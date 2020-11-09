@@ -1,5 +1,5 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Constants from "./shared/constants";
+import Constants from "../shared/constants";
 
 const { DRAWER_WIDTH } = Constants;
 

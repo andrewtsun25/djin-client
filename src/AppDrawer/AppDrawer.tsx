@@ -1,7 +1,6 @@
 import React from "react";
 import appDrawerStyles from "./AppDrawer.styles";
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import List from '@material-ui/core/List';
@@ -15,11 +14,11 @@ import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
 
 interface AppDrawerProps {
-  closeDrawer(): void;
-  isOpen: boolean;
+  closeAppDrawer(): void;
+  isAppDrawerOpen: boolean;
 }
 
-const AppDrawer: React.FC<AppDrawerProps> = ({ closeDrawer, isOpen }: AppDrawerProps) => {
+const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }: AppDrawerProps) => {
   const classes = appDrawerStyles();
   const theme = useTheme();
   return (
@@ -27,13 +26,13 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeDrawer, isOpen }: AppDrawerP
       className={classes.root}
       variant="persistent"
       anchor="left"
-      open={isOpen}
+      open={isAppDrawerOpen}
       classes={{
         paper: classes.paper,
       }}
     >
       <div className={classes.header}>
-        <IconButton onClick={closeDrawer}>
+        <IconButton onClick={closeAppDrawer}>
           {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
         </IconButton>
       </div>

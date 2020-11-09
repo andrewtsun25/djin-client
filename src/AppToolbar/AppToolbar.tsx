@@ -5,11 +5,11 @@ import clsx from "clsx";
 import React from "react";
 
 interface AppToolbarProps {
-  isOpen: boolean,
-  openDrawer(): void;
+  isAppDrawerOpen: boolean,
+  openAppDrawer(): void;
 };
 
-const AppToolbar: React.FC<AppToolbarProps> = ({ isOpen, openDrawer } : AppToolbarProps) => {
+const AppToolbar: React.FC<AppToolbarProps> = ({ isAppDrawerOpen, openAppDrawer } : AppToolbarProps) => {
   // @ts-ignore
   const classes = appToolbarStyles();
   return (
@@ -18,9 +18,9 @@ const AppToolbar: React.FC<AppToolbarProps> = ({ isOpen, openDrawer } : AppToolb
         <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={openDrawer}
+          onClick={openAppDrawer}
           edge="start"
-          className={clsx(classes.menuButton, isOpen && classes.hide)}
+          className={clsx(classes.menuButton, isAppDrawerOpen && classes.hide)}
         >
           <MenuIcon />
         </IconButton>
