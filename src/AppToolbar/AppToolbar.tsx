@@ -12,19 +12,19 @@ interface AppToolbarProps {
 const AppToolbar: React.FC<AppToolbarProps> = ({ isAppDrawerOpen, openAppDrawer } : AppToolbarProps) => {
   const classes = appToolbarStyles();
   return (
-    <AppBar position="fixed" className={clsx(classes.root, {[classes.shift]: isAppDrawerOpen})}>
+    <AppBar position="fixed" className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
       <Toolbar>
         <IconButton
           color="inherit"
           aria-label="open drawer"
           onClick={openAppDrawer}
           edge="start"
-          className={clsx(classes.menuButton, {[classes.hide]: isAppDrawerOpen})}
+          className={clsx(classes.menuButton, isAppDrawerOpen && classes.hide)}
         >
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap>
-          Dominic Jin
+          d.jin
         </Typography>
       </Toolbar>
     </AppBar>

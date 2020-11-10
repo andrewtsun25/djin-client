@@ -8,13 +8,13 @@ import useAppRootStyles from "./App.styles";
 const App = () => {
   const classes = useAppRootStyles();
   const [isAppDrawerOpen, setAppDrawerOpen] = useState(false);
-  const openDrawer = () => setAppDrawerOpen(true);
-  const closeDrawer = () => setAppDrawerOpen(false);
+  const openAppDrawer = () => setAppDrawerOpen(true);
+  const closeAppDrawer = () => setAppDrawerOpen(false);
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppToolbar isAppDrawerOpen={isAppDrawerOpen} openAppDrawer={openDrawer} />
-      <AppDrawer isAppDrawerOpen={isAppDrawerOpen} closeAppDrawer={closeDrawer} />
+      <AppToolbar isAppDrawerOpen={isAppDrawerOpen} openAppDrawer={openAppDrawer} />
+      <AppDrawer isAppDrawerOpen={isAppDrawerOpen} closeAppDrawer={closeAppDrawer} />
       <AppContent isAppDrawerOpen={isAppDrawerOpen} />
     </div>
   );

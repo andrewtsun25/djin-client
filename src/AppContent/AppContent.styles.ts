@@ -13,7 +13,7 @@ const appContentStyles = makeStyles((theme: Theme) => createStyles({
         }),
         marginLeft: -DRAWER_WIDTH,
     },
-    contentShift: {
+    shift: {
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,

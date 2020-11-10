@@ -18,6 +18,9 @@ const appDrawerStyles = makeStyles((theme: Theme) => createStyles({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end'
+  },
+  nested: {
+    paddingLeft: theme.spacing(4),
   }
 }));
 
