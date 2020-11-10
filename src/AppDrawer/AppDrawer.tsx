@@ -1,11 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import CodeIcon from '@material-ui/icons/Code';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SportsMmaIcon from '@material-ui/icons/SportsMma';
@@ -20,12 +17,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import { ExpandLess, ExpandMore } from "@material-ui/icons";
 import { useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
-import {Collapse} from "@material-ui/core";
 import appDrawerStyles from "./AppDrawer.styles";
+import NestedList from "./NestedList";
+import ListItemLink from "./ListItemLink";
 
 interface AppDrawerProps {
   closeAppDrawer(): void;
@@ -35,12 +32,6 @@ interface AppDrawerProps {
 const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }: AppDrawerProps) => {
   const classes = appDrawerStyles();
   const theme = useTheme();
-  const [isCodeOpen, setCodeOpen] = useState(false);
-  const [isMusicOpen, setMusicOpen] = useState(false);
-  const [isTkdOpen, setTkdOpen] = useState(false);
-  const handleCodeOpen = () => setCodeOpen(!isCodeOpen);
-  const handleMusicOpen = () => setMusicOpen(!isMusicOpen);
-  const handleTkdOpen = () => setTkdOpen(!isTkdOpen);
   return (
     <Drawer
       className={classes.root}
@@ -58,120 +49,28 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
       </div>
       <Divider />
       <List>
-        <ListItem button onClick={handleCodeOpen}>
-          <ListItemIcon>
-            <CodeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Coding" />
-          {isCodeOpen ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
-        <Collapse in={isCodeOpen} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <WorkIcon />
-              </ListItemIcon>
-              <ListItemText primary="Experience" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <SchoolIcon />
-              </ListItemIcon>
-              <ListItemText primary="Education" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <AppsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Projects" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <LocalLibraryIcon />
-              </ListItemIcon>
-              <ListItemText primary="Research" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <LinkedInIcon />
-              </ListItemIcon>
-              <ListItemText primary="LinkedIn" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <GitHubIcon />
-              </ListItemIcon>
-              <ListItemText primary="GitHub" />
-            </ListItem>
-          </List>
-        </Collapse>
-        <ListItem button onClick={handleMusicOpen}>
-          <ListItemIcon>
-            <MusicNoteIcon />
-          </ListItemIcon>
-          <ListItemText primary="Music" />
-          {isMusicOpen ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
-        <Collapse in={isMusicOpen} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <SchoolIcon />
-              </ListItemIcon>
-              <ListItemText primary="Education" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <HeadsetIcon />
-              </ListItemIcon>
-              <ListItemText primary="Listen" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <DescriptionIcon />
-              </ListItemIcon>
-              <ListItemText primary="Download Scores" />
-            </ListItem>
-          </List>
-        </Collapse>
-        <ListItem button onClick={handleTkdOpen}>
-          <ListItemIcon>
-            <SportsMmaIcon />
-          </ListItemIcon>
-          <ListItemText primary="Taekwondo" />
-          {isTkdOpen ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
-        <Collapse in={isTkdOpen} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <FitnessCenterIcon />
-              </ListItemIcon>
-              <ListItemText primary="ITF" />
-            </ListItem>
-            <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <FitnessCenterIcon />
-              </ListItemIcon>
-              <ListItemText primary="WT" />
-            </ListItem>
-          </List>
-        </Collapse>
-      </List>
+        <NestedList icon={<CodeIcon />} text="Coding">
+          <ListItemLink icon={<WorkIcon />} text="Experience" to="/coding/experience" nested/>
+          <ListItemLink icon={<SchoolIcon />} text="Education" to="/coding/education" nested/>
+          <ListItemLink icon={<AppsIcon />} text="Projects" to="/coding/projects" nested/>
+          <ListItemLink icon={<LocalLibraryIcon />} text="Research" to="/coding/research" nested/>
+          <ListItemLink icon={<LinkedInIcon />} text="LinkedIn" to={{pathname: "https://linkedin.com/in/andrewtsun25"}} nested/>
+          <ListItemLink icon={<GitHubIcon />} text="GitHub" to={{pathname: "https://github.com/andrewtsun25"}} nested/>
+        </NestedList>
+        <NestedList icon={<MusicNoteIcon />} text="Music">
+          <ListItemLink icon={<SchoolIcon />} text="Education" to="/music/education" nested/>
+          <ListItemLink icon={<HeadsetIcon />} text="SoundCloud" to={{pathname: "https://soundcloud.com/djtaeyong"}} nested/>
+          <ListItemLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested/>
+        </NestedList>
+        <NestedList icon={<SportsMmaIcon />} text="Taekwondo">
+          <ListItemLink icon={<FitnessCenterIcon />} text="ITF" to="/taekwondo/itf" nested/>
+          <ListItemLink icon={<FitnessCenterIcon />} text="WT" to="/taekwondo/wt" nested/>
+        </NestedList>
       <Divider />
-      <List>
-        <ListItem button>
-          <ListItemIcon>
-            <FaceIcon/>
-          </ListItemIcon>
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ContactMailIcon/>
-          </ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItem>
+        <List>
+          <ListItemLink icon={<FaceIcon/>} text="About" to="/about" nested/>
+          <ListItemLink icon={<ContactMailIcon/>} text="Contact" to={{pathname: "mailto:djtaeyong@gmail.com"}} nested/>
+        </List>
       </List>
     </Drawer>
   );

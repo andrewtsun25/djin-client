@@ -1,5 +1,5 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Constants from "../shared/constants";
+import Constants from "../utils/constants";
 
 const { DRAWER_WIDTH } = Constants;
 
@@ -18,9 +18,6 @@ const appDrawerStyles = makeStyles((theme: Theme) => createStyles({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end'
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
   }
 }));
 
