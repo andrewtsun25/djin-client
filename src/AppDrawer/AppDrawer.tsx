@@ -130,7 +130,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
               <ListItemIcon>
                 <DescriptionIcon />
               </ListItemIcon>
-              <ListItemText primary="Score" />
+              <ListItemText primary="Download Scores" />
             </ListItem>
           </List>
         </Collapse>
