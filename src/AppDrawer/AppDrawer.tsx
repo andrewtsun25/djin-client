@@ -1,5 +1,4 @@
 import React from "react";
-import appDrawerStyles from "./AppDrawer.styles";
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -12,6 +11,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import { useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
+import appDrawerStyles from "./AppDrawer.styles";
 
 interface AppDrawerProps {
   closeAppDrawer(): void;

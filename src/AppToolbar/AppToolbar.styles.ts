@@ -5,13 +5,13 @@ const { DRAWER_WIDTH } = Constants;
 
 const appToolbarStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    flexGrow: 1
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
   },
   menuButton: {
     marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
   },
   shift: {
     width: `calc(100% - ${DRAWER_WIDTH}px)`,

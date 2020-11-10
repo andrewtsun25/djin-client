@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppToolbar from './AppToolbar/AppToolbar';
-import AppDrawer from './AppDrawer/AppDrawer';
-import AppContent from "./AppContent/AppContent";
-import appRootStyles from "./App.styles";
+import AppToolbar from './AppToolbar';
+import AppDrawer from './AppDrawer';
+import AppContent from "./AppContent";
+import useAppRootStyles from "./App.styles";
 
 const App = () => {
-  const classes = appRootStyles();
+  const classes = useAppRootStyles();
   const [isAppDrawerOpen, setAppDrawerOpen] = useState(false);
   const openDrawer = () => setAppDrawerOpen(true);
   const closeDrawer = () => setAppDrawerOpen(false);
