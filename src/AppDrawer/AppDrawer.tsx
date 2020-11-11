@@ -22,7 +22,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
 import appDrawerStyles from "./AppDrawer.styles";
 import NestedList from "./NestedList";
-import ListItemLink from "./ListItemLink";
+import { ListItemInternalLink, ListItemExternalLink } from "./ListItemLink";
 
 interface AppDrawerProps {
   closeAppDrawer(): void;
@@ -50,26 +50,26 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
       <Divider />
       <List>
         <NestedList icon={<CodeIcon />} text="Coding">
-          <ListItemLink icon={<WorkIcon />} text="Experience" to="/coding/experience" nested/>
-          <ListItemLink icon={<SchoolIcon />} text="Education" to="/coding/education" nested/>
-          <ListItemLink icon={<AppsIcon />} text="Projects" to="/coding/projects" nested/>
-          <ListItemLink icon={<LocalLibraryIcon />} text="Research" to="/coding/research" nested/>
-          <ListItemLink icon={<LinkedInIcon />} text="LinkedIn" to={{pathname: "https://linkedin.com/in/andrewtsun25"}} nested/>
-          <ListItemLink icon={<GitHubIcon />} text="GitHub" to={{pathname: "https://github.com/andrewtsun25"}} nested/>
+          <ListItemInternalLink icon={<WorkIcon />} text="Experience" to="/coding/experience" nested/>
+          <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/coding/education" nested/>
+          <ListItemInternalLink icon={<AppsIcon />} text="Projects" to="/coding/projects" nested/>
+          <ListItemInternalLink icon={<LocalLibraryIcon />} text="Research" to="/coding/research" nested/>
+          <ListItemExternalLink icon={<LinkedInIcon />} text="LinkedIn" href="https://linkedin.com/in/andrewtsun25" nested/>
+          <ListItemExternalLink icon={<GitHubIcon />} text="GitHub" href="https://github.com/andrewtsun25" nested/>
         </NestedList>
         <NestedList icon={<MusicNoteIcon />} text="Music">
-          <ListItemLink icon={<SchoolIcon />} text="Education" to="/music/education" nested/>
-          <ListItemLink icon={<HeadsetIcon />} text="SoundCloud" to={{pathname: "https://soundcloud.com/djtaeyong"}} nested/>
-          <ListItemLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested/>
+          <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/music/education" nested/>
+          <ListItemExternalLink icon={<HeadsetIcon />} text="SoundCloud" href="https://soundcloud.com/djtaeyong" nested/>
+          <ListItemInternalLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested/>
         </NestedList>
         <NestedList icon={<SportsMmaIcon />} text="Taekwondo">
-          <ListItemLink icon={<FitnessCenterIcon />} text="ITF" to="/taekwondo/itf" nested/>
-          <ListItemLink icon={<FitnessCenterIcon />} text="WT" to="/taekwondo/wt" nested/>
+          <ListItemInternalLink icon={<FitnessCenterIcon />} text="ITF" to="/taekwondo/itf" nested/>
+          <ListItemInternalLink icon={<FitnessCenterIcon />} text="WT" to="/taekwondo/wt" nested/>
         </NestedList>
       <Divider />
         <List>
-          <ListItemLink icon={<FaceIcon/>} text="About" to="/about" nested/>
-          <ListItemLink icon={<ContactMailIcon/>} text="Contact" to={{pathname: "mailto:djtaeyong@gmail.com"}} nested/>
+          <ListItemInternalLink icon={<FaceIcon/>} text="About" to="/about" nested/>
+          <ListItemExternalLink icon={<ContactMailIcon/>} text="Contact" href="mailto:djtaeyong@gmail.com" nested/>
         </List>
       </List>
     </Drawer>

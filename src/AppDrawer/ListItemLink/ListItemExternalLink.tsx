@@ -10,21 +10,21 @@ import {LocationDescriptor, Location} from 'history';
 interface NestedListItemProps {
     icon: React.ReactNode;
     text: string;
-    to: LocationDescriptor | ((location: Location) => LocationDescriptor);
+    href: string;
     nested?: boolean;
 }
 
-const ListItemLink: React.FC<NestedListItemProps> =  ({ icon, text, to, nested }: NestedListItemProps) => {
+const ListItemExternalLink: React.FC<NestedListItemProps> =  ({ icon, text, href, nested }: NestedListItemProps) => {
     const classes = listItemLinkStyles();
-    const CustomLink = useMemo(
-        () =>
-            React.forwardRef<HTMLAnchorElement>((linkProps, ref) => (
-                <Link ref={ref} to={to} {...linkProps} />
-            )),
-        [to],
-    );
+    const ExternalLink = useMemo(() =>
+        React.forwardRef<HTMLAnchorElement>((linkProps, ref) =>
+            // eslint-disable-next-line jsx-a11y/anchor-has-content
+            (<a target="_blank" ref={ref} href={href} rel="noopener noreferrer" {...linkProps}/>)
+        ), [href]);
     return (
-        <ListItem button className={clsx(nested && classes.nested)} component={CustomLink}>
+        <ListItem button
+                  className={clsx(nested && classes.nested)}
+                  component={ExternalLink}>
             <ListItemIcon>
                 {icon}
             </ListItemIcon>
@@ -33,4 +33,4 @@ const ListItemLink: React.FC<NestedListItemProps> =  ({ icon, text, to, nested }
     );
 }
 
-export default ListItemLink;
+export default ListItemExternalLink;
