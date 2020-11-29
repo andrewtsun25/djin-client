@@ -1,38 +1,38 @@
 import React from 'react';
-import useTaekwondoInfo from "hooks/useTkdInfo";
-import {TkdStyle} from "types/Taekwondo";
+import useTaekwondoPageInfo from "hooks/useTkdInfo";
+import { TkdStyle } from "types/Taekwondo";
 
 interface TaekwondoPageProps {
     tkdStyle: TkdStyle;
 }
 
 const TaekwondoPage: React.FC<TaekwondoPageProps> = ({ tkdStyle }: TaekwondoPageProps) => {
-    const [tkdInfo] = useTaekwondoInfo(tkdStyle);
-    return tkdInfo && (
+    const pageInfo = useTaekwondoPageInfo(tkdStyle);
+    return pageInfo ? (
         <>
             <div>
                 <div>
-                    <img src={tkdInfo.logoUrl} alt={`${tkdInfo.style}_logo`} />
-                    <h1>{tkdInfo.style}</h1>
+                    <img src={pageInfo.logoUrl} alt={`${pageInfo.style}_logo`} />
+                    <h1>{pageInfo.style}</h1>
                 </div>
             </div>
             <hr />
             <div>
                 <div>
-                    <i>{tkdInfo.introduction}</i>
-                    <p>{tkdInfo.biography}</p>
+                    <i>{pageInfo.introduction}</i>
+                    <p>{pageInfo.biography}</p>
                 </div>
-                <img src={tkdInfo.imgUrl} alt={`${tkdInfo.style}_img`} />
+                <img src={pageInfo.imgUrl} alt={`${pageInfo.style}_img`} />
             </div>
             <hr />
             <div>
                 <h1>Studios</h1>
-                {tkdInfo.studios.map(studio => (
+                {pageInfo.studios.map(studio => (
                     <p>{JSON.stringify(studio)}</p>
                 ))}
             </div>
         </>
-    );
+    ) : null;
 }
 
 export default TaekwondoPage;

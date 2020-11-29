@@ -1,7 +1,5 @@
-import TaekwondoItf from "./TaekwondoItf";
-import TaekwondoWt from "./TaekwondoWt";
+import TaekwondoPage from "./TaekwondoPage";
 
 export {
-    TaekwondoItf,
-    TaekwondoWt
+    TaekwondoPage
 };
