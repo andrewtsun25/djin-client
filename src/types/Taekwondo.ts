@@ -1,5 +1,6 @@
 export interface TkdPageData {
     style: TkdStyle;
+    styleName: string;
     logoUrl: string;
     blackBeltRank: number;
     introduction: string;

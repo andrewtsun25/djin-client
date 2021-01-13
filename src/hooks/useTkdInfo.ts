@@ -79,7 +79,8 @@ export default function useTaekwondoInfo(style: TkdStyle): TkdPageData | undefin
                             href: "https://www.masterleestalium.com/"
                         }
                     ],
-                    style: TkdStyle.WT
+                    style: TkdStyle.WT,
+                    styleName: "World Taekwondo"
                 });
                 break;
             case TkdStyle.ITF:
@@ -107,7 +108,8 @@ export default function useTaekwondoInfo(style: TkdStyle): TkdPageData | undefin
                             href: "http://mightyfist.com/"
                         }
                     ],
-                    style: TkdStyle.ITF
+                    style: TkdStyle.ITF,
+                    styleName: "International Taekwon-Do Federation"
                 });
                 break;
             default:
