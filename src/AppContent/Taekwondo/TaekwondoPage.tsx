@@ -32,10 +32,12 @@ const TaekwondoPage: React.FC<TaekwondoPageProps> = ({ tkdStyle }: TaekwondoPage
                 <h1>Studios</h1>
                 <div className={classes.dojangGrid}>
                 {pageInfo.studios.map(studio => (
-                    <figure className={classes.pic}>
-                        <img src={studio.logoUrl} alt={studio.name} className={classes.picImg}/>
-                        <figcaption className={classes.picCaption}>{studio.name}</figcaption>
-                    </figure>
+                    <a href={studio.href}>
+                        <figure className={classes.pic}>
+                            <img src={studio.logoUrl} alt={studio.name} className={classes.picImg}/>
+                            <figcaption className={classes.picCaption}>{studio.name}</figcaption>
+                        </figure>
+                    </a>
                 ))}
                 </div>
             </div>

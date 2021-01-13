@@ -18,5 +18,5 @@ export interface TkdStudio {
 
 export enum TkdStyle {
     ITF = "ITF",
-    WT = "WT"
+    WT = "WT",
 }
