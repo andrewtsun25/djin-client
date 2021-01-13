@@ -12,10 +12,9 @@ interface NestedListItemProps {
     text: string;
     to: LocationDescriptor | ((location: Location) => LocationDescriptor);
     nested?: boolean;
-    external?: boolean;
 }
 
-const ListItemInternalLink: React.FC<NestedListItemProps> =  ({ icon, text, to, nested, external}: NestedListItemProps) => {
+const ListItemInternalLink: React.FC<NestedListItemProps> =  ({ icon, text, to, nested }: NestedListItemProps) => {
     const classes = listItemLinkStyles();
     const ReactRouterLink = useMemo(
         () =>

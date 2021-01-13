@@ -8,9 +8,10 @@ import {
 import HomePage from './HomePage';
 import { CodingEducation, CodingExperience, CodingProjects, CodingResearch } from './Coding';
 import { MusicEducation, MusicScores } from './Music';
-import { TaekwondoItf, TaekwondoWt } from "./Taekwondo";
 import { About } from "./About";
 import ErrorPage from "./ErrorPage";
+import TaekwondoPage from "./Taekwondo/TaekwondoPage";
+import { TkdStyle } from "../types/Taekwondo";
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -46,10 +47,10 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <MusicScores />
                 </Route>
                 <Route path="/taekwondo/itf">
-                    <TaekwondoItf />
+                    <TaekwondoPage tkdStyle={TkdStyle.ITF}/>
                 </Route>
                 <Route path="/taekwondo/wt">
-                    <TaekwondoWt />
+                    <TaekwondoPage tkdStyle={TkdStyle.WT}/>
                 </Route>
                 <Route path="/about">
                     <About />
