@@ -11,7 +11,7 @@ import { MusicEducation, MusicScores } from './Music';
 import { About } from "./About";
 import ErrorPage from "./ErrorPage";
 import TaekwondoPage from "./Taekwondo/TaekwondoPage";
-import { TkdStyle } from "../types/Taekwondo";
+import { TkdStyle } from "../../types/Taekwondo";
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;

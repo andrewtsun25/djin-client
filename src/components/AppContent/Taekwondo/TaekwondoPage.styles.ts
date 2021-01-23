@@ -9,6 +9,7 @@ const taekwondoPageStyles = makeStyles(() => createStyles({
     pageContent: {
         display: "grid",
         gridTemplateColumns: "repeat(2, 50%)",
+        whiteSpace: "pre-line"
     },
     info: {
         width: "66%"
