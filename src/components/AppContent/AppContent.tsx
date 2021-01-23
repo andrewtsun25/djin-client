@@ -10,8 +10,8 @@ import { CodingEducation, CodingExperience, CodingProjects, CodingResearch } fro
 import { MusicEducation, MusicScores } from './Music';
 import { About } from "./About";
 import ErrorPage from "./ErrorPage";
-import TaekwondoPage from "./Taekwondo/TaekwondoPage";
-import { TkdStyle } from "../../types/Taekwondo";
+import MartialArtsPage from "./Taekwondo/MartialArtsPage";
+import { MartialArtsStyle } from "types/martialArts";
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -46,11 +46,11 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 <Route path="/music/scores">
                     <MusicScores />
                 </Route>
-                <Route path="/taekwondo/itf">
-                    <TaekwondoPage tkdStyle={TkdStyle.ITF}/>
+                <Route path="/martialArts/itf">
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF}/>
                 </Route>
-                <Route path="/taekwondo/wt">
-                    <TaekwondoPage tkdStyle={TkdStyle.WT}/>
+                <Route path="/martialArts/wt">
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.WT}/>
                 </Route>
                 <Route path="/about">
                     <About />

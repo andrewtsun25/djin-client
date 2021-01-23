@@ -1,15 +1,15 @@
 import React from 'react';
-import useTaekwondoPageInfo from "hooks/useTkdInfo";
-import { TkdStyle } from "types/Taekwondo";
-import taekwondoPageStyles from "./TaekwondoPage.styles";
+import useMartialArts from "hooks/useMartialArts";
+import { MartialArtsStyle } from "types/martialArts";
+import martialArtsPageStyles from "./MartialArtsPage.styles";
 
-interface TaekwondoPageProps {
-    tkdStyle: TkdStyle;
+interface MartialArtsPageProps {
+    martialArtsStyle: MartialArtsStyle;
 }
 
-const TaekwondoPage: React.FC<TaekwondoPageProps> = ({ tkdStyle }: TaekwondoPageProps) => {
-    const classes = taekwondoPageStyles();
-    const pageInfo = useTaekwondoPageInfo(tkdStyle);
+const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: MartialArtsPageProps) => {
+    const classes = martialArtsPageStyles();
+    const pageInfo = useMartialArts(martialArtsStyle);
     return pageInfo ? (
         <>
             <div className={classes.pageHeading}>
@@ -45,4 +45,4 @@ const TaekwondoPage: React.FC<TaekwondoPageProps> = ({ tkdStyle }: TaekwondoPage
     ) : null;
 }
 
-export default TaekwondoPage;
+export default MartialArtsPage;

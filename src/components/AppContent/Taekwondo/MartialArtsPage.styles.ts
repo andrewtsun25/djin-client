@@ -1,6 +1,6 @@
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 
-const taekwondoPageStyles = makeStyles(() => createStyles({
+const martialArtsPageStyles = makeStyles(() => createStyles({
     pageHeading: {
         display: "flex",
         alignItems: "center",
@@ -32,4 +32,4 @@ const taekwondoPageStyles = makeStyles(() => createStyles({
     }
 }));
 
-export default taekwondoPageStyles;
+export default martialArtsPageStyles;

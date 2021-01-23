@@ -1,5 +1,5 @@
-import TaekwondoPage from "./TaekwondoPage";
+import MartialArtsPage from "./MartialArtsPage";
 
 export {
-    TaekwondoPage
+    MartialArtsPage
 };

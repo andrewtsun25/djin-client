@@ -62,9 +62,9 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
           <ListItemExternalLink icon={<HeadsetIcon />} text="SoundCloud" href="https://soundcloud.com/djtaeyong" nested/>
           <ListItemInternalLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested/>
         </NestedList>
-        <NestedList icon={<SportsMmaIcon />} text="Taekwondo">
-          <ListItemInternalLink icon={<FitnessCenterIcon />} text="ITF" to="/taekwondo/itf" nested/>
-          <ListItemInternalLink icon={<FitnessCenterIcon />} text="WT" to="/taekwondo/wt" nested/>
+        <NestedList icon={<SportsMmaIcon />} text="Martial Arts">
+          <ListItemInternalLink icon={<FitnessCenterIcon />} text="ITF" to="/martialArts/itf" nested/>
+          <ListItemInternalLink icon={<FitnessCenterIcon />} text="WT" to="/martialArts/wt" nested/>
         </NestedList>
       <Divider />
         <List>
