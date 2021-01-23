@@ -11,17 +11,17 @@ const WorldTaekwondo: MartialArt = {
         "compete with the university team there for a year under Coaches Mara Perscheid and " +
         "Kira Cramer (2016/09 - 2017/06). \n" +
         "\n" +
-        "After being out of college for a year, I decided to pursue Taekwondo more formally at a local " +
-        "studio, Taeryong Taekwondo under Grandmaster Yong-Sup Shin and Masters Nickie Quan and Brandon " +
-        "Meek (2017/06 - 2018/08). While training at Taeryong Taekwondo, I received my 1st degree (1단) " +
+        "After being out of college for a year, I decided to pursue MartialArtsPage more formally at a local " +
+        "studio, Taeryong MartialArtsPage under Grandmaster Yong-Sup Shin and Masters Nickie Quan and Brandon " +
+        "Meek (2017/06 - 2018/08). While training at Taeryong MartialArtsPage, I received my 1st degree (1단) " +
         "black belt on May 5, 2018 (2018/05/05). \n" +
         "\n" +
-        "As a grad student, I fought on for the USC Taekwondo Team under coaches Spyro Spyropoulos-Spears " +
-        "and Eduardo Belmont. At USC, I regularly represented USC as a Taekwondo PacWest athlete at " +
+        "As a grad student, I fought on for the USC MartialArtsPage Team under coaches Spyro Spyropoulos-Spears " +
+        "and Eduardo Belmont. At USC, I regularly represented USC as a MartialArtsPage PacWest athlete at " +
         "tournaments, and sometimes even lead team practices. During my second year as a master’s student, " +
-        "I served on the USC Taekwondo Team executive board as Secretary for the 2019-2020 academic year.\n" +
+        "I served on the USC MartialArtsPage Team executive board as Secretary for the 2019-2020 academic year.\n" +
         "\n" +
-        "During my time as a YouTube intern in 2019, I briefly trained in the More Than Medals Taekwondo " +
+        "During my time as a YouTube intern in 2019, I briefly trained in the More Than Medals MartialArtsPage " +
         "dojang in San Bruno. \n" +
         "\n" +
         "Since the COVID-19 pandemic began in March 2020, I was able to obtain my 2nd Dan certification " +
@@ -38,43 +38,43 @@ const WorldTaekwondo: MartialArt = {
     logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527904344207-QK30GYC8KDFHPCCN3IRQ/ke17ZwdGBToddI8pDm48kPXcsi8OqGk_c5jv_6tsV_vlfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXI1FUJGtWL0_8dpDG9_x8o1ZYD1DwftTX4uVIwU9y7MKdT94fJlXLf6cIc1Gj3JNQ/logo_wtf.png?format=500w",
     studios: [
         {
-            name: "UCSD Taekwondo",
+            name: "UCSD MartialArtsPage",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527666604460-GDGUQRIBI3GGAX04D9XB/ke17ZwdGBToddI8pDm48kPDa3ERDRejDlAlJmv0BmTVZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5cSdnW6xYwsG0aAyF_lRkc09GLBqof3ZTIiPAFg0K__g/logo_ucsd.png?format=500w",
             href: "https://www.facebook.com/groups/ucsdtkd/"
         },
         {
-            name: "Yonsei International Taekwondo Academy",
+            name: "Yonsei International MartialArtsPage Academy",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662420046-B0R7E8KMBJM2DHTDJJGP/ke17ZwdGBToddI8pDm48kP06O0_IHyRXSOOiqwgWaApZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEsL0EX72Q6S7TgfQYQBQpkz5xM6Qt8VXd_xJGg_ziCFib8BodarTVrzIWCp72ioWw/logo_yonsei.png?format=500w",
             href: "http://web.yonsei.ac.kr/yitaekwondo/"
         },
         {
-            name: "UCLA Taekwondo",
+            name: "UCLA MartialArtsPage",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662427268-V65W4GCB79E5ICI8U7RL/ke17ZwdGBToddI8pDm48kGgfmdwyDkDCbYlr5j-F18ZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwNEsiZUijG4PdEFwMh4xR5dHR9Yx6yI07XW2syHOEgOcoiExah_2KH83dOmsYiipo/logo_ucla.png?format=500w",
             href: "https://uclaclubsports.com/sports/taek"
         },
         {
-            name: "Taeryong Taekwondo",
+            name: "Taeryong MartialArtsPage",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662678459-O5W6FKRUN84BKS5D3BQM/ke17ZwdGBToddI8pDm48kMKdRrPISbXw8Frpbwjb8EJZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7cbpD-ALo5EVlYbhs4zusntqetjAVIoWS4rPslKa7KOpJut8QouL_apBGby4TfG83Q/logo_taeryong.jpg?format=500w",
             href: "http://www.trtkd.com/"
         },
         {
-            name: "USC Taekwondo",
+            name: "USC MartialArtsPage",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662758623-SZGF4ZA9JZ4G2GRPE77I/ke17ZwdGBToddI8pDm48kLxnK526YWAH1qleWz-y7AFZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH33scGBZjC30S7EYewNF5iKKwhonf2ThqWWOBkLKnojuqYeU1KwPvsAK7Tx5ND4WE/logo_usc.jpg?format=500w",
             href: "https://sites.google.com/usc.edu/usctkd"
         },
         {
-            name: "MTM Taekwondo",
+            name: "MTM MartialArtsPage",
             logoUrl: "https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1559729458096-IZRFWC8UAQ2XJVR1LW32/ke17ZwdGBToddI8pDm48kHqKK8-XLX_NZbquufEAhzBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpznQADQ-6SEvIb7Eo7uFO3Db83hfok6XGq7TTQ0Kb2vkTheqc7H0ja4BqW2AjzLBto/MTM_Logo.jpg?format=500w",
             href: "http://mtmtaekwondo.com/"
         },
         {
-            name: "Talium Taekwondo",
+            name: "Talium MartialArtsPage",
             logoUrl: "https://lirp-cdn.multiscreensite.com/cb86f2ac/dms3rep/multi/opt/Logo-Updated-480w.jpg",
             href: "https://www.masterleestalium.com/"
         }
     ],
     style: MartialArtsStyle.WT,
-    styleName: "World Taekwondo"
+    styleName: "World MartialArtsPage"
 };
 
 const InternationalTaekwondoFederation = {

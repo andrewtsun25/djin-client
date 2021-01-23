@@ -1,6 +1,6 @@
 enum EduType {
-    CODING = "coding",
-    MUSIC = "music"
+    CODING = "Coding",
+    MUSIC = "Music"
 }
 
 export default EduType;

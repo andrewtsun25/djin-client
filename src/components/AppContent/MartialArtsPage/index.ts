@@ -1,5 +1,3 @@
 import MartialArtsPage from "./MartialArtsPage";
 
-export {
-    MartialArtsPage
-};
+export default MartialArtsPage;

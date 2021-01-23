@@ -1,17 +1,16 @@
 import React from 'react';
 import clsx from 'clsx';
 import appContentStyles from './AppContent.styles';
-import {
-    Switch,
-    Route
-} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import HomePage from './HomePage';
-import { CodingEducation, CodingExperience, CodingProjects, CodingResearch } from './Coding';
-import { MusicEducation, MusicScores } from './Music';
-import { About } from "./About";
+import {CodingExperience, CodingProjects, CodingResearch} from './Coding';
+import MusicScoresPage from './MusicScoresPage';
+import {About} from "./About";
 import ErrorPage from "./ErrorPage";
-import MartialArtsPage from "./Taekwondo/MartialArtsPage";
-import { MartialArtsStyle } from "types/martialArts";
+import MartialArtsPage from "./MartialArtsPage";
+import {MartialArtsStyle} from "types/martialArts";
+import EducationPage from "./EducationPage";
+import {EduType} from "types/education";
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -32,7 +31,7 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <CodingExperience />
                 </Route>
                 <Route path="/coding/education">
-                    <CodingEducation />
+                    <EducationPage eduType={EduType.CODING} />
                 </Route>
                 <Route path="/coding/projects">
                     <CodingProjects />
@@ -41,10 +40,10 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <CodingResearch />
                 </Route>
                 <Route path="/music/education">
-                    <MusicEducation />
+                    <EducationPage eduType={EduType.MUSIC} />
                 </Route>
                 <Route path="/music/scores">
-                    <MusicScores />
+                    <MusicScoresPage />
                 </Route>
                 <Route path="/martialArts/itf">
                     <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF}/>

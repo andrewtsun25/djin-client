@@ -1,10 +1,10 @@
 import React from "react";
 import {Typography} from "@material-ui/core";
 
-const MusicEducation: React.FC = () => {
+const MusicScoresPage: React.FC = () => {
     return (
         <>
-            <h1>Music Education</h1>
+            <h1>Music Scores</h1>
             <Typography paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
@@ -32,4 +32,4 @@ const MusicEducation: React.FC = () => {
     );
 }
 
-export default MusicEducation;
+export default MusicScoresPage;

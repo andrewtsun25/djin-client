@@ -1,7 +1,5 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Constants from "../../utils/constants";
-
-const { DRAWER_WIDTH } = Constants;
+import { DRAWER_WIDTH } from "const/styling";
 
 const appDrawerStyles = makeStyles((theme: Theme) => createStyles({
   root: {

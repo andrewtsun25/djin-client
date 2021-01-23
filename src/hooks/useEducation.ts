@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { Education } from "types/education";
+import {Education, EduType} from "types/education";
 import {CodingEducation, MusicEducation} from "const/data/education";
 
 export default function useEducations(category: string): Education[] {
     const [educations, setEducations] = useState<Education[]>([]);
     useEffect(() => {
         switch(category) {
-            case "coding":
+            case EduType.CODING:
                 setEducations(CodingEducation);
                 break;
-            case "music":
+            case EduType.MUSIC:
                 setEducations(MusicEducation);
                 break;
             default:
