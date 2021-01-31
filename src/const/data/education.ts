@@ -1,15 +1,20 @@
 import {PBLA, UCSD, USC, Yonsei} from "../semester";
 import {Education, EduType} from "types/education";
+import pblaLogo from "assets/education/logo/pbla.png";
+import ucsdLogo from "assets/education/logo/ucsd.png";
+import yonseiLogo from "assets/education/logo/yonsei.png";
+import uscLogo from "assets/education/logo/usc.png";
 
 const pblaEdu: Education = {
     type: EduType.MUSIC,
     name: "Point Blank Los Angeles (PBLA)",
+    avatarUrl: pblaLogo,
     startDate: PBLA.Fall2019.date,
     endDate: PBLA.Graduation.date,
-    major: "DJ/Production Certificate",
+    major: "DJ/Producer Certificate",
     gpa: 4.0,
-    description: "As an undergraduate student from Eleanor Roosevelt College, like most other college students, I had no idea what I wanted to do in college. Choosing between being a biologist and being a computer scientist proved to be quite difficult. So, I chose both and studied bioinformatics.",
-    syllabusLink: "https://cse.ucsd.edu/undergraduate/bs-computer-science-bioinformatics",
+    description: "While attending school at USC, I also wanted to pursue my musical passions. Hence, I concurrently took DJing and Music Production classes at Point Blank.",
+    syllabusLink: "https://www.pointblankmusicschool.com/courses/la/dj-courses/dj-producer-certificate/",
     studentOrgs: [],
     courses: []
 };
@@ -17,6 +22,7 @@ const pblaEdu: Education = {
 const ucsdEdu: Education = {
     type: EduType.CODING,
     name: "University of California, San Diego (UCSD)",
+    avatarUrl: ucsdLogo,
     startDate: UCSD.Fall2012.date,
     endDate: UCSD.Graduation.date,
     major: "B.S. Computer Science with specialization in Bioinformatics",
@@ -32,6 +38,7 @@ const ucsdEdu: Education = {
 const yonseiEdu: Education = {
     type: EduType.CODING,
     name: "Yonsei University (연세대학)",
+    avatarUrl: yonseiLogo,
     startDate: Yonsei.YISS.date,
     endDate: Yonsei.Graduation.date,
     major: "Exchange Student",
@@ -45,6 +52,7 @@ const yonseiEdu: Education = {
 const uscEdu: Education = {
     type: EduType.CODING,
     name: "University of Southern California (USC)",
+    avatarUrl: uscLogo,
     startDate: USC.Fall2018.date,
     endDate: USC.Graduation.date,
     major: "M.S. Computer Science (Software Engineering Track)",

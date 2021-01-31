@@ -16,7 +16,7 @@ const PBLA: SemesterLookup = {
     },
     Graduation: {
         name: "Graduation",
-        date: DateTime.fromISO("2016-06-13T00:00:00+09:00")
+        date: DateTime.fromISO("2020-06-13T00:00:00+09:00")
     }
 }
 

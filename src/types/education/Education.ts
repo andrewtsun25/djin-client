@@ -14,6 +14,7 @@ export default interface Education {
     gpa: number
     description: string;
     syllabusLink?: string;
+    avatarUrl: any;
     studentOrgs?: StudentOrganization[];
     courses: Course[];
 }
