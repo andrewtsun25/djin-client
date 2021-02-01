@@ -1,6 +1,6 @@
 import React from "react";
 import {Education} from "types/education";
-import {Avatar, Card, CardContent, CardHeader, Typography} from "@material-ui/core";
+import {Avatar, Card, CardContent, CardHeader, Link, Typography} from "@material-ui/core";
 import educationCardStyles from "./EducationCard.styles";
 
 interface EducationCardProps {
@@ -9,16 +9,19 @@ interface EducationCardProps {
 
 const EducationCard: React.FC<EducationCardProps> = ({ education }: EducationCardProps) => {
     const classes = educationCardStyles();
+    const subheader = education.endDate
+        ? `${education.startDate.monthShort} ${education.startDate.year} - ${education.endDate.monthShort} ${education.endDate.year}, ${education.major}`
+        : `${education.startDate.monthShort} ${education.startDate.year} - Present, ${education.major}`;
     return (
         <Card variant="outlined" className={classes.root}>
             <CardHeader
                 title={education.name}
-                subheader={`${education.startDate.year} - ${education.endDate.year}, ${education.major}`}
+                subheader={subheader}
                 avatar={<Avatar alt={education.name} src={education.avatarUrl} />}
             />
             <CardContent>
                 <Typography paragraph>
-                    <a href={education.syllabusLink} target="_blank" rel="noopener noreferrer">Degree Requirements</a>
+                    <Link href={education.syllabusLink} target="_blank" rel="noopener noreferrer">Degree Requirements</Link>
                 </Typography>
                 {education.department && <Typography paragraph>
                     <b>Department:</b> {education.department}

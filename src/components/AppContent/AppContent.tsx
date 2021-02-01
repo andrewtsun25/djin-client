@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import appContentStyles from './AppContent.styles';
 import {Route, Switch} from 'react-router-dom';
 import HomePage from './HomePage';
-import {CodingExperience, CodingProjects, CodingResearch} from './Coding';
+import {CodingProjects, CodingResearch} from './Coding';
 import MusicScoresPage from './MusicScoresPage';
 import {About} from "./About";
 import ErrorPage from "./ErrorPage";
@@ -11,6 +11,7 @@ import MartialArtsPage from "./MartialArtsPage";
 import {MartialArtsStyle} from "types/martialArts";
 import EducationPage from "./EducationPage";
 import {EduType} from "types/education";
+import ExperiencePage from "./ExperiencePage";
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -28,7 +29,7 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <HomePage />
                 </Route>
                 <Route path="/coding/experience">
-                    <CodingExperience />
+                    <ExperiencePage />
                 </Route>
                 <Route path="/coding/education">
                     <EducationPage eduType={EduType.CODING} />
