@@ -1,0 +1,14 @@
+import {DateTime} from "luxon";
+import JobType from "./JobType";
+
+export default interface Experience {
+    company: string,
+    avatarUrl: string,
+    role: string,
+    startDate: DateTime,
+    endDate?: DateTime,
+    description: string;
+    responsibilities: string[];
+    skills: string[];
+    jobType: JobType;
+}
