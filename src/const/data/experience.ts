@@ -6,12 +6,21 @@ import amazonLogo from "assets/experience/logo/amazon.png";
 import hliLogo from "assets/experience/logo/hli.png";
 import yahooLogo from "assets/experience/logo/yahoo.jpeg";
 import qtLogo from "assets/experience/logo/qt.jpeg";
+import andurilImg from "assets/experience/media/anduril_lattice.jpg";
+import googleImg from "assets/experience/media/google_youtube.png";
+import amazonImg from "assets/experience/media/amazon_withoutabox.png";
+import hliImg from "assets/experience/media/hli_mantis.png";
+import yahoo2Img from "assets/experience/media/yahoo_shepherd.jpeg";
+import yahoo1Img from "assets/experience/media/yahoo_gemini.png";
+import qtImg from "assets/experience/media/qt_brandcaster.jpg";
+
 
 const Anduril: Experience = {
     company: "Anduril Industries",
     role: "Software Engineer",
     avatarUrl: andurilLogo,
-    startDate: DateTime.fromISO("2020-08-10T09:00:00-8:00"),
+    mediaUrl: andurilImg,
+    startDate: DateTime.fromISO("2020-08-10T09:00:00-08:00"),
     description: "Working on the Perception-Platform team creating front-end experiences for analyzing and managing object classification data from Anduril assets (towers and drones). Also assisting in developing UI and counter-UAS (unmanned aerial systems) capabilities for Lattice Control Application, a command center for visualizing object classification data.",
     responsibilities: [],
     skills: ["React", "Redux", "TypeScript", "protobuf", "gRPC", "Apache Spark", "Blueprint.js"],
@@ -22,6 +31,7 @@ const Google: Experience = {
     company: "Google -- YouTube",
     role: "Software Engineering Intern",
     avatarUrl: googleLogo,
+    mediaUrl: googleImg,
     startDate: DateTime.fromISO("2019-05-10T09:00:00-08:00"),
     endDate: DateTime.fromISO("2019-08-09T19:00:00-08:00"),
     description: "Contributed to the development of a virtual keyboard for YouTube running on non-standard devices such as smart televisions, game consoles, Blu-Ray players, and more.",
@@ -37,8 +47,9 @@ const Google: Experience = {
 
 const Amazon: Experience = {
     company: "Amazon -- IMDb",
-    role: "Software Engineering Intern",
+    role: "Software Development Engineer I",
     avatarUrl: amazonLogo,
+    mediaUrl: amazonImg,
     startDate: DateTime.fromISO("2016-09-26T09:00:00-08:00"),
     endDate: DateTime.fromISO("2018-04-13T17:00:00-08:00"),
     description: "Worked on developing various features on Withoutabox, a website that allows independent filmmakers to connect with film festivals. Also enabled these film festivals to crush their filmmaker's dreams.",
@@ -55,6 +66,7 @@ const Amazon: Experience = {
 const HLI: Experience = {
     company: "Human Longevity, Inc.",
     avatarUrl: hliLogo,
+    mediaUrl: hliImg,
     role: "Bioinformatics Intern",
     startDate: DateTime.fromISO("2016-01-26T09:00:00-08:00"),
     endDate: DateTime.fromISO("2016-06-26T17:00:00-08:00"),
@@ -70,6 +82,7 @@ const HLI: Experience = {
 const Yahoo2: Experience = {
     company: "Yahoo!",
     avatarUrl: yahooLogo,
+    mediaUrl: yahoo2Img,
     role: "Technical Intern",
     startDate: DateTime.fromISO("2015-06-15T09:00:00-08:00"),
     endDate: DateTime.fromISO("2015-09-18T17:00:00-08:00"),
@@ -85,6 +98,7 @@ const Yahoo2: Experience = {
 const Yahoo1: Experience = {
     company: "Yahoo!",
     avatarUrl: yahooLogo,
+    mediaUrl: yahoo1Img,
     role: "Technical Intern",
     startDate: DateTime.fromISO("2014-06-13T09:00:00-08:00"),
     endDate: DateTime.fromISO("2014-09-19T17:00:00-08:00"),
@@ -99,8 +113,9 @@ const Yahoo1: Experience = {
 }
 
 const CouponsCom: Experience = {
-    company: "Quotient Technologies (formerly Coupons.com)",
+    company: "Quotient Technologies",
     avatarUrl: qtLogo,
+    mediaUrl: qtImg,
     role: "Software Engineering Intern",
     startDate: DateTime.fromISO("2014-06-17T09:00:00-08:00"),
     endDate: DateTime.fromISO("2014-09-20T17:00:00-08:00"),

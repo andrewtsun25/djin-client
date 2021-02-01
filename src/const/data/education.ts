@@ -57,7 +57,8 @@ const uscEdu: Education = {
     endDate: USC.Graduation.date,
     major: "M.S. Computer Science (Software Engineering Track)",
     gpa: 3.700,
-    description: "As an undergraduate student from Eleanor Roosevelt College, like most other college students, I had no idea what I wanted to do in college. Choosing between being a biologist and being a computer scientist proved to be quite difficult. So, I chose both and studied bioinformatics.",
+    description: "I missed being able to code and cry in the Dungeon (computer lab where students code all night) at UCSD so I'm returning to college as a master's student to do it all over again. I chose USC... because I forgot to spell UCSD correctly on my list of universities to apply to.\n" +
+        "During my time here, my most significant achievement was to create Holistic Office, a patient EHR (Electronic Health Record) and inventory management system written in Angular (TypeScript) and Spring Boot (Java). Development lasted a year in the core Software Engineering class. More information about Holistic Office is available in the Projects tab.",
     department: "Jacobs School of Engineering",
     residentialCollege: "Eleanor Roosevelt College",
     syllabusLink: "https://cse.ucsd.edu/undergraduate/bs-computer-science-bioinformatics",
