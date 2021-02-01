@@ -18,6 +18,9 @@ const experienceCardStyles = makeStyles((theme: Theme) => createStyles({
     },
     skillChip: {
         margin: "10 auto"
+    },
+    jobChip: {
+        marginBottom: 10
     }
 }));
 

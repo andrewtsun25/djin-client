@@ -1,5 +1,5 @@
 import React from "react";
-import {Experience} from "types/experience";
+import {Experience, JobType} from "types/experience";
 import experienceCardStyles from "./ExperienceCard.styles";
 import {Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography} from "@material-ui/core";
 
@@ -7,7 +7,7 @@ interface ExperienceCardProps {
     experience: Experience;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience: { endDate, startDate, role, company, avatarUrl, mediaUrl, description, responsibilities, skills } }: ExperienceCardProps) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience: { endDate, startDate, role, company, avatarUrl, mediaUrl, description, responsibilities, skills, jobType } }: ExperienceCardProps) => {
     const classes = experienceCardStyles();
     const subheader = endDate
         ? `${startDate.monthShort} ${startDate.year} - ${endDate.monthShort} ${endDate.year}, ${role}`
@@ -22,6 +22,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience: { endDate, 
                 />
                 <CardMedia image={mediaUrl} className={classes.media}/>
                 <CardContent>
+                    <Chip label={jobType} size="small" className={classes.jobChip}/>
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 &&
                         <ul>

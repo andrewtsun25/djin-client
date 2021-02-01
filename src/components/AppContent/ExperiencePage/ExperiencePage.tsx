@@ -1,6 +1,6 @@
 import React from "react";
 import useExperience from "hooks/useExperience";
-import {Grid, Typography} from "@material-ui/core";
+import {Grid, Link, Typography} from "@material-ui/core";
 import ExperienceCard from "./ExperienceCard";
 import experiencePageStyles from "./ExperiencePage.styles";
 
@@ -13,7 +13,7 @@ const ExperiencePage: React.FC = () => {
         <>
             <Typography variant="h2" align="center"> Coding Experience</Typography>
             <Typography paragraph align="center" className={classes.resumeInfo}>
-                A more official, detailed résumé can be obtained <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">here</a>.
+                A more official, detailed résumé can be obtained <Link href={RESUME_URL} target="_blank" rel="noopener noreferrer">here</Link>.
             </Typography>
             <Grid container direction="row">
                 {experiences.map(experience => <ExperienceCard experience={experience} />)}

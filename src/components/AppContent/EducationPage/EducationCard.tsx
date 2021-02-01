@@ -1,6 +1,6 @@
 import React from "react";
 import {Education} from "types/education";
-import {Avatar, Card, CardContent, CardHeader, Typography} from "@material-ui/core";
+import {Avatar, Card, CardContent, CardHeader, Link, Typography} from "@material-ui/core";
 import educationCardStyles from "./EducationCard.styles";
 
 interface EducationCardProps {
@@ -21,7 +21,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }: EducationCar
             />
             <CardContent>
                 <Typography paragraph>
-                    <a href={education.syllabusLink} target="_blank" rel="noopener noreferrer">Degree Requirements</a>
+                    <Link href={education.syllabusLink} target="_blank" rel="noopener noreferrer">Degree Requirements</Link>
                 </Typography>
                 {education.department && <Typography paragraph>
                     <b>Department:</b> {education.department}
