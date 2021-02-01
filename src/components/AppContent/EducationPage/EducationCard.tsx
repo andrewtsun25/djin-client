@@ -9,11 +9,14 @@ interface EducationCardProps {
 
 const EducationCard: React.FC<EducationCardProps> = ({ education }: EducationCardProps) => {
     const classes = educationCardStyles();
+    const subheader = education.endDate
+        ? `${education.startDate.monthShort} ${education.startDate.year} - ${education.endDate.monthShort} ${education.endDate.year}, ${education.major}`
+        : `${education.startDate.monthShort} ${education.startDate.year} - Present, ${education.major}`;
     return (
         <Card variant="outlined" className={classes.root}>
             <CardHeader
                 title={education.name}
-                subheader={`${education.startDate.year} - ${education.endDate.year}, ${education.major}`}
+                subheader={subheader}
                 avatar={<Avatar alt={education.name} src={education.avatarUrl} />}
             />
             <CardContent>

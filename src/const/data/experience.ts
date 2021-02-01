@@ -59,7 +59,7 @@ const Amazon: Experience = {
         "Increased security in the backend by implementing anti-CSRF security measures on the legacy PHP codebase.",
         "Performed security reviews on site features to ensure compliance with Amazon security standards."
     ],
-    skills: ["React", "Redux", "PHP", "Java", "AWS OpsWorks", "AWS CloudWatch", "AWS DynamoDB", "AWS Data Pipeline", "Cucumber", "Ruby"],
+    skills: ["React", "Redux", "PHP", "Java", "AWS OpsWorks", "AWS CloudWatch", "AWS DynamoDB", "AWS EC2", "AWS Data Pipeline", "Cucumber", "Ruby"],
     jobType: JobType.FullTime,
 }
 
@@ -119,7 +119,7 @@ const CouponsCom: Experience = {
     role: "Software Engineering Intern",
     startDate: DateTime.fromISO("2014-06-17T09:00:00-08:00"),
     endDate: DateTime.fromISO("2014-09-20T17:00:00-08:00"),
-    description: "Developed unit tests for ",
+    description: "Developed unit tests for the distribution and redemption of online coupons.",
     responsibilities: [
         "Designed and implemented unit tests using Selenium Webdriver in Java & Scala for Brandcaster Social, a plugin for companies to advertise coupons on Facebook pages and CLOE (Card-Linked Offer Experience), a feature allowing users to link coupons to their credit/debit cards",
         "Designed and tested credit card data access objects for CLOE via ScalaUnit & JDBC to verify PCI compliance."

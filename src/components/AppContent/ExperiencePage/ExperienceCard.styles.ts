@@ -7,6 +7,17 @@ const experienceCardStyles = makeStyles((theme: Theme) => createStyles({
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
+    },
+    skillChipContainer: {
+        display: 'flex',
+        justifyContent: 'left',
+        flexWrap: 'wrap',
+        '& > *': {
+            margin: theme.spacing(0.5),
+        }
+    },
+    skillChip: {
+        margin: "10 auto"
     }
 }));
 
