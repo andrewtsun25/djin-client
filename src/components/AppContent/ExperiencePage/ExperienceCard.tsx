@@ -1,5 +1,5 @@
 import React from "react";
-import {Experience, JobType} from "types/experience";
+import {Experience} from "types/experience";
 import experienceCardStyles from "./ExperienceCard.styles";
 import {Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography} from "@material-ui/core";
 
@@ -26,13 +26,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience: { endDate, 
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 &&
                         <ul>
-                            {responsibilities.map(responsibility => <li>
+                            {responsibilities.map((responsibility, index) => <li key={index}>
                                 <Typography>{responsibility}</Typography>
                             </li>)}
                         </ul>
                     }
                     {skills.length > 0 && <div className={classes.skillChipContainer}>
-                        {skills.map(skill => <Chip label={skill} size="small" className={classes.skillChip}/>)}
+                        {skills.map(skill => <Chip label={skill} size="small" className={classes.skillChip} key={skill}/>)}
                     </div>}
                 </CardContent>
             </Card>

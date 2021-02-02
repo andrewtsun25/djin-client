@@ -13,7 +13,7 @@ const EducationPage: React.FC<EducationPageProps> = ({eduType}: EducationPagePro
     return (
         <>
             <Typography variant="h2" align="center">{eduType} Education</Typography>
-            {educations.map(education => <EducationCard education={education} />)}
+            {educations.map((education, index) => <EducationCard education={education} key={index}/>)}
         </>
     )
 }

@@ -16,7 +16,7 @@ const ExperiencePage: React.FC = () => {
                 A more official, detailed résumé can be obtained <Link href={RESUME_URL} target="_blank" rel="noopener noreferrer">here</Link>.
             </Typography>
             <Grid container direction="row">
-                {experiences.map(experience => <ExperienceCard experience={experience} />)}
+                {experiences.map((experience, index) => <ExperienceCard experience={experience} key={index}/>)}
             </Grid>
 
         </>
