@@ -1,4 +1,4 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { DRAWER_WIDTH } from 'const/styling';
 
 const appToolbarStyles = makeStyles((theme: Theme) =>

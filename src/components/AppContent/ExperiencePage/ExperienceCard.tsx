@@ -1,7 +1,8 @@
+import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import { Experience } from 'types/experience';
+
 import experienceCardStyles from './ExperienceCard.styles';
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
 
 interface ExperienceCardProps {
     experience: Experience;

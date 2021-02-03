@@ -1,18 +1,18 @@
-import { Experience, JobType } from 'types/experience';
-import { DateTime } from 'luxon';
+import amazonLogo from 'assets/experience/logo/amazon.png';
 import andurilLogo from 'assets/experience/logo/anduril.jpeg';
 import googleLogo from 'assets/experience/logo/google.png';
-import amazonLogo from 'assets/experience/logo/amazon.png';
 import hliLogo from 'assets/experience/logo/hli.png';
-import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
 import qtLogo from 'assets/experience/logo/qt.jpeg';
+import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
+import amazonImg from 'assets/experience/media/amazon_withoutabox.png';
 import andurilImg from 'assets/experience/media/anduril_lattice.jpg';
 import googleImg from 'assets/experience/media/google_youtube.png';
-import amazonImg from 'assets/experience/media/amazon_withoutabox.png';
 import hliImg from 'assets/experience/media/hli_mantis.png';
-import yahoo2Img from 'assets/experience/media/yahoo_shepherd.jpeg';
-import yahoo1Img from 'assets/experience/media/yahoo_gemini.png';
 import qtImg from 'assets/experience/media/qt_brandcaster.jpg';
+import yahoo1Img from 'assets/experience/media/yahoo_gemini.png';
+import yahoo2Img from 'assets/experience/media/yahoo_shepherd.jpeg';
+import { DateTime } from 'luxon';
+import { Experience, JobType } from 'types/experience';
 
 const Anduril: Experience = {
     company: 'Anduril Industries',

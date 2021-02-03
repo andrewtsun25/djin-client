@@ -1,9 +1,10 @@
-import React, { ForwardedRef, useMemo } from 'react';
+import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItem from '@material-ui/core/ListItem';
-import listItemLinkStyles from './ListItemLink.styles';
 import clsx from 'clsx';
+import React, { ForwardedRef, useMemo } from 'react';
+
+import listItemLinkStyles from './ListItemLink.styles';
 
 interface NestedListItemProps {
     icon: React.ReactNode;

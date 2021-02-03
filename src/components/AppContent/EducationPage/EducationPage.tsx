@@ -1,8 +1,9 @@
+import { Typography } from '@material-ui/core';
+import useEducations from 'hooks/useEducation';
 import React from 'react';
 import { EduType } from 'types/education';
-import useEducations from 'hooks/useEducation';
+
 import EducationCard from './EducationCard';
-import { Typography } from '@material-ui/core';
 
 interface EducationPageProps {
     eduType: EduType;

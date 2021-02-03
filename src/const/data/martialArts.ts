@@ -120,4 +120,4 @@ const InternationalTaekwondoFederation = {
     styleName: 'International Taekwon-Do Federation',
 };
 
-export { WorldTaekwondo, InternationalTaekwondoFederation };
+export { InternationalTaekwondoFederation, WorldTaekwondo };

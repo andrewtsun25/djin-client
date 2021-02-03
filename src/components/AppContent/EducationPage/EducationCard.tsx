@@ -1,6 +1,7 @@
+import { Avatar, Card, CardContent, CardHeader, Link, Typography } from '@material-ui/core';
 import React from 'react';
 import { Education } from 'types/education';
-import { Avatar, Card, CardContent, CardHeader, Link, Typography } from '@material-ui/core';
+
 import educationCardStyles from './EducationCard.styles';
 
 interface EducationCardProps {

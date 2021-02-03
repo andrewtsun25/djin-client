@@ -1,7 +1,8 @@
-import { StudentOrganization } from './StudentOrganization';
-import { Course } from './Course';
 import { DateTime } from 'luxon';
+
+import { Course } from './Course';
 import EduType from './EduType';
+import { StudentOrganization } from './StudentOrganization';
 
 export interface Education {
     type: EduType;

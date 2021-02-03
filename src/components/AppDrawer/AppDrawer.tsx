@@ -1,28 +1,29 @@
-import React from 'react';
+import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import { useTheme } from '@material-ui/core/styles';
+import AppsIcon from '@material-ui/icons/Apps';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import List from '@material-ui/core/List';
 import CodeIcon from '@material-ui/icons/Code';
-import MusicNoteIcon from '@material-ui/icons/MusicNote';
-import SportsMmaIcon from '@material-ui/icons/SportsMma';
-import FaceIcon from '@material-ui/icons/Face';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import WorkIcon from '@material-ui/icons/Work';
-import SchoolIcon from '@material-ui/icons/School';
-import AppsIcon from '@material-ui/icons/Apps';
-import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import DescriptionIcon from '@material-ui/icons/Description';
+import FaceIcon from '@material-ui/icons/Face';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
-import DescriptionIcon from '@material-ui/icons/Description';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import { useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
+import SchoolIcon from '@material-ui/icons/School';
+import SportsMmaIcon from '@material-ui/icons/SportsMma';
+import WorkIcon from '@material-ui/icons/Work';
+import React from 'react';
+
 import appDrawerStyles from './AppDrawer.styles';
+import { ListItemExternalLink, ListItemInternalLink } from './ListItemLink';
 import NestedList from './NestedList';
-import { ListItemInternalLink, ListItemExternalLink } from './ListItemLink';
 
 interface AppDrawerProps {
     closeAppDrawer(): void;

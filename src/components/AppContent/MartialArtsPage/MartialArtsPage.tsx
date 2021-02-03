@@ -1,6 +1,7 @@
-import React from 'react';
 import useMartialArts from 'hooks/useMartialArts';
+import React from 'react';
 import { MartialArtsStyle } from 'types/martialArts';
+
 import martialArtsPageStyles from './MartialArtsPage.styles';
 
 interface MartialArtsPageProps {

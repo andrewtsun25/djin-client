@@ -1,10 +1,10 @@
-import React, { PropsWithChildren, useState } from 'react';
+import { Collapse } from '@material-ui/core';
+import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
-import { Collapse } from '@material-ui/core';
-import List from '@material-ui/core/List';
+import React, { PropsWithChildren, useState } from 'react';
 
 interface NestedListProps {
     icon: React.ReactNode;

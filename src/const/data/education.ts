@@ -1,9 +1,10 @@
-import { PBLA, UCSD, USC, Yonsei } from '../semester';
-import { Education, EduType } from 'types/education';
 import pblaLogo from 'assets/education/logo/pbla.jpg';
 import ucsdLogo from 'assets/education/logo/ucsd.png';
-import yonseiLogo from 'assets/education/logo/yonsei.png';
 import uscLogo from 'assets/education/logo/usc.png';
+import yonseiLogo from 'assets/education/logo/yonsei.png';
+import { Education, EduType } from 'types/education';
+
+import { PBLA, UCSD, USC, Yonsei } from '../semester';
 
 const pblaEdu: Education = {
     type: EduType.MUSIC,

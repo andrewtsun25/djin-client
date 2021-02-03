@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Education, EduType } from 'types/education';
 import { CodingEducation, MusicEducation } from 'const/data/education';
 import { orderBy } from 'lodash';
+import { useEffect, useState } from 'react';
+import { Education, EduType } from 'types/education';
 
 export default function useEducations(category: string): Education[] {
     const [educations, setEducations] = useState<Education[]>([]);

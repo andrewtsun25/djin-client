@@ -1,17 +1,18 @@
-import React from 'react';
 import clsx from 'clsx';
-import appContentStyles from './AppContent.styles';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import HomePage from './HomePage';
-import { CodingProjects, CodingResearch } from './Coding';
-import MusicScoresPage from './MusicScoresPage';
-import { About } from './About';
-import ErrorPage from './ErrorPage';
-import MartialArtsPage from './MartialArtsPage';
-import { MartialArtsStyle } from 'types/martialArts';
-import EducationPage from './EducationPage';
 import { EduType } from 'types/education';
+import { MartialArtsStyle } from 'types/martialArts';
+
+import { About } from './About';
+import appContentStyles from './AppContent.styles';
+import { CodingProjects, CodingResearch } from './Coding';
+import EducationPage from './EducationPage';
+import ErrorPage from './ErrorPage';
 import ExperiencePage from './ExperiencePage';
+import HomePage from './HomePage';
+import MartialArtsPage from './MartialArtsPage';
+import MusicScoresPage from './MusicScoresPage';
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;

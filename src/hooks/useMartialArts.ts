@@ -1,7 +1,6 @@
+import { InternationalTaekwondoFederation, WorldTaekwondo } from 'const/data/martialArts';
 import { useEffect, useState } from 'react';
-import { MartialArtsStyle } from 'types/martialArts';
-import { MartialArt } from 'types/martialArts';
-import { WorldTaekwondo, InternationalTaekwondoFederation } from 'const/data/martialArts';
+import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
 export default function useMartialArts(style: MartialArtsStyle): MartialArt | undefined {
     const [pageData, setPageData] = useState<MartialArt>();

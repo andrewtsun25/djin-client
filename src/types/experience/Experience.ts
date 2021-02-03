@@ -1,4 +1,5 @@
 import { DateTime } from 'luxon';
+
 import JobType from './JobType';
 
 export interface Experience {

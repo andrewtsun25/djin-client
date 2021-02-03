@@ -1,7 +1,8 @@
-import React from 'react';
-import { Toolbar, AppBar, Typography, IconButton } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
+import React from 'react';
+
 import appToolbarStyles from './AppToolbar.styles';
 
 interface AppToolbarProps {

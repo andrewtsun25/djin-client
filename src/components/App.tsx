@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppToolbar from './AppToolbar';
-import AppDrawer from './AppDrawer';
-import AppContent from './AppContent';
+import React, { useState } from 'react';
+
 import useAppRootStyles from './App.styles';
+import AppContent from './AppContent';
+import AppDrawer from './AppDrawer';
+import AppToolbar from './AppToolbar';
 
 const App: React.FC = () => {
     const classes = useAppRootStyles();
