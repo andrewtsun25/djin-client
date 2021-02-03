@@ -1,7 +1,7 @@
 import {DateTime} from "luxon";
 import JobType from "./JobType";
 
-export default interface Experience {
+export interface Experience {
     company: string,
     avatarUrl: string,
     mediaUrl: string,

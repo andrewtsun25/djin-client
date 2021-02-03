@@ -1,6 +1,6 @@
 import {DateTime} from "luxon";
 
-export default interface Semester {
+export interface Semester {
     name: string,
     date: DateTime,
 }

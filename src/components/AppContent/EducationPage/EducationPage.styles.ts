@@ -1,6 +1,6 @@
-import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {createStyles, makeStyles} from "@material-ui/core/styles";
 
-const educationPageStyles = makeStyles((theme: Theme) => createStyles({
+const educationPageStyles = makeStyles(() => createStyles({
     pageTitle: {
         textAlign: "center"
     }

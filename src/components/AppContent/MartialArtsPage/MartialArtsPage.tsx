@@ -32,7 +32,7 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                 <h1>Studios</h1>
                 <div className={classes.dojangGrid}>
                 {pageInfo.studios.map(studio => (
-                    <a href={studio.href}>
+                    <a href={studio.href} key={studio.name}>
                         <figure className={classes.pic}>
                             <img src={studio.logoUrl} alt={studio.name} className={classes.picImg}/>
                             <figcaption className={classes.picCaption}>{studio.name}</figcaption>

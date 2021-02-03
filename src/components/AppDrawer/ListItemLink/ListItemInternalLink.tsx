@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {ForwardedRef, useMemo} from 'react';
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
@@ -18,9 +18,9 @@ const ListItemInternalLink: React.FC<NestedListItemProps> =  ({ icon, text, to, 
     const classes = listItemLinkStyles();
     const ReactRouterLink = useMemo(
         () =>
-            React.forwardRef<HTMLAnchorElement>((linkProps, ref) => (
-                <Link ref={ref} to={to} {...linkProps} />
-            )),
+            React.forwardRef<HTMLAnchorElement>(function internalLinkRenderer(linkProps, ref: ForwardedRef<HTMLAnchorElement>) {
+                return <Link ref={ref} to={to} {...linkProps} />;
+            }),
         [to],
     );
     return (

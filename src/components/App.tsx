@@ -5,7 +5,7 @@ import AppDrawer from './AppDrawer';
 import AppContent from "./AppContent";
 import useAppRootStyles from "./App.styles";
 
-const App = () => {
+const App: React.FC = () => {
   const classes = useAppRootStyles();
   const [isAppDrawerOpen, setAppDrawerOpen] = useState(false);
   const openAppDrawer = () => setAppDrawerOpen(true);

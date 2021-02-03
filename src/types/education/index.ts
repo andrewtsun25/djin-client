@@ -1,8 +1,8 @@
-import Education from "./Education";
-import StudentOrganization from "./StudentOrganization";
-import Course from "./Course";
-import Semester from "./Semester";
+import type { StudentOrganization } from "./StudentOrganization";
+import type { Course } from "./Course";
+import type { Semester } from "./Semester";
+import type { Education } from "./Education";
 import EduType from "./EduType";
 
-// @ts-ignore
-export { Education, StudentOrganization, Course, Semester, EduType };
+export type { Education, StudentOrganization, Course, Semester }
+export { EduType };

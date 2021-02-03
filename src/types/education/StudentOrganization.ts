@@ -1,4 +1,4 @@
-export default interface StudentOrganization {
+export interface StudentOrganization {
     name: string,
     intro: string,
     description: string
