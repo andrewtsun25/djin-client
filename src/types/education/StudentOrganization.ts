@@ -1,5 +1,5 @@
-export default interface StudentOrganization {
-    name: string,
-    intro: string,
-    description: string
+export interface StudentOrganization {
+    name: string;
+    intro: string;
+    description: string;
 }

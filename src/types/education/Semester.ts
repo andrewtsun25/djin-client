@@ -1,6 +1,6 @@
-import {DateTime} from "luxon";
+import { DateTime } from 'luxon';
 
-export default interface Semester {
-    name: string,
-    date: DateTime,
+export interface Semester {
+    name: string;
+    date: DateTime;
 }

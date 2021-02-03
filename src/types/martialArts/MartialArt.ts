@@ -1,7 +1,7 @@
-import MartialArtsStyle from "./MartialArtsStyles";
-import Dojang from "./Dojang";
+import { Dojang } from './Dojang';
+import MartialArtsStyle from './MartialArtsStyles';
 
-export default interface MartialArt {
+export interface MartialArt {
     style: MartialArtsStyle;
     styleName: string;
     logoUrl: string;

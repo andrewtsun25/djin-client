@@ -1,6 +1,6 @@
-import MartialArt from "./MartialArt";
-import Dojang from "./Dojang";
-import MartialArtsStyle from "./MartialArtsStyles";
+import type { Dojang } from './Dojang';
+import type { MartialArt } from './MartialArt';
+import MartialArtsStyle from './MartialArtsStyles';
 
-// @ts-ignore
-export { MartialArt, Dojang, MartialArtsStyle };
+export { MartialArtsStyle };
+export type { Dojang, MartialArt };

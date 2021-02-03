@@ -1,5 +1,5 @@
-import Experience from "./Experience";
-import JobType from "./JobType";
+import type { Experience } from './Experience';
+import JobType from './JobType';
 
-// @ts-ignore
-export { Experience, JobType };
+export { JobType };
+export type { Experience };

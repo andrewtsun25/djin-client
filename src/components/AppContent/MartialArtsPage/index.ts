@@ -1,3 +1,3 @@
-import MartialArtsPage from "./MartialArtsPage";
+import MartialArtsPage from './MartialArtsPage';
 
 export default MartialArtsPage;
