@@ -1,6 +1,6 @@
-import {Experience} from "types/experience";
-import {useEffect, useState} from "react";
-import {CodingExperience} from "const/data/experience";
+import { Experience } from 'types/experience';
+import { useEffect, useState } from 'react';
+import { CodingExperience } from 'const/data/experience';
 
 export default function useExperience(): Experience[] {
     const [experiences, setExperiences] = useState<Experience[]>([]);

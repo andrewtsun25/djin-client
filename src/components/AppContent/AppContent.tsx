@@ -1,17 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
 import appContentStyles from './AppContent.styles';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage';
-import {CodingProjects, CodingResearch} from './Coding';
+import { CodingProjects, CodingResearch } from './Coding';
 import MusicScoresPage from './MusicScoresPage';
-import {About} from "./About";
-import ErrorPage from "./ErrorPage";
-import MartialArtsPage from "./MartialArtsPage";
-import {MartialArtsStyle} from "types/martialArts";
-import EducationPage from "./EducationPage";
-import {EduType} from "types/education";
-import ExperiencePage from "./ExperiencePage";
+import { About } from './About';
+import ErrorPage from './ErrorPage';
+import MartialArtsPage from './MartialArtsPage';
+import { MartialArtsStyle } from 'types/martialArts';
+import EducationPage from './EducationPage';
+import { EduType } from 'types/education';
+import ExperiencePage from './ExperiencePage';
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -20,9 +20,7 @@ interface AppContentProps {
 const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentProps) => {
     const classes = appContentStyles();
     return (
-        <main
-            className={clsx(classes.root, isAppDrawerOpen && classes.shift)}
-        >
+        <main className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
             <div className={classes.drawerHeader} />
             <Switch>
                 <Route exact path="/">
@@ -47,10 +45,10 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <MusicScoresPage />
                 </Route>
                 <Route path="/martialArts/itf">
-                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF}/>
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF} />
                 </Route>
                 <Route path="/martialArts/wt">
-                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.WT}/>
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.WT} />
                 </Route>
                 <Route path="/about">
                     <About />
@@ -61,6 +59,6 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
             </Switch>
         </main>
     );
-}
+};
 
 export default AppContent;

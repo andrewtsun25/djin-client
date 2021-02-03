@@ -1,11 +1,6 @@
-import UCSD from "./ucsd";
-import Yonsei from "./yonsei";
-import USC from "./usc";
-import PBLA from "./pbla";
+import UCSD from './ucsd';
+import Yonsei from './yonsei';
+import USC from './usc';
+import PBLA from './pbla';
 
-export {
-    UCSD,
-    Yonsei,
-    USC,
-    PBLA
-};
+export { UCSD, Yonsei, USC, PBLA };

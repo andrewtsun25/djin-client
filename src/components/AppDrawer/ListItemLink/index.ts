@@ -1,7 +1,4 @@
-import ListItemInternalLink from "./ListItemInternalLink";
-import ListItemExternalLink from "./ListItemExternalLink";
+import ListItemInternalLink from './ListItemInternalLink';
+import ListItemExternalLink from './ListItemExternalLink';
 
-export {
-    ListItemInternalLink,
-    ListItemExternalLink
-};
+export { ListItemInternalLink, ListItemExternalLink };

@@ -1,11 +1,11 @@
-import React, {ForwardedRef, useMemo} from 'react';
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItem from "@material-ui/core/ListItem";
-import listItemLinkStyles from "./ListItemLink.styles";
-import {Link} from "react-router-dom";
-import clsx from "clsx";
-import {LocationDescriptor, Location} from 'history';
+import React, { ForwardedRef, useMemo } from 'react';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import listItemLinkStyles from './ListItemLink.styles';
+import { Link } from 'react-router-dom';
+import clsx from 'clsx';
+import { LocationDescriptor, Location } from 'history';
 
 interface NestedListItemProps {
     icon: React.ReactNode;
@@ -14,25 +14,24 @@ interface NestedListItemProps {
     nested?: boolean;
 }
 
-const ListItemInternalLink: React.FC<NestedListItemProps> =  ({ icon, text, to, nested }: NestedListItemProps) => {
+const ListItemInternalLink: React.FC<NestedListItemProps> = ({ icon, text, to, nested }: NestedListItemProps) => {
     const classes = listItemLinkStyles();
     const ReactRouterLink = useMemo(
         () =>
-            React.forwardRef<HTMLAnchorElement>(function internalLinkRenderer(linkProps, ref: ForwardedRef<HTMLAnchorElement>) {
+            React.forwardRef<HTMLAnchorElement>(function internalLinkRenderer(
+                linkProps,
+                ref: ForwardedRef<HTMLAnchorElement>,
+            ) {
                 return <Link ref={ref} to={to} {...linkProps} />;
             }),
         [to],
     );
     return (
-        <ListItem button
-                  className={clsx(nested && classes.nested)}
-                  component={ReactRouterLink}>
-            <ListItemIcon>
-                {icon}
-            </ListItemIcon>
+        <ListItem button className={clsx(nested && classes.nested)} component={ReactRouterLink}>
+            <ListItemIcon>{icon}</ListItemIcon>
             <ListItemText primary={text} />
         </ListItem>
     );
-}
+};
 
 export default ListItemInternalLink;

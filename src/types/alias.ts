@@ -1,3 +1,3 @@
-import { Semester } from "./education";
+import { Semester } from './education';
 
 export type SemesterLookup = { [k: string]: Semester };

@@ -1,6 +1,6 @@
 enum JobType {
-    FullTime = "Full-Time",
-    Internship = "Internship"
+    FullTime = 'Full-Time',
+    Internship = 'Internship',
 }
 
 export default JobType;

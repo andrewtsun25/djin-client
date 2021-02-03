@@ -1,5 +1,5 @@
-import MartialArtsStyle from "./MartialArtsStyles";
-import { Dojang } from "./Dojang";
+import MartialArtsStyle from './MartialArtsStyles';
+import { Dojang } from './Dojang';
 
 export interface MartialArt {
     style: MartialArtsStyle;

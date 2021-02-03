@@ -1,3 +1,3 @@
-import EducationPage from "./EducationPage";
+import EducationPage from './EducationPage';
 
 export default EducationPage;

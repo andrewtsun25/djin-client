@@ -1,3 +1,3 @@
-import MusicScoresPage from "./MusicScoresPage";
+import MusicScoresPage from './MusicScoresPage';
 
 export default MusicScoresPage;

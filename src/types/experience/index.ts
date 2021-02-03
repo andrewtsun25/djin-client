@@ -1,6 +1,5 @@
-import type { Experience } from "./Experience";
-import JobType from "./JobType";
+import type { Experience } from './Experience';
+import JobType from './JobType';
 
-export {JobType};
+export { JobType };
 export type { Experience };
-
