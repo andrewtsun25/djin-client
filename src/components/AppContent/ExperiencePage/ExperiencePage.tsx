@@ -13,7 +13,6 @@ const ExperiencePage: React.FC = () => {
     return (
         <>
             <Typography variant="h2" align="center">
-                {' '}
                 Coding Experience
             </Typography>
             <Typography paragraph align="center" className={classes.resumeInfo}>
