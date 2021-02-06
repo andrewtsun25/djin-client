@@ -20,8 +20,12 @@ const projectCardStyles = makeStyles((theme: Theme) =>
         skillChip: {
             margin: '10 auto',
         },
-        jobChip: {
-            marginBottom: 10,
+        projectLink: {
+            display: 'flex',
+            alignItems: 'center',
+        },
+        projectLinkIcon: {
+            marginRight: 10,
         },
     }),
 );

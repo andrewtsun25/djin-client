@@ -11,7 +11,7 @@ const ProjectsPage: React.FC = () => {
     return (
         <>
             <Typography variant="h2" align="center" className={classes.pageTitle}>
-                Projects
+                Coding Projects
             </Typography>
             <Grid container direction="row">
                 {projects.map((project, index) => (

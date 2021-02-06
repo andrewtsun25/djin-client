@@ -1,4 +1,16 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Link, Typography } from '@material-ui/core';
+import {
+    Avatar,
+    Card,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    Chip,
+    Grid,
+    Icon,
+    Link,
+    Typography,
+} from '@material-ui/core';
+import LinkIcon from '@material-ui/icons/Link';
 import React from 'react';
 import { Project } from 'types/project';
 
@@ -10,6 +22,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
     project: {
+        name,
         endDate,
         startDate: { monthShort: startDateMonth, year: startDateYear },
         organization,
@@ -23,19 +36,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }: ProjectCardProps) => {
     const classes = projectCardStyles();
     const subheader = endDate
-        ? `${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}`
-        : `${startDateMonth} ${startDateYear} - Present`;
+        ? `${organization}, ${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}`
+        : `${organization}, ${startDateMonth} ${startDateYear} - Present`;
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Card variant="outlined" className={classes.root}>
                 <CardHeader
-                    title={organization}
+                    title={name}
                     subheader={subheader}
                     avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
                 />
                 <CardMedia image={mediaUrl} className={classes.media} />
                 <CardContent>
-                    {projectLink && <Link href={projectLink} />}
+                    {projectLink && (
+                        <Typography paragraph>
+                            <Link
+                                href={projectLink}
+                                className={classes.projectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkIcon className={classes.projectLinkIcon} />
+                                Project Link
+                            </Link>
+                        </Typography>
+                    )}
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 && (
                         <ul>

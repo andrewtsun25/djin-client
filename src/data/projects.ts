@@ -144,17 +144,16 @@ const CloseOfBooksDashboard: Project = {
 
 const Defiance: Project = {
     name: 'Defiance',
-    organization: 'UCSD Intervarsity, Urbana 2015',
+    organization: 'UCSD Intervarsity',
     avatarUrl: ivLogo,
     mediaUrl: urbanaImg,
     startDate: Yahoo2.startDate,
     endDate: Yahoo2.endDate,
     description:
-        "Created an extension to the monitoring UI for Yahoo's advertising platform: a dashboard to monitor the progress of data-aggregation jobs of advertisement revenue across all known time zones. Yahoo needs to know how much to charge its international clients. Once all jobs across all time zones are completed, a job responsible for close-of-books report can then be generated for internal monitoring purposes. ",
+        'Developed a video game during #Hack4Missions, a Christian hackathon, that brings awareness to the despair refugees around the world face in their respective crises. Players assume the role of a refugee discriminated against for eye color, and uses stealth/social interactions to find the abducted members of their family, like Silent Hill. Impressed the Greater Europe Mission (GEM) refugee aid organization with our hackathon demonstration, and the game was briefly in development for GEM.',
     responsibilities: [
-        'Designed and implemented a front-end Close-of-Books dashboard written with HTML and jQuery',
-        'Implemented a backend-API in Java using Spring MVC',
-        'Retrieved data from an Oracle database with queries in PL/SQL.',
+        'Developed a playable demo in Unity, with code written in C#.',
+        'Composed an original soundtrack with Finale.',
     ],
     skills: ['C#', 'Unity', 'Finale'],
     projectLink: 'https://github.com/TactualNick/projectrefuge',
@@ -241,7 +240,7 @@ const BeyondTheGrind: Project = {
 };
 
 const FearlessLASite: Project = {
-    name: 'Fearless LA Website 2.0',
+    name: 'Fearless LA Website v2.0',
     organization: 'Fearless LA',
     avatarUrl: fearlessLogo,
     mediaUrl: fearlessWebsiteImg,
@@ -251,17 +250,17 @@ const FearlessLASite: Project = {
         'Fearless LA formerly had a disorganized website that no one could use, and multiple tools across the organization that incurred a hefty technology budget expense. Through ChurchBase, I was able to design a website that separated front-end from back-end, empowering non-technical church leaders to update site content easily without direct dependence on a web designer. This content would then be propagated to a mobile app the platform provided (see below for Fearless LA Mobile). ChurchBase also provides a suite of church-friendly tools such as a giving platform for offerings and tithes as well as member portals for users to manage their own involvement with Fearless LA, reducing our dependency on other platforms and data synchronization errors. While all seemed well with the initial launch, ChurchBase’s technology stack was largely unreliable, crashing frequently, with slow turnaround on support requests. Due to unbearable technical issues with ChurchBase, the website has since been transferred to Squarespace, but redesigned with my original design and layout. Squarespace has a much cleaner design, intuitive interface, and robust platform. However, we were unable to achieve the goal of having a mobile application that connected with the same backend as Squarespace, as well as reducing dependency on other tools. ',
     responsibilities: [
         'Met with stakeholders (the church board) to discuss available options and pricing.',
-        'Led a team of 5 to determine and create site content.',
+        'Led a team of 5 to design and create site content.',
         'Designed the content, layout, and interaction of pages on the website.',
-        'Built all 0riginal pages on ChurchBase using their webpage design tool, using custom HTML embeds, CSS classes, and scripts written in either Javascript or PHP whenever necessary. ChurchBase’s web application stack was an implementation of WordPress on LAMP (Linux, Apache HTTP Server, MySQL Database, PHP).',
+        'Built all original pages on ChurchBase using their webpage design tool, using custom HTML embeds, CSS classes, and scripts written in either Javascript or PHP whenever necessary. ChurchBase’s web application stack was an implementation of WordPress on LAMP (Linux, Apache HTTP Server, MySQL Database, PHP).',
         'Redesigned all pages on the Squarespace platform after transferring the domain from ChurchBase to Squarespace.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'ChurchBase'],
     projectLink: 'https://www.fearlessla.com',
 };
 
 const FearlessLAMobile: Project = {
-    name: 'Fearless LA Mobile 1.0',
+    name: 'Fearless LA Mobile v1.0',
     organization: 'Fearless LA',
     avatarUrl: fearlessLogo,
     mediaUrl: fearlessMobileImg,
@@ -313,7 +312,7 @@ const ViTelex = {
 };
 
 const LetterSuggestions = {
-    name: 'Vietnamese Telex IME for YouTube on Virtual Keyboard',
+    name: 'Letter Suggestions',
     organization: 'Google',
     avatarUrl: googleLogo,
     mediaUrl: letterSuggestionsImg,
@@ -332,7 +331,7 @@ const LetterSuggestions = {
 };
 
 const UscTaekwondoWebsite = {
-    name: 'USC Taekwondo Website 2.0',
+    name: 'USC Taekwondo Website v2.0',
     organization: 'USC Taekwondo',
     avatarUrl: uscTkdLogo,
     mediaUrl: uscTkdWebsiteImg,
@@ -376,6 +375,7 @@ const LattticeControlApp = {
         'Added UI components to easily manipulate control application settings.',
     ],
     skills: ['React', 'Redux', 'TypeScript', 'SCSS', 'CSS', 'Blueprint.js', 'protobuf', 'gRPC'],
+    projectLink: 'https://www.anduril.com/work',
 };
 
 const Capacitor = {
