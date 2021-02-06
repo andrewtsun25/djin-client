@@ -1,9 +1,7 @@
-import { CodingExperience } from 'const/data/experience';
+import { CodingExperience } from 'data/experience';
 import { orderBy } from 'lodash';
 import { useEffect, useState } from 'react';
 import { Experience } from 'types/experience';
-
-import { CodingEducation } from '../const/data/education';
 
 export default function useExperiences(): Experience[] {
     const [experiences, setExperiences] = useState<Experience[]>([]);

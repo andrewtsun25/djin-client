@@ -5,6 +5,7 @@ import qtLogo from 'assets/experience/logo/qt.jpeg';
 import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
 import btgLogo from 'assets/projects/logo/btg.png';
 import fearlessLogo from 'assets/projects/logo/fearless_la.png';
+import ivLogo from 'assets/projects/logo/intervarsity_ucsd.png';
 import uscTkdLogo from 'assets/projects/logo/usctkd.jpg';
 import withoutaboxImg from 'assets/projects/media/amazon_withoutabox.png';
 import latticeImg from 'assets/projects/media/anduril_lattice.jpg';
@@ -27,7 +28,7 @@ import summaryDashboardImg from 'assets/projects/media/yahoo_summary-dashboard.p
 import { DateTime } from 'luxon';
 import { Project } from 'types/project/Project';
 
-import { USC } from '../semester';
+import { USC } from '../const/semester';
 import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './experience';
 
 const BrandCaster: Project = {
@@ -36,7 +37,7 @@ const BrandCaster: Project = {
     avatarUrl: qtLogo,
     mediaUrl: brandcasterImg,
     startDate: CouponsCom.startDate,
-    endDate: CouponsCom.endDate,
+    endDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
     description:
         'Brandcaster is a Facebook application that allows retailers to easily provide online coupons to customers through their Facebook pages.',
     responsibilities: [
@@ -52,7 +53,7 @@ const CLOE: Project = {
     organization: CouponsCom.company,
     avatarUrl: qtLogo,
     mediaUrl: cloeImg,
-    startDate: CouponsCom.startDate,
+    startDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
     endDate: CouponsCom.endDate,
     description:
         'Card-linked offers allow Coupons.com coupons to be linked to credit cards such that upon credit card payment, the relevant coupons can automatically be applied. ',
@@ -70,7 +71,7 @@ const QueryCategorizationModuleImplementation: Project = {
     avatarUrl: yahooLogo,
     mediaUrl: queryCategorizationModuleImg,
     startDate: Yahoo1.startDate,
-    endDate: Yahoo1.endDate,
+    endDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     description:
         'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. I also realized how much Yahoo! is used to search up pornography.',
     responsibilities: [
@@ -85,7 +86,7 @@ const QueryCategorizationModuleAnalysis: Project = {
     organization: Yahoo1.company,
     avatarUrl: yahooLogo,
     mediaUrl: queryCategorizationModuleImg,
-    startDate: Yahoo1.startDate,
+    startDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     endDate: Yahoo1.endDate,
     description:
         'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. After developing the module, I performed continual monitoring and statistical analysis to determine the success of this module.',
@@ -102,13 +103,13 @@ const PipelineDetailsDashboard: Project = {
     avatarUrl: yahooLogo,
     mediaUrl: pipelineDashboardImg,
     startDate: Yahoo2.startDate,
-    endDate: Yahoo2.endDate,
+    endDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
     description:
         "Previously, the data pipeline reporting UI for Yahoo's advertising platform could only visualize the current state or history of a single data pipeline. The reporting team would have to manually sift through multiple pipelines every day. Created a high-level visualization of all pipelines to reduce reporting chores",
     responsibilities: [
         'Created a new dashboard via pure HTML, CSS and jQuery, calling upon an existing Spring REST endpoint written in Java.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript (ES5)', 'jQuery', 'moment.js'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'moment.js'],
 };
 
 const PipelineSummaryDashboard: Project = {
@@ -116,12 +117,12 @@ const PipelineSummaryDashboard: Project = {
     organization: Yahoo2.company,
     avatarUrl: yahooLogo,
     mediaUrl: summaryDashboardImg,
-    startDate: Yahoo2.startDate,
-    endDate: Yahoo2.endDate,
+    startDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
+    endDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
     description:
         "Previously, the data pipeline reporting UI for Yahoo's advertising platform could only view the current state of a single data pipeline. If a pipeline broke, the developers would have to manually sift through pipeline history by exhaustive SQL queries. Developed a visualization of data pipeline history to speed up data pipeline debugging.",
     responsibilities: ['Existing dashboard was modified via editing pure HTML, CSS and jQuery'],
-    skills: ['HTML', 'CSS', 'JavaScript (ES5)', 'jQuery', 'moment.js'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'moment.js'],
 };
 
 const CloseOfBooksDashboard: Project = {
@@ -129,7 +130,7 @@ const CloseOfBooksDashboard: Project = {
     organization: Yahoo2.company,
     avatarUrl: yahooLogo,
     mediaUrl: cobDashboardImg,
-    startDate: Yahoo2.startDate,
+    startDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
     endDate: Yahoo2.endDate,
     description:
         "Created an extension to the monitoring UI for Yahoo's advertising platform: a dashboard to monitor the progress of data-aggregation jobs of advertisement revenue across all known time zones. Yahoo needs to know how much to charge its international clients. Once all jobs across all time zones are completed, a job responsible for close-of-books report can then be generated for internal monitoring purposes. ",
@@ -138,13 +139,13 @@ const CloseOfBooksDashboard: Project = {
         'Implemented a backend-API in Java using Spring MVC',
         'Retrieved data from an Oracle database with queries in PL/SQL.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript (ES5)', 'jQuery', 'moment.js', 'Spring', 'Java', 'JDBC', 'Oracle DB', 'PL/SQL'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'moment.js', 'Spring', 'Java', 'JDBC', 'Oracle DB', 'PL/SQL'],
 };
 
 const Defiance: Project = {
     name: 'Defiance',
-    organization: 'Urbana 2015',
-    avatarUrl: yahooLogo,
+    organization: 'UCSD Intervarsity, Urbana 2015',
+    avatarUrl: ivLogo,
     mediaUrl: urbanaImg,
     startDate: Yahoo2.startDate,
     endDate: Yahoo2.endDate,
@@ -155,7 +156,7 @@ const Defiance: Project = {
         'Implemented a backend-API in Java using Spring MVC',
         'Retrieved data from an Oracle database with queries in PL/SQL.',
     ],
-    skills: ['C', 'Unity', 'Finale'],
+    skills: ['C#', 'Unity', 'Finale'],
     projectLink: 'https://github.com/TactualNick/projectrefuge',
 };
 
@@ -165,7 +166,7 @@ const TestHarness: Project = {
     avatarUrl: yahooLogo,
     mediaUrl: mantisImg,
     startDate: HLI.startDate,
-    endDate: HLI.endDate,
+    endDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
     description:
         'Prior to Human Longevity’s eventual integration of Cypher Genomics assets, Cypher Genomics had the Mantis Genome Interpretation Engine. Mantis is currently used in other parts of Human Longevity infrastructure.',
     responsibilities: [
@@ -179,7 +180,7 @@ const DataCurationParsers: Project = {
     organization: HLI.company,
     avatarUrl: yahooLogo,
     mediaUrl: mantisImg,
-    startDate: HLI.startDate,
+    startDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
     endDate: HLI.endDate,
     description:
         'Prior to Human Longevity’s eventual integration of Cypher Genomics assets, Cypher Genomics had the Mantis Genome Interpretation Engine. Mantis is currently used in other parts of Human Longevity infrastructure.',
@@ -255,7 +256,7 @@ const FearlessLASite: Project = {
         'Built all 0riginal pages on ChurchBase using their webpage design tool, using custom HTML embeds, CSS classes, and scripts written in either Javascript or PHP whenever necessary. ChurchBase’s web application stack was an implementation of WordPress on LAMP (Linux, Apache HTTP Server, MySQL Database, PHP).',
         'Redesigned all pages on the Squarespace platform after transferring the domain from ChurchBase to Squarespace.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript (ES5)', 'PHP', 'WordPress'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
     projectLink: 'https://www.fearlessla.com',
 };
 
@@ -282,12 +283,12 @@ const SamsungTVs = {
     avatarUrl: googleLogo,
     mediaUrl: samsungTVImg,
     startDate: Google.startDate,
-    endDate: Google.endDate,
+    endDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
     description:
-        "In the past, Samsung devices were known to have compatibility issues with YouTube on Tv's application, noticeably with unresponsive or wrong input. Even though these were fixed 3 years ago, support was still not allowed for Samsung devices. YouTube would not like to be known for its 3-year SLAs.",
+        'In the past, Samsung devices were known to have compatibility issues with YouTube on smart TVs, noticeably with unresponsive or wrong input. Even though these were fixed 3 years ago, support was still not allowed for Samsung devices. YouTube would not like to be known for its 3-year SLAs.',
     responsibilities: [
         'Selectively hardware keyboard support for only devices known to be compatible with YouTube on TV application. Modified device checkers written in TypeScript to verify by Samsung device model number regular expressions.',
-        "Searched YouTube videos for hours in front of Samsung TV's using a hardware keyboard (as part of the QA process, I swear)",
+        "Searched YouTube videos for hours in front of Samsung TV's using a hardware keyboard (as part of the QA process, I swear).",
     ],
     skills: ['TypeScript', 'QA Testing'],
 };
@@ -297,10 +298,10 @@ const ViTelex = {
     organization: 'Google',
     avatarUrl: googleLogo,
     mediaUrl: viTelexImg,
-    startDate: Google.startDate,
-    endDate: Google.endDate,
+    startDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
+    endDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
     description:
-        'Vietnamese users are our 3rd biggest demographic at YouTube. Yet, we don\'t have a way for them to accurately type Vietnamese to search for videos. For example, "bộ” means "walk", while “bò” means "beef". Not knowing which "bo" to search for can be a huge issue. Another huge issue: I don\'t speak Vietnamese.',
+        'Vietnamese users are our 3rd biggest demographic at YouTube. Yet, we don\'t have a way for them to accurately type Vietnamese to search for videos on smart TVs. For example, "bộ” means "walk", while “bò” means "beef". Not knowing which "bo" to search for can be a huge issue. Another huge issue: I don\'t speak Vietnamese.',
     responsibilities: [
         'Implemented a Vietnamese Telex keyboard which transliterates Latin character input into Vietnamese letters.',
         'Designed a language switching mechanism to switch between Vietnamese and English input.',
@@ -316,7 +317,7 @@ const LetterSuggestions = {
     organization: 'Google',
     avatarUrl: googleLogo,
     mediaUrl: letterSuggestionsImg,
-    startDate: Google.startDate,
+    startDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
     endDate: Google.endDate,
     description:
         'Languages other than English often have special characters which are important for spelling. For example, French people searching for videos on "same" items (même) would probably not be searching for memes. YouTube on TV\'s new virtual keyboard cannot type special characters. Interfacing with the GBoard framework for virtual keyboards, I helped design the virtual keyboard\'s ability to type special characters.',
@@ -325,9 +326,9 @@ const LetterSuggestions = {
         'Designed virtual controller view components for special character suggestions.',
         'Implemented new GBoard controller components while integrating with existing ones.',
         'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
-        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual',
+        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual.',
     ],
-    skills: ['TypeScript', 'JavaScript (ES5/ES6)', 'protobuf', 'Google Closure Compiler'],
+    skills: ['TypeScript', 'JavaScript', 'protobuf', 'Google Closure Compiler'],
 };
 
 const UscTaekwondoWebsite = {
@@ -344,7 +345,7 @@ const UscTaekwondoWebsite = {
         'Designed virtual controller view components for special character suggestions.',
         'Implemented new GBoard controller components while integrating with existing ones.',
         'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
-        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual',
+        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still trilingual.',
     ],
     skills: ['Google Sites', 'Leadership'],
     projectLink: 'https://sites.google.com/usc.edu/usctkd',
@@ -357,7 +358,7 @@ const Metrix = {
     mediaUrl: classifiedImg,
     startDate: Anduril.startDate,
     description:
-        'Designed and developed Metrix, a UI that visualizes object classification and tracking data from networks of Anduril assets (towers and drones). The Perception team, mission operations team, and business operations team use my app to analyze training model performance and improve existing training models for object classification. The app was primarily written in React and TypeScript, visualizing data via Blueprint.js. ',
+        'Designing and developing Metrix, a UI that visualizes object classification and tracking data from networks of Anduril assets (towers and drones). The Perception team, mission operations team, and business operations team use my app to analyze training model performance and improve existing training models for object classification. The app is primarily written in React and TypeScript, visualizing data via Blueprint.js. ',
     responsibilities: [],
     skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
 };
@@ -367,7 +368,7 @@ const LattticeControlApp = {
     organization: Anduril.company,
     avatarUrl: andurilLogo,
     mediaUrl: latticeImg,
-    startDate: Anduril.startDate,
+    startDate: DateTime.fromISO('2020-10-10T09:00:00-08:00'),
     description:
         'Assisting in the development for Lattice Control Application, a user interface for Lattice AI, our flagship software that fuses real-time sensor data from Anduril assets (towers and drones) into a single command center. Also developing cUAS (counter unmanned aerial systems) capabilities for Lattice AI as well. The control application is written in React and Typescript, using Redux for state management and Blueprint.js (from Palantír) for UI components.',
     responsibilities: [
@@ -382,10 +383,12 @@ const Capacitor = {
     organization: Anduril.company,
     avatarUrl: andurilLogo,
     mediaUrl: classifiedImg,
-    startDate: Anduril.startDate,
+    startDate: DateTime.fromISO('2021-01-04T09:00:00-08:00'),
     description:
-        'Developed Capacitor, an implementation of version control for data similar to Git for code. Capacitor is built with gRPC APIs, data stored in AWS S3, and queried via Apache Spark. Developed a front end in React and Typescript that allows for querying Capacitor via Spark SQL and visualizing query results via Blueprint.js data tables.',
-    responsibilities: [],
+        'Developing Capacitor, an implementation of version control for data similar to Git for code. Capacitor is built with gRPC APIs, data stored in AWS S3, and queried via Apache Spark.',
+    responsibilities: [
+        'Developed a front end in React and Typescript that allows for querying Capacitor via Spark SQL and visualizing query results via Blueprint.js data tables.',
+    ],
     skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
 };
 

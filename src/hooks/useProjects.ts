@@ -1,4 +1,4 @@
-import { CodingProjects } from 'const/data/projects';
+import { CodingProjects } from 'data/projects';
 import { orderBy } from 'lodash';
 import { useEffect, useState } from 'react';
 import { Project } from 'types/project';

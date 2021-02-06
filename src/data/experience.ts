@@ -134,8 +134,8 @@ export const CouponsCom: Experience = {
     avatarUrl: qtLogo,
     mediaUrl: qtImg,
     role: 'Software Engineering Intern',
-    startDate: DateTime.fromISO('2014-06-17T09:00:00-08:00'),
-    endDate: DateTime.fromISO('2014-09-20T17:00:00-08:00'),
+    startDate: DateTime.fromISO('2013-06-17T09:00:00-08:00'),
+    endDate: DateTime.fromISO('2013-09-20T17:00:00-08:00'),
     description: 'Developed unit tests for the distribution and redemption of online coupons.',
     responsibilities: [
         'Designed and implemented unit tests using Selenium Webdriver in Java & Scala for Brandcaster Social, a plugin for companies to advertise coupons on Facebook pages and CLOE (Card-Linked Offer Experience), a feature allowing users to link coupons to their credit/debit cards',

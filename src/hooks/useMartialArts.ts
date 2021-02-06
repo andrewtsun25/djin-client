@@ -1,4 +1,4 @@
-import { InternationalTaekwondoFederation, WorldTaekwondo } from 'const/data/martialArts';
+import { InternationalTaekwondoFederation, WorldTaekwondo } from 'data/martialArts';
 import { useEffect, useState } from 'react';
 import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
