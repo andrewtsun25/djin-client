@@ -1,23 +1,34 @@
 import amazonLogo from 'assets/experience/logo/amazon.png';
+import andurilLogo from 'assets/experience/logo/anduril.jpeg';
+import googleLogo from 'assets/experience/logo/google.png';
 import qtLogo from 'assets/experience/logo/qt.jpeg';
 import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
 import btgLogo from 'assets/projects/logo/btg.png';
 import fearlessLogo from 'assets/projects/logo/fearless_la.png';
+import uscTkdLogo from 'assets/projects/logo/usctkd.jpg';
 import withoutaboxImg from 'assets/projects/media/amazon_withoutabox.png';
+import latticeImg from 'assets/projects/media/anduril_lattice.jpg';
 import btgImg from 'assets/projects/media/btg_site.jpg';
+import classifiedImg from 'assets/projects/media/classified.jpg';
+import fearlessMobileImg from 'assets/projects/media/fearless_mobile.png';
 import fearlessWebsiteImg from 'assets/projects/media/fearless_website.png';
+import letterSuggestionsImg from 'assets/projects/media/google_letter-suggestions.png';
+import samsungTVImg from 'assets/projects/media/google_samsung-tv.jpg';
+import viTelexImg from 'assets/projects/media/google_vi-telex.jpg';
 import mantisImg from 'assets/projects/media/hli_mantis.png';
 import brandcasterImg from 'assets/projects/media/qt_brandcaster.jpg';
 import cloeImg from 'assets/projects/media/qt_cloe.png';
 import urbanaImg from 'assets/projects/media/urbana_2015.jpg';
+import uscTkdWebsiteImg from 'assets/projects/media/usctkd_website.png';
 import cobDashboardImg from 'assets/projects/media/yahoo_cob-dashboard.png';
 import queryCategorizationModuleImg from 'assets/projects/media/yahoo_gemini.png';
 import pipelineDashboardImg from 'assets/projects/media/yahoo_pipeline-dashboard.png';
 import summaryDashboardImg from 'assets/projects/media/yahoo_summary-dashboard.png';
 import { DateTime } from 'luxon';
-import { Project } from 'types/Project';
+import { Project } from 'types/project/Project';
 
-import { Amazon, CouponsCom, HLI, Yahoo1, Yahoo2 } from './experience';
+import { USC } from '../semester';
+import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './experience';
 
 const BrandCaster: Project = {
     name: 'BrandCaster',
@@ -33,6 +44,7 @@ const BrandCaster: Project = {
         'Automated unit tests in CI builds with Jenkins and Selenium Grid.',
     ],
     skills: ['Java', 'Scala', 'Selenium Webdriver', 'JUnit', 'ScalaUnit', 'Jenkins'],
+    projectLink: 'https://brandcaster.coupons.com/home/',
 };
 
 const CLOE: Project = {
@@ -49,6 +61,7 @@ const CLOE: Project = {
         'Tested coupon redemption transactional integrity on the back end in Java using JUnit, JDBC, and a MySQL database.',
     ],
     skills: ['Scala', 'Selenium Webdriver', 'ScalaUnit', 'Spring', 'MySQL', 'JDBC'],
+    projectLink: 'https://www.coupons.com/coupon-codes/',
 };
 
 const QueryCategorizationModuleImplementation: Project = {
@@ -143,6 +156,7 @@ const Defiance: Project = {
         'Retrieved data from an Oracle database with queries in PL/SQL.',
     ],
     skills: ['C', 'Unity', 'Finale'],
+    projectLink: 'https://github.com/TactualNick/projectrefuge',
 };
 
 const TestHarness: Project = {
@@ -204,6 +218,8 @@ const Withoutabox: Project = {
         'Cucumber',
         'Ruby',
     ],
+    disclaimer: 'Due to tough competition from FilmFreeway, Withoutabox was terminated by Amazon on October 30, 2019.',
+    projectLink: 'https://www.withoutabox.com',
 };
 
 const BeyondTheGrind: Project = {
@@ -219,7 +235,8 @@ const BeyondTheGrind: Project = {
         'Implemented an online storefront entirely on the Squarespace platform.',
         'Integrated online payments with Stripe, a payment/inventory system.',
     ],
-    skills: ['Squarespace', 'Stripe'],
+    disclaimer: 'This site has been closed by its owner for financial reasons.',
+    skills: ['Stripe', 'Squarespace'],
 };
 
 const FearlessLASite: Project = {
@@ -239,9 +256,140 @@ const FearlessLASite: Project = {
         'Redesigned all pages on the Squarespace platform after transferring the domain from ChurchBase to Squarespace.',
     ],
     skills: ['HTML', 'CSS', 'JavaScript (ES5)', 'PHP', 'WordPress'],
+    projectLink: 'https://www.fearlessla.com',
 };
 
-const Projects: Project[] = [
+const FearlessLAMobile: Project = {
+    name: 'Fearless LA Mobile 1.0',
+    organization: 'Fearless LA',
+    avatarUrl: fearlessLogo,
+    mediaUrl: fearlessMobileImg,
+    startDate: DateTime.fromISO('2018-04-16T00:00:00-08:00'),
+    endDate: DateTime.fromISO('2019-01-01T00:00:00-08:00'),
+    description:
+        'Fearless LA had a mobile application that was for iOS only that was barely maintained due to the lack of app developers within the church body. With the migration to Church Base, Fearless LA was also provided with the opportunity to have a mobile app that was easy to maintain, and could run on Android, iOS, and the Amazon App Store. As the principal mobile app developer at Fearless LA, I collaborated with a mobile app developer from Church Base to create an mobile app where app content can easily be updated and maintained on the existing Church Base content management system.',
+    responsibilities: [
+        'Collaborated with a mobile app developer from Church Base to create a mobile app where app content can easily be updated and maintained on the existing Church Base content management system.',
+    ],
+    disclaimer:
+        'Due to technical issues with Church Base, the mobile application never got released on any platform. However, a version of the app is still deployed on their system.',
+    skills: ['Teamwork'],
+};
+
+const SamsungTVs = {
+    name: 'Enable Hardware Keyboard Support on Samsung TVs for YouTube',
+    organization: 'Google',
+    avatarUrl: googleLogo,
+    mediaUrl: samsungTVImg,
+    startDate: Google.startDate,
+    endDate: Google.endDate,
+    description:
+        "In the past, Samsung devices were known to have compatibility issues with YouTube on Tv's application, noticeably with unresponsive or wrong input. Even though these were fixed 3 years ago, support was still not allowed for Samsung devices. YouTube would not like to be known for its 3-year SLAs.",
+    responsibilities: [
+        'Selectively hardware keyboard support for only devices known to be compatible with YouTube on TV application. Modified device checkers written in TypeScript to verify by Samsung device model number regular expressions.',
+        "Searched YouTube videos for hours in front of Samsung TV's using a hardware keyboard (as part of the QA process, I swear)",
+    ],
+    skills: ['TypeScript', 'QA Testing'],
+};
+
+const ViTelex = {
+    name: 'Vietnamese Telex IME for YouTube on Virtual Keyboard',
+    organization: 'Google',
+    avatarUrl: googleLogo,
+    mediaUrl: viTelexImg,
+    startDate: Google.startDate,
+    endDate: Google.endDate,
+    description:
+        'Vietnamese users are our 3rd biggest demographic at YouTube. Yet, we don\'t have a way for them to accurately type Vietnamese to search for videos. For example, "bộ” means "walk", while “bò” means "beef". Not knowing which "bo" to search for can be a huge issue. Another huge issue: I don\'t speak Vietnamese.',
+    responsibilities: [
+        'Implemented a Vietnamese Telex keyboard which transliterates Latin character input into Vietnamese letters.',
+        'Designed a language switching mechanism to switch between Vietnamese and English input.',
+        'Pioneered a standard QA process for verifying and launching new languages.',
+        'Performed statistical tests on metrics gathered using in-house experimentation frameworks.',
+        'Did not learn Vietnamese. Still trilingual.',
+    ],
+    skills: ['TypeScript', 'SCSS', 'protobuf'],
+};
+
+const LetterSuggestions = {
+    name: 'Vietnamese Telex IME for YouTube on Virtual Keyboard',
+    organization: 'Google',
+    avatarUrl: googleLogo,
+    mediaUrl: letterSuggestionsImg,
+    startDate: Google.startDate,
+    endDate: Google.endDate,
+    description:
+        'Languages other than English often have special characters which are important for spelling. For example, French people searching for videos on "same" items (même) would probably not be searching for memes. YouTube on TV\'s new virtual keyboard cannot type special characters. Interfacing with the GBoard framework for virtual keyboards, I helped design the virtual keyboard\'s ability to type special characters.',
+    responsibilities: [
+        'Drafted a design document proposing multiple approaches to the integration of GBoard with the virtual keyboard and describing technical details to do so.',
+        'Designed virtual controller view components for special character suggestions.',
+        'Implemented new GBoard controller components while integrating with existing ones.',
+        'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
+        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual',
+    ],
+    skills: ['TypeScript', 'JavaScript (ES5/ES6)', 'protobuf', 'Google Closure Compiler'],
+};
+
+const UscTaekwondoWebsite = {
+    name: 'USC Taekwondo Website 2.0',
+    organization: 'USC Taekwondo',
+    avatarUrl: uscTkdLogo,
+    mediaUrl: uscTkdWebsiteImg,
+    startDate: USC.Fall2019.date,
+    endDate: USC.Graduation.date,
+    description:
+        'With a strong desire to move away from using a free WordPress site cluttered with ads, the USC Taekwondo team commissioned me to create a new static website to give members information about team practices and policies. After realizing that all USC students are part of one giant G-Suite, we determined that using Google Sites provides us with a better website at no additional cost.',
+    responsibilities: [
+        'Drafted a design document proposing multiple approaches to the integration of GBoard with the virtual keyboard and describing technical details to do so.',
+        'Designed virtual controller view components for special character suggestions.',
+        'Implemented new GBoard controller components while integrating with existing ones.',
+        'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
+        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual',
+    ],
+    skills: ['Google Sites', 'Leadership'],
+    projectLink: 'https://sites.google.com/usc.edu/usctkd',
+};
+
+const Metrix = {
+    name: 'Metrix',
+    organization: Anduril.company,
+    avatarUrl: andurilLogo,
+    mediaUrl: classifiedImg,
+    startDate: Anduril.startDate,
+    description:
+        'Designed and developed Metrix, a UI that visualizes object classification and tracking data from networks of Anduril assets (towers and drones). The Perception team, mission operations team, and business operations team use my app to analyze training model performance and improve existing training models for object classification. The app was primarily written in React and TypeScript, visualizing data via Blueprint.js. ',
+    responsibilities: [],
+    skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
+};
+
+const LattticeControlApp = {
+    name: 'Lattice UI',
+    organization: Anduril.company,
+    avatarUrl: andurilLogo,
+    mediaUrl: latticeImg,
+    startDate: Anduril.startDate,
+    description:
+        'Assisting in the development for Lattice Control Application, a user interface for Lattice AI, our flagship software that fuses real-time sensor data from Anduril assets (towers and drones) into a single command center. Also developing cUAS (counter unmanned aerial systems) capabilities for Lattice AI as well. The control application is written in React and Typescript, using Redux for state management and Blueprint.js (from Palantír) for UI components.',
+    responsibilities: [
+        'Created app pop-outs to visualize Anduril tower data and issue object tracking commands',
+        'Added UI components to easily manipulate control application settings.',
+    ],
+    skills: ['React', 'Redux', 'TypeScript', 'SCSS', 'CSS', 'Blueprint.js', 'protobuf', 'gRPC'],
+};
+
+const Capacitor = {
+    name: 'Capacitor',
+    organization: Anduril.company,
+    avatarUrl: andurilLogo,
+    mediaUrl: classifiedImg,
+    startDate: Anduril.startDate,
+    description:
+        'Developed Capacitor, an implementation of version control for data similar to Git for code. Capacitor is built with gRPC APIs, data stored in AWS S3, and queried via Apache Spark. Developed a front end in React and Typescript that allows for querying Capacitor via Spark SQL and visualizing query results via Blueprint.js data tables.',
+    responsibilities: [],
+    skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
+};
+
+const CodingProjects: Project[] = [
     BrandCaster,
     CLOE,
     QueryCategorizationModuleImplementation,
@@ -253,7 +401,16 @@ const Projects: Project[] = [
     DataCurationParsers,
     Withoutabox,
     BeyondTheGrind,
+    Defiance,
     FearlessLASite,
+    FearlessLAMobile,
+    SamsungTVs,
+    ViTelex,
+    LetterSuggestions,
+    UscTaekwondoWebsite,
+    Metrix,
+    LattticeControlApp,
+    Capacitor,
 ];
 
-export { Projects };
+export { CodingProjects };

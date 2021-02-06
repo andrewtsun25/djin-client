@@ -11,7 +11,6 @@ import hliImg from 'assets/experience/media/hli_mantis.png';
 import qtImg from 'assets/experience/media/qt_brandcaster.jpg';
 import yahoo1Img from 'assets/experience/media/yahoo_gemini.png';
 import yahoo2Img from 'assets/experience/media/yahoo_shepherd.jpeg';
-import btgImg from 'assets/projects/media/btg_site.jpg';
 import { DateTime } from 'luxon';
 import { Experience, JobType } from 'types/experience';
 

@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core';
-import useEducations from 'hooks/useEducation';
+import useEducations from 'hooks/useEducations';
 import React from 'react';
 import { EduType } from 'types/education';
 

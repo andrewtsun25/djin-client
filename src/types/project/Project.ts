@@ -10,4 +10,6 @@ export interface Project {
     organization: string;
     avatarUrl: string;
     skills: string[];
+    disclaimer?: string;
+    projectLink?: string;
 }

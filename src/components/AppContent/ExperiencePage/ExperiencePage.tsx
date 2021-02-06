@@ -1,5 +1,5 @@
 import { Grid, Link, Typography } from '@material-ui/core';
-import useExperience from 'hooks/useExperience';
+import useExperiences from 'hooks/useExperiences';
 import React from 'react';
 
 import ExperienceCard from './ExperienceCard';
@@ -9,7 +9,7 @@ const RESUME_URL = 'https://docs.google.com/document/d/1fIQ8ceaV1BW7FmWvPe8aGGlL
 
 const ExperiencePage: React.FC = () => {
     const classes = experiencePageStyles();
-    const experiences = useExperience();
+    const experiences = useExperiences();
     return (
         <>
             <Typography variant="h2" align="center">

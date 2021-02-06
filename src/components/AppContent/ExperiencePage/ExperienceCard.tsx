@@ -11,7 +11,7 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
     experience: {
         endDate,
-        startDate,
+        startDate: { monthShort: startDateMonth, year: startDateYear },
         role,
         company,
         avatarUrl,
@@ -24,8 +24,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 }: ExperienceCardProps) => {
     const classes = experienceCardStyles();
     const subheader = endDate
-        ? `${startDate.monthShort} ${startDate.year} - ${endDate.monthShort} ${endDate.year}, ${role}`
-        : `${startDate.monthShort} ${startDate.year} - Present, ${role}`;
+        ? `${startDateMonth} ${startDateYear} - ${endDate.month} ${endDate.year}, ${role}`
+        : `${startDateMonth} ${startDateYear} - Present, ${role}`;
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Card variant="outlined" className={classes.root}>
