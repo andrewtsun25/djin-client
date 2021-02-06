@@ -15,6 +15,7 @@ export interface Education {
     gpa: number;
     description: string;
     syllabusLink?: string;
+    residentialCollegeSyllabusLink?: string;
     avatarUrl: string;
     studentOrgs?: StudentOrganization[];
     courses: Course[];

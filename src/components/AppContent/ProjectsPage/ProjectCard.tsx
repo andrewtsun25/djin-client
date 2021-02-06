@@ -1,42 +1,66 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
+import {
+    Avatar,
+    Card,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    Chip,
+    Grid,
+    Icon,
+    Link,
+    Typography,
+} from '@material-ui/core';
+import LinkIcon from '@material-ui/icons/Link';
 import React from 'react';
-import { Experience } from 'types/experience';
+import { Project } from 'types/project';
 
-import experienceCardStyles from './ExperienceCard.styles';
+import projectCardStyles from './ProjectCard.styles';
 
-interface ExperienceCardProps {
-    experience: Experience;
+interface ProjectCardProps {
+    project: Project;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
-    experience: {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+    project: {
+        name,
         endDate,
         startDate: { monthShort: startDateMonth, year: startDateYear },
-        role,
-        company,
+        organization,
         avatarUrl,
         mediaUrl,
         description,
         responsibilities,
         skills,
-        jobType,
+        projectLink,
     },
-}: ExperienceCardProps) => {
-    const classes = experienceCardStyles();
+}: ProjectCardProps) => {
+    const classes = projectCardStyles();
     const subheader = endDate
-        ? `${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}, ${role}`
-        : `${startDateMonth} ${startDateYear} - Present, ${role}`;
+        ? `${organization}, ${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}`
+        : `${organization}, ${startDateMonth} ${startDateYear} - Present`;
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Card variant="outlined" className={classes.root}>
                 <CardHeader
-                    title={company}
+                    title={name}
                     subheader={subheader}
-                    avatar={<Avatar alt={`${company}_avatar`} src={avatarUrl} />}
+                    avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
                 />
                 <CardMedia image={mediaUrl} className={classes.media} />
                 <CardContent>
-                    <Chip label={jobType} size="small" className={classes.jobChip} />
+                    {projectLink && (
+                        <Typography paragraph>
+                            <Link
+                                href={projectLink}
+                                className={classes.projectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkIcon className={classes.projectLinkIcon} />
+                                Project Link
+                            </Link>
+                        </Typography>
+                    )}
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 && (
                         <ul>
@@ -60,4 +84,4 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     );
 };
 
-export default ExperienceCard;
+export default ProjectCard;

@@ -1,4 +1,4 @@
-import { CodingEducation, MusicEducation } from 'const/data/education';
+import { CodingEducation, MusicEducation } from 'data/education';
 import { orderBy } from 'lodash';
 import { useEffect, useState } from 'react';
 import { Education, EduType } from 'types/education';

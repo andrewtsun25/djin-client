@@ -8,38 +8,53 @@ interface EducationCardProps {
     education: Education;
 }
 
-const EducationCard: React.FC<EducationCardProps> = ({ education }: EducationCardProps) => {
+const EducationCard: React.FC<EducationCardProps> = ({
+    education: {
+        endDate: { monthShort: endDateMonth, year: endDateYear },
+        startDate: { monthShort: startDateMonth, year: startDateYear },
+        major,
+        name,
+        avatarUrl,
+        syllabusLink,
+        residentialCollegeSyllabusLink,
+        department,
+        residentialCollege,
+        gpa,
+        description,
+    },
+}: EducationCardProps) => {
     const classes = educationCardStyles();
-    const subheader = education.endDate
-        ? `${education.startDate.monthShort} ${education.startDate.year} - ${education.endDate.monthShort} ${education.endDate.year}, ${education.major}`
-        : `${education.startDate.monthShort} ${education.startDate.year} - Present, ${education.major}`;
+    const subheader = `${startDateMonth} ${startDateYear} - ${endDateMonth} ${endDateYear}, ${major}`;
     return (
         <Card variant="outlined" className={classes.root}>
-            <CardHeader
-                title={education.name}
-                subheader={subheader}
-                avatar={<Avatar alt={education.name} src={education.avatarUrl} />}
-            />
+            <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={avatarUrl} />} />
             <CardContent>
                 <Typography paragraph>
-                    <Link href={education.syllabusLink} target="_blank" rel="noopener noreferrer">
+                    <Link href={syllabusLink} target="_blank" rel="noopener noreferrer">
                         Degree Requirements
                     </Link>
                 </Typography>
-                {education.department && (
+                {residentialCollegeSyllabusLink && (
                     <Typography paragraph>
-                        <b>Department:</b> {education.department}
+                        <Link href={residentialCollegeSyllabusLink} target="_blank" rel="noopener noreferrer">
+                            Residential College GE Requirements
+                        </Link>
                     </Typography>
                 )}
-                {education.residentialCollege && (
+                {department && (
                     <Typography paragraph>
-                        <b>Residential College:</b> {education.residentialCollege}
+                        <b>Department:</b> {department}
+                    </Typography>
+                )}
+                {residentialCollege && (
+                    <Typography paragraph>
+                        <b>Residential College:</b> {residentialCollege}
                     </Typography>
                 )}
                 <Typography paragraph>
-                    <b>GPA:</b> {education.gpa.toFixed(3)}
+                    <b>GPA:</b> {gpa.toFixed(3)}
                 </Typography>
-                <Typography paragraph>{education.description}</Typography>
+                <Typography paragraph>{description}</Typography>
             </CardContent>
         </Card>
     );

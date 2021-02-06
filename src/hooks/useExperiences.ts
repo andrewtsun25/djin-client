@@ -1,11 +1,12 @@
-import { CodingExperience } from 'const/data/experience';
+import { CodingExperience } from 'data/experience';
+import { orderBy } from 'lodash';
 import { useEffect, useState } from 'react';
 import { Experience } from 'types/experience';
 
-export default function useExperience(): Experience[] {
+export default function useExperiences(): Experience[] {
     const [experiences, setExperiences] = useState<Experience[]>([]);
     useEffect(() => {
-        setExperiences(CodingExperience);
+        setExperiences(orderBy(CodingExperience, 'startDate', 'desc'));
     }, []);
     return experiences;
 }
