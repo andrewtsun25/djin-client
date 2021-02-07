@@ -1,6 +1,7 @@
 import amazonLogo from 'assets/experience/logo/amazon.png';
 import andurilLogo from 'assets/experience/logo/anduril.jpeg';
 import googleLogo from 'assets/experience/logo/google.png';
+import hliLogo from 'assets/experience/logo/hli.png';
 import qtLogo from 'assets/experience/logo/qt.jpeg';
 import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
 import btgLogo from 'assets/projects/logo/btg.png';
@@ -162,7 +163,7 @@ const Defiance: Project = {
 const TestHarness: Project = {
     name: 'Mantis: QA Test Harness',
     organization: HLI.company,
-    avatarUrl: yahooLogo,
+    avatarUrl: hliLogo,
     mediaUrl: mantisImg,
     startDate: HLI.startDate,
     endDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
@@ -177,7 +178,7 @@ const TestHarness: Project = {
 const DataCurationParsers: Project = {
     name: 'Mantis: Data Curation Parsers for Cancer Exome Report Generation',
     organization: HLI.company,
-    avatarUrl: yahooLogo,
+    avatarUrl: hliLogo,
     mediaUrl: mantisImg,
     startDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
     endDate: HLI.endDate,
@@ -325,7 +326,7 @@ const LetterSuggestions = {
         'Designed virtual controller view components for special character suggestions.',
         'Implemented new GBoard controller components while integrating with existing ones.',
         'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
-        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still Trilingual.',
+        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still trilingual.',
     ],
     skills: ['TypeScript', 'JavaScript', 'protobuf', 'Google Closure Compiler'],
 };
@@ -340,11 +341,9 @@ const UscTaekwondoWebsite = {
     description:
         'With a strong desire to move away from using a free WordPress site cluttered with ads, the USC Taekwondo team commissioned me to create a new static website to give members information about team practices and policies. After realizing that all USC students are part of one giant G-Suite, we determined that using Google Sites provides us with a better website at no additional cost.',
     responsibilities: [
-        'Drafted a design document proposing multiple approaches to the integration of GBoard with the virtual keyboard and describing technical details to do so.',
-        'Designed virtual controller view components for special character suggestions.',
-        'Implemented new GBoard controller components while integrating with existing ones.',
-        'Learned to enforce typing in JavaScript for compilation with Google Closure Compiler.',
-        'As proof of concept, configured a French IME using the AZERTY layout. Did not learn French. Still trilingual.',
+        'Developed a static website using the Google Sites platform.',
+        'Collaborated with the Public Relations Officer and other USC Taekwondo Executive Board officers to design site content and gather site assets (images, RCC policies, etc.).',
+        "Served as the site's webmaster for the entire duration of my term as Secretary, keeping club information up-to-date.",
     ],
     skills: ['Google Sites', 'Leadership'],
     projectLink: 'https://sites.google.com/usc.edu/usctkd',

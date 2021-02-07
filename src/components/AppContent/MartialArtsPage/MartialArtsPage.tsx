@@ -1,6 +1,6 @@
 import useMartialArts from 'hooks/useMartialArts';
 import React from 'react';
-import { MartialArtsStyle } from 'types/martialArts';
+import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
 import martialArtsPageStyles from './MartialArtsPage.styles';
 
@@ -10,7 +10,7 @@ interface MartialArtsPageProps {
 
 const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: MartialArtsPageProps) => {
     const classes = martialArtsPageStyles();
-    const pageInfo = useMartialArts(martialArtsStyle);
+    const pageInfo: MartialArt | undefined = useMartialArts(martialArtsStyle);
     return pageInfo ? (
         <>
             <div className={classes.pageHeading}>

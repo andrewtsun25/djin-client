@@ -1,15 +1,4 @@
-import {
-    Avatar,
-    Card,
-    CardContent,
-    CardHeader,
-    CardMedia,
-    Chip,
-    Grid,
-    Icon,
-    Link,
-    Typography,
-} from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Link, Typography } from '@material-ui/core';
 import LinkIcon from '@material-ui/icons/Link';
 import React from 'react';
 import { Project } from 'types/project';

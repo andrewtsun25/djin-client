@@ -4,10 +4,17 @@ const educationCardStyles = makeStyles(() =>
     createStyles({
         root: {
             padding: 10,
-            margin: 10,
+            margin: '10px auto',
         },
         title: {
             textAlign: 'center',
+        },
+        reqLink: {
+            display: 'flex',
+            alignItems: 'center',
+        },
+        reqLinkIcon: {
+            marginRight: 10,
         },
     }),
 );
