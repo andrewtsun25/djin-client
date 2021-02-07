@@ -1,7 +1,7 @@
 import { Typography } from '@material-ui/core';
 import useEducations from 'hooks/useEducations';
 import React from 'react';
-import { EduType } from 'types/education';
+import { Education, EduType } from 'types/education';
 
 import EducationCard from './EducationCard';
 
@@ -10,7 +10,7 @@ interface EducationPageProps {
 }
 
 const EducationPage: React.FC<EducationPageProps> = ({ eduType }: EducationPageProps) => {
-    const educations = useEducations(eduType);
+    const educations: Education[] = useEducations(eduType);
     return (
         <>
             <Typography variant="h2" align="center">
