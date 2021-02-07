@@ -6,10 +6,10 @@ import { MartialArtsStyle } from 'types/martialArts';
 
 import { About } from './About';
 import appContentStyles from './AppContent.styles';
-import { CodingResearch } from './Coding';
 import EducationPage from './EducationPage';
 import ErrorPage from './ErrorPage';
 import ExperiencePage from './ExperiencePage';
+import HBVResearchPage from './HBVResearchPage';
 import HomePage from './HomePage';
 import MartialArtsPage from './MartialArtsPage';
 import MusicScoresPage from './MusicScoresPage';
@@ -37,8 +37,8 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 <Route path="/coding/projects">
                     <ProjectsPage />
                 </Route>
-                <Route path="/coding/research">
-                    <CodingResearch />
+                <Route path="/academic/hbv">
+                    <HBVResearchPage />
                 </Route>
                 <Route path="/music/education">
                     <EducationPage eduType={EduType.MUSIC} />

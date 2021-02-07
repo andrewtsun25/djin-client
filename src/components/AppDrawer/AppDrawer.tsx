@@ -14,9 +14,11 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import LocalPharmacyIcon from '@material-ui/icons/LocalPharmacy';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SchoolIcon from '@material-ui/icons/School';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import SportsMmaIcon from '@material-ui/icons/SportsMma';
 import WorkIcon from '@material-ui/icons/Work';
 import React from 'react';
@@ -54,7 +56,6 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                     <ListItemInternalLink icon={<WorkIcon />} text="Experience" to="/coding/experience" nested />
                     <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/coding/education" nested />
                     <ListItemInternalLink icon={<AppsIcon />} text="Projects" to="/coding/projects" nested />
-                    <ListItemInternalLink icon={<LocalLibraryIcon />} text="Research" to="/coding/research" nested />
                     <ListItemExternalLink
                         icon={<LinkedInIcon />}
                         text="LinkedIn"
@@ -65,6 +66,21 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                         icon={<GitHubIcon />}
                         text="GitHub"
                         href="https://github.com/andrewtsun25"
+                        nested
+                    />
+                </NestedList>
+                <NestedList icon={<SchoolIcon />} text="Academic Work">
+                    <ListItemInternalLink icon={<LocalHospitalIcon />} text="HBV Research" to="/academic/hbv" nested />
+                    <ListItemInternalLink
+                        icon={<LocalPharmacyIcon />}
+                        text="Holistic Office"
+                        to="/academic/holisticOffice"
+                        nested
+                    />
+                    <ListItemInternalLink
+                        icon={<SportsEsportsIcon />}
+                        text="Reclaimer"
+                        to="/academic/reclaimer"
                         nested
                     />
                 </NestedList>
@@ -79,16 +95,12 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                     <ListItemInternalLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested />
                 </NestedList>
                 <NestedList icon={<SportsMmaIcon />} text="Martial Arts">
+                    <ListItemInternalLink icon={<SportsMmaIcon />} text="ITF Taekwondo" to="/martialArts/itf" nested />
+                    <ListItemInternalLink icon={<SportsMmaIcon />} text="WT Taekwondo" to="/martialArts/wt" nested />
                     <ListItemInternalLink
-                        icon={<FitnessCenterIcon />}
-                        text="ITF Taekwondo"
-                        to="/martialArts/itf"
-                        nested
-                    />
-                    <ListItemInternalLink
-                        icon={<FitnessCenterIcon />}
-                        text="WT Taekwondo"
-                        to="/martialArts/wt"
+                        icon={<SportsMmaIcon />}
+                        text="Haidong Gumdo"
+                        to="/martialArts/haidongGumdo"
                         nested
                     />
                 </NestedList>
