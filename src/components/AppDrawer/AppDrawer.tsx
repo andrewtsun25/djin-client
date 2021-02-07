@@ -10,7 +10,6 @@ import CodeIcon from '@material-ui/icons/Code';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FaceIcon from '@material-ui/icons/Face';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';

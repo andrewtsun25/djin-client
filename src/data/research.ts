@@ -1,4 +1,4 @@
-import ucsdLogo from 'assets/education/logo/ucsd.png';
+import aphfLogo from 'assets/research/logo/aphf.jpg';
 import costBenefitAnalysisImg from 'assets/research/media/cost_benefit_analysis.jpg';
 import linkageToCareImg from 'assets/research/media/linkage_to_care.jpg';
 import { Research } from 'types/research';
@@ -8,7 +8,7 @@ import { UCSD } from '../const/semester';
 const CostBenefitAnalysis: Research = {
     name: 'Cost Estimation Of Hepatitis B Screenings Across Greater San Diego',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: ucsdLogo,
+    avatarUrl: aphfLogo,
     mediaUrl: costBenefitAnalysisImg,
     startDate: UCSD.Fall2014.date,
     endDate: UCSD.Winter2015.date,
@@ -25,13 +25,13 @@ const CostBenefitAnalysis: Research = {
 const LinkageToCare: Research = {
     name: 'Linkage-To-Care Results',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: ucsdLogo,
+    avatarUrl: aphfLogo,
     mediaUrl: linkageToCareImg,
     startDate: UCSD.Winter2015.date,
     endDate: UCSD.Spring2015.date,
     paperLink: 'https://docs.google.com/document/d/1O3l3UU_qePiJVxPDHzcR1hce_SqV2OZBPr8dETCM1sU/edit',
     description:
-        'Investigated the successful linkage to medical care for Hepatitis B clinic patients screened by the Asian Pacific Health Foundation.',
+        'Investigated the successful linkage to medical care for Hepatitis B clinic patients screened by the Asian Pacific Health Foundation. Needless to say, most HBV patients were indeed getting linked to follow-up professional care.',
     responsibilities: [
         'Volunteered weekly at clinical screenings to collect patient and blood sample data with our target demographic of Asian Americans in San Diego County. Used these clinical sessions as a baseline for cost calculations',
         'Created a Python Script for clinical doctors and volunteers to easily generate patient ID numbers.',

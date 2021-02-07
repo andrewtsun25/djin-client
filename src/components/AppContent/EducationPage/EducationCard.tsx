@@ -1,4 +1,5 @@
 import { Avatar, Card, CardContent, CardHeader, Link, Typography } from '@material-ui/core';
+import SchoolIcon from '@material-ui/icons/School';
 import React from 'react';
 import { Education } from 'types/education';
 
@@ -30,13 +31,20 @@ const EducationCard: React.FC<EducationCardProps> = ({
             <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={avatarUrl} />} />
             <CardContent>
                 <Typography paragraph>
-                    <Link href={syllabusLink} target="_blank" rel="noopener noreferrer">
+                    <Link href={syllabusLink} className={classes.reqLink} target="_blank" rel="noopener noreferrer">
+                        <SchoolIcon className={classes.reqLinkIcon} />
                         Degree Requirements
                     </Link>
                 </Typography>
                 {residentialCollegeSyllabusLink && (
                     <Typography paragraph>
-                        <Link href={residentialCollegeSyllabusLink} target="_blank" rel="noopener noreferrer">
+                        <Link
+                            href={residentialCollegeSyllabusLink}
+                            className={classes.reqLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <SchoolIcon className={classes.reqLinkIcon} />
                             Residential College GE Requirements
                         </Link>
                     </Typography>

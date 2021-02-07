@@ -1,4 +1,4 @@
-import { Link, Typography } from '@material-ui/core';
+import { Container, Link, Typography } from '@material-ui/core';
 import useResearches from 'hooks/useResearches';
 import React from 'react';
 import { Research } from 'types/research';
@@ -12,7 +12,7 @@ const HBVResearchPage: React.FC = () => {
     const classes = hbvResearchPageStyles();
     const researches: Research[] = useResearches();
     return (
-        <>
+        <Container maxWidth="lg">
             <Typography variant="h2" align="center" className={classes.pageTitle}>
                 Hepatitis B Research
             </Typography>
@@ -33,7 +33,10 @@ const HBVResearchPage: React.FC = () => {
             </Typography>
             <Typography paragraph className={classes.italicizedParagraph}>
                 You can learn more about Hepatitis B and how Asian Americans are disproportionately affected{' '}
-                <Link href={HEP_B_LINK}>here</Link>.
+                <Link href={HEP_B_LINK} target="_blank" rel="noopener noreferrer">
+                    here
+                </Link>
+                .
             </Typography>
             <Typography paragraph className={classes.contentParagraph}>
                 In middle school, my maternal grandmother passed away from Hepatitis B. Through that experience, I took
@@ -47,13 +50,12 @@ const HBVResearchPage: React.FC = () => {
                 help lead the Team HBV chapter there, and decided to partner with the Asian Pacific Health Foundation, a
                 local health organization that provided Hepatitis B screenings and vaccinations to Asian populations
                 across San Diego. Working alongside the Asian Pacific Health Foundation provided me with unique
-                opportunities to perform undergraduate research with them. Listed below are the opportunities I was
-                provided.
+                opportunities to perform undergraduate research with them.
             </Typography>
             {researches.map((research, index) => (
                 <HBVResearchCard research={research} key={index} />
             ))}
-        </>
+        </Container>
     );
 };
 
