@@ -5,6 +5,7 @@ const iconLinkStyles = makeStyles(() =>
         link: {
             display: 'flex',
             alignItems: 'center',
+            margin: '1em 0',
         },
         iconContainer: {
             marginRight: 10,
