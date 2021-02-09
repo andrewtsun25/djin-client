@@ -1,5 +1,6 @@
 import { Container, Grid, Link, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import ShopIcon from '@material-ui/icons/Shop';
 import WebIcon from '@material-ui/icons/Web';
@@ -62,7 +63,7 @@ const ReclaimerPage: React.FC = () => {
                 soundtrack. I also helped manage app publishing to the Google Play Services.
             </Typography>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} lg={3}>
+                <Grid item sm={12} md={6} lg={4}>
                     <div className={classes.centeringContainer}>
                         <IconLink
                             href={RECLAIMER_LINK}
@@ -72,7 +73,7 @@ const ReclaimerPage: React.FC = () => {
                         />
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} lg={3}>
+                <Grid item sm={12} md={6} lg={4}>
                     <div className={classes.centeringContainer}>
                         <IconLink
                             href="https://docs.google.com/document/d/1kCaNgljvQoYSivE1K8k4781hS_qSFREjGe788UiPb6M/edit"
@@ -82,7 +83,7 @@ const ReclaimerPage: React.FC = () => {
                         />
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} lg={3}>
+                <Grid item sm={12} md={6} lg={4}>
                     <div className={classes.centeringContainer}>
                         <IconLink
                             href="https://soundcloud.com/djtaeyong/sets/reclaimer-ost"
@@ -92,12 +93,22 @@ const ReclaimerPage: React.FC = () => {
                         />
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} lg={3}>
+                <Grid item sm={12} md={6}>
                     <div className={classes.centeringContainer}>
                         <IconLink
                             href="https://www.youtube.com/watch?v=iCcWpw9RU9g"
                             text="Trailer"
                             icon={<YouTubeIcon />}
+                            className={classes.reclaimerLink}
+                        />
+                    </div>
+                </Grid>
+                <Grid item xs={12} lg={6}>
+                    <div className={classes.centeringContainer}>
+                        <IconLink
+                            href="https://play.google.com/store/apps/details?id=com.RedPandaStudios.Reclaimer"
+                            text="Source Code"
+                            icon={<GitHubIcon />}
                             className={classes.reclaimerLink}
                         />
                     </div>
