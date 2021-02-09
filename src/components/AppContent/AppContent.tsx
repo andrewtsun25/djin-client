@@ -10,6 +10,7 @@ import EducationPage from './EducationPage';
 import ErrorPage from './ErrorPage';
 import ExperiencePage from './ExperiencePage';
 import HBVResearchPage from './HBVResearchPage';
+import HolisticOfficePage from './HolisticOfficePage';
 import HomePage from './HomePage';
 import MartialArtsPage from './MartialArtsPage';
 import MusicScoresPage from './MusicScoresPage';
@@ -25,9 +26,6 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
         <main className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
             <div className={classes.drawerHeader} />
             <Switch>
-                <Route exact path="/">
-                    <HomePage />
-                </Route>
                 <Route path="/coding/experience">
                     <ExperiencePage />
                 </Route>
@@ -39,6 +37,9 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 </Route>
                 <Route path="/academic/hbv">
                     <HBVResearchPage />
+                </Route>
+                <Route path="/academic/holisticOffice">
+                    <HolisticOfficePage />
                 </Route>
                 <Route path="/music/education">
                     <EducationPage eduType={EduType.MUSIC} />
@@ -54,6 +55,9 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 </Route>
                 <Route path="/about">
                     <About />
+                </Route>
+                <Route exact path="/">
+                    <HomePage />
                 </Route>
                 <Route path="*">
                     <ErrorPage />

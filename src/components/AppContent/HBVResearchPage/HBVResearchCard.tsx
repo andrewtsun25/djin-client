@@ -1,5 +1,6 @@
-import { Avatar, Card, CardContent, CardHeader, Chip, Link, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, Chip, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
+import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Research } from 'types/research';
 
@@ -32,12 +33,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                 avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
             />
             <CardContent>
-                <Typography paragraph>
-                    <Link href={paperLink} className={classes.paperLink} target="_blank" rel="noopener noreferrer">
-                        <DescriptionIcon className={classes.paperLinkIcon} />
-                        Research Paper
-                    </Link>
-                </Typography>
+                <IconLink href={paperLink} text="Research Paper" icon={<DescriptionIcon />} />
                 <Typography paragraph>{description}</Typography>
                 {responsibilities.length > 0 && (
                     <ul>
