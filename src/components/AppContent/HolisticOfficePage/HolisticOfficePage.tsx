@@ -1,7 +1,8 @@
-import { Container, Grid, Link, Paper, Typography } from '@material-ui/core';
+import { Container, Grid, Link, Typography } from '@material-ui/core';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
 import architectureImg from 'assets/holisticOffice/media/architecture.png';
 import websiteImg from 'assets/holisticOffice/media/website.png';
+import DocumentLink from 'components/shared/DocumentLink';
 import { ArchitecturalCategories } from 'data/holisticOffice';
 import React from 'react';
 
@@ -15,8 +16,13 @@ const HolisticOfficePage: React.FC = () => {
     return (
         <Container maxWidth="lg">
             <div className={classes.holisticOfficeImgContainer}>
-                <a href={HOLISTIC_OFFICE_LINK} target="_blank" rel="noopener noreferrer">
-                    <img src={logo} alt="Holistic Office Logo" className={classes.holisticOfficeImg} />
+                <a
+                    href={HOLISTIC_OFFICE_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.holisticOfficeImgLink}
+                >
+                    <img src={logo} alt="Holistic Office Logo" />
                 </a>
             </div>
             <div className={classes.holisticOfficeImgContainer}>
@@ -55,15 +61,55 @@ const HolisticOfficePage: React.FC = () => {
             </Typography>
             <Typography paragraph>Here are the 8 academic documents submitted to USC detailing the project.</Typography>
             <Typography>
-                <ul>
-                    <li>Feasibility Evidence Description</li>
-                    <li>Life Cycle Plan</li>
-                    <li>Operational Concept Description</li>
-                    <li>Release Description</li>
-                    <li>System and Software Support Plan</li>
-                    <li>System Software Architecture Description</li>
-                    <li>Transition Plan</li>
-                    <li>Test Plan and Cases</li>
+                <ul className={classes.linkList}>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c8f8eb3931774e0a50e1/1555679481664/FED_ASBUILT_S19b_T04_V5.0.pdf"
+                            text="Feasibility Evidence Description"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c914eb3931774e0a516f/1555679509721/LCP_ASBUILT_S19b_T04_V5.1.pdf"
+                            text="Life Cycle Plan"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c9338165f50780f1188b/1555679540359/OCD_ASBUILT_S19b_T04_V4.1.pdf"
+                            text="Operational Concept Description"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cbae9478165f5949eb6589d/1555753287742/RD_ASBUILT_S19b_T04_V1.0.pdf"
+                            text="Release Description"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c98ff9619a605343016b/1555679632749/SP_ASBUILT_S19b_T04_V1.1.pdf"
+                            text="System & Software Support Plan"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9cc0f53450a2f3fb21eb8/1555680274881/SSAD_ASBUILT_S19b_T04_V5.1.pdf"
+                            text="System Software Architecture Description"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cbae970f9619a021d1d99e2/1555753332197/TP_ASBUILT_S19b_T04_V2.1.pdf"
+                            text="Transition Plan"
+                        />
+                    </li>
+                    <li>
+                        <DocumentLink
+                            href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c9ce0d92971994a8a8a7/1555679694962/TPC_ASBUILT_S19b_T04_V3.0.pdf"
+                            text="Test Plan & Cases"
+                        />
+                    </li>
                 </ul>
             </Typography>
             <Typography variant="h2" align="center" className={classes.pageHeading}>

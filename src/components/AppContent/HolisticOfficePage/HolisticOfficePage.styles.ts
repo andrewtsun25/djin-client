@@ -9,14 +9,21 @@ const holisticOfficePageStyles = makeStyles(() =>
         holisticOfficeImgContainer: {
             display: 'flex',
             justifyItems: 'center',
+            width: '100%',
         },
         holisticOfficeImg: {
             maxWidth: '100%',
             padding: 10,
             margin: '10px auto',
         },
+        holisticOfficeImgLink: {
+            margin: '30px auto',
+        },
         pageHeading: {
-            margin: '10px auto',
+            margin: '30px auto',
+        },
+        linkList: {
+            listStyleType: 'none',
         },
     }),
 );
