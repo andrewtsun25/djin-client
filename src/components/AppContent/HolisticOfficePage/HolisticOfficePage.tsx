@@ -1,31 +1,41 @@
-import { Container, Paper, Typography } from '@material-ui/core';
-import architectureImg from 'assets/holisticOffice/holistic_office_architecture.png';
-import websiteImg from 'assets/holisticOffice/holistic_office_website.png';
+import { Container, Grid, Link, Paper, Typography } from '@material-ui/core';
+import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
+import architectureImg from 'assets/holisticOffice/media/architecture.png';
+import websiteImg from 'assets/holisticOffice/media/website.png';
+import { ArchitecturalCategories } from 'data/holisticOffice';
 import React from 'react';
 
+import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
+
+const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 
 const HolisticOfficePage: React.FC = () => {
     const classes = holisticOfficePageStyles();
     return (
         <Container maxWidth="lg">
-            <Typography variant="h2" align="center">
-                Holistic Office
-            </Typography>
+            <div className={classes.holisticOfficeImgContainer}>
+                <a href={HOLISTIC_OFFICE_LINK} target="_blank" rel="noopener noreferrer">
+                    <img src={logo} alt="Holistic Office Logo" className={classes.holisticOfficeImg} />
+                </a>
+            </div>
             <div className={classes.holisticOfficeImgContainer}>
                 <img src={websiteImg} alt="Holistic Office Website Image" className={classes.holisticOfficeImg} />
             </div>
             <Typography paragraph>
-                Holistic Office is a patient EHR (Electronic Health Record) management and inventory management system
-                for small to mid-sized independent clinics, and also my graduate school project at USC for CSCI-577:
-                Software Engineering. With a team of 8, my main role in the project is the architect, designing
-                everything from infrastructure to frameworks used. We decided to have the site conform to FHIR (Fast
-                Healthcare Interoperability Resources) data handling standards. As with any health-related software, it
-                needs to be HIPAA (Health Information Portability and Accountability Act) compliant. Currently it is
-                deployed as a static file server (AWS S3) and a REST API server (AWS Elastic Beanstalk) that talks to a
-                relational database (AWS RDS).
+                <Link href={HOLISTIC_OFFICE_LINK} target="_blank" rel="noopener noreferrer">
+                    Holistic Office
+                </Link>{' '}
+                is a patient EHR (Electronic Health Record) management and inventory management system for small to
+                mid-sized independent clinics, and also my graduate school project at USC (listed as CSCI-577: Software
+                Engineering), developed from August 2018 to May 2019. With a team of 8, my main role in the project is
+                the architect, designing everything from infrastructure to frameworks used. We decided to have the site
+                conform to FHIR (Fast Healthcare Interoperability Resources) data handling standards. As with any
+                health-related software, it needs to be HIPAA (Health Information Portability and Accountability Act)
+                compliant. Currently it is deployed as a static file server (AWS S3) and a REST API server (AWS Elastic
+                Beanstalk) that talks to a relational database (AWS RDS).
             </Typography>
-            <Typography variant="h3" align="center">
+            <Typography variant="h2" align="center" className={classes.pageHeading}>
                 Architecture
             </Typography>
             <img
@@ -33,112 +43,17 @@ const HolisticOfficePage: React.FC = () => {
                 alt="Holistic Office Architecture Diagram"
                 className={classes.holisticOfficeImg}
             />
-            <Paper className={classes.architecturePaper} elevation={5}>
-                <Typography variant="h4">Client Module</Typography>
-                <Typography>
-                    <ul>
-                        <li>
-                            <b>Language:</b> TypeScript
-                        </li>
-                        <li>
-                            <b>Styling:</b> Sass Stylesheets
-                        </li>
-                        <li>
-                            <b>Frameworks:</b> Angular, ng-fhir
-                        </li>
-                        <li>
-                            <b>Server:</b> node.js
-                        </li>
-                        <li>
-                            <b>Deployment:</b> AWS S3 Storage + AWS CloudFront CDN
-                        </li>
-                    </ul>
-                </Typography>
-            </Paper>
-            <Paper className={classes.architecturePaper} elevation={5}>
-                <Typography variant="h4">Server Module</Typography>
-                <Typography>
-                    <ul>
-                        <li>
-                            <b>Language:</b> Java 8
-                        </li>
-                        <li>
-                            <b>Frameworks:</b> Spring Boot, HAPI-FHIR
-                        </li>
-                        <li>
-                            <b>Server:</b> Tomcat (embedded)
-                        </li>
-                        <li>
-                            <b>Database:</b> Postgres
-                        </li>
-                        <li>
-                            <b>Deployment:</b> AWS Elastic Beanstalk
-                        </li>
-                    </ul>
-                </Typography>
-            </Paper>
-            <Paper className={classes.architecturePaper} elevation={5}>
-                <Typography variant="h4">E2E Test Module</Typography>
-                <Typography>
-                    <ul>
-                        <li>
-                            <b>Language:</b> JavaScript (ES6)
-                        </li>
-                        <li>
-                            <b>Framework</b> Cypress.io
-                        </li>
-                        <li>
-                            <b>Server:</b> node.js
-                        </li>
-                    </ul>
-                </Typography>
-            </Paper>
-            <Paper className={classes.architecturePaper} elevation={5}>
-                <Typography variant="h4">Serverless Compute Functions</Typography>
-                <Typography>
-                    <ul>
-                        <li>
-                            <b>Language:</b> Python
-                        </li>
-                        <li>
-                            <b>Deployment:</b> AWS Lambda
-                        </li>
-                    </ul>
-                </Typography>
-            </Paper>
-            <Paper className={classes.architecturePaper} elevation={5}>
-                <Typography variant="h4">Infrastructure</Typography>
-                <Typography>
-                    <ul>
-                        <li>
-                            <b>Version Control:</b> GitHub
-                        </li>
-                        <li>
-                            <b>CI/CD:</b> AWS CodePipeline w/ AWS CodeBuild
-                        </li>
-                        <li>
-                            <b>Authentication:</b> AWS Cognito
-                        </li>
-                        <li>
-                            <b>Security:</b> AWS VPC
-                        </li>
-                        <li>
-                            <b>CDN:</b> AWS CloudFront
-                        </li>
-                        <li>
-                            <b>DNS Routing:</b> AWS Route 53
-                        </li>
-                    </ul>
-                </Typography>
-            </Paper>
-            <Typography variant="h3" align="center">
+            <Grid container spacing={3}>
+                {ArchitecturalCategories.map((architecturalCategory) => (
+                    <Grid item xs={12} sm={4} key={architecturalCategory.title}>
+                        <ArchitecturePaper category={architecturalCategory} />
+                    </Grid>
+                ))}
+            </Grid>
+            <Typography variant="h2" align="center" className={classes.pageHeading}>
                 Documentation
             </Typography>
-            <Typography paragraph>
-                For a full history of documentation in various stages as well as supporting documents, please check out
-                our team’s website on USC’s servers. However, I will provide the final 8 main documents that describes
-                this project here.
-            </Typography>
+            <Typography paragraph>Here are the 8 academic documents submitted to USC detailing the project.</Typography>
             <Typography>
                 <ul>
                     <li>Feasibility Evidence Description</li>
@@ -151,7 +66,7 @@ const HolisticOfficePage: React.FC = () => {
                     <li>Test Plan and Cases</li>
                 </ul>
             </Typography>
-            <Typography variant="h3" align="center">
+            <Typography variant="h2" align="center" className={classes.pageHeading}>
                 Source Code
             </Typography>
             <Typography paragraph>
@@ -165,7 +80,7 @@ const HolisticOfficePage: React.FC = () => {
                     <li>Client Module (Angular in TypeScript)</li>
                     <li>Server Module (HAPI-FHIR on Java)</li>
                     <li>E2E Module (Cypress.io in JavaScript)</li>
-                    <li>Confluence Wiki Export.</li>
+                    <li>Confluence Wiki Export</li>
                 </ul>
             </Typography>
         </Container>

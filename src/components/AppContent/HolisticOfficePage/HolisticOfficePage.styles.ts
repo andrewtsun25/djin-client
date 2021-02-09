@@ -14,7 +14,9 @@ const holisticOfficePageStyles = makeStyles(() =>
             maxWidth: '100%',
             padding: 10,
             margin: '10px auto',
-            textAlign: 'center',
+        },
+        pageHeading: {
+            margin: '10px auto',
         },
     }),
 );
