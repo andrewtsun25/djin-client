@@ -1,8 +1,10 @@
 import { Container, Grid, Link, Typography } from '@material-ui/core';
+import { FolderSpecial } from '@material-ui/icons';
+import DescriptionIcon from '@material-ui/icons/Description';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
 import architectureImg from 'assets/holisticOffice/media/architecture.png';
 import websiteImg from 'assets/holisticOffice/media/website.png';
-import DocumentLink from 'components/shared/DocumentLink';
+import IconLink from 'components/shared/IconLink';
 import { ArchitecturalCategories } from 'data/holisticOffice';
 import React from 'react';
 
@@ -59,55 +61,65 @@ const HolisticOfficePage: React.FC = () => {
             <Typography variant="h2" align="center" className={classes.pageHeading}>
                 Documentation
             </Typography>
-            <Typography paragraph>Here are the 8 academic documents submitted to USC detailing the project.</Typography>
+            <Typography paragraph>
+                Provided below is an account of all the decision making that went into creating this project.
+            </Typography>
             <Typography>
                 <ul className={classes.linkList}>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c8f8eb3931774e0a50e1/1555679481664/FED_ASBUILT_S19b_T04_V5.0.pdf"
                             text="Feasibility Evidence Description"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c914eb3931774e0a516f/1555679509721/LCP_ASBUILT_S19b_T04_V5.1.pdf"
                             text="Life Cycle Plan"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c9338165f50780f1188b/1555679540359/OCD_ASBUILT_S19b_T04_V4.1.pdf"
                             text="Operational Concept Description"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cbae9478165f5949eb6589d/1555753287742/RD_ASBUILT_S19b_T04_V1.0.pdf"
                             text="Release Description"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c98ff9619a605343016b/1555679632749/SP_ASBUILT_S19b_T04_V1.1.pdf"
                             text="System & Software Support Plan"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9cc0f53450a2f3fb21eb8/1555680274881/SSAD_ASBUILT_S19b_T04_V5.1.pdf"
                             text="System Software Architecture Description"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cbae970f9619a021d1d99e2/1555753332197/TP_ASBUILT_S19b_T04_V2.1.pdf"
                             text="Transition Plan"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                     <li>
-                        <DocumentLink
+                        <IconLink
                             href="https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5cb9c9ce0d92971994a8a8a7/1555679694962/TPC_ASBUILT_S19b_T04_V3.0.pdf"
                             text="Test Plan & Cases"
+                            icon={<DescriptionIcon />}
                         />
                     </li>
                 </ul>
@@ -122,11 +134,35 @@ const HolisticOfficePage: React.FC = () => {
                 perform local deployment.
             </Typography>
             <Typography>
-                <ul>
-                    <li>Client Module (Angular in TypeScript)</li>
-                    <li>Server Module (HAPI-FHIR on Java)</li>
-                    <li>E2E Module (Cypress.io in JavaScript)</li>
-                    <li>Confluence Wiki Export</li>
+                <ul className={classes.linkList}>
+                    <li>
+                        <IconLink
+                            href="https://www.djtaeyong.com/s/holistic-office-client-development.zip"
+                            text="Client Module (Angular in TypeScript)"
+                            icon={<FolderSpecial />}
+                        />
+                    </li>
+                    <li>
+                        <IconLink
+                            href="https://www.djtaeyong.com/s/holistic-office-server-development.zip"
+                            text="Server Module (HAPI-FHIR on Java)"
+                            icon={<FolderSpecial />}
+                        />
+                    </li>
+                    <li>
+                        <IconLink
+                            href="https://www.djtaeyong.com/s/holistic-office-e2e-dev.zip"
+                            text="E2E Module (Cypress.io in JavaScript)"
+                            icon={<FolderSpecial />}
+                        />
+                    </li>
+                    <li>
+                        <IconLink
+                            href="https://www.djtaeyong.com/s/Holistic-Office-Wiki-Export.zip"
+                            text="Confluence Wiki Export"
+                            icon={<FolderSpecial />}
+                        />
+                    </li>
                 </ul>
             </Typography>
         </Container>

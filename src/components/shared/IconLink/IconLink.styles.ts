@@ -1,15 +1,15 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const documentLinkStyles = makeStyles(() =>
+const iconLinkStyles = makeStyles(() =>
     createStyles({
-        paperLink: {
+        link: {
             display: 'flex',
             alignItems: 'center',
         },
-        paperLinkIcon: {
+        iconContainer: {
             marginRight: 10,
         },
     }),
 );
 
-export default documentLinkStyles;
+export default iconLinkStyles;

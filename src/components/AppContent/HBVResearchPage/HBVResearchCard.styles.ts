@@ -21,11 +21,11 @@ const hbvResearchCardStyles = makeStyles((theme: Theme) =>
         skillChip: {
             margin: '10 auto',
         },
-        paperLink: {
+        link: {
             display: 'flex',
             alignItems: 'center',
         },
-        paperLinkIcon: {
+        iconContainer: {
             marginRight: 10,
         },
     }),

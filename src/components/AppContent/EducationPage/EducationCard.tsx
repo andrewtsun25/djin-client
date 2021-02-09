@@ -1,8 +1,9 @@
-import { Avatar, Card, CardContent, CardHeader, Link, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import React from 'react';
 import { Education } from 'types/education';
 
+import IconLink from '../../shared/IconLink';
 import educationCardStyles from './EducationCard.styles';
 
 interface EducationCardProps {
@@ -30,24 +31,13 @@ const EducationCard: React.FC<EducationCardProps> = ({
         <Card variant="outlined" className={classes.root}>
             <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={avatarUrl} />} />
             <CardContent>
-                <Typography paragraph>
-                    <Link href={syllabusLink} className={classes.reqLink} target="_blank" rel="noopener noreferrer">
-                        <SchoolIcon className={classes.reqLinkIcon} />
-                        Degree Requirements
-                    </Link>
-                </Typography>
+                <IconLink icon={<SchoolIcon />} href={syllabusLink} text="Degree Requirements" />
                 {residentialCollegeSyllabusLink && (
-                    <Typography paragraph>
-                        <Link
-                            href={residentialCollegeSyllabusLink}
-                            className={classes.reqLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <SchoolIcon className={classes.reqLinkIcon} />
-                            Residential College GE Requirements
-                        </Link>
-                    </Typography>
+                    <IconLink
+                        icon={<SchoolIcon />}
+                        href={residentialCollegeSyllabusLink}
+                        text="Residential College GE Requirements"
+                    />
                 )}
                 {department && (
                     <Typography paragraph>

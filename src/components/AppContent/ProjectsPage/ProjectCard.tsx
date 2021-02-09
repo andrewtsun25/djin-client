@@ -1,5 +1,6 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Link, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
 import LinkIcon from '@material-ui/icons/Link';
+import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Project } from 'types/project';
 
@@ -37,19 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 />
                 <CardMedia image={mediaUrl} className={classes.media} />
                 <CardContent>
-                    {projectLink && (
-                        <Typography paragraph>
-                            <Link
-                                href={projectLink}
-                                className={classes.projectLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <LinkIcon className={classes.projectLinkIcon} />
-                                Project Link
-                            </Link>
-                        </Typography>
-                    )}
+                    {projectLink && <IconLink href={projectLink} text="Project Link" icon={<LinkIcon />} />}
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 && (
                         <ul>
