@@ -15,6 +15,7 @@ import HomePage from './HomePage';
 import MartialArtsPage from './MartialArtsPage';
 import MusicScoresPage from './MusicScoresPage';
 import ProjectsPage from './ProjectsPage';
+import ReclaimerPage from './ReclaimerPage';
 
 interface AppContentProps {
     isAppDrawerOpen: boolean;
@@ -40,6 +41,9 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 </Route>
                 <Route path="/academic/holisticOffice">
                     <HolisticOfficePage />
+                </Route>
+                <Route path="/academic/reclaimer">
+                    <ReclaimerPage />
                 </Route>
                 <Route path="/music/education">
                     <EducationPage eduType={EduType.MUSIC} />

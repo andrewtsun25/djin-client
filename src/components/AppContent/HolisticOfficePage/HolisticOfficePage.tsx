@@ -1,6 +1,6 @@
 import { Container, Grid, Link, Typography } from '@material-ui/core';
-import { FolderSpecial } from '@material-ui/icons';
 import DescriptionIcon from '@material-ui/icons/Description';
+import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
 import architectureImg from 'assets/holisticOffice/media/architecture.png';
 import websiteImg from 'assets/holisticOffice/media/website.png';
@@ -71,7 +71,7 @@ const HolisticOfficePage: React.FC = () => {
                 Our source code is divided into 3 modules as listed above. Each repository has a README on how to
                 perform local deployment."
                 links={DownloadLinks}
-                icon={<FolderSpecial />}
+                icon={<FolderSpecialIcon />}
             />
         </Container>
     );
