@@ -1,3 +1,3 @@
-import type { ArchitectureCategory, ArchitectureCategoryKVPair } from './ArchitectureCategory';
+import type { ArchitectureCategory } from './ArchitectureCategory';
 
-export type { ArchitectureCategory, ArchitectureCategoryKVPair };
+export type { ArchitectureCategory };

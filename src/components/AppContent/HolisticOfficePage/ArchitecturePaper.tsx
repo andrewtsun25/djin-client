@@ -1,6 +1,7 @@
 import { Paper, Typography } from '@material-ui/core';
+import { map } from 'lodash';
 import React from 'react';
-import { ArchitectureCategory, ArchitectureCategoryKVPair } from 'types/holisticOffice';
+import { ArchitectureCategory } from 'types/holisticOffice';
 
 import holisticOfficeArchitecturePaperStyles from './HolisticOfficeArchitecturePaper.styles';
 
@@ -19,7 +20,7 @@ const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
             </Typography>
             <Typography>
                 <ul>
-                    {mappings.map(({ key, value }: ArchitectureCategoryKVPair) => (
+                    {map(mappings, (value: string, key: string) => (
                         <li key={key}>
                             <b>{key}:</b> {value}
                         </li>
