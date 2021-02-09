@@ -22,9 +22,6 @@ const holisticOfficePageStyles = makeStyles(() =>
         pageHeading: {
             margin: '30px auto',
         },
-        linkList: {
-            listStyleType: 'none',
-        },
     }),
 );
 

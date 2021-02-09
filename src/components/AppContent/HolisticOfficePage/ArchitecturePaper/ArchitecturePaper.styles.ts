@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const holisticOfficeArchitecturePaperStyles = makeStyles(() =>
+const architecturePaperStyles = makeStyles(() =>
     createStyles({
         architecturePaper: {
             padding: 10,
@@ -9,4 +9,4 @@ const holisticOfficeArchitecturePaperStyles = makeStyles(() =>
     }),
 );
 
-export default holisticOfficeArchitecturePaperStyles;
+export default architecturePaperStyles;

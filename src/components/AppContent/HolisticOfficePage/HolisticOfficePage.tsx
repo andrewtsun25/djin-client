@@ -4,13 +4,12 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
 import architectureImg from 'assets/holisticOffice/media/architecture.png';
 import websiteImg from 'assets/holisticOffice/media/website.png';
-import IconLink from 'components/shared/IconLink';
 import { ArchitecturalCategories, DocumentationLinks, DownloadLinks } from 'data/holisticOffice';
-import { map } from 'lodash';
 import React from 'react';
 
 import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
+import LinkSection from './LinkSection';
 
 const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 
@@ -59,35 +58,21 @@ const HolisticOfficePage: React.FC = () => {
                     </Grid>
                 ))}
             </Grid>
-            <Typography variant="h2" align="center" className={classes.pageHeading}>
-                Documentation
-            </Typography>
-            <Typography paragraph>
-                Provided below is an account of all the decision making that went into creating this project.
-            </Typography>
-            <Typography>
-                <ul className={classes.linkList}>
-                    {map(DocumentationLinks, (value, key) => (
-                        <IconLink href={value} text={key} icon={<DescriptionIcon />} />
-                    ))}
-                </ul>
-            </Typography>
-            <Typography variant="h2" align="center" className={classes.pageHeading}>
-                Source Code
-            </Typography>
-            <Typography paragraph>
-                While the current version of the source code will no longer be open to the public, I am able to release
+            <LinkSection
+                title="Documentation"
+                description="The provided documentation cover various aspects of the project besides raw code."
+                links={DocumentationLinks}
+                icon={<DescriptionIcon />}
+            />
+            <LinkSection
+                title="Source Code"
+                description="While the current version of the source code will no longer be open to the public, I am able to release
                 the source code in .zip format at the point of time when this project is considered “completed” by USC.
                 Our source code is divided into 3 modules as listed above. Each repository has a README on how to
-                perform local deployment.
-            </Typography>
-            <Typography>
-                <ul className={classes.linkList}>
-                    {map(DownloadLinks, (value, key) => (
-                        <IconLink href={value} text={key} icon={<FolderSpecial />} />
-                    ))}
-                </ul>
-            </Typography>
+                perform local deployment."
+                links={DownloadLinks}
+                icon={<FolderSpecial />}
+            />
         </Container>
     );
 };
