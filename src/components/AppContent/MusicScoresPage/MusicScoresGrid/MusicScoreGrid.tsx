@@ -1,12 +1,4 @@
-import {
-    GridList,
-    GridListTile,
-    GridListTileBar,
-    IconButton,
-    Link,
-    ListSubheader,
-    Typography,
-} from '@material-ui/core';
+import { GridList, GridListTile, GridListTileBar, IconButton, Link, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
@@ -21,6 +13,8 @@ interface MusicScoreGridProps {
     musicScore: MusicScore;
 }
 
+const COL_HEIGHT = 333;
+
 const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
     musicScore: { title, parts, trackUrl },
 }: MusicScoreGridProps) => {
@@ -31,7 +25,7 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
     const cols = isLarge ? 4 : isMedium ? 2 : 1;
     return (
         <div className={classes.root}>
-            <GridList cellHeight={500} cols={cols}>
+            <GridList cellHeight={COL_HEIGHT} cols={cols}>
                 <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
                     <Link href={trackUrl} target="_blank" rel="noopener noreferrer">
                         <Typography paragraph variant="h5" className={classes.gridHeader}>
