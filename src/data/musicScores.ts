@@ -2,12 +2,13 @@ import { DateTime } from 'luxon';
 import { Instrument, MusicScore } from 'types/music';
 
 const Reclaimer: MusicScore = {
-    title: 'Reclaimer',
+    title: 'Prelude of Purgatory',
     date: DateTime.fromISO('2020-05-01T00:00:00-08:00'),
     parts: {
         [Instrument.PIANO]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5e9fe393950dee1e5f9e2105/1587536787717/Reclaimer+-+Score.pdf',
     },
+    trackUrl: 'https://soundcloud.com/djtaeyong/prelude-of-purgatory',
 };
 
 const LamentingLoss: MusicScore = {
@@ -17,6 +18,7 @@ const LamentingLoss: MusicScore = {
         [Instrument.PIANO]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5b2b00cbf950b7ec2441a0b8/1529544910779/Lamenting_Loss+-+Score.pdf',
     },
+    trackUrl: 'https://soundcloud.com/djtaeyong/lamenting-loss',
 };
 
 const Indeterminate: MusicScore = {
@@ -26,6 +28,7 @@ const Indeterminate: MusicScore = {
         [Instrument.ORCHESTRA]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5b35eb1baa4a99232a630319/1530260251730/indeterminate_score.pdf',
     },
+    trackUrl: 'https://soundcloud.com/djtaeyong/indeterminate',
 };
 
 const HybridDuality: MusicScore = {
@@ -47,6 +50,7 @@ const HybridDuality: MusicScore = {
         [Instrument.BASS]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5b35ec73f950b745b91ebf84/1530260596079/Hybrid_Duality_2_11+-+Double+Bass.pdf',
     },
+    trackUrl: 'https://soundcloud.com/djtaeyong/hybrid-duality',
 };
 
 const Lost: MusicScore = {
@@ -56,6 +60,7 @@ const Lost: MusicScore = {
         [Instrument.PIANO]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5b35eb63aa4a99232a630812/1530260324826/Lost.pdf',
     },
+    trackUrl: 'https://soundcloud.com/djtaeyong/lost',
 };
 
 const ClassicalMusicScores = [Reclaimer, LamentingLoss, Indeterminate, HybridDuality, Lost];
