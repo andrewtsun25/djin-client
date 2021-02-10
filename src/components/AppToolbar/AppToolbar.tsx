@@ -2,6 +2,7 @@ import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import appToolbarStyles from './AppToolbar.styles';
 
@@ -24,9 +25,11 @@ const AppToolbar: React.FC<AppToolbarProps> = ({ isAppDrawerOpen, openAppDrawer 
                 >
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap>
-                    d.jin
-                </Typography>
+                <Link to="/" className={classes.homeLink}>
+                    <Typography variant="h6" noWrap>
+                        d.jin
+                    </Typography>
+                </Link>
             </Toolbar>
         </AppBar>
     );
