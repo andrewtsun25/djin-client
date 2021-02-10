@@ -23,7 +23,7 @@ const Indeterminate: MusicScore = {
     title: 'Indeterminate',
     date: DateTime.fromISO('2011-11-01T00:00:00-08:00'),
     parts: {
-        [Instrument.PIANO]:
+        [Instrument.ORCHESTRA]:
             'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5b35eb1baa4a99232a630319/1530260251730/indeterminate_score.pdf',
     },
 };
