@@ -94,8 +94,18 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                     <ListItemInternalLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested />
                 </NestedList>
                 <NestedList icon={<SportsMmaIcon />} text="Martial Arts">
-                    <ListItemInternalLink icon={<SportsMmaIcon />} text="ITF Taekwondo" to="/martialArts/itf" nested />
-                    <ListItemInternalLink icon={<SportsMmaIcon />} text="WT Taekwondo" to="/martialArts/wt" nested />
+                    <ListItemInternalLink
+                        icon={<SportsMmaIcon />}
+                        text="ITF Taekwondo"
+                        to="/martialArts/itfTaekwondo"
+                        nested
+                    />
+                    <ListItemInternalLink
+                        icon={<SportsMmaIcon />}
+                        text="WT Taekwondo"
+                        to="/martialArts/wtTaekwondo"
+                        nested
+                    />
                     <ListItemInternalLink
                         icon={<SportsMmaIcon />}
                         text="Haidong Gumdo"

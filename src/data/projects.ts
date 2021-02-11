@@ -7,11 +7,13 @@ import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
 import btgLogo from 'assets/projects/logo/btg.png';
 import fearlessLogo from 'assets/projects/logo/fearless_la.png';
 import ivLogo from 'assets/projects/logo/intervarsity_ucsd.png';
+import selfLogo from 'assets/projects/logo/self.png';
 import uscTkdLogo from 'assets/projects/logo/usctkd.jpg';
 import withoutaboxImg from 'assets/projects/media/amazon_withoutabox.png';
 import latticeImg from 'assets/projects/media/anduril_lattice.jpg';
 import btgImg from 'assets/projects/media/btg_site.jpg';
 import classifiedImg from 'assets/projects/media/classified.jpg';
+import djinDevImg from 'assets/projects/media/djin_dev.png';
 import fearlessMobileImg from 'assets/projects/media/fearless_mobile.png';
 import fearlessWebsiteImg from 'assets/projects/media/fearless_website.png';
 import letterSuggestionsImg from 'assets/projects/media/google_letter-suggestions.png';
@@ -391,6 +393,22 @@ const Capacitor = {
     skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
 };
 
+const DjinDev = {
+    name: 'djin.dev',
+    organization: 'Self',
+    avatarUrl: selfLogo,
+    mediaUrl: djinDevImg,
+    startDate: DateTime.fromISO('2021-02-04T09:00:00-08:00'),
+    description:
+        'Figured that the best way to provide a code sample to recruiters/interviewers is to give it to them ' +
+        'right under their noses while they are looking for it. I am also not fond of owing Squarespace money for my personal website.',
+    responsibilities: [
+        `Designed a front-end for my application in React and TypeScript, styled with Material UI`,
+        'Coming Soon: Backend in DynamoDB w/ GraphQL APIs.',
+    ],
+    skills: ['React', 'TypeScript', 'JSS', 'Material UI'],
+};
+
 const CodingProjects: Project[] = [
     BrandCaster,
     CLOE,
@@ -413,6 +431,7 @@ const CodingProjects: Project[] = [
     Metrix,
     LattticeControlApp,
     Capacitor,
+    DjinDev,
 ];
 
 export { CodingProjects };

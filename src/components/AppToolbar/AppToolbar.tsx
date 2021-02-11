@@ -1,6 +1,7 @@
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
+import logo from 'logo.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ const AppToolbar: React.FC<AppToolbarProps> = ({ isAppDrawerOpen, openAppDrawer 
                     <MenuIcon />
                 </IconButton>
                 <Link to="/" className={classes.homeLink}>
+                    <img src={logo} alt="d.jin website logo" className={classes.logo} />
                     <Typography variant="h6" noWrap>
                         d.jin
                     </Typography>
