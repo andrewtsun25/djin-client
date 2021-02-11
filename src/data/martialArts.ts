@@ -95,7 +95,7 @@ const WorldTaekwondo: MartialArt = {
         'During my time as a YouTube intern in 2019, I briefly trained in the More Than Medals Taekwondo ' +
         'dojang in San Bruno (2019/05 - 2019/08). \n' +
         '\n' +
-        'Since the COVID-19 pandemic began in March 2020, I was able to obtain my 2nd Dan certification ' +
+        'Since the COVID-19 pandemic began in March 2020, I was able to obtain my 2nd Dan (2단) certification ' +
         'from Taeryong Taekwondo with the first socially distanced black belt test in July 19, 2020 (2020/07/19). \n' +
         '\n' +
         'After moving to Irvine to begin working at Anduril Industries, I migrated to Talium Taekwondo, ' +

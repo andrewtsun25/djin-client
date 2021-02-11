@@ -26,6 +26,9 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                 </Typography>
                 {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} />}
             </div>
+            <Typography variant="h4" align="center" className={classes.rank}>
+                Current Rank: {martialArt.blackBeltRank} 단
+            </Typography>
             <Grid container spacing={3} className={classes.pageContent}>
                 <Grid xs={12} lg={6}>
                     <Typography paragraph className={classes.introduction}>

@@ -6,7 +6,7 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: `1rem auto 3rem`,
+            marginTop: `1rem`,
         },
         pageContent: {
             whiteSpace: 'pre-line',
@@ -34,7 +34,10 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
             textAlign: 'center',
         },
         title: {
-            margin: `0 50px`,
+            margin: '0 50px',
+        },
+        rank: {
+            marginBottom: '3rem',
         },
     }),
 );
