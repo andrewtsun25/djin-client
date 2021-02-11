@@ -43,7 +43,7 @@ const martialArtsPageStyles = makeStyles(() =>
             flexShrink: 1,
         },
         title: {
-            margin: `0 20px`,
+            margin: `0 50px`,
         },
     }),
 );
