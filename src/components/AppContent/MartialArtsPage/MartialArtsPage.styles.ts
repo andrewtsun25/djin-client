@@ -6,14 +6,22 @@ const martialArtsPageStyles = makeStyles(() =>
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            margin: `20px auto`,
         },
         pageContent: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 50%)',
             whiteSpace: 'pre-line',
+            margin: `20px 0`,
+        },
+        introduction: {
+            fontStyle: 'italic',
         },
         info: {
             width: '66%',
+        },
+        picContainer: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
         pic: {
             width: '100%',
@@ -30,6 +38,12 @@ const martialArtsPageStyles = makeStyles(() =>
             gridTemplateColumns: 'repeat(4, 25%)',
             justifyItems: 'center',
             alignItems: 'center',
+        },
+        styleLogoImg: {
+            flexShrink: 1,
+        },
+        title: {
+            margin: `0 20px`,
         },
     }),
 );

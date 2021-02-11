@@ -1,3 +1,5 @@
+import itfImg from 'assets/martialArts/img/itf_1st_dan_test.jpg';
+import itfLogo from 'assets/martialArts/logo/style/itf.png';
 import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
 const WorldTaekwondo: MartialArt = {
@@ -38,49 +40,55 @@ const WorldTaekwondo: MartialArt = {
         '80% foot techniques and 20% hand techniques. WT-style Taekwondo was created by the South Korean ' +
         'government after General Choi Hong Hi (최홍히) left. It is the style of Taekwondo most people think ' +
         'of, and is the official style promoted by South Korea and featured in the Summer Olympics. ',
-    logoUrl:
-        'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527904344207-QK30GYC8KDFHPCCN3IRQ/ke17ZwdGBToddI8pDm48kPXcsi8OqGk_c5jv_6tsV_vlfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXI1FUJGtWL0_8dpDG9_x8o1ZYD1DwftTX4uVIwU9y7MKdT94fJlXLf6cIc1Gj3JNQ/logo_wtf.png?format=500w',
+    logoUrl: itfLogo,
     studios: [
         {
             name: 'UCSD Taekwondo',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527666604460-GDGUQRIBI3GGAX04D9XB/ke17ZwdGBToddI8pDm48kPDa3ERDRejDlAlJmv0BmTVZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5cSdnW6xYwsG0aAyF_lRkc09GLBqof3ZTIiPAFg0K__g/logo_ucsd.png?format=500w',
             href: 'https://www.facebook.com/groups/ucsdtkd/',
+            location: 'San Diego, CA, USA',
         },
         {
             name: 'Yonsei International Taekwondo Academy',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662420046-B0R7E8KMBJM2DHTDJJGP/ke17ZwdGBToddI8pDm48kP06O0_IHyRXSOOiqwgWaApZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEsL0EX72Q6S7TgfQYQBQpkz5xM6Qt8VXd_xJGg_ziCFib8BodarTVrzIWCp72ioWw/logo_yonsei.png?format=500w',
             href: 'http://web.yonsei.ac.kr/yitaekwondo/',
+            location: 'Seoul, South Korea',
         },
         {
             name: 'UCLA Taekwondo',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662427268-V65W4GCB79E5ICI8U7RL/ke17ZwdGBToddI8pDm48kGgfmdwyDkDCbYlr5j-F18ZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwNEsiZUijG4PdEFwMh4xR5dHR9Yx6yI07XW2syHOEgOcoiExah_2KH83dOmsYiipo/logo_ucla.png?format=500w',
             href: 'https://uclaclubsports.com/sports/taek',
+            location: 'Los Angeles, CA, USA',
         },
         {
             name: 'Taeryong Taekwondo',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662678459-O5W6FKRUN84BKS5D3BQM/ke17ZwdGBToddI8pDm48kMKdRrPISbXw8Frpbwjb8EJZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7cbpD-ALo5EVlYbhs4zusntqetjAVIoWS4rPslKa7KOpJut8QouL_apBGby4TfG83Q/logo_taeryong.jpg?format=500w',
             href: 'http://www.trtkd.com/',
+            location: 'Santa Monica, CA, USA',
         },
         {
             name: 'USC Taekwondo',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1527662758623-SZGF4ZA9JZ4G2GRPE77I/ke17ZwdGBToddI8pDm48kLxnK526YWAH1qleWz-y7AFZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH33scGBZjC30S7EYewNF5iKKwhonf2ThqWWOBkLKnojuqYeU1KwPvsAK7Tx5ND4WE/logo_usc.jpg?format=500w',
             href: 'https://sites.google.com/usc.edu/usctkd',
+            location: 'Los Angeles, CA, USA',
         },
         {
             name: 'MTM Taekwondo',
             logoUrl:
                 'https://images.squarespace-cdn.com/content/v1/5b06683d89c172fcf6c30356/1559729458096-IZRFWC8UAQ2XJVR1LW32/ke17ZwdGBToddI8pDm48kHqKK8-XLX_NZbquufEAhzBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpznQADQ-6SEvIb7Eo7uFO3Db83hfok6XGq7TTQ0Kb2vkTheqc7H0ja4BqW2AjzLBto/MTM_Logo.jpg?format=500w',
             href: 'http://mtmtaekwondo.com/',
+            location: 'Daly City, CA, USA',
         },
         {
             name: 'Talium Taekwondo',
             logoUrl: 'https://lirp-cdn.multiscreensite.com/cb86f2ac/dms3rep/multi/opt/Logo-Updated-480w.jpg',
             href: 'https://www.masterleestalium.com/',
+            location: 'Irvine, CA, USA',
         },
     ],
     style: MartialArtsStyle.WT,
@@ -97,8 +105,7 @@ const InternationalTaekwondoFederation = {
         'in September 2013 (2013/09). ',
     blackBeltRank: 1,
     imgCaption: '1st Dan Black Belt Ceremony',
-    imgUrl:
-        'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5f50a4aa15788b24a394a6c0/1527909028111/Mightyfist.jpg?format=1000wm',
+    imgUrl: itfImg,
     introduction:
         'ITF-style taekwon-do closely resembles a traditional martial art more akin to Japanese ' +
         'karate and Chinese kung-fu. There is a stronger emphasis on power and techniques, and thus, ' +
@@ -106,14 +113,14 @@ const InternationalTaekwondoFederation = {
         'techniques. While it was created by General Choi Hong Hi (최홍히) in South Korea, ITF-style ' +
         'taekwon-do is not endorsed by South Korea. It is headquartered in Vienna, Austria, and is ' +
         'more popular in Europe and North Korea. ',
-    logoUrl:
-        'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/t/5f50a4aa15788b24a394a6c3/1528048741163/logo_itf.png?format=500w',
+    logoUrl: itfLogo,
     studios: [
         {
             name: 'Mightyfist Taekwon-Do',
             logoUrl:
                 'https://static1.squarespace.com/static/5b06683d89c172fcf6c30356/5f50a4aa15788b24a394a6cb/5f50a4aa15788b24a394a6cc/1527909113118/logo_mightyfist.jpg?format=500w',
             href: 'http://mightyfist.com/',
+            location: 'San Jose, CA, USA',
         },
     ],
     style: MartialArtsStyle.ITF,
