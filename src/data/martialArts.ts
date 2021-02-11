@@ -1,6 +1,4 @@
-import itfImg from 'assets/martialArts/img/itf_1st_dan_test.jpg';
-import wtTmg from 'assets/martialArts/img/wt_2nd_dan_test.jpeg';
-import mightyFistLogo from 'assets/martialArts/logo/dojang/mightyfist_tkd.jpg';
+import mightyFistTkdLogo from 'assets/martialArts/logo/dojang/mightyfist_tkd.jpg';
 import mtmTkdLogo from 'assets/martialArts/logo/dojang/mtm_tkd.jpg';
 import taeryongTkdLogo from 'assets/martialArts/logo/dojang/taeryong_tkd.png';
 import taliumTkdLogo from 'assets/martialArts/logo/dojang/talium_tkd.png';
@@ -8,9 +6,69 @@ import uclaTkdLogo from 'assets/martialArts/logo/dojang/ucla_tkd.png';
 import ucsdTkdLogo from 'assets/martialArts/logo/dojang/ucsd_tkd.png';
 import uscTkdLogo from 'assets/martialArts/logo/dojang/usc_tkd.jpg';
 import yonseiTkdLogo from 'assets/martialArts/logo/dojang/yonsei_intl_tkd.png';
+import hdgdLogo from 'assets/martialArts/logo/style/hdgd.png';
 import itfLogo from 'assets/martialArts/logo/style/itf.png';
 import wtLogo from 'assets/martialArts/logo/style/wt.png';
-import { MartialArt, MartialArtsStyle } from 'types/martialArts';
+import hdgdImg from 'assets/martialArts/media/hdgd_placeholder.png';
+import itfImg from 'assets/martialArts/media/itf_1st_dan_test.jpg';
+import wtTmg from 'assets/martialArts/media/wt_2nd_dan_test.jpeg';
+import { MartialArt, MartialArtsStyle, Studio } from 'types/martialArts';
+
+const UcsdTkd: Studio = {
+    name: 'UCSD Taekwondo',
+    logoUrl: ucsdTkdLogo,
+    href: 'https://www.facebook.com/groups/ucsdtkd/',
+    location: 'San Diego, CA, USA',
+};
+
+const YonseiTkd: Studio = {
+    name: "Yonsei Int'l Taekwondo Academy",
+    logoUrl: yonseiTkdLogo,
+    href: 'http://web.yonsei.ac.kr/yitaekwondo/',
+    location: 'Seoul, South Korea',
+};
+
+const UclaTkd: Studio = {
+    name: 'UCLA Taekwondo',
+    logoUrl: uclaTkdLogo,
+    href: 'https://uclaclubsports.com/sports/taek',
+    location: 'Los Angeles, CA, USA',
+};
+
+const TaeryongTkd: Studio = {
+    name: 'Taeryong Taekwondo',
+    logoUrl: taeryongTkdLogo,
+    href: 'http://www.trtkd.com/',
+    location: 'Santa Monica, CA, USA',
+};
+
+const UscTkd: Studio = {
+    name: 'USC Taekwondo',
+    logoUrl: uscTkdLogo,
+    href: 'https://sites.google.com/usc.edu/usctkd',
+    location: 'Los Angeles, CA, USA',
+};
+
+const MtmTkd: Studio = {
+    name: 'MTM Taekwondo',
+    logoUrl: mtmTkdLogo,
+    href: 'http://mtmtaekwondo.com/',
+    location: 'Daly City, CA, USA',
+};
+
+const TaliumTkd: Studio = {
+    name: 'Talium Taekwondo',
+    logoUrl: taliumTkdLogo,
+    href: 'https://www.masterleestalium.com/',
+    location: 'Irvine, CA, USA',
+};
+
+const MightyFistTkd: Studio = {
+    name: 'Mightyfist Taekwon-Do',
+    logoUrl: mightyFistTkdLogo,
+    href: 'http://mightyfist.com/',
+    location: 'San Jose, CA, USA',
+};
 
 const WorldTaekwondo: MartialArt = {
     biography:
@@ -52,51 +110,8 @@ const WorldTaekwondo: MartialArt = {
         'government after General Choi Hong Hi (최홍히) left. It is the style of Taekwondo most people think ' +
         'of, and is the official style promoted by South Korea and featured in the Summer Olympics. ',
     logoUrl: wtLogo,
-    studios: [
-        {
-            name: 'UCSD Taekwondo',
-            logoUrl: ucsdTkdLogo,
-            href: 'https://www.facebook.com/groups/ucsdtkd/',
-            location: 'San Diego, CA, USA',
-        },
-        {
-            name: "Yonsei Int'l Taekwondo Academy",
-            logoUrl: yonseiTkdLogo,
-            href: 'http://web.yonsei.ac.kr/yitaekwondo/',
-            location: 'Seoul, South Korea',
-        },
-        {
-            name: 'UCLA Taekwondo',
-            logoUrl: uclaTkdLogo,
-            href: 'https://uclaclubsports.com/sports/taek',
-            location: 'Los Angeles, CA, USA',
-        },
-        {
-            name: 'Taeryong Taekwondo',
-            logoUrl: taeryongTkdLogo,
-            href: 'http://www.trtkd.com/',
-            location: 'Santa Monica, CA, USA',
-        },
-        {
-            name: 'USC Taekwondo',
-            logoUrl: uscTkdLogo,
-            href: 'https://sites.google.com/usc.edu/usctkd',
-            location: 'Los Angeles, CA, USA',
-        },
-        {
-            name: 'MTM Taekwondo',
-            logoUrl: mtmTkdLogo,
-            href: 'http://mtmtaekwondo.com/',
-            location: 'Daly City, CA, USA',
-        },
-        {
-            name: 'Talium Taekwondo',
-            logoUrl: taliumTkdLogo,
-            href: 'https://www.masterleestalium.com/',
-            location: 'Irvine, CA, USA',
-        },
-    ],
-    style: MartialArtsStyle.WT,
+    studios: [UcsdTkd, YonseiTkd, UclaTkd, TaeryongTkd, UscTkd, MtmTkd, TaliumTkd],
+    style: MartialArtsStyle.WT_TKD,
     styleName: 'World Taekwondo',
 };
 
@@ -119,16 +134,28 @@ const InternationalTaekwondoFederation = {
         'taekwon-do is not endorsed by South Korea. It is headquartered in Vienna, Austria, and is ' +
         'more popular in Europe and North Korea. ',
     logoUrl: itfLogo,
-    studios: [
-        {
-            name: 'Mightyfist Taekwon-Do',
-            logoUrl: mightyFistLogo,
-            href: 'http://mightyfist.com/',
-            location: 'San Jose, CA, USA',
-        },
-    ],
-    style: MartialArtsStyle.ITF,
+    studios: [MightyFistTkd],
+    style: MartialArtsStyle.ITF_TKD,
     styleName: 'International Taekwon-Do Federation',
 };
 
-export { InternationalTaekwondoFederation, WorldTaekwondo };
+const HaidongGumdo = {
+    biography:
+        'As I began training at Talium Taekwondo, I never really learned how to properly wield any kind of sword. ' +
+        'Through training with a bamboo sword (죽검), I was able to learn basic cutting techniques (베기), sword stances (세), ' +
+        'and sword forms (검법). So far, I have achieved the ability to cut newspaper precisely with a bamboo sword instead of ' +
+        'using scissors like a white belt.',
+    blackBeltRank: 2,
+    imgCaption: 'A really cool picture of Haidong Gumdo since I keep breaking phone cameras with my sword.',
+    imgUrl: hdgdImg,
+    introduction:
+        'Haidong Gumdo (해동검도) is a Korean sword martial art founded in 1983. Rather than focusing on sword combat, ' +
+        'Haidong Gumdo primarily focuses on increasing concentration through the precision and accuracy of sword techniques. ' +
+        'In a sense, Haidong Gumdo is akin to Japanese Iaido (居合道).',
+    logoUrl: hdgdLogo,
+    studios: [TaliumTkd],
+    style: MartialArtsStyle.ITF_TKD,
+    styleName: 'International Taekwon-Do Federation',
+};
+
+export { HaidongGumdo, InternationalTaekwondoFederation, WorldTaekwondo };

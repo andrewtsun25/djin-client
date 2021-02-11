@@ -1,5 +1,5 @@
-import { Dojang } from './Dojang';
 import MartialArtsStyle from './MartialArtsStyles';
+import { Studio } from './Studio';
 
 export interface MartialArt {
     style: MartialArtsStyle;
@@ -10,5 +10,5 @@ export interface MartialArt {
     biography: string;
     imgUrl: string;
     imgCaption: string;
-    studios: Dojang[];
+    studios: Studio[];
 }

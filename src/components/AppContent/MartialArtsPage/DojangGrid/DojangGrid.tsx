@@ -3,12 +3,12 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import LaunchIcon from '@material-ui/icons/Launch';
 import React from 'react';
-import { Dojang } from 'types/martialArts';
+import { Studio } from 'types/martialArts';
 
 import dojangGridStyles from './DojangGrid.styles';
 
 interface DojangGridProps {
-    dojangs: Dojang[];
+    dojangs: Studio[];
 }
 
 const COL_HEIGHT = 333;
@@ -25,7 +25,7 @@ const DojangGrid: React.FC<DojangGridProps> = ({ dojangs }: DojangGridProps) => 
                 Studios
             </Typography>
             <GridList cellHeight={COL_HEIGHT} cols={cols}>
-                {dojangs.map(({ name, href, logoUrl, location }: Dojang) => (
+                {dojangs.map(({ name, href, logoUrl, location }: Studio) => (
                     <GridListTile key={name} cols={1} rows={1}>
                         <img src={logoUrl} alt={`${name} Logo`} className={classes.dojangImg} />
                         <GridListTileBar

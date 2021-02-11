@@ -51,11 +51,14 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 <Route path="/music/scores">
                     <MusicScoresPage />
                 </Route>
-                <Route path="/martialArts/itf">
-                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF} />
+                <Route path="/martialArts/itfTaekwondo">
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.ITF_TKD} />
                 </Route>
-                <Route path="/martialArts/wt">
-                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.WT} />
+                <Route path="/martialArts/wtTaekwondo">
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.WT_TKD} />
+                </Route>
+                <Route path="/martialArts/haidongGumdo">
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyle.HDGD} />
                 </Route>
                 <Route path="/about">
                     <About />

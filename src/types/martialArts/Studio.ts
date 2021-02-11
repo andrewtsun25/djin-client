@@ -1,4 +1,4 @@
-export interface Dojang {
+export interface Studio {
     name: string;
     logoUrl: string;
     href: string;
