@@ -5,8 +5,8 @@ import useMartialArt from 'hooks/useMartialArt';
 import React from 'react';
 import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
-import DojangGrid from './DojangGrid';
 import martialArtsPageStyles from './MartialArtsPage.styles';
+import StudioGrid from './StudioGrid';
 
 interface MartialArtsPageProps {
     martialArtsStyle: MartialArtsStyle;
@@ -20,15 +20,11 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
     return martialArt ? (
         <Container maxWidth="lg">
             <div className={classes.pageHeading}>
-                {isLarge && (
-                    <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} className={classes.styleLogoImg} />
-                )}
-                <Typography variant="h2" align="center" className={classes.title}>
+                {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} />}
+                <Typography variant="h1" align="center" className={classes.title}>
                     {martialArt.styleName}
                 </Typography>
-                {isLarge && (
-                    <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} className={classes.styleLogoImg} />
-                )}
+                {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} />}
             </div>
             <Grid container spacing={3} className={classes.pageContent}>
                 <Grid xs={12} lg={6}>
@@ -48,7 +44,7 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                     </figure>
                 </Grid>
             </Grid>
-            <DojangGrid dojangs={martialArt.studios} />
+            <StudioGrid studios={martialArt.studios} />
         </Container>
     ) : null;
 };

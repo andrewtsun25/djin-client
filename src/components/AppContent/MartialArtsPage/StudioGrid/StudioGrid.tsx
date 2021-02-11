@@ -5,19 +5,19 @@ import LaunchIcon from '@material-ui/icons/Launch';
 import React from 'react';
 import { Studio } from 'types/martialArts';
 
-import dojangGridStyles from './DojangGrid.styles';
+import studioGridStyles from './StudioGrid.styles';
 
-interface DojangGridProps {
-    dojangs: Studio[];
+interface StudioGridProps {
+    studios: Studio[];
 }
 
 const COL_HEIGHT = 333;
 
-const DojangGrid: React.FC<DojangGridProps> = ({ dojangs }: DojangGridProps) => {
+const StudioGrid: React.FC<StudioGridProps> = ({ studios }: StudioGridProps) => {
     const theme = useTheme();
     const isMedium = useMediaQuery(theme.breakpoints.up('md'));
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
-    const classes = dojangGridStyles();
+    const classes = studioGridStyles();
     const cols = isLarge ? 4 : isMedium ? 2 : 1;
     return (
         <div className={classes.root}>
@@ -25,9 +25,9 @@ const DojangGrid: React.FC<DojangGridProps> = ({ dojangs }: DojangGridProps) => 
                 Studios
             </Typography>
             <GridList cellHeight={COL_HEIGHT} cols={cols}>
-                {dojangs.map(({ name, href, logoUrl, location }: Studio) => (
+                {studios.map(({ name, href, logoUrl, location }: Studio) => (
                     <GridListTile key={name} cols={1} rows={1}>
-                        <img src={logoUrl} alt={`${name} Logo`} className={classes.dojangImg} />
+                        <img src={logoUrl} alt={`${name} Logo`} className={classes.studioImg} />
                         <GridListTileBar
                             title={name}
                             subtitle={location}
@@ -50,4 +50,4 @@ const DojangGrid: React.FC<DojangGridProps> = ({ dojangs }: DojangGridProps) => 
     );
 };
 
-export default DojangGrid;
+export default StudioGrid;

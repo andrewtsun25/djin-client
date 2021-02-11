@@ -26,6 +26,12 @@ const appToolbarStyles = makeStyles((theme: Theme) =>
         homeLink: {
             color: '#fff',
             textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+        },
+        logo: {
+            maxHeight: theme.typography.h3.fontSize,
+            marginRight: `0.5rem`,
         },
     }),
 );

@@ -1,12 +1,12 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const dojangGridStyles = makeStyles(() =>
+const studioGridStyles = makeStyles(() =>
     createStyles({
         root: {
             margin: `20px auto`,
         },
         studioGridTitle: {
-            margin: `20px auto`,
+            margin: `1rem auto`,
         },
         gridList: {
             width: 500,
@@ -15,11 +15,11 @@ const dojangGridStyles = makeStyles(() =>
         icon: {
             color: 'rgba(255, 255, 255, 0.54)',
         },
-        dojangImg: {
+        studioImg: {
             maxWidth: `100%`,
             objectFit: 'contain',
         },
     }),
 );
 
-export default dojangGridStyles;
+export default studioGridStyles;

@@ -1,12 +1,12 @@
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-const martialArtsPageStyles = makeStyles(() =>
+const martialArtsPageStyles = makeStyles((theme: Theme) =>
     createStyles({
         pageHeading: {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: `20px auto`,
+            margin: `1rem auto 3rem`,
         },
         pageContent: {
             whiteSpace: 'pre-line',
@@ -32,15 +32,6 @@ const martialArtsPageStyles = makeStyles(() =>
         },
         picCaption: {
             textAlign: 'center',
-        },
-        dojangGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 25%)',
-            justifyItems: 'center',
-            alignItems: 'center',
-        },
-        styleLogoImg: {
-            flexShrink: 1,
         },
         title: {
             margin: `0 50px`,

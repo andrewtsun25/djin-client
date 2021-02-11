@@ -104,7 +104,7 @@ const WorldTaekwondo: MartialArt = {
     imgCaption: '2nd Dan Black Belt Test',
     imgUrl: wtTmg,
     introduction:
-        'WT-style Taekwondo is a more sport-oriented form of Taekwondo, with sparring (겨루기) as its ' +
+        'World Taekwondo (WT) style Taekwondo is a more sport-oriented form of Taekwondo, with sparring (겨루기) as its ' +
         'most prominent aspect. More emphasis is placed on speed and kicks, resulting in usage of roughly ' +
         '80% foot techniques and 20% hand techniques. WT-style Taekwondo was created by the South Korean ' +
         'government after General Choi Hong Hi (최홍히) left. It is the style of Taekwondo most people think ' +
@@ -112,7 +112,7 @@ const WorldTaekwondo: MartialArt = {
     logoUrl: wtLogo,
     studios: [UcsdTkd, YonseiTkd, UclaTkd, TaeryongTkd, UscTkd, MtmTkd, TaliumTkd],
     style: MartialArtsStyle.WT_TKD,
-    styleName: 'World Taekwondo',
+    styleName: 'WT Taekwondo',
 };
 
 const InternationalTaekwondoFederation = {
@@ -127,7 +127,7 @@ const InternationalTaekwondoFederation = {
     imgCaption: '1st Dan Black Belt Ceremony',
     imgUrl: itfImg,
     introduction:
-        'ITF-style taekwon-do closely resembles a traditional martial art more akin to Japanese ' +
+        'International Taekwon-Do Federation (ITF) taekwon-do closely resembles a traditional martial art more akin to Japanese ' +
         'karate and Chinese kung-fu. There is a stronger emphasis on power and techniques, and thus, ' +
         'patterns (툴). It employs a roughly equal distribution of 50% foot techniques and 50% hand ' +
         'techniques. While it was created by General Choi Hong Hi (최홍히) in South Korea, ITF-style ' +
@@ -136,7 +136,7 @@ const InternationalTaekwondoFederation = {
     logoUrl: itfLogo,
     studios: [MightyFistTkd],
     style: MartialArtsStyle.ITF_TKD,
-    styleName: 'International Taekwon-Do Federation',
+    styleName: 'ITF Taekwondo',
 };
 
 const HaidongGumdo = {
@@ -154,8 +154,8 @@ const HaidongGumdo = {
         'In a sense, Haidong Gumdo is akin to Japanese Iaido (居合道).',
     logoUrl: hdgdLogo,
     studios: [TaliumTkd],
-    style: MartialArtsStyle.ITF_TKD,
-    styleName: 'International Taekwon-Do Federation',
+    style: MartialArtsStyle.HDGD,
+    styleName: 'Haidong Gumdo',
 };
 
 export { HaidongGumdo, InternationalTaekwondoFederation, WorldTaekwondo };
