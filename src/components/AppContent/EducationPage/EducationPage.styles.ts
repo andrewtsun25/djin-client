@@ -1,9 +1,13 @@
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-const educationPageStyles = makeStyles(() =>
+const educationPageStyles = makeStyles((theme: Theme) =>
     createStyles({
+        container: {
+            padding: `10px 0`,
+        },
         pageTitle: {
-            margin: 10,
+            padding: 10,
+            color: theme.palette.primary.contrastText,
         },
     }),
 );

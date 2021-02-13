@@ -11,11 +11,11 @@ const ErrorPage: React.FC = () => {
         <Container maxWidth="lg" className={classes.center}>
             <div className={classes.pageContent}>
                 <img src={errorChickens} alt="Angry Chickens" />
-                <Typography paragraph variant="h4">
+                <Typography paragraph variant="h4" align="center">
                     You probably caught these chickens at a bad time.
                 </Typography>
                 <Link to="/">
-                    <Typography paragraph variant="h6">
+                    <Typography paragraph variant="h6" align="center">
                         Give the chickens some privacy.
                     </Typography>
                 </Link>
