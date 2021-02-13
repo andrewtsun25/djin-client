@@ -22,8 +22,7 @@ const hbvResearchCardStyles = makeStyles((theme: Theme) =>
             margin: '10 auto',
         },
         link: {
-            display: 'flex',
-            alignItems: 'center',
+            color: '#308574',
         },
         iconContainer: {
             marginRight: 10,

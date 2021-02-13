@@ -23,7 +23,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, links, ic
             <Typography>
                 <ul className={classes.linkList}>
                     {map(links, (value, key) => (
-                        <IconLink href={value} text={key} icon={icon} />
+                        <IconLink href={value} text={key} icon={icon} className={classes.link} />
                     ))}
                 </ul>
             </Typography>

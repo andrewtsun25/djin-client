@@ -12,6 +12,8 @@ const reclaimerPageStyles = makeStyles(() =>
             maxWidth: '100%',
             padding: 10,
             margin: '10px auto',
+            border: '3px solid #ba4ef8',
+            borderRadius: 10,
         },
         reclaimerPlayLink: {
             margin: '1em auto',

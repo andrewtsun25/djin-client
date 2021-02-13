@@ -1,7 +1,16 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+import studioBg from 'assets/martialArts/media/studio_bg.png';
 
 const martialArtsPageStyles = makeStyles((theme: Theme) =>
     createStyles({
+        bg: {
+            backgroundImage: `url(${studioBg})`,
+        },
+        contentBg: {
+            backgroundColor: fade(theme.palette.common.white, 0.85),
+            padding: 10,
+        },
         pageHeading: {
             display: 'flex',
             alignItems: 'center',

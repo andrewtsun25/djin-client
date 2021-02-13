@@ -407,6 +407,7 @@ const DjinDev = {
         'Coming Soon: Backend in DynamoDB w/ GraphQL APIs.',
     ],
     skills: ['React', 'TypeScript', 'JSS', 'Material UI'],
+    projectLink: 'https://github.com/andrewtsun25/djin',
 };
 
 const CodingProjects: Project[] = [

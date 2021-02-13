@@ -33,7 +33,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                 avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
             />
             <CardContent>
-                <IconLink href={paperLink} text="Research Paper" icon={<DescriptionIcon />} />
+                <IconLink href={paperLink} text="Research Paper" icon={<DescriptionIcon />} className={classes.link} />
                 <Typography paragraph>{description}</Typography>
                 {responsibilities.length > 0 && (
                     <ul>

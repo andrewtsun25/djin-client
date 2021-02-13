@@ -73,7 +73,8 @@ const MightyFistTkd: Studio = {
 const WorldTaekwondo: MartialArt = {
     biography:
         'During my undergraduate years (2012-2016), I primarily competed for the University of California, ' +
-        'San Diego (UCSD) Taekwondo team led by Coach Jacky Baik. Upon graduation, ' +
+        'San Diego (UCSD) Taekwondo team led by Coach Jacky Baik. As I initially trained in ITF Taekwondo, the style ' +
+        'change was a shock to the system, but I quickly adapted over the years, and became proficient. Upon graduation, ' +
         'I was co-captain of a demonstration team of international students while attending Yonsei ' +
         'University in Seoul, Korea (2016/06 - 2016/08). Aside from co-captain duties, I also led ' +
         "practices in Grandmaster Young-Sun Kim's absence. \n" +
@@ -82,10 +83,10 @@ const WorldTaekwondo: MartialArt = {
         'compete with the university team there for a year under Coaches Mara Perscheid and ' +
         'Kira Cramer (2016/09 - 2017/06). \n' +
         '\n' +
-        'After being out of college for a year, I decided to pursue Taekwondo more formally at a local ' +
-        'studio, Taeryong Taekwondo under Grandmaster Yong-Sup Shin and Masters Nickie Quan and Brandon ' +
-        'Meek (2017/06 - 2020/02). While training at Taeryong Taekwondo, I received my 1st degree (1단) ' +
-        'black belt on May 5, 2018 (2018/05/05). \n' +
+        'After being out of college for a year, I decided to get around to getting a black bellt and pursue Taekwondo ' +
+        'more formally at a local studio, Taeryong Taekwondo under Grandmaster Yong-Sup Shin and Masters Nickie Quan ' +
+        'and Brandon Meek (2017/06 - 2020/02). While training at Taeryong Taekwondo, I (finally) received my 1st degree ' +
+        '(1단) black belt on May 5, 2018 (2018/05/05). \n' +
         '\n' +
         'As a graduate student, I fought on for the USC Taekwondo Team under coaches Spyro Spyropoulos-Spears ' +
         'and Eduardo Belmont (2018/08 - 2020/05). At USC, I regularly represented USC as a Taekwondo PacWest athlete at ' +
@@ -117,12 +118,17 @@ const WorldTaekwondo: MartialArt = {
 
 const InternationalTaekwondoFederation = {
     biography:
-        'Prior to my undergraduate studies, I trained at the Mightyfist Taekwon-do dojang under ' +
+        'Prior to my undergraduate studies, I trained at the Mightyfist Taekwon-do studio under ' +
         'Master Jason Morris. There, I learned board-breaking, sparring, patterns, and self-defense. ' +
-        'As the dojang was split into four teams, I received the responsibility of being a patterns ' +
-        'coach for Team Alpha. Prior to receiving my black belt, I served as an assistant instructor ' +
-        'for younger children in color-belt classes. I received my 1st degree (1단) black belt ' +
-        'in September 2013 (2013/09). ',
+        'As the studio was split into four teams, I received the responsibility of being a patterns ' +
+        'coach for Team Alpha. As I graduated high school and prepared to leave for college, I served as an ' +
+        'assistant instructor for younger children in color-belt classes. \n' +
+        '\n' +
+        'While exploring WT Taekwondo for the first time in my undergraduate years at UCSD, I secretly practiced ITF ' +
+        'Taekwondo concurrently, and flew home to test for my 1st degree black belt in February 2013 (02/2013). ' +
+        'After training in ITF Taekwondo over the summer of 2013 for the last time, I received my 1st degree (1단) black ' +
+        'belt in September 2013 (2013/09). Seeing as I was going to be in SoCal for the foreseeable future, and the lack ' +
+        'of ITF studios thereof in SoCal, I decided to officially convert to WT Taekwondo.',
     blackBeltRank: 1,
     imgCaption: '1st Dan Black Belt Ceremony',
     imgUrl: itfImg,

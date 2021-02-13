@@ -1,6 +1,7 @@
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import errorBg from 'assets/error/media/error_bg.png';
 
-const errorPageStyles = makeStyles(() =>
+const errorPageStyles = makeStyles((theme: Theme) =>
     createStyles({
         center: {
             display: 'flex',
@@ -11,6 +12,12 @@ const errorPageStyles = makeStyles(() =>
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+        },
+        contrastText: {
+            color: theme.palette.primary.contrastText,
+        },
+        bg: {
+            backgroundImage: `url(${errorBg})`,
         },
     }),
 );

@@ -32,7 +32,12 @@ const HolisticOfficePage: React.FC = () => {
                     <img src={websiteImg} alt="Holistic Office Website Image" className={classes.holisticOfficeImg} />
                 </div>
                 <Typography paragraph>
-                    <Link href={HOLISTIC_OFFICE_LINK} target="_blank" rel="noopener noreferrer">
+                    <Link
+                        href={HOLISTIC_OFFICE_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={classes.link}
+                    >
                         Holistic Office
                     </Link>{' '}
                     is a patient EHR (Electronic Health Record) management and inventory management system for small to
