@@ -1,44 +1,45 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
-import LinkIcon from '@material-ui/icons/Link';
+import { Avatar, Card, CardContent, CardHeader, Chip, Grow, Slide, Typography } from '@material-ui/core';
+import DescriptionIcon from '@material-ui/icons/Description';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
-import { Project } from 'types/project';
+import { Research } from 'types/research';
 
-import projectCardStyles from './ProjectCard.styles';
+import hbvResearchCardStyles from './HBVResearchCard.styles';
 
-interface ProjectCardProps {
-    project: Project;
+interface HBVResearchCardProps {
+    research: Research;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-    project: {
-        name,
-        endDate,
-        startDate: { monthShort: startDateMonth, year: startDateYear },
-        organization,
+const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
+    research: {
         avatarUrl,
-        mediaUrl,
+        organization,
+        name,
+        startDate: { monthShort: startDateMonth, year: startDateYear },
+        endDate: { monthShort: endDateMonth, year: endDateYear },
         description,
         responsibilities,
         skills,
-        projectLink,
+        paperLink,
     },
-}: ProjectCardProps) => {
-    const classes = projectCardStyles();
-    const subheader = endDate
-        ? `${organization}, ${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}`
-        : `${organization}, ${startDateMonth} ${startDateYear} - Present`;
+}: HBVResearchCardProps) => {
+    const classes = hbvResearchCardStyles();
+    const subheader = `${organization}, ${startDateMonth} ${startDateYear} - ${endDateMonth} ${endDateYear}`;
     return (
-        <Grid item xs={12} md={6} lg={4} xl={3}>
-            <Card variant="outlined" className={classes.root}>
+        <Slide direction="up" in mountOnEnter unmountOnExit>
+            <Card className={classes.root}>
                 <CardHeader
                     title={name}
                     subheader={subheader}
                     avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
                 />
-                <CardMedia image={mediaUrl} className={classes.media} />
                 <CardContent>
-                    {projectLink && <IconLink href={projectLink} text="Project Link" icon={<LinkIcon />} />}
+                    <IconLink
+                        href={paperLink}
+                        text="Research Paper"
+                        icon={<DescriptionIcon />}
+                        className={classes.link}
+                    />
                     <Typography paragraph>{description}</Typography>
                     {responsibilities.length > 0 && (
                         <ul>
@@ -58,8 +59,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     )}
                 </CardContent>
             </Card>
-        </Grid>
+        </Slide>
     );
 };
 
-export default ProjectCard;
+export default HBVResearchCard;

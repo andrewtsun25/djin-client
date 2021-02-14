@@ -16,7 +16,12 @@ const experiencePageStyles = makeStyles((theme: Theme) =>
         contrastText: {
             color: theme.palette.primary.contrastText,
         },
+        resumeLink: {
+            textDecoration: 'underline',
+            '&:hover': {
+                color: theme.palette.primary.light,
+            },
+        },
     }),
 );
-
 export default experiencePageStyles;

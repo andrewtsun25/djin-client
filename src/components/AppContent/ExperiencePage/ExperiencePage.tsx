@@ -21,7 +21,12 @@ const ExperiencePage: React.FC = () => {
             </Typography>
             <Typography paragraph align="center" className={clsx(classes.resumeInfo, classes.contrastText)}>
                 A more official, detailed résumé can be obtained{' '}
-                <Link href={RESUME_URL} target="_blank" rel="noopener noreferrer" className={classes.contrastText}>
+                <Link
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={clsx(classes.contrastText, classes.resumeLink)}
+                >
                     here
                 </Link>
                 .

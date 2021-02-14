@@ -1,12 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#d.jin
+
+`djin` is the front-end personal website of its creator, d.jin. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As of version 1.0.0, this website is front-end only. The production deployment of this website is available at https://djin.dev.
 
 ## Available Scripts
 
-In the project directory, you can run:
+Here are some scripts you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the personal website in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
