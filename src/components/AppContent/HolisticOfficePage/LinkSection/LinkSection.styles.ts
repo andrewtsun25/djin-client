@@ -8,6 +8,9 @@ const linkSectionStyles = makeStyles(() =>
         linkList: {
             listStyleType: 'none',
         },
+        link: {
+            color: '#308575',
+        },
     }),
 );
 

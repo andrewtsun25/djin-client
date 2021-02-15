@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import { EduType } from 'types/education';
 import { MartialArtsStyle } from 'types/martialArts';
 
-import { About } from './About';
 import appContentStyles from './AppContent.styles';
 import EducationPage from './EducationPage';
 import ErrorPage from './ErrorPage';
@@ -59,9 +58,6 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 </Route>
                 <Route path="/martialArts/haidongGumdo">
                     <MartialArtsPage martialArtsStyle={MartialArtsStyle.HDGD} />
-                </Route>
-                <Route path="/about">
-                    <About />
                 </Route>
                 <Route exact path="/">
                     <HomePage />

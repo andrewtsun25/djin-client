@@ -14,7 +14,7 @@ import yahoo2Img from 'assets/experience/media/yahoo_shepherd.jpeg';
 import { DateTime } from 'luxon';
 import { Experience, JobType } from 'types/experience';
 
-export const Anduril: Experience = {
+const Anduril: Experience = {
     company: 'Anduril Industries',
     role: 'Software Engineer',
     avatarUrl: andurilLogo,
@@ -27,7 +27,7 @@ export const Anduril: Experience = {
     jobType: JobType.FullTime,
 };
 
-export const Google: Experience = {
+const Google: Experience = {
     company: 'Google -- YouTube',
     role: 'Software Engineering Intern',
     avatarUrl: googleLogo,
@@ -46,7 +46,7 @@ export const Google: Experience = {
     jobType: JobType.Internship,
 };
 
-export const Amazon: Experience = {
+const Amazon: Experience = {
     company: 'Amazon -- IMDb',
     role: 'Software Development Engineer I',
     avatarUrl: amazonLogo,
@@ -77,7 +77,7 @@ export const Amazon: Experience = {
     jobType: JobType.FullTime,
 };
 
-export const HLI: Experience = {
+const HLI: Experience = {
     company: 'Human Longevity, Inc.',
     avatarUrl: hliLogo,
     mediaUrl: hliImg,
@@ -94,7 +94,7 @@ export const HLI: Experience = {
     jobType: JobType.Internship,
 };
 
-export const Yahoo2: Experience = {
+const Yahoo2: Experience = {
     company: 'Yahoo!',
     avatarUrl: yahooLogo,
     mediaUrl: yahoo2Img,
@@ -111,7 +111,7 @@ export const Yahoo2: Experience = {
     jobType: JobType.Internship,
 };
 
-export const Yahoo1: Experience = {
+const Yahoo1: Experience = {
     company: 'Yahoo!',
     avatarUrl: yahooLogo,
     mediaUrl: yahoo1Img,
@@ -129,7 +129,7 @@ export const Yahoo1: Experience = {
     jobType: JobType.Internship,
 };
 
-export const CouponsCom: Experience = {
+const CouponsCom: Experience = {
     company: 'Quotient Technologies',
     avatarUrl: qtLogo,
     mediaUrl: qtImg,
@@ -147,4 +147,4 @@ export const CouponsCom: Experience = {
 
 const CodingExperience: Experience[] = [Anduril, Google, Amazon, HLI, Yahoo2, Yahoo1, CouponsCom];
 
-export { CodingExperience };
+export { Amazon, Anduril, CodingExperience, CouponsCom, Google, HLI, Yahoo1, Yahoo2 };

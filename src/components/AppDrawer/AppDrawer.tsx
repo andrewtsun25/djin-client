@@ -9,7 +9,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import CodeIcon from '@material-ui/icons/Code';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import DescriptionIcon from '@material-ui/icons/Description';
-import FaceIcon from '@material-ui/icons/Face';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -45,7 +44,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
             }}
         >
             <div className={classes.header}>
-                <IconButton onClick={closeAppDrawer}>
+                <IconButton onClick={closeAppDrawer} data-testid="close-drawer-btn">
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
             </div>
@@ -115,7 +114,6 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                 </NestedList>
                 <Divider />
                 <List>
-                    <ListItemInternalLink icon={<FaceIcon />} text="About" to="/about" nested />
                     <ListItemExternalLink
                         icon={<ContactMailIcon />}
                         text="Contact"

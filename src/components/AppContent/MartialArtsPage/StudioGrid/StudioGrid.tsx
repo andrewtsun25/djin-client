@@ -1,4 +1,4 @@
-import { GridList, GridListTile, GridListTileBar, IconButton, Typography } from '@material-ui/core';
+import { GridList, GridListTile, GridListTileBar, Grow, IconButton, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import LaunchIcon from '@material-ui/icons/Launch';
@@ -26,24 +26,26 @@ const StudioGrid: React.FC<StudioGridProps> = ({ studios }: StudioGridProps) => 
             </Typography>
             <GridList cellHeight={COL_HEIGHT} cols={cols}>
                 {studios.map(({ name, href, logoUrl, location }: Studio) => (
-                    <GridListTile key={name} cols={1} rows={1}>
-                        <img src={logoUrl} alt={`${name} Logo`} className={classes.studioImg} />
-                        <GridListTileBar
-                            title={name}
-                            subtitle={location}
-                            actionIcon={
-                                <IconButton
-                                    aria-label={name}
-                                    className={classes.icon}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <LaunchIcon />
-                                </IconButton>
-                            }
-                        />
-                    </GridListTile>
+                    <Grow in key={name}>
+                        <GridListTile cols={1} rows={1}>
+                            <img src={logoUrl} alt={`${name} Logo`} className={classes.studioImg} />
+                            <GridListTileBar
+                                title={name}
+                                subtitle={location}
+                                actionIcon={
+                                    <IconButton
+                                        aria-label={name}
+                                        className={classes.icon}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <LaunchIcon />
+                                    </IconButton>
+                                }
+                            />
+                        </GridListTile>
+                    </Grow>
                 ))}
             </GridList>
         </div>

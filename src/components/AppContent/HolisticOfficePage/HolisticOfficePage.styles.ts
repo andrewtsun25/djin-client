@@ -15,12 +15,21 @@ const holisticOfficePageStyles = makeStyles(() =>
             maxWidth: '100%',
             padding: 10,
             margin: '10px auto',
+            border: '3px solid #2ab573',
+            borderRadius: 10,
         },
         holisticOfficeImgLink: {
             margin: '30px auto',
         },
         pageHeading: {
             margin: '30px auto',
+        },
+        bg: {
+            backgroundColor: '#e2f1e9',
+            padding: 10,
+        },
+        link: {
+            color: '#308575',
         },
     }),
 );
