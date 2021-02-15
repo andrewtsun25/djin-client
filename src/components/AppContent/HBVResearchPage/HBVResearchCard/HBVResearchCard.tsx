@@ -1,4 +1,4 @@
-import { Avatar, Card, CardContent, CardHeader, Chip, Grow, Slide, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, Chip, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';

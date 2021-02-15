@@ -1,4 +1,4 @@
-import { Container, Fade, Grid, Grow, Link, Paper, Typography } from '@material-ui/core';
+import { Container, Fade, Grid, Grow, Link, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
