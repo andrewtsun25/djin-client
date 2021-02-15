@@ -2,7 +2,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import clsx from 'clsx';
-import { Location, LocationDescriptor } from 'history';
 import React, { ForwardedRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ import listItemLinkStyles from './ListItemLink.styles';
 interface NestedListItemProps {
     icon: React.ReactNode;
     text: string;
-    to: LocationDescriptor | ((location: Location) => LocationDescriptor);
+    to: string;
     nested?: boolean;
 }
 

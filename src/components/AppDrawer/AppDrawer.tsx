@@ -44,7 +44,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
             }}
         >
             <div className={classes.header}>
-                <IconButton onClick={closeAppDrawer}>
+                <IconButton onClick={closeAppDrawer} data-testid="close-drawer-btn">
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
             </div>
