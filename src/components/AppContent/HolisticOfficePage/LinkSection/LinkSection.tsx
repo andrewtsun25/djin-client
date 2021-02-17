@@ -1,8 +1,9 @@
-import { Typography } from '@material-ui/core';
+import { Typography, useMediaQuery } from '@material-ui/core';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
 import React from 'react';
 
+import theme from '../../../theme';
 import linkSectionStyles from './LinkSection.styles';
 
 interface LinkSectionProps {
@@ -14,9 +15,10 @@ interface LinkSectionProps {
 
 const LinkSection: React.FC<LinkSectionProps> = ({ title, description, links, icon }: LinkSectionProps) => {
     const classes = linkSectionStyles();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <>
-            <Typography variant="h2" align="center" className={classes.title}>
+            <Typography variant={isSmall ? 'h3' : 'h2'} align="center" className={classes.title}>
                 {title}
             </Typography>
             <Typography paragraph>{description}</Typography>
