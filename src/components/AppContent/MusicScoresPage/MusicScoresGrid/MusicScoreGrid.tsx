@@ -19,10 +19,10 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
     musicScore: { title, parts, trackUrl },
 }: MusicScoreGridProps) => {
     const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
     const isMedium = useMediaQuery(theme.breakpoints.up('md'));
-    const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
     const classes = musicScoreGridStyles();
-    const cols = isLarge ? 4 : isMedium ? 2 : 1;
+    const cols = isMedium ? 4 : isSmall ? 2 : 1;
     return (
         <Zoom in>
             <div className={classes.root}>
@@ -38,10 +38,9 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
                         const scoreName = `${title} - ${instrument} Score`;
                         return (
                             <GridListTile key={instrument} cols={1} rows={1}>
-                                <img
-                                    src={InstrumentUrls?.[instrument]}
-                                    alt={scoreName}
+                                <div
                                     className={classes.instrumentImg}
+                                    style={{ backgroundImage: `url(${InstrumentUrls?.[instrument]})` }}
                                 />
                                 <GridListTileBar
                                     title={instrument}

@@ -16,26 +16,28 @@ const ExperiencePage: React.FC = () => {
     const experiences: Experience[] = useExperiences();
     return (
         <div className={clsx(shared.bg, classes.bg)}>
-            <Typography variant="h2" align="center" className={clsx(classes.pageTitle, classes.contrastText)}>
-                Coding Experience
-            </Typography>
-            <Typography paragraph align="center" className={clsx(classes.resumeInfo, classes.contrastText)}>
-                A more official, detailed résumé can be obtained{' '}
-                <Link
-                    href={RESUME_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={clsx(classes.contrastText, classes.resumeLink)}
-                >
-                    here
-                </Link>
-                .
-            </Typography>
-            <Grid container direction="row">
-                {experiences.map((experience, index) => (
-                    <ExperienceCard experience={experience} key={index} />
-                ))}
-            </Grid>
+            <div className={classes.colorBg}>
+                <Typography variant="h2" align="center" className={clsx(classes.pageTitle, classes.contrastText)}>
+                    Coding Experience
+                </Typography>
+                <Typography paragraph align="center" className={clsx(classes.resumeInfo, classes.contrastText)}>
+                    A more official, detailed résumé can be obtained{' '}
+                    <Link
+                        href={RESUME_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={clsx(classes.contrastText, classes.resumeLink)}
+                    >
+                        here
+                    </Link>
+                    .
+                </Typography>
+                <Grid container direction="row">
+                    {experiences.map((experience, index) => (
+                        <ExperienceCard experience={experience} key={index} />
+                    ))}
+                </Grid>
+            </div>
         </div>
     );
 };

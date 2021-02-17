@@ -12,16 +12,14 @@ const musicScoreGridStyles = makeStyles((theme: Theme) =>
         gridHeader: {
             margin: `5px auto 5px 5px`,
         },
-        gridList: {
-            width: 500,
-            height: 450,
-        },
         icon: {
             color: 'rgba(255, 255, 255, 0.54)',
         },
         instrumentImg: {
-            maxHeight: `100%`,
-            objectFit: 'cover',
+            width: '100%',
+            paddingTop: '100%',
+            position: 'relative',
+            backgroundSize: 'contain',
         },
     }),
 );

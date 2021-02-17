@@ -1,4 +1,5 @@
 import { Container, Typography } from '@material-ui/core';
+import clsx from 'clsx';
 import sharedStyles from 'components/shared/shared.styles';
 import useEducationBackgroundImage from 'hooks/useEducationBackgroundImage';
 import useEducations from 'hooks/useEducations';
@@ -19,14 +20,16 @@ const EducationPage: React.FC<EducationPageProps> = ({ eduType }: EducationPageP
     const educations: Education[] = useEducations(eduType);
     return (
         <div className={sharedClasses.bg} style={{ backgroundImage: `url(${bgImage})` }}>
-            <Container maxWidth="lg" className={classes.container}>
-                <Typography variant="h2" align="center" className={classes.pageTitle}>
-                    {eduType} Education
-                </Typography>
-                {educations.map((education, index) => (
-                    <EducationCard education={education} key={index} />
-                ))}
-            </Container>
+            <div className={classes.colorBg}>
+                <Container maxWidth="lg">
+                    <Typography variant="h2" align="center" className={classes.pageTitle}>
+                        {eduType} Education
+                    </Typography>
+                    {educations.map((education, index) => (
+                        <EducationCard education={education} key={index} />
+                    ))}
+                </Container>
+            </div>
         </div>
     );
 };

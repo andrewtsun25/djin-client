@@ -13,14 +13,16 @@ const ProjectsPage: React.FC = () => {
     const shared = sharedStyles();
     return (
         <div className={clsx(shared.bg, classes.bg)}>
-            <Typography variant="h2" align="center" className={classes.pageTitle}>
-                Coding Projects
-            </Typography>
-            <Grid container direction="row">
-                {projects.map((project, index) => (
-                    <ProjectCard project={project} key={index} />
-                ))}
-            </Grid>
+            <div className={classes.colorBg}>
+                <Typography variant="h2" align="center" className={classes.pageTitle}>
+                    Coding Projects
+                </Typography>
+                <Grid container direction="row">
+                    {projects.map((project, index) => (
+                        <ProjectCard project={project} key={index} />
+                    ))}
+                </Grid>
+            </div>
         </div>
     );
 };

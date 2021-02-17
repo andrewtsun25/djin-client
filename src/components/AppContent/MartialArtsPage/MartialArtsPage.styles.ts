@@ -35,7 +35,7 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
         },
         pic: {
             width: '100%',
-            padding: 50,
+            padding: 10,
         },
         picImg: {
             width: '100%',

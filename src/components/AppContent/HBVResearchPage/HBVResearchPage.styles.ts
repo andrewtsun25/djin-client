@@ -1,4 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import teamHbvBg from 'assets/research/media/team_hbv_bg.png';
 
 const hbvResearchPageStyles = makeStyles((theme: Theme) =>
@@ -22,7 +23,11 @@ const hbvResearchPageStyles = makeStyles((theme: Theme) =>
         bg: {
             backgroundImage: `url(${teamHbvBg})`,
             backgroundColor: '#308575',
-            paddingBottom: 20,
+        },
+        colorBg: {
+            backgroundColor: fade(theme.palette.common.black, 0.3),
+            height: '100%',
+            paddingBottom: 10,
         },
     }),
 );

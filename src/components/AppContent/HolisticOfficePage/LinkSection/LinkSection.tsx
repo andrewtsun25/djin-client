@@ -17,7 +17,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, links, ic
     const classes = linkSectionStyles();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <>
+        <div className={classes.linkSection}>
             <Typography variant={isSmall ? 'h3' : 'h2'} align="center" className={classes.title}>
                 {title}
             </Typography>
@@ -29,7 +29,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, links, ic
                     ))}
                 </ul>
             </Typography>
-        </>
+        </div>
     );
 };
 

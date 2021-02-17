@@ -18,7 +18,7 @@ const holisticOfficePageStyles = makeStyles(() =>
             margin: '30px auto',
         },
         holisticOfficeLinkImg: {
-            maxWidth: '100vw',
+            maxWidth: '90vw',
             objectFit: 'scale-down',
         },
         pageHeading: {

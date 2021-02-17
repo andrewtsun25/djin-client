@@ -11,6 +11,9 @@ const linkSectionStyles = makeStyles(() =>
         link: {
             color: '#308575',
         },
+        linkSection: {
+            width: '100%',
+        },
     }),
 );
 
