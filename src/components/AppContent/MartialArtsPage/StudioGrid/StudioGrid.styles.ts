@@ -8,15 +8,11 @@ const studioGridStyles = makeStyles(() =>
         studioGridTitle: {
             margin: `1rem auto`,
         },
-        gridList: {
-            width: 500,
-            height: 450,
-        },
         icon: {
             color: 'rgba(255, 255, 255, 0.54)',
         },
         studioImg: {
-            maxWidth: `100%`,
+            maxWidth: `95%`,
             objectFit: 'contain',
         },
     }),

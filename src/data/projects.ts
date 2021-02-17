@@ -404,9 +404,9 @@ const DjinDev = {
         'right under their noses while they are looking for it. I am also not fond of owing Squarespace money for my personal website.',
     responsibilities: [
         `Designed a front-end for my application in React and TypeScript, styled with Material UI`,
-        'Coming Soon: Backend in DynamoDB w/ GraphQL APIs.',
+        'Coming Soon: DB in Firestore, Node backend w/ GraphQL communication, assets stored in separate bucket',
     ],
-    skills: ['React', 'TypeScript', 'JSS', 'Material UI'],
+    skills: ['React', 'TypeScript', 'JSS', 'Material UI', 'GCP Cloud Storage', 'GCP Cloud Build'],
     projectLink: 'https://github.com/andrewtsun25/djin',
 };
 

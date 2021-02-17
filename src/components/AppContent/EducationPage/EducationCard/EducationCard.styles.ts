@@ -4,7 +4,7 @@ const educationCardStyles = makeStyles(() =>
     createStyles({
         root: {
             padding: 10,
-            margin: '10px auto',
+            margin: 10,
         },
         title: {
             textAlign: 'center',

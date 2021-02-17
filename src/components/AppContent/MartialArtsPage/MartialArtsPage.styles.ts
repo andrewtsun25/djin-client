@@ -19,7 +19,8 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
         },
         pageContent: {
             whiteSpace: 'pre-line',
-            margin: `20px 0`,
+            margin: `20px auto`,
+            maxWidth: '95vw',
         },
         introduction: {
             fontStyle: 'italic',
@@ -34,7 +35,7 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
         },
         pic: {
             width: '100%',
-            padding: 50,
+            padding: 10,
         },
         picImg: {
             width: '100%',
@@ -46,7 +47,7 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
             margin: '0 50px',
         },
         rank: {
-            marginBottom: '3rem',
+            margin: '1rem auto',
         },
     }),
 );

@@ -6,6 +6,7 @@ const reclaimerPageStyles = makeStyles(() =>
         centeringContainer: {
             display: 'flex',
             justifyItems: 'center',
+            alignItems: 'center',
             width: '100%',
         },
         reclaimerImg: {

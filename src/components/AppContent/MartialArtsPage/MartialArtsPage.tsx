@@ -27,12 +27,12 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                     <Container maxWidth="lg" className={classes.contentBg}>
                         <div className={classes.pageHeading}>
                             {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} />}
-                            <Typography variant="h1" align="center" className={classes.title}>
+                            <Typography variant={isLarge ? 'h1' : 'h2'} align="center" className={classes.title}>
                                 {martialArt.styleName}
                             </Typography>
                             {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.style}_logo`} />}
                         </div>
-                        <Typography variant="h4" align="center" className={classes.rank}>
+                        <Typography variant={isLarge ? 'h4' : 'h5'} align="center" className={classes.rank}>
                             Current Rank: {martialArt.blackBeltRank} 단
                         </Typography>
                         <Grid container spacing={3} className={classes.pageContent}>

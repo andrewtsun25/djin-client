@@ -1,4 +1,5 @@
-import { Container, Fade, Grid, Grow, Link, Typography } from '@material-ui/core';
+import { Container, Fade, Grid, Grow, Link, Typography, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
@@ -18,11 +19,13 @@ const RECLAIMER_LINK = 'https://alextomkow.itch.io/reclaimer';
 const ReclaimerPage: React.FC = () => {
     const classes = reclaimerPageStyles();
     const shared = sharedStyles();
+    const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <div className={clsx(shared.bg, classes.reclaimerBg)}>
             <Fade in>
                 <Container maxWidth="lg">
-                    <Typography variant="h1" align="center">
+                    <Typography variant={isSmall ? 'h2' : 'h1'} align="center">
                         Reclaimer
                     </Typography>
                     <Grow in>
@@ -76,55 +79,45 @@ const ReclaimerPage: React.FC = () => {
                         soundtrack. I also helped manage app publishing to the Google Play Services.
                     </Typography>
                     <Grid container spacing={2}>
-                        <Grid item sm={12} md={6} lg={4}>
-                            <div className={classes.centeringContainer}>
-                                <IconLink
-                                    href={RECLAIMER_LINK}
-                                    text="Official Game Site"
-                                    icon={<WebIcon />}
-                                    className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
-                                />
-                            </div>
+                        <Grid item xs={12} sm={6} md={4} lg={2} className={classes.centeringContainer}>
+                            <IconLink
+                                href={RECLAIMER_LINK}
+                                text="Official Game Site"
+                                icon={<WebIcon />}
+                                className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
+                            />
                         </Grid>
-                        <Grid item sm={12} md={6} lg={4}>
-                            <div className={classes.centeringContainer}>
-                                <IconLink
-                                    href="https://docs.google.com/document/d/1kCaNgljvQoYSivE1K8k4781hS_qSFREjGe788UiPb6M/edit"
-                                    text="Game Design Document"
-                                    icon={<DescriptionIcon />}
-                                    className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
-                                />
-                            </div>
+                        <Grid item xs={12} sm={6} md={4} lg={2} className={classes.centeringContainer}>
+                            <IconLink
+                                href="https://docs.google.com/document/d/1kCaNgljvQoYSivE1K8k4781hS_qSFREjGe788UiPb6M/edit"
+                                text="Game Design Doc"
+                                icon={<DescriptionIcon />}
+                                className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
+                            />
                         </Grid>
-                        <Grid item sm={12} md={6} lg={4}>
-                            <div className={classes.centeringContainer}>
-                                <IconLink
-                                    href="https://soundcloud.com/djtaeyong/sets/reclaimer-ost"
-                                    text="Reclaimer OST"
-                                    icon={<MusicNoteIcon />}
-                                    className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
-                                />
-                            </div>
+                        <Grid item xs={12} sm={6} md={4} lg={2} className={classes.centeringContainer}>
+                            <IconLink
+                                href="https://soundcloud.com/djtaeyong/sets/reclaimer-ost"
+                                text="Reclaimer OST"
+                                icon={<MusicNoteIcon />}
+                                className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
+                            />
                         </Grid>
-                        <Grid item sm={12} md={6}>
-                            <div className={classes.centeringContainer}>
-                                <IconLink
-                                    href="https://www.youtube.com/watch?v=iCcWpw9RU9g"
-                                    text="Trailer"
-                                    icon={<YouTubeIcon />}
-                                    className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
-                                />
-                            </div>
+                        <Grid item xs={12} sm={6} lg={2} className={classes.centeringContainer}>
+                            <IconLink
+                                href="https://www.youtube.com/watch?v=iCcWpw9RU9g"
+                                text="Trailer"
+                                icon={<YouTubeIcon />}
+                                className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
+                            />
                         </Grid>
-                        <Grid item xs={12} lg={6}>
-                            <div className={classes.centeringContainer}>
-                                <IconLink
-                                    href="https://play.google.com/store/apps/details?id=com.RedPandaStudios.Reclaimer"
-                                    text="Source Code"
-                                    icon={<GitHubIcon />}
-                                    className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
-                                />
-                            </div>
+                        <Grid item xs={12} sm={6} lg={2} className={classes.centeringContainer}>
+                            <IconLink
+                                href="https://play.google.com/store/apps/details?id=com.RedPandaStudios.Reclaimer"
+                                text="Source Code"
+                                icon={<GitHubIcon />}
+                                className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
+                            />
                         </Grid>
                     </Grid>
                 </Container>

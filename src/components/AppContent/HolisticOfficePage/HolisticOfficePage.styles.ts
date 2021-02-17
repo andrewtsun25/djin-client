@@ -6,23 +6,28 @@ const holisticOfficePageStyles = makeStyles(() =>
             padding: 10,
             margin: 10,
         },
-        holisticOfficeImgContainer: {
-            display: 'flex',
-            justifyItems: 'center',
-            width: '100%',
-        },
         holisticOfficeImg: {
-            maxWidth: '100%',
+            maxWidth: '80vw',
             padding: 10,
-            margin: '10px auto',
+            margin: 10,
             border: '3px solid #2ab573',
             borderRadius: 10,
+            objectFit: 'scale-down',
         },
         holisticOfficeImgLink: {
             margin: '30px auto',
         },
+        holisticOfficeLinkImg: {
+            maxWidth: '90vw',
+            objectFit: 'scale-down',
+        },
         pageHeading: {
             margin: '30px auto',
+        },
+        pageContent: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
         },
         bg: {
             backgroundColor: '#e2f1e9',

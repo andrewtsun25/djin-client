@@ -7,6 +7,7 @@ const errorPageStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            height: '100vh',
         },
         pageContent: {
             display: 'flex',
@@ -18,6 +19,10 @@ const errorPageStyles = makeStyles((theme: Theme) =>
         },
         bg: {
             backgroundImage: `url(${errorBg})`,
+        },
+        errorImg: {
+            maxWidth: '50%',
+            maxHeight: '40%',
         },
     }),
 );

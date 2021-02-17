@@ -29,6 +29,7 @@ module.exports = {
         'import/order': 'off',
         'import/first': 'error',
         'import/exports-last': 'error',
+        'import/no-unused-modules': 'warn',
         'import/named': 'error',
         'import/no-cycle': 'error',
         'import/no-webpack-loader-syntax': 'error',
@@ -36,10 +37,11 @@ module.exports = {
         'import/no-extraneous-dependencies': 'warn',
         'import/no-mutable-exports': 'error',
         'import/no-duplicates': 'error',
-        'import/no-unused-modules': 'warn',
-        'import/newline-after-import': 'error',
+        'import/newline-after-import': 'warn',
+        '@typescript-eslint/explicit-function-return-type': 'warn',
 
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
+    ignorePatterns: ['build/**/*'],
 };

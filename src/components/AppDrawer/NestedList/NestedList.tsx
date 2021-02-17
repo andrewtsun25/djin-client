@@ -13,10 +13,10 @@ interface NestedListProps {
 
 const NestedList: React.FC<NestedListProps> = ({ icon, text, children }: PropsWithChildren<NestedListProps>) => {
     const [isListOpen, setListOpen] = useState(false);
-    const handleListOpen = () => setListOpen(!isListOpen);
+    const toggleListOpen: () => void = () => setListOpen(!isListOpen);
     return (
         <List>
-            <ListItem button onClick={handleListOpen}>
+            <ListItem button onClick={toggleListOpen}>
                 <ListItemIcon>{icon}</ListItemIcon>
                 <ListItemText primary={text} />
                 {isListOpen ? <ExpandLess /> : <ExpandMore />}
