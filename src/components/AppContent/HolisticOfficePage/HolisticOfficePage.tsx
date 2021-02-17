@@ -1,10 +1,10 @@
 import { Container, Fade, Grid, Grow, Link, Typography, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
 import architectureImg from 'assets/holisticOffice/media/architecture.png';
 import websiteImg from 'assets/holisticOffice/media/website.png';
-import theme from 'components/theme';
 import { ArchitecturalCategories, DocumentationLinks, DownloadLinks } from 'data/holisticOffice';
 import React from 'react';
 
@@ -16,6 +16,7 @@ const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 
 const HolisticOfficePage: React.FC = () => {
     const classes = holisticOfficePageStyles();
+    const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <div className={classes.bg}>
