@@ -1,7 +1,7 @@
-#d.jin
+# d.jin
 
 `djin` is the front-end personal website of its creator, d.jin. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-As of version 1.0.0, this website is front-end only. The production deployment of this website is available at https://djin.dev.
+As of version 1.0.1, this website is front-end only. The production deployment of this website is available at https://djin.dev.
 
 ## Available Scripts
 
