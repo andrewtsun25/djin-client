@@ -11,7 +11,7 @@ steps:
   # Run all tests (yarn test)
   - name: node
     entrypoint: yarn
-    args: [ 'test' ]
+    args: [ 'test-ci' ]
   # Create a production build (yarn run build)
   - name: node
     entrypoint: yarn
