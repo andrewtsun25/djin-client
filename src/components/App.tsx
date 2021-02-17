@@ -11,8 +11,8 @@ import djinTheme from './theme';
 const App: React.FC = () => {
     const classes = useAppRootStyles();
     const [isAppDrawerOpen, setAppDrawerOpen] = useState(false);
-    const openAppDrawer = () => setAppDrawerOpen(true);
-    const closeAppDrawer = () => setAppDrawerOpen(false);
+    const openAppDrawer: () => void = () => setAppDrawerOpen(true);
+    const closeAppDrawer: () => void = () => setAppDrawerOpen(false);
     return (
         <MuiThemeProvider theme={djinTheme}>
             <div className={classes.root}>
