@@ -9,6 +9,7 @@ const educationPageStyles = makeStyles((theme: Theme) =>
         colorBg: {
             backgroundColor: fade(theme.palette.common.black, 0.5),
             minHeight: '100vh',
+            padding: 10,
         },
         pageTitle: {
             padding: 10,

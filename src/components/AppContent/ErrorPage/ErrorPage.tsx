@@ -14,7 +14,7 @@ const ErrorPage: React.FC = () => {
         <div className={clsx(shared.bg, classes.bg)}>
             <Container maxWidth="lg" className={classes.center}>
                 <div className={classes.pageContent}>
-                    <img src={errorChickens} alt="Angry Chickens" />
+                    <img src={errorChickens} alt="Angry Chickens" className={classes.errorImg} />
                     <Typography paragraph variant="h3" align="center" className={classes.contrastText}>
                         Nothing to see here.
                     </Typography>
