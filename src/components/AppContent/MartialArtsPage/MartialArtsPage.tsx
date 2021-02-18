@@ -1,12 +1,12 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import clsx from 'clsx';
+import studioBg from 'assets/martialArts/media/studio_bg.png';
+import Background from 'components/shared/Background';
 import useMartialArt from 'hooks/useMartialArt';
 import React from 'react';
 import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
-import sharedStyles from '../../shared/shared.styles';
 import martialArtsPageStyles from './MartialArtsPage.styles';
 import StudioGrid from './StudioGrid';
 
@@ -16,12 +16,11 @@ interface MartialArtsPageProps {
 
 const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: MartialArtsPageProps) => {
     const classes = martialArtsPageStyles();
-    const shared = sharedStyles();
     const martialArt: MartialArt | undefined = useMartialArt(martialArtsStyle);
     const theme = useTheme();
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
     return (
-        <div className={clsx(shared.bg, classes.bg)}>
+        <Background tint={false} imageUrl={studioBg}>
             {martialArt ? (
                 <Fade in>
                     <Container maxWidth="lg" className={classes.contentBg}>
@@ -63,7 +62,7 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                     </Container>
                 </Fade>
             ) : null}
-        </div>
+        </Background>
     );
 };
 

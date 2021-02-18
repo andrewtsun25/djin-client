@@ -1,16 +1,7 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { fade } from '@material-ui/core/styles/colorManipulator';
-import andurilBg from 'assets/experience/media/anduril_22m_bg.jpeg';
 
 const experiencePageStyles = makeStyles((theme: Theme) =>
     createStyles({
-        bg: {
-            backgroundImage: `url(${andurilBg})`,
-        },
-        colorBg: {
-            backgroundColor: fade(theme.palette.common.black, 0.5),
-            padding: 10,
-        },
         pageTitle: {
             textAlign: 'center',
             padding: 20,

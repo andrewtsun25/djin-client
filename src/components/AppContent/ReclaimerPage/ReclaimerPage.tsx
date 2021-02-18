@@ -6,10 +6,11 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import ShopIcon from '@material-ui/icons/Shop';
 import WebIcon from '@material-ui/icons/Web';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import reclaimerBg from 'assets/reclaimer/media/reclaimer_bg.png';
 import gameImg from 'assets/reclaimer/media/reclaimer_game.png';
 import clsx from 'clsx';
+import Background from 'components/shared/Background';
 import IconLink from 'components/shared/IconLink';
-import sharedStyles from 'components/shared/shared.styles';
 import React from 'react';
 
 import reclaimerPageStyles from './ReclaimerPage.styles';
@@ -18,13 +19,12 @@ const RECLAIMER_LINK = 'https://alextomkow.itch.io/reclaimer';
 
 const ReclaimerPage: React.FC = () => {
     const classes = reclaimerPageStyles();
-    const shared = sharedStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <div className={clsx(shared.bg, classes.reclaimerBg)}>
+        <Background imageUrl={reclaimerBg} tint={false}>
             <Fade in>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" className={classes.reclaimerBg}>
                     <Typography variant={isSmall ? 'h2' : 'h1'} align="center">
                         Reclaimer
                     </Typography>
@@ -122,7 +122,7 @@ const ReclaimerPage: React.FC = () => {
                     </Grid>
                 </Container>
             </Fade>
-        </div>
+        </Background>
     );
 };
 
