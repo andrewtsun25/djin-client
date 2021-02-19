@@ -8,14 +8,14 @@ import { Employment } from 'types/employment';
 import EmploymentCard from './EmploymentCard';
 import employmentPageStyles from './EmploymentPage.styles';
 
-const andurilBg = 'https://storage.googleapis.com/storage.djin.dev/employment/bg/anduril_22m_bg.jpeg';
+const employmentsBg = 'https://storage.googleapis.com/storage.djin.dev/employment/bg/anduril_22m_bg.jpeg';
 const RESUME_URL = 'https://docs.google.com/document/d/1fIQ8ceaV1BW7FmWvPe8aGGlLVFtXxLcHDIOf7swxXzw/edit?usp=sharing';
 
 const EmploymentPage: React.FC = () => {
     const classes = employmentPageStyles();
     const experiences: Employment[] = useEmployments();
     return (
-        <Background imageUrl={andurilBg} tint>
+        <Background imageUrl={employmentsBg} tint>
             <Typography variant="h2" align="center" className={clsx(classes.pageTitle, classes.contrastText)}>
                 Coding Employment
             </Typography>
