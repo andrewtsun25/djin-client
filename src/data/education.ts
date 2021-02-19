@@ -1,7 +1,3 @@
-import pblaLogo from 'assets/education/logo/pbla.jpg';
-import ucsdLogo from 'assets/education/logo/ucsd.png';
-import uscLogo from 'assets/education/logo/usc.png';
-import yonseiLogo from 'assets/education/logo/yonsei.png';
 import { Education, EduType } from 'types/education';
 
 import { PBLA, UCSD, USC, Yonsei } from '../const/semester';

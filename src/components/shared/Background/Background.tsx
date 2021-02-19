@@ -22,7 +22,6 @@ const Background: React.FC<BackgroundProps> = ({
     const classes = backgroundStyles();
     const theme = useTheme();
     const tintOpacity = tint ? 0.5 : 0;
-    console.log(tintOpacity);
     return (
         <div className={classes.bg} style={{ backgroundImage: `url(${imageUrl})`, backgroundColor: color }}>
             <div

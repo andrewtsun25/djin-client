@@ -1,6 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import aboutBg from 'assets/about/media/about_bg.jpg';
 
 const homePageStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -20,9 +19,6 @@ const homePageStyles = makeStyles((theme: Theme) =>
         },
         contrastText: {
             color: theme.palette.primary.contrastText,
-        },
-        bg: {
-            backgroundImage: `url(${aboutBg})`,
         },
     }),
 );

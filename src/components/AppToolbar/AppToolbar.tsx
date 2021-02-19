@@ -17,15 +17,17 @@ const AppToolbar: React.FC<AppToolbarProps> = ({ isAppDrawerOpen, openAppDrawer 
     return (
         <AppBar position="fixed" className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
             <Toolbar>
-                <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={openAppDrawer}
-                    edge="start"
-                    className={clsx(classes.menuButton, isAppDrawerOpen && classes.hide)}
-                >
-                    <MenuIcon />
-                </IconButton>
+                {!isAppDrawerOpen && (
+                    <IconButton
+                        color="inherit"
+                        aria-label="Open Drawer Button"
+                        onClick={openAppDrawer}
+                        edge="start"
+                        className={classes.menuButton}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                )}
                 <Link to="/" className={classes.homeLink}>
                     <img src={logo} alt="d.jin website logo" className={classes.logo} />
                     <Typography variant="h6" noWrap>

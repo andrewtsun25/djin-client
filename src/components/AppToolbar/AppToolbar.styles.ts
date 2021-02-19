@@ -20,9 +20,6 @@ const appToolbarStyles = makeStyles((theme: Theme) =>
                 duration: theme.transitions.duration.enteringScreen,
             }),
         },
-        hide: {
-            display: 'none',
-        },
         homeLink: {
             color: '#fff',
             textDecoration: 'none',

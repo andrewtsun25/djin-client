@@ -1,5 +1,4 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import reclaimerBg from 'assets/reclaimer/media/reclaimer_bg.png';
 
 const reclaimerPageStyles = makeStyles(() =>
     createStyles({

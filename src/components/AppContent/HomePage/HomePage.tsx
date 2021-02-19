@@ -16,10 +16,15 @@ const HomePage: React.FC = () => {
         <Background imageUrl={aboutBg} className={classes.center}>
             <Grow in>
                 <div className={classes.pageContent}>
-                    <Typography variant={isSmall ? 'h3' : 'h1'} align="center">
+                    <Typography variant={isSmall ? 'h3' : 'h1'} align="center" aria-label="Home Page Title">
                         d.jin
                     </Typography>
-                    <Typography paragraph variant={isSmall ? 'body1' : 'h6'} align="center">
+                    <Typography
+                        paragraph
+                        variant={isSmall ? 'body1' : 'h6'}
+                        align="center"
+                        aria-label="Home Page Description"
+                    >
                         d.jin is a coder, music producer, DJ, and martial artist hailing from the sun-soaked shores of
                         SoCal.
                     </Typography>
