@@ -1,7 +1,6 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import studioBg from 'assets/martialArts/media/studio_bg.png';
 import Background from 'components/shared/Background';
 import useMartialArt from 'hooks/useMartialArt';
 import React from 'react';
@@ -9,6 +8,8 @@ import { MartialArt, MartialArtsStyle } from 'types/martialArts';
 
 import martialArtsPageStyles from './MartialArtsPage.styles';
 import StudioGrid from './StudioGrid';
+
+const martialArtsBg = 'https://storage.googleapis.com/storage.djin.dev/martialArts/bg/taeryong_studio_bg.png';
 
 interface MartialArtsPageProps {
     martialArtsStyle: MartialArtsStyle;
@@ -20,7 +21,7 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
     const theme = useTheme();
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
     return (
-        <Background tint={false} imageUrl={studioBg}>
+        <Background tint={false} imageUrl={martialArtsBg}>
             {martialArt ? (
                 <Fade in>
                     <Container maxWidth="lg" className={classes.contentBg}>

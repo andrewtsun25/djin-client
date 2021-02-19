@@ -14,10 +14,10 @@ interface EducationPageProps {
 
 const EducationPage: React.FC<EducationPageProps> = ({ eduType }: EducationPageProps) => {
     const classes = educationPageStyles();
-    const bgImage: string = useEducationBackgroundImage(eduType);
+    const educationBg: string = useEducationBackgroundImage(eduType);
     const educations: Education[] = useEducations(eduType);
     return (
-        <Background imageUrl={bgImage} tint>
+        <Background imageUrl={educationBg} tint>
             <Container maxWidth="lg">
                 <Typography variant="h2" align="center" className={classes.pageTitle}>
                     {eduType} Education
