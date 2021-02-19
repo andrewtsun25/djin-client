@@ -2,9 +2,6 @@ import { Container, Fade, Grid, Grow, Link, Typography, useMediaQuery } from '@m
 import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
-import logo from 'assets/holisticOffice/logo/holisticOfficelogo.png';
-import architectureImg from 'assets/holisticOffice/media/architecture.png';
-import websiteImg from 'assets/holisticOffice/media/website.png';
 import Background from 'components/shared/Background';
 import { ArchitecturalCategories, DocumentationLinks, DownloadLinks } from 'data/holisticOffice';
 import React from 'react';
@@ -12,6 +9,11 @@ import React from 'react';
 import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
+
+const logo = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/logo/holistic_office_logo.png';
+const websiteImg = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_website.png';
+const architectureImg =
+    'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_architecture.png';
 
 const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 const HOLISTIC_OFFICE_GREEN = '#e2f1e9';
