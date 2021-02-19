@@ -1,4 +1,3 @@
-import aphfLogo from 'assets/research/logo/aphf.jpg';
 import costBenefitAnalysisImg from 'assets/research/media/cost_benefit_analysis.jpg';
 import linkageToCareImg from 'assets/research/media/linkage_to_care.jpg';
 import { Research } from 'types/research';
@@ -8,11 +7,12 @@ import { UCSD } from '../const/semester';
 const CostBenefitAnalysis: Research = {
     name: 'Cost Estimation Of Hepatitis B Screenings Across Greater San Diego',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: aphfLogo,
-    mediaUrl: costBenefitAnalysisImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/img/cost_benefit_analysis.jpg',
     startDate: UCSD.Fall2014.date,
     endDate: UCSD.Winter2015.date,
-    paperLink: 'https://docs.google.com/document/d/1313n4EcFPFcP_aTEkEqxIFHibTdbUJJGR_bZcWPTTm8/edit',
+    paperLink:
+        'https://storage.googleapis.com/storage.djin.dev/hbvResearch/docs/Cost_Estimation_of_Hepatitis_B_Screenings_Across_Greater_San_Diego%20.pdf',
     description:
         'Performed a cost-benefit analysis that analyzes the benefits of providing Hepatitis B health screenings to Asian communities, and how to provide these screenings in a cost-effective way. Needless to say, it is indeed possible to provide screenings in a cost-effective manner.',
     responsibilities: [
@@ -25,11 +25,11 @@ const CostBenefitAnalysis: Research = {
 const LinkageToCare: Research = {
     name: 'Linkage-To-Care Results',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: aphfLogo,
-    mediaUrl: linkageToCareImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/img/linkage_to_care.jpg',
     startDate: UCSD.Winter2015.date,
     endDate: UCSD.Spring2015.date,
-    paperLink: 'https://docs.google.com/document/d/1O3l3UU_qePiJVxPDHzcR1hce_SqV2OZBPr8dETCM1sU/edit',
+    paperLink: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/docs/Linkage-To-Care_Results.pdf',
     description:
         'Investigated the successful linkage to medical care for Hepatitis B clinic patients screened by the Asian Pacific Health Foundation. Needless to say, most HBV patients were indeed getting linked to follow-up professional care.',
     responsibilities: [
