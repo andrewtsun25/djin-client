@@ -1,7 +1,8 @@
-import pblaBg from 'assets/education/media/pbla_bg.jpg';
-import uscBg from 'assets/education/media/usc_bg.jpg';
 import { useEffect, useState } from 'react';
 import { EduType } from 'types/education';
+
+const pblaBg = 'https://storage.googleapis.com/storage.djin.dev/education/bg/pbla_bg.jpg';
+const uscBg = 'https://storage.googleapis.com/storage.djin.dev/education/bg/usc_bg.jpg';
 
 export default function useEducationBackgroundImage(category: EduType): string {
     const [educationBgImage, setEducationBgImage] = useState<string>('');
