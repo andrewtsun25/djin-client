@@ -1,11 +1,12 @@
 import { Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import aboutBg from 'assets/about/media/about_bg.jpg';
 import Background from 'components/shared/Background';
 import React from 'react';
 
 import aboutPageStyles from './HomePage.styles';
+
+const aboutBg = 'https://storage.googleapis.com/storage.djin.dev/home/bg/huntington_beach_bg.jpg';
 
 const HomePage: React.FC = () => {
     const classes = aboutPageStyles();

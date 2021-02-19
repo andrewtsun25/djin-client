@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-const experiencePageStyles = makeStyles((theme: Theme) =>
+const employmentPageStyles = makeStyles((theme: Theme) =>
     createStyles({
         pageTitle: {
             textAlign: 'center',
@@ -20,4 +20,4 @@ const experiencePageStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
-export default experiencePageStyles;
+export default employmentPageStyles;

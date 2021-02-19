@@ -32,7 +32,7 @@ import { DateTime } from 'luxon';
 import { Project } from 'types/project/Project';
 
 import { USC } from '../const/semester';
-import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './experience';
+import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './employment';
 
 const BrandCaster: Project = {
     name: 'BrandCaster',

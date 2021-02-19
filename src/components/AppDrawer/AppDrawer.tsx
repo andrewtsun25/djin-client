@@ -51,7 +51,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
             <Divider />
             <List>
                 <NestedList icon={<CodeIcon />} text="Coding">
-                    <ListItemInternalLink icon={<WorkIcon />} text="Experience" to="/coding/experience" nested />
+                    <ListItemInternalLink icon={<WorkIcon />} text="Employment" to="/coding/employment" nested />
                     <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/coding/education" nested />
                     <ListItemInternalLink icon={<AppsIcon />} text="Projects" to="/coding/projects" nested />
                     <ListItemExternalLink

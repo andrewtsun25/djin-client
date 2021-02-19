@@ -1,24 +1,11 @@
-import amazonLogo from 'assets/experience/logo/amazon.png';
-import andurilLogo from 'assets/experience/logo/anduril.jpeg';
-import googleLogo from 'assets/experience/logo/google.png';
-import hliLogo from 'assets/experience/logo/hli.png';
-import qtLogo from 'assets/experience/logo/qt.jpeg';
-import yahooLogo from 'assets/experience/logo/yahoo.jpeg';
-import amazonImg from 'assets/experience/media/amazon_withoutabox.png';
-import andurilImg from 'assets/experience/media/anduril_lattice.jpg';
-import googleImg from 'assets/experience/media/google_youtube.png';
-import hliImg from 'assets/experience/media/hli_mantis.png';
-import qtImg from 'assets/experience/media/qt_brandcaster.jpg';
-import yahoo1Img from 'assets/experience/media/yahoo_gemini.png';
-import yahoo2Img from 'assets/experience/media/yahoo_shepherd.jpeg';
 import { DateTime } from 'luxon';
-import { Experience, JobType } from 'types/experience';
+import { Employment, JobType } from 'types/employment';
 
-const Anduril: Experience = {
+const Anduril: Employment = {
     company: 'Anduril Industries',
     role: 'Software Engineer',
-    avatarUrl: andurilLogo,
-    mediaUrl: andurilImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/anduril_lattice.jpg',
     startDate: DateTime.fromISO('2020-08-10T09:00:00-08:00'),
     description:
         'Working on the Perception-Platform team creating front-end experiences for analyzing and managing object classification data from Anduril assets (towers and drones). Also assisting in developing UI and counter-UAS (unmanned aerial systems) capabilities for Lattice Control Application, a command center for visualizing object classification data.',
@@ -27,11 +14,11 @@ const Anduril: Experience = {
     jobType: JobType.FullTime,
 };
 
-const Google: Experience = {
+const Google: Employment = {
     company: 'Google -- YouTube',
     role: 'Software Engineering Intern',
-    avatarUrl: googleLogo,
-    mediaUrl: googleImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/google_youtube.png',
     startDate: DateTime.fromISO('2019-05-10T09:00:00-08:00'),
     endDate: DateTime.fromISO('2019-08-09T19:00:00-08:00'),
     description:
@@ -46,11 +33,11 @@ const Google: Experience = {
     jobType: JobType.Internship,
 };
 
-const Amazon: Experience = {
+const Amazon: Employment = {
     company: 'Amazon -- IMDb',
     role: 'Software Development Engineer I',
-    avatarUrl: amazonLogo,
-    mediaUrl: amazonImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/amazon_logo.png',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/amazon_withoutabox.png',
     startDate: DateTime.fromISO('2016-09-26T09:00:00-08:00'),
     endDate: DateTime.fromISO('2018-04-13T17:00:00-08:00'),
     description:
@@ -77,10 +64,10 @@ const Amazon: Experience = {
     jobType: JobType.FullTime,
 };
 
-const HLI: Experience = {
+const HLI: Employment = {
     company: 'Human Longevity, Inc.',
-    avatarUrl: hliLogo,
-    mediaUrl: hliImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/hli_logo.png',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/hli_mantis.png',
     role: 'Bioinformatics Intern',
     startDate: DateTime.fromISO('2016-01-26T09:00:00-08:00'),
     endDate: DateTime.fromISO('2016-06-26T17:00:00-08:00'),
@@ -94,10 +81,10 @@ const HLI: Experience = {
     jobType: JobType.Internship,
 };
 
-const Yahoo2: Experience = {
+const Yahoo2: Employment = {
     company: 'Yahoo!',
-    avatarUrl: yahooLogo,
-    mediaUrl: yahoo2Img,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/yahoo_shepherd.jpeg',
     role: 'Technical Intern',
     startDate: DateTime.fromISO('2015-06-15T09:00:00-08:00'),
     endDate: DateTime.fromISO('2015-09-18T17:00:00-08:00'),
@@ -111,16 +98,16 @@ const Yahoo2: Experience = {
     jobType: JobType.Internship,
 };
 
-const Yahoo1: Experience = {
+const Yahoo1: Employment = {
     company: 'Yahoo!',
-    avatarUrl: yahooLogo,
-    mediaUrl: yahoo1Img,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/yahoo_gemini.png',
     role: 'Technical Intern',
     startDate: DateTime.fromISO('2014-06-13T09:00:00-08:00'),
     endDate: DateTime.fromISO('2014-09-19T17:00:00-08:00'),
     description:
         'Advertisers can buy keywords from Yahoo! to have their ads display on searches containing the keyword, with more relevant keywords being more expensive. ' +
-        'Instead, they buy a larger quantity of irrelevant keywords to increase the probability of ad impression but also detract from user experience.',
+        'Instead, they buy a larger quantity of irrelevant keywords to increase the probability of ad impression but also detract from user employment.',
     responsibilities: [
         'Created a query categorization filter in C++ to prevent this kind of keyword abuse, only showing ads for relevant searches.',
         'Generated daily metrics of filter performance with Hadoop and Pig scripts.',
@@ -129,10 +116,10 @@ const Yahoo1: Experience = {
     jobType: JobType.Internship,
 };
 
-const CouponsCom: Experience = {
+const CouponsCom: Employment = {
     company: 'Quotient Technologies',
-    avatarUrl: qtLogo,
-    mediaUrl: qtImg,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/qt_logo.jpeg',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/qt_brandcaster.jpg',
     role: 'Software Engineering Intern',
     startDate: DateTime.fromISO('2013-06-17T09:00:00-08:00'),
     endDate: DateTime.fromISO('2013-09-20T17:00:00-08:00'),
@@ -145,6 +132,6 @@ const CouponsCom: Experience = {
     jobType: JobType.Internship,
 };
 
-const CodingExperience: Experience[] = [Anduril, Google, Amazon, HLI, Yahoo2, Yahoo1, CouponsCom];
+const CodingExperience: Employment[] = [Anduril, Google, Amazon, HLI, Yahoo2, Yahoo1, CouponsCom];
 
 export { Amazon, Anduril, CodingExperience, CouponsCom, Google, HLI, Yahoo1, Yahoo2 };

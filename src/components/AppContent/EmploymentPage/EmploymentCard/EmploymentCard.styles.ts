@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-const experienceCardStyles = makeStyles((theme: Theme) =>
+const employmentCardStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             margin: 10,
@@ -26,4 +26,4 @@ const experienceCardStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export default experienceCardStyles;
+export default employmentCardStyles;
