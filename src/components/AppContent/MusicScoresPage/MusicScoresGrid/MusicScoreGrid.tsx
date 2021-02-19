@@ -2,7 +2,7 @@ import { GridList, GridListTile, GridListTileBar, IconButton, Link, Typography, 
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import InstrumentUrls from 'const/music/InstrumentUrls';
+import InstrumentUrls from 'data/InstrumentUrls';
 import { map } from 'lodash';
 import React from 'react';
 import { Instrument, MusicScore } from 'types/music';

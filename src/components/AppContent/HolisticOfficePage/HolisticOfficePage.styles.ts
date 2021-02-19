@@ -29,10 +29,6 @@ const holisticOfficePageStyles = makeStyles(() =>
             flexDirection: 'column',
             alignItems: 'center',
         },
-        bg: {
-            backgroundColor: '#e2f1e9',
-            padding: 10,
-        },
         link: {
             color: '#308575',
         },

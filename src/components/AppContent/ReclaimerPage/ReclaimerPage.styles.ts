@@ -23,9 +23,7 @@ const reclaimerPageStyles = makeStyles(() =>
             margin: '0 auto',
         },
         reclaimerBg: {
-            backgroundImage: `url(${reclaimerBg})`,
             color: '#bba0d9',
-            paddingBottom: 10,
         },
         reclaimerLinkText: {
             color: '#ba4ef8',

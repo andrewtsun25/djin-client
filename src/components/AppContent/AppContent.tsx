@@ -6,8 +6,8 @@ import { MartialArtsStyle } from 'types/martialArts';
 
 import appContentStyles from './AppContent.styles';
 import EducationPage from './EducationPage';
+import EmploymentPage from './EmploymentPage';
 import ErrorPage from './ErrorPage';
-import ExperiencePage from './ExperiencePage';
 import HBVResearchPage from './HBVResearchPage';
 import HolisticOfficePage from './HolisticOfficePage';
 import HomePage from './HomePage';
@@ -26,8 +26,8 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
         <main className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
             <div className={classes.drawerHeader} />
             <Switch>
-                <Route path="/coding/experience">
-                    <ExperiencePage />
+                <Route path="/coding/employment">
+                    <EmploymentPage />
                 </Route>
                 <Route path="/coding/education">
                     <EducationPage eduType={EduType.CODING} />

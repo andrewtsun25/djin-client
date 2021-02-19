@@ -1,19 +1,19 @@
 import { Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import clsx from 'clsx';
-import sharedStyles from 'components/shared/shared.styles';
+import Background from 'components/shared/Background';
 import React from 'react';
 
 import aboutPageStyles from './HomePage.styles';
 
+const aboutBg = 'https://storage.googleapis.com/storage.djin.dev/home/bg/huntington_beach_bg.jpg';
+
 const HomePage: React.FC = () => {
     const classes = aboutPageStyles();
-    const shared = sharedStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('lg'));
     return (
-        <div className={clsx(shared.bg, classes.bg, classes.center)}>
+        <Background imageUrl={aboutBg} className={classes.center}>
             <Grow in>
                 <div className={classes.pageContent}>
                     <Typography variant={isSmall ? 'h3' : 'h1'} align="center">
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
                     </Typography>
                 </div>
             </Grow>
-        </div>
+        </Background>
     );
 };
 

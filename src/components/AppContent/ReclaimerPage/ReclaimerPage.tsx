@@ -6,25 +6,25 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import ShopIcon from '@material-ui/icons/Shop';
 import WebIcon from '@material-ui/icons/Web';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import gameImg from 'assets/reclaimer/media/reclaimer_game.png';
 import clsx from 'clsx';
+import Background from 'components/shared/Background';
 import IconLink from 'components/shared/IconLink';
-import sharedStyles from 'components/shared/shared.styles';
 import React from 'react';
 
 import reclaimerPageStyles from './ReclaimerPage.styles';
 
-const RECLAIMER_LINK = 'https://alextomkow.itch.io/reclaimer';
+const gameImg = 'https://storage.googleapis.com/storage.djin.dev/reclaimer/img/reclaimer_game.png';
+const reclaimerBg = 'https://storage.googleapis.com/storage.djin.dev/reclaimer/bg/reclaimer_bg.png';
+const reclaimerWebsite = 'https://alextomkow.itch.io/reclaimer';
 
 const ReclaimerPage: React.FC = () => {
     const classes = reclaimerPageStyles();
-    const shared = sharedStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <div className={clsx(shared.bg, classes.reclaimerBg)}>
+        <Background imageUrl={reclaimerBg} tint={false}>
             <Fade in>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" className={classes.reclaimerBg}>
                     <Typography variant={isSmall ? 'h2' : 'h1'} align="center">
                         Reclaimer
                     </Typography>
@@ -43,7 +43,7 @@ const ReclaimerPage: React.FC = () => {
                     </div>
                     <Typography paragraph>
                         <Link
-                            href={RECLAIMER_LINK}
+                            href={reclaimerWebsite}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={classes.reclaimerLinkText}
@@ -81,7 +81,7 @@ const ReclaimerPage: React.FC = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6} md={4} lg={2} className={classes.centeringContainer}>
                             <IconLink
-                                href={RECLAIMER_LINK}
+                                href={reclaimerWebsite}
                                 text="Official Game Site"
                                 icon={<WebIcon />}
                                 className={clsx(classes.reclaimerLink, classes.reclaimerLinkText)}
@@ -122,7 +122,7 @@ const ReclaimerPage: React.FC = () => {
                     </Grid>
                 </Container>
             </Fade>
-        </div>
+        </Background>
     );
 };
 

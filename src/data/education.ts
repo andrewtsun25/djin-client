@@ -9,7 +9,7 @@ import { PBLA, UCSD, USC, Yonsei } from '../const/semester';
 const pblaEdu: Education = {
     type: EduType.MUSIC,
     name: 'Point Blank Los Angeles (PBLA)',
-    avatarUrl: pblaLogo,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/education/logo/pbla_logo.jpg',
     startDate: PBLA.Fall2019.date,
     endDate: PBLA.Graduation.date,
     major: 'DJ/Producer Certificate',
@@ -24,7 +24,7 @@ const pblaEdu: Education = {
 const ucsdEdu: Education = {
     type: EduType.CODING,
     name: 'University of California, San Diego (UCSD)',
-    avatarUrl: ucsdLogo,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/education/logo/ucsd_logo.png',
     startDate: UCSD.Fall2012.date,
     endDate: UCSD.Graduation.date,
     major: 'B.S. Computer Science with Specialization in Bioinformatics',
@@ -42,7 +42,7 @@ const ucsdEdu: Education = {
 const yonseiEdu: Education = {
     type: EduType.CODING,
     name: 'Yonsei University (연세대학교)',
-    avatarUrl: yonseiLogo,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/education/logo/yonsei_logo.png',
     startDate: Yonsei.YISS.date,
     endDate: Yonsei.Graduation.date,
     major: 'Exchange Student',
@@ -57,7 +57,7 @@ const yonseiEdu: Education = {
 const uscEdu: Education = {
     type: EduType.CODING,
     name: 'University of Southern California (USC)',
-    avatarUrl: uscLogo,
+    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/education/logo/usc_logo.png',
     startDate: USC.Fall2018.date,
     endDate: USC.Graduation.date,
     major: 'M.S. Computer Science (Software Engineering Track)',
