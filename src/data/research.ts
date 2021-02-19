@@ -1,5 +1,3 @@
-import costBenefitAnalysisImg from 'assets/research/media/cost_benefit_analysis.jpg';
-import linkageToCareImg from 'assets/research/media/linkage_to_care.jpg';
 import { Research } from 'types/research';
 
 import { UCSD } from '../const/semester';
