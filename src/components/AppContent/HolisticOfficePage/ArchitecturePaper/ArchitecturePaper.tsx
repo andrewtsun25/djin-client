@@ -1,16 +1,16 @@
 import { Grow, Paper, Typography } from '@material-ui/core';
 import { map } from 'lodash';
 import React from 'react';
-import { ArchitectureCategory } from 'types/holisticOffice';
+import { HolisticOfficeModule } from 'types/holisticOffice';
 
 import architecturePaperStyles from './ArchitecturePaper.styles';
 
 interface ArchitecturePaperProps {
-    category: ArchitectureCategory;
+    category: HolisticOfficeModule;
 }
 
 const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
-    category: { title, mappings },
+    category: { title, components },
 }: ArchitecturePaperProps) => {
     const classes = architecturePaperStyles();
     return (
@@ -21,7 +21,7 @@ const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
                 </Typography>
                 <Typography>
                     <ul>
-                        {map(mappings, (value: string, key: string) => (
+                        {map(components, (value: string, key: string) => (
                             <li key={key}>
                                 <b>{key}:</b> {value}
                             </li>
