@@ -10,14 +10,14 @@ interface ArchitecturePaperProps {
 }
 
 const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
-    category: { title, components },
+    category: { name, components },
 }: ArchitecturePaperProps) => {
     const classes = architecturePaperStyles();
     return (
         <Grow in>
             <Paper className={classes.architecturePaper} elevation={5}>
                 <Typography variant="h5" align="center">
-                    {title}
+                    {name}
                 </Typography>
                 <Typography>
                     <ul>

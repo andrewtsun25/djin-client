@@ -1,4 +1,5 @@
-export interface Studio {
+export interface MartialArtsStudio {
+    id: string;
     name: string;
     logoUrl: string;
     href: string;

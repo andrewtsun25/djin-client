@@ -1,7 +1,7 @@
 import { HolisticOfficeLinkType } from './HolisticOfficeLinkType';
 
 export interface HolisticOfficeLink {
-    label: string;
+    name: string;
     type: HolisticOfficeLinkType;
     href: string;
 }

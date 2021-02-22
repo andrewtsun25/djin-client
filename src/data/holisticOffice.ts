@@ -2,7 +2,7 @@ import { HolisticOfficeLink, HolisticOfficeLinkType, HolisticOfficeModule } from
 
 const HolisticOfficeModules: HolisticOfficeModule[] = [
     {
-        title: 'Client Module',
+        name: 'Client Module',
         components: {
             Language: 'TypeScript',
             Stylesheets: 'SASS',
@@ -12,7 +12,7 @@ const HolisticOfficeModules: HolisticOfficeModule[] = [
         },
     },
     {
-        title: 'Server Module',
+        name: 'Server Module',
         components: {
             Language: 'Java 8',
             Database: 'Postgres',
@@ -22,7 +22,7 @@ const HolisticOfficeModules: HolisticOfficeModule[] = [
         },
     },
     {
-        title: 'E2E Test Module',
+        name: 'E2E Test Module',
         components: {
             Language: 'JavaScript (ES6)',
             Framework: 'Cypress.io',
@@ -31,14 +31,14 @@ const HolisticOfficeModules: HolisticOfficeModule[] = [
         },
     },
     {
-        title: 'Serverless Compute Functions',
+        name: 'Serverless Compute Functions',
         components: {
             Language: 'Python',
             Deployment: 'AWS Lambda',
         },
     },
     {
-        title: 'Infrastructure',
+        name: 'Infrastructure',
         components: {
             'Version Control': 'GitHub',
             'CI/CD': 'AWS CodePipeline w/ AWS CodeBuild',
@@ -52,64 +52,64 @@ const HolisticOfficeModules: HolisticOfficeModule[] = [
 
 const HolisticOfficeLinks: HolisticOfficeLink[] = [
     {
-        label: 'Feasibility Evidence Description',
+        name: 'Feasibility Evidence Description',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
     },
     {
-        label: 'Life Cycle Plan',
+        name: 'Life Cycle Plan',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/LCP_ASBUILT_S19b_T04_V5.1.pdf',
     },
     {
-        label: 'Operational Concept Description',
+        name: 'Operational Concept Description',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/OCD_ASBUILT_S19b_T04_V4.1.pdf',
     },
     {
-        label: 'Release Description',
+        name: 'Release Description',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/RD_ASBUILT_S19b_T04_V1.0.pdf',
     },
     {
-        label: 'System & Software Support Plan',
+        name: 'System & Software Support Plan',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SP_ASBUILT_S19b_T04_V1.1.pdf',
     },
     {
-        label: 'System Software Architecture Description',
+        name: 'System Software Architecture Description',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SSAD_ASBUILT_S19b_T04_V5.1.pdf',
     },
     {
-        label: 'Transition Plan',
+        name: 'Transition Plan',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
     },
     {
-        label: 'Test Plan & Cases',
+        name: 'Test Plan & Cases',
         type: HolisticOfficeLinkType.Documentation,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/TPC_ASBUILT_S19b_T04_V3.0.pdf',
     },
     {
-        label: 'Client Module (Angular in TypeScript)',
+        name: 'Client Module (Angular in TypeScript)',
         type: HolisticOfficeLinkType.Code,
         href:
             'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-client-development.zip',
     },
     {
-        label: 'Server Module (HAPI-FHIR on Java)',
+        name: 'Server Module (HAPI-FHIR on Java)',
         type: HolisticOfficeLinkType.Code,
         href:
             'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-server-development.zip',
     },
     {
-        label: 'E2E Module (Cypress.io in JavaScript)',
+        name: 'E2E Module (Cypress.io in JavaScript)',
         type: HolisticOfficeLinkType.Code,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-e2e-development.zip',
     },
     {
-        label: 'Confluence Wiki Export',
+        name: 'Confluence Wiki Export',
         type: HolisticOfficeLinkType.Code,
         href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-wiki-export.zip',
     },

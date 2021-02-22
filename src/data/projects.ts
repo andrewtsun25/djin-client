@@ -7,7 +7,7 @@ import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './empl
 const BrandCaster: Project = {
     name: 'BrandCaster',
     organization: CouponsCom.company,
-    avatarUrl: CouponsCom.avatarUrl,
+    logoUrl: CouponsCom.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/qt_brandcaster.jpg',
     startDate: CouponsCom.startDate,
     endDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
@@ -24,7 +24,7 @@ const BrandCaster: Project = {
 const CLOE: Project = {
     name: 'BrandCaster',
     organization: CouponsCom.company,
-    avatarUrl: CouponsCom.avatarUrl,
+    logoUrl: CouponsCom.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/qt_cloe.png',
     startDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
     endDate: CouponsCom.endDate,
@@ -41,7 +41,7 @@ const CLOE: Project = {
 const QueryCategorizationModuleImplementation: Project = {
     name: 'Query Categorization Module: Implementation',
     organization: Yahoo1.company,
-    avatarUrl: Yahoo1.avatarUrl,
+    logoUrl: Yahoo1.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_gemini.png',
     startDate: Yahoo1.startDate,
     endDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
@@ -57,7 +57,7 @@ const QueryCategorizationModuleImplementation: Project = {
 const QueryCategorizationModuleAnalysis: Project = {
     name: 'Query Categorization Module: Analysis',
     organization: Yahoo1.company,
-    avatarUrl: Yahoo1.avatarUrl,
+    logoUrl: Yahoo1.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_gemini.png',
     startDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     endDate: Yahoo1.endDate,
@@ -73,7 +73,7 @@ const QueryCategorizationModuleAnalysis: Project = {
 const PipelineDetailsDashboard: Project = {
     name: 'Data Pipeline Dashboard Improvements',
     organization: Yahoo2.company,
-    avatarUrl: Yahoo2.avatarUrl,
+    logoUrl: Yahoo2.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_pipeline-dashboard.png',
     startDate: Yahoo2.startDate,
     endDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
@@ -88,7 +88,7 @@ const PipelineDetailsDashboard: Project = {
 const PipelineSummaryDashboard: Project = {
     name: 'Data Pipeline Summary Dashboard',
     organization: Yahoo2.company,
-    avatarUrl: Yahoo2.avatarUrl,
+    logoUrl: Yahoo2.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_summary-dashboard.png',
     startDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
     endDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
@@ -101,7 +101,7 @@ const PipelineSummaryDashboard: Project = {
 const CloseOfBooksDashboard: Project = {
     name: 'Close-Of-Books Dashboard',
     organization: Yahoo2.company,
-    avatarUrl: Yahoo2.avatarUrl,
+    logoUrl: Yahoo2.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_cob-dashboard.png',
     startDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
     endDate: Yahoo2.endDate,
@@ -118,7 +118,7 @@ const CloseOfBooksDashboard: Project = {
 const Defiance: Project = {
     name: 'Defiance',
     organization: 'UCSD Intervarsity',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/intervarsity_ucsd_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/intervarsity_ucsd_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/urbana_2015.jpg',
     startDate: Yahoo2.startDate,
     endDate: Yahoo2.endDate,
@@ -135,7 +135,7 @@ const Defiance: Project = {
 const TestHarness: Project = {
     name: 'Mantis: QA Test Harness',
     organization: HLI.company,
-    avatarUrl: HLI.avatarUrl,
+    logoUrl: HLI.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/hli_mantis.png',
     startDate: HLI.startDate,
     endDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
@@ -150,7 +150,7 @@ const TestHarness: Project = {
 const DataCurationParsers: Project = {
     name: 'Mantis: Data Curation Parsers for Cancer Exome Report Generation',
     organization: HLI.company,
-    avatarUrl: HLI.avatarUrl,
+    logoUrl: HLI.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/hli_mantis.png',
     startDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
     endDate: HLI.endDate,
@@ -166,7 +166,7 @@ const DataCurationParsers: Project = {
 const Withoutabox: Project = {
     name: 'Withoutabox',
     organization: Amazon.company,
-    avatarUrl: Amazon.avatarUrl,
+    logoUrl: Amazon.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/amazon_withoutabox.png',
     startDate: Amazon.startDate,
     endDate: Amazon.endDate,
@@ -198,7 +198,7 @@ const Withoutabox: Project = {
 const BeyondTheGrind: Project = {
     name: 'Beyond The Grind',
     organization: 'Beyond The Grind',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/btg_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/btg_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/btg_site.jpg',
     startDate: DateTime.fromISO('2018-06-20T00:00:00-08:00'),
     endDate: DateTime.fromISO('2018-07-20T00:00:00-08:00'),
@@ -215,7 +215,7 @@ const BeyondTheGrind: Project = {
 const FearlessLASite: Project = {
     name: 'Fearless LA Website v2.0',
     organization: 'Fearless LA',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/fearless_la_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/fearless_la_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/fearless_website.png',
     startDate: DateTime.fromISO('2018-04-16T00:00:00-08:00'),
     endDate: DateTime.fromISO('2019-01-01T00:00:00-08:00'),
@@ -235,7 +235,7 @@ const FearlessLASite: Project = {
 const FearlessLAMobile: Project = {
     name: 'Fearless LA Mobile v1.0',
     organization: 'Fearless LA',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/fearless_la_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/fearless_la_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/fearless_mobile.png',
     startDate: DateTime.fromISO('2018-04-16T00:00:00-08:00'),
     endDate: DateTime.fromISO('2019-01-01T00:00:00-08:00'),
@@ -249,10 +249,10 @@ const FearlessLAMobile: Project = {
     skills: ['Teamwork'],
 };
 
-const SamsungTVs = {
+const SamsungTVs: Project = {
     name: 'Enable Hardware Keyboard Support on Samsung TVs for YouTube',
     organization: 'Google',
-    avatarUrl: Google.avatarUrl,
+    logoUrl: Google.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_samsung-tv.jpg',
     startDate: Google.startDate,
     endDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
@@ -265,10 +265,10 @@ const SamsungTVs = {
     skills: ['TypeScript', 'QA Testing'],
 };
 
-const ViTelex = {
+const ViTelex: Project = {
     name: 'Vietnamese Telex IME for YouTube on Virtual Keyboard',
     organization: 'Google',
-    avatarUrl: Google.avatarUrl,
+    logoUrl: Google.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_vi-telex.jpg',
     startDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
     endDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
@@ -284,10 +284,10 @@ const ViTelex = {
     skills: ['TypeScript', 'SCSS', 'protobuf'],
 };
 
-const LetterSuggestions = {
+const LetterSuggestions: Project = {
     name: 'Letter Suggestions',
     organization: 'Google',
-    avatarUrl: Google.avatarUrl,
+    logoUrl: Google.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_letter-suggestions.png',
     startDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
     endDate: Google.endDate,
@@ -303,10 +303,10 @@ const LetterSuggestions = {
     skills: ['TypeScript', 'JavaScript', 'protobuf', 'Google Closure Compiler'],
 };
 
-const UscTaekwondoWebsite = {
+const UscTaekwondoWebsite: Project = {
     name: 'USC Taekwondo Website v2.0',
     organization: 'USC Taekwondo',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/usc_tkd_logo.jpg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/usc_tkd_logo.jpg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/usctkd_website.png',
     startDate: USC.Fall2019.date,
     endDate: USC.Graduation.date,
@@ -321,10 +321,10 @@ const UscTaekwondoWebsite = {
     projectLink: 'https://sites.google.com/usc.edu/usctkd',
 };
 
-const Metrix = {
+const Metrix: Project = {
     name: 'Metrix',
     organization: Anduril.company,
-    avatarUrl: Anduril.avatarUrl,
+    logoUrl: Anduril.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/classified.jpg',
     startDate: Anduril.startDate,
     description:
@@ -333,10 +333,10 @@ const Metrix = {
     skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
 };
 
-const LattticeControlApp = {
+const LattticeControlApp: Project = {
     name: 'Lattice UI',
     organization: Anduril.company,
-    avatarUrl: Anduril.avatarUrl,
+    logoUrl: Anduril.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/anduril_lattice.jpg',
     startDate: DateTime.fromISO('2020-10-10T09:00:00-08:00'),
     description:
@@ -349,10 +349,10 @@ const LattticeControlApp = {
     projectLink: 'https://www.anduril.com/work',
 };
 
-const Capacitor = {
+const Capacitor: Project = {
     name: 'Capacitor',
     organization: Anduril.company,
-    avatarUrl: Anduril.avatarUrl,
+    logoUrl: Anduril.logoUrl,
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/classified.jpg',
     startDate: DateTime.fromISO('2021-01-04T09:00:00-08:00'),
     description:
@@ -363,10 +363,10 @@ const Capacitor = {
     skills: ['React', 'TypeScript', 'SCSS', 'Blueprint.js', 'protobuf', 'gRPC'],
 };
 
-const DjinDev = {
+const DjinDev: Project = {
     name: 'djin.dev',
     organization: 'djin',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/djin_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/djin_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/djin_dev.png',
     startDate: DateTime.fromISO('2021-02-04T09:00:00-08:00'),
     description:

@@ -27,8 +27,8 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, linkType,
             <Typography paragraph>{description}</Typography>
             <Typography>
                 <ul className={classes.linkList}>
-                    {links.map(({ label, href }: HolisticOfficeLink) => (
-                        <IconLink href={href} text={label} icon={icon} key={label} className={classes.link} />
+                    {links.map(({ name, href }: HolisticOfficeLink) => (
+                        <IconLink href={href} text={name} icon={icon} key={name} className={classes.link} />
                     ))}
                 </ul>
             </Typography>

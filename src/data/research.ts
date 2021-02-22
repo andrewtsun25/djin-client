@@ -5,7 +5,7 @@ import { UCSD } from '../const/semester';
 const CostBenefitAnalysis: Research = {
     name: 'Cost Estimation Of Hepatitis B Screenings Across Greater San Diego',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/img/cost_benefit_analysis.jpg',
     startDate: UCSD.Fall2014.date,
     endDate: UCSD.Winter2015.date,
@@ -23,7 +23,7 @@ const CostBenefitAnalysis: Research = {
 const LinkageToCare: Research = {
     name: 'Linkage-To-Care Results',
     organization: 'Asian Pacific Health Foundation, San Diego',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/logo/aphf_logo.jpg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/img/linkage_to_care.jpg',
     startDate: UCSD.Winter2015.date,
     endDate: UCSD.Spring2015.date,

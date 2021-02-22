@@ -1,4 +1,4 @@
 export interface HolisticOfficeModule {
-    title: string;
+    name: string;
     components: Record<string, string>;
 }

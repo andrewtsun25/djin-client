@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         endDate,
         startDate: { monthShort: startDateMonth, year: startDateYear },
         organization,
-        avatarUrl,
+        logoUrl,
         mediaUrl,
         description,
         responsibilities,
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <CardHeader
                         title={name}
                         subheader={subheader}
-                        avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
+                        avatar={<Avatar alt={`${organization}_avatar`} src={logoUrl} />}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
                     <CardContent>

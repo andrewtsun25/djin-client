@@ -3,10 +3,10 @@ import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import Background from 'components/shared/Background';
-import { DocumentationLinks, DownloadLinks, HolisticOfficeModules } from 'data/holisticOffice';
+import { HolisticOfficeModules } from 'data/holisticOffice';
 import React from 'react';
+import { HolisticOfficeLinkType } from 'types/holisticOffice';
 
-import { HolisticOfficeLinkType } from '../../../types/holisticOffice';
 import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
@@ -73,7 +73,7 @@ const HolisticOfficePage: React.FC = () => {
                     </Grow>
                     <Grid container spacing={3}>
                         {HolisticOfficeModules.map((architecturalCategory) => (
-                            <Grid item xs={12} sm={6} md={4} key={architecturalCategory.title}>
+                            <Grid item xs={12} sm={6} md={4} key={architecturalCategory.name}>
                                 <ArchitecturePaper category={architecturalCategory} />
                             </Grid>
                         ))}

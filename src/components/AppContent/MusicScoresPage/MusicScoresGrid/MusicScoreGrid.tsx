@@ -2,10 +2,11 @@ import { GridList, GridListTile, GridListTileBar, IconButton, Link, Typography, 
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import InstrumentUrls from 'data/InstrumentUrls';
+import useInstruments from 'hooks/useInstruments';
 import { map } from 'lodash';
 import React from 'react';
-import { Instrument, MusicScore } from 'types/music';
+import { InstrumentId, MusicScore } from 'types/music';
+import { Instrument } from 'types/music/Instrument';
 
 import musicScoreGridStyles from './MusicScoreGrid.styles';
 
@@ -23,6 +24,7 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
     const isMedium = useMediaQuery(theme.breakpoints.up('md'));
     const classes = musicScoreGridStyles();
     const cols = isMedium ? 4 : isSmall ? 2 : 1;
+    const instruments = useInstruments();
     return (
         <Zoom in>
             <div className={classes.root}>
@@ -34,16 +36,19 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
                             </Typography>
                         </Link>
                     </GridListTile>
-                    {map(parts, (downloadUrl, instrument: Instrument) => {
+                    {map(parts, (downloadUrl, instrumentType: InstrumentId) => {
+                        const instrument: Instrument | undefined = instruments.find((i) => i.id === instrumentType);
                         const scoreName = `${title} - ${instrument} Score`;
                         return (
-                            <GridListTile key={instrument} cols={1} rows={1}>
+                            <GridListTile key={instrumentType} cols={1} rows={1}>
                                 <div
                                     className={classes.instrumentImg}
-                                    style={{ backgroundImage: `url(${InstrumentUrls?.[instrument]})` }}
+                                    style={{
+                                        backgroundImage: `url(${instrument?.mediaUrl})`,
+                                    }}
                                 />
                                 <GridListTileBar
-                                    title={instrument}
+                                    title={instrument?.name}
                                     actionIcon={
                                         <IconButton
                                             aria-label={`Download ${scoreName}`}

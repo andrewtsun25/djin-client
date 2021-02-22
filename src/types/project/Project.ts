@@ -8,7 +8,7 @@ export interface Project {
     description: string;
     responsibilities: string[];
     organization: string;
-    avatarUrl: string;
+    logoUrl: string;
     skills: string[];
     disclaimer?: string;
     projectLink?: string;

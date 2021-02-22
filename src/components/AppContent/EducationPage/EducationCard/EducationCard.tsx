@@ -16,8 +16,8 @@ const EducationCard: React.FC<EducationCardProps> = ({
         startDate: { monthShort: startDateMonth, year: startDateYear },
         major,
         name,
-        avatarUrl,
-        syllabusLink,
+        logoUrl,
+        syllabusUrl,
         residentialCollegeSyllabusLink,
         department,
         residentialCollege,
@@ -30,9 +30,9 @@ const EducationCard: React.FC<EducationCardProps> = ({
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>
-                <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={avatarUrl} />} />
+                <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={logoUrl} />} />
                 <CardContent>
-                    <IconLink icon={<SchoolIcon />} href={syllabusLink} text="Degree Requirements" />
+                    <IconLink icon={<SchoolIcon />} href={syllabusUrl} text="Degree Requirements" />
                     {residentialCollegeSyllabusLink && (
                         <IconLink
                             icon={<SchoolIcon />}

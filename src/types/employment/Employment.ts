@@ -4,7 +4,7 @@ import JobType from './JobType';
 
 export interface Employment {
     company: string;
-    avatarUrl: string;
+    logoUrl: string;
     mediaUrl: string;
     role: string;
     startDate: DateTime;
