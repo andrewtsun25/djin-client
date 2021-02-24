@@ -1,5 +1,4 @@
 import { CircularProgress, Paper, Typography } from '@material-ui/core';
-import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
 import React from 'react';
 
