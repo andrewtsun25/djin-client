@@ -12,7 +12,7 @@ interface HBVResearchCardProps {
 
 const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
     research: {
-        avatarUrl,
+        logoUrl,
         organization,
         name,
         startDate: { monthShort: startDateMonth, year: startDateYear },
@@ -31,7 +31,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                 <CardHeader
                     title={name}
                     subheader={subheader}
-                    avatar={<Avatar alt={`${organization}_avatar`} src={avatarUrl} />}
+                    avatar={<Avatar alt={`${organization}_avatar`} src={logoUrl} />}
                 />
                 <CardContent>
                     <IconLink

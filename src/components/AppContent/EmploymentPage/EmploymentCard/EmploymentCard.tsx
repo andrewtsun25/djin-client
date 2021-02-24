@@ -14,7 +14,7 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
         startDate: { monthShort: startDateMonth, year: startDateYear },
         role,
         company,
-        avatarUrl,
+        logoUrl,
         mediaUrl,
         description,
         responsibilities,
@@ -33,7 +33,7 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
                     <CardHeader
                         title={company}
                         subheader={subheader}
-                        avatar={<Avatar alt={`${company}_avatar`} src={avatarUrl} />}
+                        avatar={<Avatar alt={`${company}_avatar`} src={logoUrl} />}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
                     <CardContent>

@@ -1,9 +1,9 @@
 # d.jin
 
-`djin` is the front-end personal website of its creator, d.jin. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-As of version 1.0.1, this website is front-end only. The production deployment of this website is available at https://djin.dev.
+`djin` is the personal website of its creator, d.jin. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As of version 1.1.0, this website is front-end only. The production deployment of this website is available at https://djin.dev.
 
-## Available Scripts
+## Commands
 
 Here are some scripts you can run:
 
@@ -15,10 +15,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn test:dev`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn test:ci`
+
+Runs tests in a non-interactive mode. Used for building in CI/CD environments.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn lint:dev`
+
+Runs `eslint` on all source files to correct formatting mistakes. Will fix errors/warnings if possible<br />
+
+### `yarn lint:ci`
+
+Runs `eslint` on all source files to correct formatting mistakes. Unlike its `dev` counterpart, errors will remain and fail builds. Used for building in CI/CD environments.<br />
 
 ### `yarn build`
 
@@ -29,6 +42,10 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn deploy:ci`
+Runs all the necessary steps to create a production build in a deployment environment sequentially. First, 
+dependencies are `install`ed, then the code is `lint`ed, `test`s are run, and the code is `built`.
 
 ### `yarn eject`
 

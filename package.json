@@ -1,6 +1,6 @@
 {
-  "name": "djin-client",
-  "version": "1.0.1",
+  "name": "djin",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.2.1",
@@ -18,10 +18,12 @@
     "@types/react-router-dom": "^5.1.6",
     "clsx": "^1.1.1",
     "eslint-plugin-react": "^7.22.0",
+    "firebase": "^8.2.9",
     "lodash": "^4.17.20",
     "luxon": "^1.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-firebase-hooks": "^2.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "typescript": "~4.1.5"
@@ -30,11 +32,12 @@
     "depcheck": "yarn-check",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test-ci": "react-scripts test --watchAll=false",
+    "test:dev": "react-scripts test",
+    "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
-    "lint-ci": "eslint '*/**/*.{js,ts,tsx}'"
+    "lint:dev": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "lint:ci": "eslint '*/**/*.{js,ts,tsx}'",
+    "deploy:ci": "yarn install && run-s lint:ci test:ci build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,6 +64,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "yarn-check": "^0.0.3"
   },

@@ -1,60 +1,4 @@
-import { MartialArt, MartialArtsStyle, Studio } from 'types/martialArts';
-
-const UcsdTkd: Studio = {
-    name: 'UCSD Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/ucsd_tkd.png',
-    href: 'https://www.facebook.com/groups/ucsdtkd/',
-    location: 'San Diego, CA, USA',
-};
-
-const YonseiTkd: Studio = {
-    name: "Yonsei Int'l Taekwondo Academy",
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/yonsei_intl_tkd.png',
-    href: 'http://web.yonsei.ac.kr/yitaekwondo/',
-    location: 'Seoul, South Korea',
-};
-
-const UclaTkd: Studio = {
-    name: 'UCLA Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/ucla_tkd.png',
-    href: 'https://uclaclubsports.com/sports/taek',
-    location: 'Los Angeles, CA, USA',
-};
-
-const TaeryongTkd: Studio = {
-    name: 'Taeryong Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/taeryong_tkd.png',
-    href: 'http://www.trtkd.com/',
-    location: 'Santa Monica, CA, USA',
-};
-
-const UscTkd: Studio = {
-    name: 'USC Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/usc_tkd.jpg',
-    href: 'https://sites.google.com/usc.edu/usctkd',
-    location: 'Los Angeles, CA, USA',
-};
-
-const MtmTkd: Studio = {
-    name: 'MTM Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/mtm_tkd.jpg',
-    href: 'http://mtmtaekwondo.com/',
-    location: 'Daly City, CA, USA',
-};
-
-const TaliumTkd: Studio = {
-    name: 'Talium Taekwondo',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/talium_tkd.png',
-    href: 'https://www.masterleestalium.com/',
-    location: 'Irvine, CA, USA',
-};
-
-const MightyFistTkd: Studio = {
-    name: 'Mightyfist Taekwon-Do',
-    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/dojang/mightyfist_tkd.jpg',
-    href: 'http://mightyfist.com/',
-    location: 'San Jose, CA, USA',
-};
+import { MartialArt, MartialArtsType, StudioIds } from 'types/martialArts';
 
 const WorldTaekwondo: MartialArt = {
     biography:
@@ -88,21 +32,29 @@ const WorldTaekwondo: MartialArt = {
         'After moving to Irvine to begin working at Anduril Industries, I migrated to Talium Taekwondo, ' +
         'where I not only continued Taekwondo, but also learned to wield a jingum (Korean sword) as well (2020/11 - present).',
     blackBeltRank: 2,
-    imgCaption: '2nd Dan Black Belt Test',
-    imgUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/wt_2nd_dan_test.jpeg',
-    introduction:
+    mediaCaption: '2nd Dan Black Belt Test',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/wt_2nd_dan_test.jpeg',
+    description:
         'World Taekwondo (WT) style Taekwondo is a more sport-oriented form of Taekwondo, with sparring (겨루기) as its ' +
         'most prominent aspect. More emphasis is placed on speed and kicks, resulting in usage of roughly ' +
         '80% foot techniques and 20% hand techniques. WT-style Taekwondo was created by the South Korean ' +
         'government after General Choi Hong Hi (최홍히) left. It is the style of Taekwondo most people think ' +
         'of, and is the official style promoted by South Korea and featured in the Summer Olympics. ',
     logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/style/wt_logo.png',
-    studios: [UcsdTkd, YonseiTkd, UclaTkd, TaeryongTkd, UscTkd, MtmTkd, TaliumTkd],
-    style: MartialArtsStyle.WT_TKD,
-    styleName: 'WT Taekwondo',
+    studios: [
+        StudioIds.UCSD_TKD,
+        StudioIds.YONSEI_TKD,
+        StudioIds.UCLA_TKD,
+        StudioIds.TAERYONG_TKD,
+        StudioIds.USC_TKD,
+        StudioIds.MTM_TKD,
+        StudioIds.TALIUM_TKD,
+    ],
+    type: MartialArtsType.WT_TKD,
+    name: 'WT Taekwondo',
 };
 
-const InternationalTaekwondoFederation = {
+const InternationalTaekwondoFederation: MartialArt = {
     biography:
         'Prior to my undergraduate studies, I trained at the Mightyfist Taekwon-do studio under ' +
         'Master Jason Morris. There, I learned board-breaking, sparring, patterns, and self-defense. ' +
@@ -116,9 +68,9 @@ const InternationalTaekwondoFederation = {
         'belt in September 2013 (2013/09). Seeing as I was going to be in SoCal for the foreseeable future, and the lack ' +
         'of ITF studios thereof in SoCal, I decided to officially convert to WT Taekwondo.',
     blackBeltRank: 1,
-    imgCaption: '1st Dan Black Belt Ceremony',
-    imgUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/itf_1st_dan_test.jpg',
-    introduction:
+    mediaCaption: '1st Dan Black Belt Ceremony',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/itf_1st_dan_test.jpg',
+    description:
         'International Taekwon-Do Federation (ITF) taekwon-do closely resembles a traditional martial art more akin to Japanese ' +
         'karate and Chinese kung-fu. There is a stronger emphasis on power and techniques, and thus, ' +
         'patterns (툴). It employs a roughly equal distribution of 50% foot techniques and 50% hand ' +
@@ -126,28 +78,28 @@ const InternationalTaekwondoFederation = {
         'taekwon-do is not endorsed by South Korea. It is headquartered in Vienna, Austria, and is ' +
         'more popular in Europe and North Korea. ',
     logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/style/itf_logo.png',
-    studios: [MightyFistTkd],
-    style: MartialArtsStyle.ITF_TKD,
-    styleName: 'ITF Taekwondo',
+    studios: [StudioIds.MIGHTYFIST_TKD],
+    type: MartialArtsType.ITF_TKD,
+    name: 'ITF Taekwondo',
 };
 
-const HaidongGumdo = {
+const HaidongGumdo: MartialArt = {
     biography:
         'As I began training at Talium Taekwondo, I never really learned how to properly wield any kind of sword. ' +
         'Through training with a bamboo sword (죽검), I was able to learn basic cutting techniques (베기), sword stances (세), ' +
         'and sword forms (검법). So far, I have achieved the ability to cut newspaper precisely with a bamboo sword instead of ' +
         'using scissors like a white belt.',
     blackBeltRank: 2,
-    imgCaption: 'A really cool picture of Haidong Gumdo since I keep breaking phone cameras with my sword.',
-    imgUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/hdgd_placeholder.png',
-    introduction:
+    mediaCaption: 'A really cool picture of Haidong Gumdo since I keep breaking phone cameras with my sword.',
+    mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/img/hdgd_placeholder.png',
+    description:
         'Haidong Gumdo (해동검도) is a Korean sword martial art founded in 1983. Rather than focusing on sword combat, ' +
         'Haidong Gumdo primarily focuses on increasing concentration through the precision and accuracy of sword techniques. ' +
         'In a sense, Haidong Gumdo is akin to Japanese Iaido (居合道).',
     logoUrl: 'https://storage.googleapis.com/storage.djin.dev/martialArts/logo/style/hdgd_logo.png',
-    studios: [TaliumTkd],
-    style: MartialArtsStyle.HDGD,
-    styleName: 'Haidong Gumdo',
+    studios: [StudioIds.TALIUM_TKD],
+    type: MartialArtsType.HDGD,
+    name: 'Haidong Gumdo',
 };
 
 export { HaidongGumdo, InternationalTaekwondoFederation, WorldTaekwondo };

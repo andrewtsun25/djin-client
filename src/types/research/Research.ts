@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 export interface Research {
     name: string;
     organization: string;
-    avatarUrl: string;
+    logoUrl: string;
     mediaUrl: string;
     startDate: DateTime;
     endDate: DateTime;

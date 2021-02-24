@@ -28,3 +28,7 @@ yarn-error.log*
 # IntelliJ Idea
 *.idea
 .idea/*
+
+# Firebase
+.firebase/**/*
+firebase-debug.log*

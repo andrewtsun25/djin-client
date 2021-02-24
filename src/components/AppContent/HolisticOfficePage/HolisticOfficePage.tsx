@@ -3,12 +3,16 @@ import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import Background from 'components/shared/Background';
-import { ArchitecturalCategories, DocumentationLinks, DownloadLinks } from 'data/holisticOffice';
+import ErrorView from 'components/shared/ErrorView';
+import LoadingView from 'components/shared/LoadingView';
+import HolisticOfficeQueries from 'queries/HolisticOfficeQueries';
 import React from 'react';
+import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
+import { HolisticOfficeLinkType, HolisticOfficeModule } from 'types/holisticOffice';
 
-import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
+import ModuleInfo from './ModuleInfo';
 
 const logo = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/logo/holistic_office_logo.png';
 const websiteImg = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_website.png';
@@ -22,6 +26,7 @@ const HolisticOfficePage: React.FC = () => {
     const classes = holisticOfficePageStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const [modules, loading, error] = useCollectionDataOnce<HolisticOfficeModule>(HolisticOfficeQueries.getModules());
     return (
         <Background tint={false} color={HOLISTIC_OFFICE_GREEN}>
             <Fade in>
@@ -70,17 +75,23 @@ const HolisticOfficePage: React.FC = () => {
                             className={classes.holisticOfficeImg}
                         />
                     </Grow>
-                    <Grid container spacing={3}>
-                        {ArchitecturalCategories.map((architecturalCategory) => (
-                            <Grid item xs={12} sm={6} md={4} key={architecturalCategory.title}>
-                                <ArchitecturePaper category={architecturalCategory} />
-                            </Grid>
-                        ))}
-                    </Grid>
+                    {error && (
+                        <ErrorView error={error} message="An error occurred when loading architectural modules." />
+                    )}
+                    {loading && <LoadingView message="Loading architectural modules..." />}
+                    {modules && (
+                        <Grid container spacing={3}>
+                            {modules.map((module) => (
+                                <Grid item xs={12} sm={6} md={4} key={module.name}>
+                                    <ModuleInfo category={module} />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    )}
                     <LinkSection
                         title="Documentation"
                         description="The provided documentation cover various aspects of the project besides raw code."
-                        links={DocumentationLinks}
+                        linkType={HolisticOfficeLinkType.Documentation}
                         icon={<DescriptionIcon />}
                     />
                     <LinkSection
@@ -89,7 +100,7 @@ const HolisticOfficePage: React.FC = () => {
                 the source code in .zip format at the point of time when this project is considered “completed” by USC.
                 Our source code is divided into 3 modules as listed above. Each repository has a README on how to
                 perform local deployment."
-                        links={DownloadLinks}
+                        linkType={HolisticOfficeLinkType.Code}
                         icon={<FolderSpecialIcon />}
                     />
                 </Container>

@@ -1,18 +1,18 @@
-import { HaidongGumdo, InternationalTaekwondoFederation, WorldTaekwondo } from 'data/martialArts';
+import { HaidongGumdo, InternationalTaekwondoFederation, WorldTaekwondo } from 'data/martialArts/martialArts';
 import { useEffect, useState } from 'react';
-import { MartialArt, MartialArtsStyle } from 'types/martialArts';
+import { MartialArt, MartialArtsType } from 'types/martialArts';
 
-export default function useMartialArt(style: MartialArtsStyle): MartialArt | undefined {
+export default function useMartialArt(style: MartialArtsType): MartialArt | undefined {
     const [pageData, setPageData] = useState<MartialArt>();
     useEffect(() => {
         switch (style) {
-            case MartialArtsStyle.WT_TKD:
+            case MartialArtsType.WT_TKD:
                 setPageData(WorldTaekwondo);
                 break;
-            case MartialArtsStyle.ITF_TKD:
+            case MartialArtsType.ITF_TKD:
                 setPageData(InternationalTaekwondoFederation);
                 break;
-            case MartialArtsStyle.HDGD:
+            case MartialArtsType.HDGD:
                 setPageData(HaidongGumdo);
                 break;
             default:

@@ -1,14 +1,14 @@
-import MartialArtsStyle from './MartialArtsStyles';
-import { Studio } from './Studio';
+import MartialArtsType from './MartialArtsType';
+import StudioIds from './StudioIds';
 
 export interface MartialArt {
-    style: MartialArtsStyle;
-    styleName: string;
+    type: MartialArtsType;
+    name: string;
     logoUrl: string;
     blackBeltRank: number;
-    introduction: string;
+    description: string;
     biography: string;
-    imgUrl: string;
-    imgCaption: string;
-    studios: Studio[];
+    mediaUrl: string;
+    mediaCaption: string;
+    studios: StudioIds[];
 }

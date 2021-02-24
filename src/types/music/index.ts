@@ -1,5 +1,5 @@
-import { Instrument } from './Instrument';
+import { InstrumentId } from './InstrumentId';
 import type { MusicScore } from './MusicScore';
 
-export { Instrument };
+export { InstrumentId };
 export type { MusicScore };

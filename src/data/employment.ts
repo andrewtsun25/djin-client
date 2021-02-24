@@ -4,7 +4,7 @@ import { Employment, JobType } from 'types/employment';
 const Anduril: Employment = {
     company: 'Anduril Industries',
     role: 'Software Engineer',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/anduril_lattice.jpg',
     startDate: DateTime.fromISO('2020-08-10T09:00:00-08:00'),
     description:
@@ -17,7 +17,7 @@ const Anduril: Employment = {
 const Google: Employment = {
     company: 'Google -- YouTube',
     role: 'Software Engineering Intern',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/google_youtube.png',
     startDate: DateTime.fromISO('2019-05-10T09:00:00-08:00'),
     endDate: DateTime.fromISO('2019-08-09T19:00:00-08:00'),
@@ -36,7 +36,7 @@ const Google: Employment = {
 const Amazon: Employment = {
     company: 'Amazon -- IMDb',
     role: 'Software Development Engineer I',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/amazon_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/amazon_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/amazon_withoutabox.png',
     startDate: DateTime.fromISO('2016-09-26T09:00:00-08:00'),
     endDate: DateTime.fromISO('2018-04-13T17:00:00-08:00'),
@@ -66,7 +66,7 @@ const Amazon: Employment = {
 
 const HLI: Employment = {
     company: 'Human Longevity, Inc.',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/hli_logo.png',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/hli_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/hli_mantis.png',
     role: 'Bioinformatics Intern',
     startDate: DateTime.fromISO('2016-01-26T09:00:00-08:00'),
@@ -83,7 +83,7 @@ const HLI: Employment = {
 
 const Yahoo2: Employment = {
     company: 'Yahoo!',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/yahoo_shepherd.jpeg',
     role: 'Technical Intern',
     startDate: DateTime.fromISO('2015-06-15T09:00:00-08:00'),
@@ -100,7 +100,7 @@ const Yahoo2: Employment = {
 
 const Yahoo1: Employment = {
     company: 'Yahoo!',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/yahoo_gemini.png',
     role: 'Technical Intern',
     startDate: DateTime.fromISO('2014-06-13T09:00:00-08:00'),
@@ -118,7 +118,7 @@ const Yahoo1: Employment = {
 
 const CouponsCom: Employment = {
     company: 'Quotient Technologies',
-    avatarUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/qt_logo.jpeg',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/qt_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/img/qt_brandcaster.jpg',
     role: 'Software Engineering Intern',
     startDate: DateTime.fromISO('2013-06-17T09:00:00-08:00'),

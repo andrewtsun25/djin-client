@@ -18,7 +18,7 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
             margin: `20px auto`,
             maxWidth: '95vw',
         },
-        introduction: {
+        description: {
             fontStyle: 'italic',
         },
         info: {
