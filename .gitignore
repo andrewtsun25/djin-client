@@ -30,4 +30,5 @@ yarn-error.log*
 .idea/*
 
 # Firebase
+.firebase/**/*
 firebase-debug.log*
