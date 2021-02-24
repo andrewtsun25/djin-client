@@ -3,13 +3,13 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const errorViewStyles = makeStyles((theme: Theme) =>
     createStyles({
-        container: {
+        root: {
             width: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
         },
-        root: {
+        content: {
             backgroundColor: fade(theme.palette.error.light, 0.4),
             display: 'flex',
             flexDirection: 'column',

@@ -19,15 +19,15 @@ const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
                 <Typography variant="h5" align="center">
                     {name}
                 </Typography>
-                <Typography>
-                    <ul>
-                        {map(components, (value: string, key: string) => (
-                            <li key={key}>
+                <ul>
+                    {map(components, (value: string, key: string) => (
+                        <li key={key}>
+                            <Typography>
                                 <b>{key}:</b> {value}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
+                            </Typography>
+                        </li>
+                    ))}
+                </ul>
             </Paper>
         </Grow>
     );

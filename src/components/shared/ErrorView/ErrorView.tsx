@@ -14,8 +14,8 @@ interface ErrorViewProps {
 const ErrorView: React.FC<ErrorViewProps> = ({ error, message, className }: ErrorViewProps) => {
     const classes = errorViewStyles();
     return (
-        <div className={classes.container}>
-            <Paper className={clsx(classes.root, className)}>
+        <div className={classes.root}>
+            <Paper className={clsx(classes.content, className)}>
                 <Error color="error" fontSize="large" />
                 <Typography paragraph variant="h5">
                     {message}
