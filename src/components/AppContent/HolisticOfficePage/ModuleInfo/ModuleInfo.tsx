@@ -3,16 +3,14 @@ import { map } from 'lodash';
 import React from 'react';
 import { HolisticOfficeModule } from 'types/holisticOffice';
 
-import architecturePaperStyles from './ArchitecturePaper.styles';
+import moduleInfoStyles from './ModuleInfo.styles';
 
-interface ArchitecturePaperProps {
+interface ModuleInfoProps {
     category: HolisticOfficeModule;
 }
 
-const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
-    category: { name, components },
-}: ArchitecturePaperProps) => {
-    const classes = architecturePaperStyles();
+const ModuleInfo: React.FC<ModuleInfoProps> = ({ category: { name, components } }: ModuleInfoProps) => {
+    const classes = moduleInfoStyles();
     return (
         <Grow in>
             <Paper className={classes.architecturePaper} elevation={5}>
@@ -33,4 +31,4 @@ const ArchitecturePaper: React.FC<ArchitecturePaperProps> = ({
     );
 };
 
-export default ArchitecturePaper;
+export default ModuleInfo;

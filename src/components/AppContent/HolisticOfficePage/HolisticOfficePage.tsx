@@ -5,15 +5,14 @@ import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
 import Background from 'components/shared/Background';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
-import { HolisticOfficeModules } from 'data/holisticOffice';
 import HolisticOfficeQueries from 'queries/HolisticOfficeQueries';
 import React from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { HolisticOfficeLinkType, HolisticOfficeModule } from 'types/holisticOffice';
 
-import ArchitecturePaper from './ArchitecturePaper';
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
+import ModuleInfo from './ModuleInfo';
 
 const logo = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/logo/holistic_office_logo.png';
 const websiteImg = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_website.png';
@@ -82,9 +81,9 @@ const HolisticOfficePage: React.FC = () => {
                     {loading && <LoadingView message="Loading architectural modules..." />}
                     {modules && (
                         <Grid container spacing={3}>
-                            {HolisticOfficeModules.map((architecturalCategory) => (
-                                <Grid item xs={12} sm={6} md={4} key={architecturalCategory.name}>
-                                    <ArchitecturePaper category={architecturalCategory} />
+                            {modules.map((module) => (
+                                <Grid item xs={12} sm={6} md={4} key={module.name}>
+                                    <ModuleInfo category={module} />
                                 </Grid>
                             ))}
                         </Grid>

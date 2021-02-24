@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const architecturePaperStyles = makeStyles(() =>
+const moduleInfoStyles = makeStyles(() =>
     createStyles({
         architecturePaper: {
             padding: 10,
@@ -9,4 +9,4 @@ const architecturePaperStyles = makeStyles(() =>
     }),
 );
 
-export default architecturePaperStyles;
+export default moduleInfoStyles;
