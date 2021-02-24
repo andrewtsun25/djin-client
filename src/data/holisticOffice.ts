@@ -54,64 +54,64 @@ const HolisticOfficeLinks: HolisticOfficeLink[] = [
     {
         name: 'Feasibility Evidence Description',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
     },
     {
         name: 'Life Cycle Plan',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/LCP_ASBUILT_S19b_T04_V5.1.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/LCP_ASBUILT_S19b_T04_V5.1.pdf',
     },
     {
         name: 'Operational Concept Description',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/OCD_ASBUILT_S19b_T04_V4.1.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/OCD_ASBUILT_S19b_T04_V4.1.pdf',
     },
     {
         name: 'Release Description',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/RD_ASBUILT_S19b_T04_V1.0.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/RD_ASBUILT_S19b_T04_V1.0.pdf',
     },
     {
         name: 'System & Software Support Plan',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SP_ASBUILT_S19b_T04_V1.1.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SP_ASBUILT_S19b_T04_V1.1.pdf',
     },
     {
         name: 'System Software Architecture Description',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SSAD_ASBUILT_S19b_T04_V5.1.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/SSAD_ASBUILT_S19b_T04_V5.1.pdf',
     },
     {
         name: 'Transition Plan',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/FED_ASBUILT_S19b_T04_V5.0.pdf',
     },
     {
         name: 'Test Plan & Cases',
         type: HolisticOfficeLinkType.Documentation,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/TPC_ASBUILT_S19b_T04_V3.0.pdf',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/doc/TPC_ASBUILT_S19b_T04_V3.0.pdf',
     },
     {
         name: 'Client Module (Angular in TypeScript)',
         type: HolisticOfficeLinkType.Code,
-        href:
+        url:
             'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-client-development.zip',
     },
     {
         name: 'Server Module (HAPI-FHIR on Java)',
         type: HolisticOfficeLinkType.Code,
-        href:
+        url:
             'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-server-development.zip',
     },
     {
         name: 'E2E Module (Cypress.io in JavaScript)',
         type: HolisticOfficeLinkType.Code,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-e2e-development.zip',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-e2e-development.zip',
     },
     {
         name: 'Confluence Wiki Export',
         type: HolisticOfficeLinkType.Code,
-        href: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-wiki-export.zip',
+        url: 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/code/holistic-office-wiki-export.zip',
     },
 ];
 
