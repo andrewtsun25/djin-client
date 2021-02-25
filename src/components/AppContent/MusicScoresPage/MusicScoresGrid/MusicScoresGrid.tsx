@@ -9,6 +9,8 @@ import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { MusicScore } from 'types/music';
 import { Instrument } from 'types/music/Instrument';
 
+import musicScoresGridStyles from './MusicScoresGrid.styles';
+
 interface MusicScoresGridProps {
     musicScore: MusicScore;
 }
@@ -22,6 +24,7 @@ type SectionInfo = {
 const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
     musicScore: { name, sections, trackUrl },
 }: MusicScoresGridProps) => {
+    const classes = musicScoresGridStyles();
     const [instruments, loading, error] = useCollectionDataOnce<Instrument>(MusicAPI.getInstruments());
     const sectionInfos: SectionInfo[] = useMemo(
         () =>
@@ -66,6 +69,7 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
                     renderGridTile={renderGridTile}
                     title={name}
                     titleHref={trackUrl}
+                    className={classes.grid}
                 />
             </Zoom>
         </>

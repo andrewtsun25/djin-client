@@ -6,11 +6,8 @@ const responsiveGridStyles = makeStyles((theme: Theme) =>
             flexWrap: 'wrap',
             justifyContent: 'space-around',
             overflow: 'hidden',
-            backgroundColor: theme.palette.background.paper,
-            margin: `20px auto`,
-            maxWidth: '100vw',
             padding: 10,
-            borderRadius: 10,
+            maxWidth: '100vw',
         },
         gridHeader: {
             margin: `5px auto 5px 5px`,

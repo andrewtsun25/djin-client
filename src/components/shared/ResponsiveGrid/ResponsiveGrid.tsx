@@ -1,6 +1,7 @@
 import { GridList, GridListTile, Link, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import clsx from 'clsx';
 import React, { ReactElement } from 'react';
 
 import responsiveGridStyles from './ResponsiveGrid.styles';
@@ -11,6 +12,7 @@ interface ResponsiveGridProps<T> {
     title?: string;
     titleHref?: string;
     items: T[];
+    className?: string;
     renderGridTile(item: T): JSX.Element;
 }
 
@@ -19,6 +21,7 @@ function ResponsiveGrid<T>({
     titleHref,
     items,
     renderGridTile,
+    className,
 }: ResponsiveGridProps<T>): ReactElement<ResponsiveGridProps<T>> {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
@@ -26,7 +29,7 @@ function ResponsiveGrid<T>({
     const classes = responsiveGridStyles();
     const cols = isMedium ? 4 : isSmall ? 2 : 1;
     return (
-        <div className={classes.root}>
+        <div className={clsx(classes.root, className)}>
             <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
                     <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
@@ -37,7 +40,7 @@ function ResponsiveGrid<T>({
                         </Link>
                     </GridListTile>
                 )}
-                {items.map((item: T) => renderGridTile(item))}
+                {items.map(renderGridTile)}
             </GridList>
         </div>
     );
