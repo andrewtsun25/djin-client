@@ -1,7 +1,7 @@
-import { InstrumentId } from './InstrumentId';
+import { InstrumentType } from './InstrumentType';
 
 export interface Instrument {
     name: string;
-    id: InstrumentId;
+    type: InstrumentType;
     mediaUrl: string;
 }

@@ -46,7 +46,7 @@ const QueryCategorizationModuleImplementation: Project = {
     startDate: Yahoo1.startDate,
     endDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     description:
-        'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. I also realized how much Yahoo! is used to search up pornography.',
+        'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of api. I also realized how much Yahoo! is used to search up pornography.',
     responsibilities: [
         'Designed & Implemented the module in C++ using the Boost library.',
         'Module was presented to Jay Rossiter, Senior Vice President of Yahoo! as an intern demonstration',
@@ -62,7 +62,7 @@ const QueryCategorizationModuleAnalysis: Project = {
     startDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     endDate: Yahoo1.endDate,
     description:
-        'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. After developing the module, I performed continual monitoring and statistical analysis to determine the success of this module.',
+        'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of api. After developing the module, I performed continual monitoring and statistical analysis to determine the success of this module.',
     responsibilities: [
         'Developed a Apache Pig script to collect and transform analytical data on the Query Module from a Hadoop Distributed Filesystem (HDFS)',
         'Prepared an end-of-internship report describing the efficacy of my module using Pig script runs as evidence.',
@@ -93,7 +93,7 @@ const PipelineSummaryDashboard: Project = {
     startDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
     endDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
     description:
-        "Previously, the data pipeline reporting UI for Yahoo's advertising platform could only view the current state of a single data pipeline. If a pipeline broke, the developers would have to manually sift through pipeline history by exhaustive SQL queries. Developed a visualization of data pipeline history to speed up data pipeline debugging.",
+        "Previously, the data pipeline reporting UI for Yahoo's advertising platform could only view the current state of a single data pipeline. If a pipeline broke, the developers would have to manually sift through pipeline history by exhaustive SQL api. Developed a visualization of data pipeline history to speed up data pipeline debugging.",
     responsibilities: ['Existing dashboard was modified via editing pure HTML, CSS and jQuery'],
     skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'moment.js'],
 };
@@ -110,7 +110,7 @@ const CloseOfBooksDashboard: Project = {
     responsibilities: [
         'Designed and implemented a front-end Close-of-Books dashboard written with HTML and jQuery',
         'Implemented a backend-API in Java using Spring MVC',
-        'Retrieved data from an Oracle database with queries in PL/SQL.',
+        'Retrieved data from an Oracle database with api in PL/SQL.',
     ],
     skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'moment.js', 'Spring', 'Java', 'JDBC', 'Oracle DB', 'PL/SQL'],
 };

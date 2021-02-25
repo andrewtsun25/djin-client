@@ -1,40 +1,40 @@
-import { InstrumentId } from 'types/music';
+import { InstrumentType } from 'types/music';
 import { Instrument } from 'types/music/Instrument';
 
 const Instruments: Instrument[] = [
     {
         name: 'Violin 1',
-        id: InstrumentId.VIOLIN1,
+        type: InstrumentType.VIOLIN1,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/violin1.jpg',
     },
     {
         name: 'Violin 2',
-        id: InstrumentId.VIOLIN2,
+        type: InstrumentType.VIOLIN2,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/violin2.jpg',
     },
     {
         name: 'Viola',
-        id: InstrumentId.VIOLA,
+        type: InstrumentType.VIOLA,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/viola.jpg',
     },
     {
         name: 'Cello',
-        id: InstrumentId.CELLO,
+        type: InstrumentType.CELLO,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/cello.jpg',
     },
     {
         name: 'Double Bass',
-        id: InstrumentId.DOUBLE_BASS,
+        type: InstrumentType.DOUBLE_BASS,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/doublebass.jpg',
     },
     {
         name: 'Concert Score',
-        id: InstrumentId.ORCHESTRA,
+        type: InstrumentType.ORCHESTRA,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/orchestra.jpg',
     },
     {
         name: 'Piano',
-        id: InstrumentId.PIANO,
+        type: InstrumentType.PIANO,
         mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/music/img/piano.jpg',
     },
 ];

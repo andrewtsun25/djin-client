@@ -1,9 +1,9 @@
 import { Typography, useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
+import HolisticOfficeAPI from 'api/HolisticOfficeAPI';
 import ErrorView from 'components/shared/ErrorView';
 import IconLink from 'components/shared/IconLink';
 import LoadingView from 'components/shared/LoadingView';
-import HolisticOfficeQueries from 'queries/HolisticOfficeQueries';
 import React from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { HolisticOfficeLink, HolisticOfficeLinkType } from 'types/holisticOffice';
@@ -21,9 +21,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, linkType,
     const classes = linkSectionStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const [values, loading, error] = useCollectionDataOnce<HolisticOfficeLink>(
-        HolisticOfficeQueries.getLinks(linkType),
-    );
+    const [values, loading, error] = useCollectionDataOnce<HolisticOfficeLink>(HolisticOfficeAPI.getLinks(linkType));
     return (
         <div className={classes.linkSection}>
             <Typography variant={isSmall ? 'h3' : 'h2'} align="center" className={classes.title}>

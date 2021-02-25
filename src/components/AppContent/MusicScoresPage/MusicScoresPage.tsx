@@ -21,7 +21,7 @@ const MusicScoresPage: React.FC = () => {
                     Music Scores
                 </Typography>
                 {musicScores.map((musicScore) => (
-                    <MusicScoreGrid musicScore={musicScore} key={musicScore.title} />
+                    <MusicScoreGrid musicScore={musicScore} key={musicScore.name} />
                 ))}
             </Container>
         </Background>

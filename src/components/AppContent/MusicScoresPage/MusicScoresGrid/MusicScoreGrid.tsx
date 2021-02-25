@@ -5,7 +5,7 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import useInstruments from 'hooks/useInstruments';
 import { map } from 'lodash';
 import React from 'react';
-import { InstrumentId, MusicScore } from 'types/music';
+import { InstrumentType, MusicScore } from 'types/music';
 import { Instrument } from 'types/music/Instrument';
 
 import musicScoreGridStyles from './MusicScoreGrid.styles';
@@ -17,7 +17,7 @@ interface MusicScoreGridProps {
 const COL_HEIGHT = 333;
 
 const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
-    musicScore: { title, parts, trackUrl },
+    musicScore: { name, parts, trackUrl },
 }: MusicScoreGridProps) => {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
@@ -32,13 +32,13 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
                     <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
                         <Link href={trackUrl} target="_blank" rel="noopener noreferrer">
                             <Typography paragraph variant="h5" className={classes.gridHeader}>
-                                {title}
+                                {name}
                             </Typography>
                         </Link>
                     </GridListTile>
-                    {map(parts, (downloadUrl, instrumentType: InstrumentId) => {
-                        const instrument: Instrument | undefined = instruments.find((i) => i.id === instrumentType);
-                        const scoreName = `${title} - ${instrument} Score`;
+                    {map(parts, (downloadUrl, instrumentType: InstrumentType) => {
+                        const instrument: Instrument | undefined = instruments.find((i) => i.type === instrumentType);
+                        const scoreName = `${name} - ${instrument} Score`;
                         return (
                             <GridListTile key={instrumentType} cols={1} rows={1}>
                                 <div
