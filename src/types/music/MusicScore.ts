@@ -1,7 +1,5 @@
-import { DateTime } from 'luxon';
-
 export interface MusicScore {
-    date: DateTime;
+    date: Date;
     name: string;
     sections: Record<string, string>;
     trackUrl: string;

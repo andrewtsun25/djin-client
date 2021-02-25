@@ -9,7 +9,7 @@ import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { MusicScore } from 'types/music';
 import { Instrument } from 'types/music/Instrument';
 
-interface MusicScoreGridProps {
+interface MusicScoresGridProps {
     musicScore: MusicScore;
 }
 
@@ -19,9 +19,9 @@ type SectionInfo = {
     scoreUrl: string;
 };
 
-const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
+const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
     musicScore: { name, sections, trackUrl },
-}: MusicScoreGridProps) => {
+}: MusicScoresGridProps) => {
     const [instruments, loading, error] = useCollectionDataOnce<Instrument>(MusicAPI.getInstruments());
     const sectionInfos: SectionInfo[] = useMemo(
         () =>
@@ -59,7 +59,7 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
 
     return (
         <>
-            {error && <ErrorView error={error} message="An error occurred when retrieving instrument information" />}
+            {error && <ErrorView error={error} message="An error occurred when retrieving instrument information." />}
             <Zoom in>
                 <ResponsiveGrid
                     items={sectionInfos}
@@ -72,4 +72,4 @@ const MusicScoreGrid: React.FC<MusicScoreGridProps> = ({
     );
 };
 
-export default MusicScoreGrid;
+export default MusicScoresGrid;

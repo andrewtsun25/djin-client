@@ -5,11 +5,12 @@ import Background from 'components/shared/Background';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
 import { Urls } from 'const/urls';
+import { orderBy } from 'lodash';
 import React from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { MusicScore } from 'types/music';
 
-import MusicScoreGrid from './MusicScoresGrid';
+import MusicScoresGrid from './MusicScoresGrid';
 import musicScoresPageStyles from './MusicScoresPage.styles';
 
 const musicScoresBg = `${Urls.AssetRoot}/music/bg/music_score_bg.jpeg`;
@@ -26,7 +27,9 @@ const MusicScoresPage: React.FC = () => {
                     Music Scores
                 </Typography>
                 {musicScores &&
-                    musicScores.map((musicScore) => <MusicScoreGrid musicScore={musicScore} key={musicScore.name} />)}
+                    orderBy(musicScores, 'date', 'asc').map((musicScore) => (
+                        <MusicScoresGrid musicScore={musicScore} key={musicScore.name} />
+                    ))}
                 {loading && <LoadingView message="Loading Music Scores..." />}
                 {error && <ErrorView error={error} message="Music Scores unavailable." />}
             </Container>
