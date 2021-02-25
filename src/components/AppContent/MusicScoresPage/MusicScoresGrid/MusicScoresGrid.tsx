@@ -57,6 +57,7 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
             mediaUrl={mediaUrl}
             loading={loading}
             error={error}
+            mediaSizingStrategy="cover"
         />
     );
 

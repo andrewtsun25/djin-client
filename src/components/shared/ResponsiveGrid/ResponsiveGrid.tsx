@@ -34,7 +34,7 @@ function ResponsiveGrid<T>({
                 {title && (
                     <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
                         <Link href={titleHref} target="_blank" rel="noopener noreferrer">
-                            <Typography paragraph variant="h5" className={classes.gridHeader}>
+                            <Typography paragraph variant="h4" align="center" className={classes.gridHeader}>
                                 {title}
                             </Typography>
                         </Link>

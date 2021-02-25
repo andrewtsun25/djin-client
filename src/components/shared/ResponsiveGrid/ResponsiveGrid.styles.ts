@@ -1,6 +1,6 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const responsiveGridStyles = makeStyles((theme: Theme) =>
+const responsiveGridStyles = makeStyles(() =>
     createStyles({
         root: {
             flexWrap: 'wrap',

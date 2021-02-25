@@ -2,6 +2,7 @@ import { CircularProgress, GridListTile, GridListTileBar, IconButton } from '@ma
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
+import clsx from 'clsx';
 import React from 'react';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';
@@ -14,6 +15,7 @@ interface ResponsiveGridItemProps {
     icon: JSX.Element;
     loading?: boolean;
     error?: Error;
+    mediaSizingStrategy?: string;
 }
 
 const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
@@ -24,6 +26,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     icon,
     loading,
     error,
+    mediaSizingStrategy,
 }: ResponsiveGridItemProps) => {
     const classes = responsiveGridItemStyles();
     const theme = useTheme();
@@ -32,15 +35,24 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     const width = isMedium ? '24%' : isSmall ? '48%' : '96%';
     return (
         <GridListTile cols={1} rows={1} className={classes.tile} style={{ width }}>
-            {!loading && !error && <img src={mediaUrl} alt={`${title} Background`} className={classes.media} />}
+            {!loading && !error && (
+                <div
+                    className={classes.media}
+                    style={{ backgroundImage: `url(${mediaUrl})`, backgroundSize: mediaSizingStrategy || 'cover' }}
+                />
+            )}
             {loading && (
                 <div className={classes.loadingContainer}>
-                    <CircularProgress size={100} />
+                    <CircularProgress size={100} className={classes.absoluteCenter} />
                 </div>
             )}
             {error && (
                 <div className={classes.errorContainer}>
-                    <Error color="error" fontSize="large" />
+                    <Error
+                        color="error"
+                        fontSize="inherit"
+                        className={clsx(classes.absoluteCenter, classes.errorIcon)}
+                    />
                 </div>
             )}
             <GridListTileBar
