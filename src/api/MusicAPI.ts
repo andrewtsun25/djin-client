@@ -10,7 +10,7 @@ const MusicCollections: Record<string, string> = {
 };
 
 /**
- * Return all architectural modules of Holistic Office.
+ * Return display names & URLs for all instruments
  */
 function getInstruments(): Query {
     return db.collection(MusicCollections.Instruments);

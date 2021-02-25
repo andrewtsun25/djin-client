@@ -92,7 +92,7 @@ const Yahoo2: Employment = {
         'Developed internal reporting tools for the Reporting/Analytics team to monitor advertising data ETL pipelines. Also presented my work as part of the UCSD Jacobs School of Engineering Team Internship Program.',
     responsibilities: [
         'Created three internal dashboards for monitoring advertising data ETL pipeline state for the reporting and analytics teams.',
-        'Designed web dashboards using jQuery and Handlebars templating in the front end. Data was fetched through creation of a new REST endpoint in Java, alongside SQL api to OracleDB.',
+        'Designed web dashboards using jQuery and Handlebars templating in the front end. Data was fetched through creation of a new REST endpoint in Java, alongside SQL queries to OracleDB.',
     ],
     skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Java', 'Handlebars'],
     jobType: JobType.Internship,

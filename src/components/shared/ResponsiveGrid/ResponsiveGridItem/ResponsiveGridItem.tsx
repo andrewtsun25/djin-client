@@ -7,6 +7,8 @@ import React from 'react';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';
 
+const ITEM_MARGIN = 5;
+
 interface ResponsiveGridItemProps {
     downloadUrl: string;
     mediaUrl: string;
@@ -32,9 +34,10 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
     const isMedium = useMediaQuery(theme.breakpoints.up('md'));
-    const width = isMedium ? '24%' : isSmall ? '48%' : '96%';
+    const cols = isMedium ? 4 : isSmall ? 2 : 1;
+    const width = `calc((100% - 2 * ${ITEM_MARGIN}px * ${cols})/${cols})`;
     return (
-        <GridListTile cols={1} rows={1} className={classes.tile} style={{ width }}>
+        <GridListTile cols={1} rows={1} style={{ width: width, margin: ITEM_MARGIN }}>
             {!loading && !error && (
                 <div
                     className={classes.media}

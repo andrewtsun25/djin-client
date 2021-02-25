@@ -12,9 +12,6 @@ const responsiveGridItemStyles = makeStyles((theme: Theme) =>
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
         },
-        tile: {
-            margin: 5,
-        },
         loadingContainer: {
             width: '100%',
             paddingBottom: '100%',
