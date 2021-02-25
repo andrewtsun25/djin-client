@@ -21,7 +21,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, linkType,
     const classes = linkSectionStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const [values, loading, error] = useCollectionDataOnce<HolisticOfficeLink>(HolisticOfficeAPI.getLinks(linkType));
+    const [links, loading, error] = useCollectionDataOnce<HolisticOfficeLink>(HolisticOfficeAPI.getLinks(linkType));
     return (
         <div className={classes.linkSection}>
             <Typography variant={isSmall ? 'h3' : 'h2'} align="center" className={classes.title}>
@@ -29,11 +29,11 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, description, linkType,
             </Typography>
             {error && <ErrorView error={error} message={`An error occurred when loading ${linkType} links`} />}
             {loading && <LoadingView message={`Loading ${linkType} links`} />}
-            {values && (
+            {links && (
                 <>
                     <Typography paragraph>{description}</Typography>
                     <ul className={classes.linkList}>
-                        {values.map(({ name, url }: HolisticOfficeLink) => (
+                        {links.map(({ name, url }: HolisticOfficeLink) => (
                             <IconLink href={url} text={name} icon={icon} key={name} className={classes.link} />
                         ))}
                     </ul>
