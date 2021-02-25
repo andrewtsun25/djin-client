@@ -11,9 +11,22 @@ const responsiveGridItemStyles = makeStyles((theme: Theme) =>
             objectPosition: '50% 50%',
         },
         tile: {
-            width: '24%',
             maxHeight: 333,
             margin: 5,
+        },
+        loadingContainer: {
+            height: 333,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: fade(theme.palette.common.black, 0.7),
+        },
+        errorContainer: {
+            height: 333,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: fade(theme.palette.error.light, 0.25),
         },
     }),
 );
