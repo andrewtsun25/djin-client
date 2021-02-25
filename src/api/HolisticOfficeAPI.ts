@@ -5,9 +5,9 @@ import { db } from './database';
 
 type Query = firebase.firestore.Query;
 
-const Collections = {
-    HolisticOfficeLinks: 'holisticOfficeLinks',
-    HolisticOfficeModules: 'holisticOfficeModules',
+const HolisticOfficeCollections: Record<string, string> = {
+    Links: 'holisticOfficeLinks',
+    Modules: 'holisticOfficeModules',
 };
 
 /**
@@ -16,19 +16,19 @@ const Collections = {
  * @return - A Query of the collection of links that can be further processed.
  */
 function getLinks(type: HolisticOfficeLinkType): Query {
-    return db.collection(Collections.HolisticOfficeLinks).where('type', '==', type);
+    return db.collection(HolisticOfficeCollections.Links).where('type', '==', type);
 }
 
 /**
  * Return all architectural modules of Holistic Office.
  */
 function getModules(): Query {
-    return db.collection(Collections.HolisticOfficeModules);
+    return db.collection(HolisticOfficeCollections.Modules);
 }
 
-const HolisticOfficeQueries = {
+const HolisticOfficeAPI = {
     getLinks,
     getModules,
 };
 
-export default HolisticOfficeQueries;
+export default HolisticOfficeAPI;

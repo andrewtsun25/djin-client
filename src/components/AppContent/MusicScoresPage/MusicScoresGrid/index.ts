@@ -1,3 +1,3 @@
-import MusicScoreGrid from './MusicScoreGrid';
+import MusicScoresGrid from './MusicScoresGrid';
 
-export default MusicScoreGrid;
+export default MusicScoresGrid;

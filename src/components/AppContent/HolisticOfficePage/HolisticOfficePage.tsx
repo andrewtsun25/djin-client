@@ -2,10 +2,10 @@ import { Container, Fade, Grid, Grow, Link, Typography, useMediaQuery } from '@m
 import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
+import HolisticOfficeAPI from 'api/HolisticOfficeAPI';
 import Background from 'components/shared/Background';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
-import HolisticOfficeQueries from 'queries/HolisticOfficeQueries';
 import React from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { HolisticOfficeLinkType, HolisticOfficeModule } from 'types/holisticOffice';
@@ -26,7 +26,7 @@ const HolisticOfficePage: React.FC = () => {
     const classes = holisticOfficePageStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const [modules, loading, error] = useCollectionDataOnce<HolisticOfficeModule>(HolisticOfficeQueries.getModules());
+    const [modules, loading, error] = useCollectionDataOnce<HolisticOfficeModule>(HolisticOfficeAPI.getModules());
     return (
         <Background tint={false} color={HOLISTIC_OFFICE_GREEN}>
             <Fade in>
