@@ -1,15 +1,19 @@
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
-const responsiveGridItemStyles = makeStyles(() =>
+const responsiveGridItemStyles = makeStyles((theme: Theme) =>
     createStyles({
         icon: {
-            color: 'rgba(255, 255, 255, 0.54)',
+            color: fade(theme.palette.common.white, 0.54),
         },
         media: {
-            width: '100%',
-            paddingTop: '100%',
-            position: 'relative',
-            backgroundSize: 'contain',
+            objectFit: 'contain',
+            objectPosition: '50% 50%',
+        },
+        tile: {
+            width: '24%',
+            maxHeight: 333,
+            margin: 5,
         },
     }),
 );

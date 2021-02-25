@@ -4,7 +4,7 @@ import { InstrumentType, MusicScore } from 'types/music';
 const Reclaimer: MusicScore = {
     name: 'Prelude of Purgatory',
     date: DateTime.fromISO('2020-05-01T00:00:00-08:00'),
-    parts: {
+    sections: {
         [InstrumentType.PIANO]:
             'https://storage.googleapis.com/storage.djin.dev/music/docs/preludeOfPurgatory/preludeOfPurgatory_piano.pdf',
     },
@@ -14,7 +14,7 @@ const Reclaimer: MusicScore = {
 const LamentingLoss: MusicScore = {
     name: 'Lamenting Loss',
     date: DateTime.fromISO('2018-06-01T00:00:00-08:00'),
-    parts: {
+    sections: {
         [InstrumentType.PIANO]:
             'https://storage.googleapis.com/storage.djin.dev/music/docs/lamentingLoss/lamentingLoss_piano.pdf',
     },
@@ -24,7 +24,7 @@ const LamentingLoss: MusicScore = {
 const Indeterminate: MusicScore = {
     name: 'Indeterminate',
     date: DateTime.fromISO('2011-11-01T00:00:00-08:00'),
-    parts: {
+    sections: {
         [InstrumentType.ORCHESTRA]:
             'https://storage.googleapis.com/storage.djin.dev/music/docs/indeterminate/indeterminate_orchestra.pdf',
     },
@@ -34,7 +34,7 @@ const Indeterminate: MusicScore = {
 const HybridDuality: MusicScore = {
     name: 'Hybrid Duality',
     date: DateTime.fromISO('2011-04-01T00:00:00-08:00'),
-    parts: {
+    sections: {
         [InstrumentType.ORCHESTRA]:
             'https://storage.googleapis.com/storage.djin.dev/music/docs/hybridDuality/hybridDuality_orchestra.pdf',
         [InstrumentType.PIANO]:
@@ -56,7 +56,7 @@ const HybridDuality: MusicScore = {
 const Lost: MusicScore = {
     name: 'Lost (USOMC 3rd Place State Level Winner 2010)',
     date: DateTime.fromISO('2010-02-01T00:00:00-08:00'),
-    parts: {
+    sections: {
         [InstrumentType.PIANO]: 'https://storage.googleapis.com/storage.djin.dev/music/docs/lost/lost_piano.pdf',
     },
     trackUrl: 'https://soundcloud.com/djtaeyong/lost',

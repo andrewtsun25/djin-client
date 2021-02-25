@@ -16,7 +16,7 @@ const musicScoresBg = `${Urls.AssetRoot}/music/bg/music_score_bg.jpeg`;
 
 const MusicScoresPage: React.FC = () => {
     const classes = musicScoresPageStyles();
-    const [musicScores, loading, error] = useCollectionDataOnce<MusicScore>(MusicAPI.getInstruments());
+    const [musicScores, loading, error] = useCollectionDataOnce<MusicScore>(MusicAPI.getScores());
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (

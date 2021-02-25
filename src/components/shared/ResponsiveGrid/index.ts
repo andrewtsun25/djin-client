@@ -1,4 +1,4 @@
-import type ResponsiveGrid from './ResponsiveGrid';
-import type ResponsiveGridItem from './ResponsiveGridItem';
+import ResponsiveGrid from './ResponsiveGrid';
+import ResponsiveGridItem from './ResponsiveGridItem';
 
-export type { ResponsiveGrid, ResponsiveGridItem };
+export { ResponsiveGrid, ResponsiveGridItem };

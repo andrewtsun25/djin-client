@@ -1,4 +1,5 @@
-import { GridListTile, GridListTileBar, IconButton } from '@material-ui/core';
+import { CircularProgress, GridListTile, GridListTileBar, IconButton } from '@material-ui/core';
+import Error from '@material-ui/icons/Error';
 import React from 'react';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';
@@ -9,6 +10,8 @@ interface ResponsiveGridItemProps {
     title: string;
     subtitle?: string;
     icon: JSX.Element;
+    loading?: boolean;
+    error?: Error;
 }
 
 const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
@@ -17,16 +20,15 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     subtitle,
     downloadUrl,
     icon,
+    loading,
+    error,
 }: ResponsiveGridItemProps) => {
     const classes = responsiveGridItemStyles();
     return (
-        <GridListTile cols={1} rows={1}>
-            <div
-                className={classes.media}
-                style={{
-                    backgroundImage: `url(${mediaUrl})`,
-                }}
-            />
+        <GridListTile cols={1} rows={1} className={classes.tile}>
+            {!loading && !error && <img src={mediaUrl} alt={`${title} Background`} className={classes.media} />}
+            {loading && <CircularProgress />}
+            {error && <Error />}
             <GridListTileBar
                 title={title}
                 subtitle={subtitle}

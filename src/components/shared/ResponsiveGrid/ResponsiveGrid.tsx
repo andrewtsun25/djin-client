@@ -4,7 +4,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React, { ReactElement } from 'react';
 
 import responsiveGridStyles from './ResponsiveGrid.styles';
-import { ResponsiveGridItemProps } from './ResponsiveGridItem/ResponsiveGridItem';
 
 const COL_HEIGHT = 333;
 
@@ -12,7 +11,7 @@ interface ResponsiveGridProps<T> {
     title?: string;
     titleHref?: string;
     items: T[];
-    renderGridTile(item: T): React.ComponentType<ResponsiveGridItemProps>;
+    renderGridTile(item: T): JSX.Element;
 }
 
 function ResponsiveGrid<T>({
@@ -28,7 +27,7 @@ function ResponsiveGrid<T>({
     const cols = isMedium ? 4 : isSmall ? 2 : 1;
     return (
         <div className={classes.root}>
-            <GridList cellHeight={COL_HEIGHT} cols={cols}>
+            <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
                     <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
                         <Link href={titleHref} target="_blank" rel="noopener noreferrer">
