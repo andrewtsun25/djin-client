@@ -24,7 +24,7 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
     const classes = appContentStyles();
     return (
         <main className={clsx(classes.root, isAppDrawerOpen && classes.shift)}>
-            <div className={classes.drawerHeader} />
+            <aside className={classes.drawerHeader} />
             <Switch>
                 <Route path="/coding/employment">
                     <EmploymentPage />

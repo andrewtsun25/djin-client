@@ -1,5 +1,6 @@
-import { Avatar, Card, CardContent, CardHeader, Chip, Slide, Typography } from '@material-ui/core';
+import { Card, CardContent, Chip, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
+import { TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Research } from 'types/research';
@@ -11,27 +12,18 @@ interface HBVResearchCardProps {
 }
 
 const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
-    research: {
-        logoUrl,
-        organization,
-        name,
-        startDate: { monthShort: startDateMonth, year: startDateYear },
-        endDate: { monthShort: endDateMonth, year: endDateYear },
-        description,
-        responsibilities,
-        skills,
-        paperLink,
-    },
+    research: { logoUrl, organization, name, startDate, endDate, description, responsibilities, skills, paperLink },
 }: HBVResearchCardProps) => {
     const classes = hbvResearchCardStyles();
-    const subheader = `${organization}, ${startDateMonth} ${startDateYear} - ${endDateMonth} ${endDateYear}`;
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card className={classes.root}>
-                <CardHeader
+                <TimeIntervalCardHeader
                     title={name}
-                    subheader={subheader}
-                    avatar={<Avatar alt={`${organization}_avatar`} src={logoUrl} />}
+                    subtitle={organization}
+                    startDate={startDate}
+                    endDate={endDate}
+                    logoUrl={logoUrl}
                 />
                 <CardContent>
                     <IconLink

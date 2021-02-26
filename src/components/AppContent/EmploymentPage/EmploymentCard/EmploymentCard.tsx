@@ -1,4 +1,5 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
+import { TimeIntervalCardHeader } from 'components/shared/card';
 import React from 'react';
 import { Employment } from 'types/employment';
 
@@ -11,7 +12,7 @@ interface EmploymentCardProps {
 const EmploymentCard: React.FC<EmploymentCardProps> = ({
     experience: {
         endDate,
-        startDate: { monthShort: startDateMonth, year: startDateYear },
+        startDate,
         role,
         company,
         logoUrl,
@@ -23,17 +24,16 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
     },
 }: EmploymentCardProps) => {
     const classes = employmentCardStyles();
-    const subheader = endDate
-        ? `${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}, ${role}`
-        : `${startDateMonth} ${startDateYear} - Present, ${role}`;
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Grow in>
                 <Card variant="outlined" className={classes.root}>
-                    <CardHeader
+                    <TimeIntervalCardHeader
                         title={company}
-                        subheader={subheader}
-                        avatar={<Avatar alt={`${company}_avatar`} src={logoUrl} />}
+                        subtitle={role}
+                        startDate={startDate}
+                        endDate={endDate}
+                        logoUrl={logoUrl}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
                     <CardContent>
