@@ -6,7 +6,7 @@ import { ResponsiveGrid, ResponsiveGridItem } from 'components/shared/Responsive
 import { map } from 'lodash';
 import React, { useMemo } from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
-import { InstrumentType, MusicScore } from 'types/music';
+import { MusicScore } from 'types/music';
 import { Instrument } from 'types/music/Instrument';
 
 import musicScoresGridStyles from './MusicScoresGrid.styles';

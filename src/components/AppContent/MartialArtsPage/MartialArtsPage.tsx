@@ -1,7 +1,7 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import MartialArtsAPI from 'api/MartialArtsApi';
+import MartialArtsAPI from 'api/MartialArtsAPI';
 import Background from 'components/shared/Background';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
@@ -14,7 +14,7 @@ import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { MartialArtsStyleType, MartialArtStyle } from 'types/martialArts';
 
 import martialArtsPageStyles from './MartialArtsPage.styles';
-import StudioGridTile from './StudioGridTile/StudioGridTile';
+import StudioGridTile from './StudioGridTile';
 
 type DocumentReference = firebase.firestore.DocumentReference;
 
@@ -29,14 +29,12 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
     const [martialArts, loading, error] = useCollectionDataOnce<MartialArtStyle>(
         MartialArtsAPI.getStyle(martialArtsStyle),
     );
-    console.log('Martial Arts: ', martialArts);
     const martialArt: MartialArtStyle | undefined = useMemo(() => first(martialArts), [martialArts]);
     const theme = useTheme();
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
-    if (martialArt) {
-        console.log('Martial Art: ', martialArt);
-    }
-    const renderGridTile = (studioRef: DocumentReference): JSX.Element => <StudioGridTile studioRef={studioRef} />;
+    const renderGridTile = (studioRef: DocumentReference, index: number): JSX.Element => (
+        <StudioGridTile studioRef={studioRef} key={index} />
+    );
     return (
         <Background tint={false} imageUrl={martialArtsBg} className={classes.bg}>
             {error && <ErrorView error={error} message={'Martial Arts information unavailable.'} />}

@@ -6,7 +6,7 @@ import { db } from './database';
 type Query = firebase.firestore.Query;
 
 const MartialArtsCollections: Record<string, string> = {
-    Styles: 'martialArtStyles',
+    Styles: 'martialArtsStyles',
     Studios: 'martialArtsStudios',
 };
 

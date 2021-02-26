@@ -13,7 +13,7 @@ interface ResponsiveGridProps<T> {
     titleHref?: string;
     items: T[];
     className?: string;
-    renderGridTile(item: T): JSX.Element;
+    renderGridTile(item: T, index?: number): JSX.Element;
 }
 
 function ResponsiveGrid<T>({
@@ -40,7 +40,7 @@ function ResponsiveGrid<T>({
                         </Link>
                     </GridListTile>
                 )}
-                {items.map((item: T) => renderGridTile(item))}
+                {items.map((item: T, index: number) => renderGridTile(item, index))}
             </GridList>
         </div>
     );
