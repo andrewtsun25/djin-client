@@ -28,13 +28,14 @@ function ResponsiveGrid<T>({
     const isMedium = useMediaQuery(theme.breakpoints.up('md'));
     const classes = responsiveGridStyles();
     const cols = isMedium ? 4 : isSmall ? 2 : 1;
+    const titleVariant = isMedium ? 'h4' : isSmall ? 'h5' : 'h6';
     return (
         <div className={clsx(classes.root, className)}>
             <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
                     <GridListTile cols={cols} style={{ height: 'auto' }}>
                         <Link href={titleHref} target="_blank" rel="noopener noreferrer">
-                            <Typography paragraph variant="h4" align="center" className={classes.gridHeader}>
+                            <Typography paragraph variant={titleVariant} align="center" className={classes.gridHeader}>
                                 {title}
                             </Typography>
                         </Link>

@@ -1,6 +1,7 @@
 import { Container, Fade, Link, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import useResearches from 'hooks/useResearches';
 import React from 'react';
 import { Research } from 'types/research';
@@ -10,7 +11,7 @@ import hbvResearchPageStyles from './HBVResearchPage.styles';
 
 const HEP_B_LINK = 'http://med.stanford.edu/liver/education/whatishepb.html';
 const HEP_B_JADE = '#308575';
-const teamHbvBg = 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/bg/team_hbv_bg.png';
+const teamHbvBg = `${Urls.AssetRoot}/hbvResearch/bg/team_hbv_bg.png`;
 
 const HBVResearchPage: React.FC = () => {
     const classes = hbvResearchPageStyles();

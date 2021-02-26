@@ -8,7 +8,7 @@ import LoadingView from 'components/shared/LoadingView';
 import { ResponsiveGrid } from 'components/shared/ResponsiveGrid';
 import { Urls } from 'const/urls';
 import firebase from 'firebase';
-import { first, isArray } from 'lodash';
+import { first } from 'lodash';
 import React, { useMemo } from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { MartialArtsStyleType, MartialArtStyle } from 'types/martialArts';
@@ -37,18 +37,18 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
     );
     return (
         <Background tint={false} imageUrl={martialArtsBg} className={classes.bg}>
-            {error && <ErrorView error={error} message={'Martial Arts information unavailable.'} />}
-            {loading && <LoadingView message="Loading martial arts..." />}
+            {error && <ErrorView error={error} message={'Martial art information unavailable.'} />}
+            {loading && <LoadingView message="Loading martial art..." />}
             {martialArt && (
                 <Fade in>
                     <Container maxWidth="lg" className={classes.contentBg}>
-                        <div className={classes.pageHeading}>
+                        <header className={classes.pageHeading}>
                             {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.type}_logo`} />}
-                            <Typography variant={isLarge ? 'h1' : 'h2'} align="center" className={classes.title}>
+                            <Typography variant={isLarge ? 'h1' : 'h3'} align="center" className={classes.title}>
                                 {martialArt.name}
                             </Typography>
                             {isLarge && <img src={martialArt.logoUrl} alt={`${martialArt.type}_logo`} />}
-                        </div>
+                        </header>
                         <Typography variant={isLarge ? 'h4' : 'h5'} align="center" className={classes.rank}>
                             Current Rank: {martialArt.blackBeltRank} 단
                         </Typography>
@@ -80,12 +80,12 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                                 </Grow>
                             </Grid>
                         </Grid>
-                        <div className={classes.studioGridRoot}>
+                        <section className={classes.studioGridRoot}>
                             <Typography variant="h2" align="center" className={classes.studioGridTitle}>
                                 Studios
                             </Typography>
                             <ResponsiveGrid items={martialArt.studios} renderGridTile={renderGridTile} />
-                        </div>
+                        </section>
                     </Container>
                 </Fade>
             )}

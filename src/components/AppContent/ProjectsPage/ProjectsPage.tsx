@@ -1,12 +1,13 @@
 import { Grid, Typography } from '@material-ui/core';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import useProjects from 'hooks/useProjects';
 import React from 'react';
 
 import ProjectCard from './ProjectCard';
 import projectPageStyles from './ProjectsPage.styles';
 
-const projectsBg = 'https://storage.googleapis.com/storage.djin.dev/projects/bg/matrix_bg.png';
+const projectsBg = `${Urls.AssetRoot}/projects/bg/matrix_bg.png`;
 
 const ProjectsPage: React.FC = () => {
     const projects = useProjects();

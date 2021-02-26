@@ -6,6 +6,7 @@ import HolisticOfficeAPI from 'api/HolisticOfficeAPI';
 import Background from 'components/shared/Background';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
+import { Urls } from 'const/urls';
 import React from 'react';
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
 import { HolisticOfficeLinkType, HolisticOfficeModule } from 'types/holisticOffice';
@@ -14,10 +15,9 @@ import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
 import ModuleInfo from './ModuleInfo';
 
-const logo = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/logo/holistic_office_logo.png';
-const websiteImg = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_website.png';
-const architectureImg =
-    'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_architecture.png';
+const logo = `${Urls.AssetRoot}/holisticOffice/logo/holistic_office_logo.png`;
+const websiteImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_website.png`;
+const architectureImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_architecture.png`;
 
 const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 const HOLISTIC_OFFICE_GREEN = '#e2f1e9';
@@ -75,9 +75,7 @@ const HolisticOfficePage: React.FC = () => {
                             className={classes.holisticOfficeImg}
                         />
                     </Grow>
-                    {error && (
-                        <ErrorView error={error} message="An error occurred when loading architectural modules." />
-                    )}
+                    {error && <ErrorView error={error} message="Architectural modules unavailable." />}
                     {loading && <LoadingView message="Loading architectural modules..." />}
                     {modules && (
                         <Grid container spacing={3}>

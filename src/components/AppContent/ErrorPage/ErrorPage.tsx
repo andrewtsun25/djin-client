@@ -1,12 +1,13 @@
 import { Typography } from '@material-ui/core';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import errorPageStyles from './ErrorPage.styles';
 
-const errorChickens = 'https://storage.googleapis.com/storage.djin.dev/error/img/angry_chickens.png';
-const errorBg = 'https://storage.googleapis.com/storage.djin.dev/error/bg/ff7_cloud_sephiroth_bg.png';
+const errorChickens = `${Urls.AssetRoot}/error/img/angry_chickens.png`;
+const errorBg = `${Urls.AssetRoot}/error/bg/ff7_cloud_sephiroth_bg.png`;
 
 const ErrorPage: React.FC = () => {
     const classes = errorPageStyles();

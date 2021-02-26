@@ -9,12 +9,13 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import clsx from 'clsx';
 import Background from 'components/shared/Background';
 import IconLink from 'components/shared/IconLink';
+import { Urls } from 'const/urls';
 import React from 'react';
 
 import reclaimerPageStyles from './ReclaimerPage.styles';
 
-const gameImg = 'https://storage.googleapis.com/storage.djin.dev/reclaimer/img/reclaimer_game.png';
-const reclaimerBg = 'https://storage.googleapis.com/storage.djin.dev/reclaimer/bg/reclaimer_bg.png';
+const gameImg = `${Urls.AssetRoot}/reclaimer/img/reclaimer_game.png`;
+const reclaimerBg = `${Urls.AssetRoot}/reclaimer/bg/reclaimer_bg.png`;
 const reclaimerWebsite = 'https://alextomkow.itch.io/reclaimer';
 
 const ReclaimerPage: React.FC = () => {
