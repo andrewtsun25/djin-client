@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { EduType } from 'types/education';
-import { MartialArtsType } from 'types/martialArts';
+import { MartialArtsStyleType } from 'types/martialArts';
 
 import appContentStyles from './AppContent.styles';
 import EducationPage from './EducationPage';
@@ -51,13 +51,13 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                     <MusicScoresPage />
                 </Route>
                 <Route path="/martialArts/itfTaekwondo">
-                    <MartialArtsPage martialArtsStyle={MartialArtsType.ITF_TKD} />
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyleType.ITF_TKD} />
                 </Route>
                 <Route path="/martialArts/wtTaekwondo">
-                    <MartialArtsPage martialArtsStyle={MartialArtsType.WT_TKD} />
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyleType.WT_TKD} />
                 </Route>
                 <Route path="/martialArts/haidongGumdo">
-                    <MartialArtsPage martialArtsStyle={MartialArtsType.HDGD} />
+                    <MartialArtsPage martialArtsStyle={MartialArtsStyleType.HDGD} />
                 </Route>
                 <Route exact path="/">
                     <HomePage />

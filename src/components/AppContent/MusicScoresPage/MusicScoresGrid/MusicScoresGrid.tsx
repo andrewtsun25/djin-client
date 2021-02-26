@@ -19,10 +19,11 @@ type SectionInfo = {
     name: string;
     mediaUrl: string;
     scoreUrl: string;
+    type: string;
 };
 
 const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
-    musicScore: { name, sections, trackUrl },
+    musicScore: { name: scoreName, sections, trackUrl },
 }: MusicScoresGridProps) => {
     const classes = musicScoresGridStyles();
     const [instruments, loading, error] = useCollectionDataOnce<Instrument>(MusicAPI.getInstruments());
@@ -45,19 +46,21 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
                     name,
                     mediaUrl,
                     scoreUrl: href,
+                    type: instrumentType,
                 };
             }),
         [instruments, sections, loading],
     );
-    const renderGridTile = ({ name, mediaUrl, scoreUrl }: SectionInfo): JSX.Element => (
+    const renderGridTile = ({ name: instrumentName, mediaUrl, scoreUrl, type }: SectionInfo): JSX.Element => (
         <ResponsiveGridItem
             downloadUrl={scoreUrl}
-            title={name}
+            title={instrumentName}
             icon={<CloudDownloadIcon />}
             mediaUrl={mediaUrl}
             loading={loading}
             error={error}
             mediaSizingStrategy="cover"
+            key={`${scoreName}.${type}`}
         />
     );
 
@@ -68,7 +71,7 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
                 <ResponsiveGrid
                     items={sectionInfos}
                     renderGridTile={renderGridTile}
-                    title={name}
+                    title={scoreName}
                     titleHref={trackUrl}
                     className={classes.grid}
                 />

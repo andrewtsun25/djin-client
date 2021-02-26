@@ -11,6 +11,7 @@ const responsiveGridItemStyles = makeStyles((theme: Theme) =>
             paddingBottom: '100%',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
+            backgroundColor: theme.palette.common.white,
         },
         loadingContainer: {
             width: '100%',
