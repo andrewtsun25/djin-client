@@ -32,7 +32,7 @@ function ResponsiveGrid<T>({
         <div className={clsx(classes.root, className)}>
             <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
-                    <GridListTile key="Subheader" cols={cols} style={{ height: 'auto' }}>
+                    <GridListTile cols={cols} style={{ height: 'auto' }}>
                         <Link href={titleHref} target="_blank" rel="noopener noreferrer">
                             <Typography paragraph variant="h4" align="center" className={classes.gridHeader}>
                                 {title}
@@ -40,7 +40,7 @@ function ResponsiveGrid<T>({
                         </Link>
                     </GridListTile>
                 )}
-                {items.map(renderGridTile)}
+                {items.map((item: T) => renderGridTile(item))}
             </GridList>
         </div>
     );

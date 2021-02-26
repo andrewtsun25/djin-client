@@ -1,28 +1,47 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import MartialArtsAPI from 'api/MartialArtsApi';
 import Background from 'components/shared/Background';
-import useMartialArt from 'hooks/useMartialArt';
-import React from 'react';
-import { MartialArt, MartialArtsType } from 'types/martialArts';
+import ErrorView from 'components/shared/ErrorView';
+import LoadingView from 'components/shared/LoadingView';
+import { ResponsiveGrid } from 'components/shared/ResponsiveGrid';
+import { Urls } from 'const/urls';
+import firebase from 'firebase';
+import { first, isArray } from 'lodash';
+import React, { useMemo } from 'react';
+import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
+import { MartialArtsStyleType, MartialArtStyle } from 'types/martialArts';
 
 import martialArtsPageStyles from './MartialArtsPage.styles';
-import StudioGrid from './StudioGrid';
+import StudioGridTile from './StudioGridTile/StudioGridTile';
 
-const martialArtsBg = 'https://storage.googleapis.com/storage.djin.dev/martialArts/bg/taeryong_studio_bg.png';
+type DocumentReference = firebase.firestore.DocumentReference;
+
+const martialArtsBg = `${Urls.AssetRoot}/martialArts/bg/taeryong_studio_bg.png`;
 
 interface MartialArtsPageProps {
-    martialArtsStyle: MartialArtsType;
+    martialArtsStyle: MartialArtsStyleType;
 }
 
 const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: MartialArtsPageProps) => {
     const classes = martialArtsPageStyles();
-    const martialArt: MartialArt | undefined = useMartialArt(martialArtsStyle);
+    const [martialArts, loading, error] = useCollectionDataOnce<MartialArtStyle>(
+        MartialArtsAPI.getStyle(martialArtsStyle),
+    );
+    console.log('Martial Arts: ', martialArts);
+    const martialArt: MartialArtStyle | undefined = useMemo(() => first(martialArts), [martialArts]);
     const theme = useTheme();
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
+    if (martialArt) {
+        console.log('Martial Art: ', martialArt);
+    }
+    const renderGridTile = (studioRef: DocumentReference): JSX.Element => <StudioGridTile studioRef={studioRef} />;
     return (
-        <Background tint={false} imageUrl={martialArtsBg}>
-            {martialArt ? (
+        <Background tint={false} imageUrl={martialArtsBg} className={classes.bg}>
+            {error && <ErrorView error={error} message={'Martial Arts information unavailable.'} />}
+            {loading && <LoadingView message="Loading martial arts..." />}
+            {martialArt && (
                 <Fade in>
                     <Container maxWidth="lg" className={classes.contentBg}>
                         <div className={classes.pageHeading}>
@@ -40,7 +59,11 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                                 <Typography paragraph className={classes.description}>
                                     {martialArt.description}
                                 </Typography>
-                                <Typography paragraph>{martialArt.biography}</Typography>
+                                {martialArt.biography.map((paragraph: string, index: number) => (
+                                    <Typography paragraph key={index}>
+                                        {paragraph}
+                                    </Typography>
+                                ))}
                             </Grid>
                             <Grid xs={12} lg={6} className={classes.picContainer} item>
                                 <Grow in>
@@ -59,10 +82,18 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                                 </Grow>
                             </Grid>
                         </Grid>
-                        <StudioGrid studios={martialArt.studios} />
+                        <div className={classes.studioGridRoot}>
+                            <Typography variant="h2" align="center" className={classes.studioGridTitle}>
+                                Studios
+                            </Typography>
+                            <ResponsiveGrid
+                                items={isArray(martialArt.studios) ? martialArt.studios : [martialArt.studios]}
+                                renderGridTile={renderGridTile}
+                            />
+                        </div>
                     </Container>
                 </Fade>
-            ) : null}
+            )}
         </Background>
     );
 };

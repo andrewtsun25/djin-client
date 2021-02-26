@@ -3,6 +3,9 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const martialArtsPageStyles = makeStyles((theme: Theme) =>
     createStyles({
+        bg: {
+            padding: 0,
+        },
         contentBg: {
             backgroundColor: fade(theme.palette.common.white, 0.85),
             padding: 10,
@@ -44,6 +47,12 @@ const martialArtsPageStyles = makeStyles((theme: Theme) =>
         },
         rank: {
             margin: '1rem auto',
+        },
+        studioGridRoot: {
+            margin: `20px auto`,
+        },
+        studioGridTitle: {
+            margin: `1rem auto`,
         },
     }),
 );

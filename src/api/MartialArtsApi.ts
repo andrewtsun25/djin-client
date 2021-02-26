@@ -1,32 +1,24 @@
 import firebase from 'firebase';
+import { MartialArtsStyleType } from 'types/martialArts';
 
 import { db } from './database';
-import DocumentReference = firebase.firestore.DocumentReference;
 
 type Query = firebase.firestore.Query;
 
 const MartialArtsCollections: Record<string, string> = {
-    Styles: 'martialArtsStyles',
+    Styles: 'martialArtStyles',
     Studios: 'martialArtsStudios',
 };
 
 /**
  * Return all martial arts styles
  */
-function getStyles(): Query {
-    return db.collection(MartialArtsCollections.Styles);
-}
-
-/**
- * Return the path for a particular studio.
- */
-function getStudio(studioPath: string): DocumentReference {
-    return db.doc(studioPath);
+function getStyle(martialArtsStyleType: MartialArtsStyleType): Query {
+    return db.collection(MartialArtsCollections.Styles).where('type', '==', martialArtsStyleType);
 }
 
 const MartialArtsAPI = {
-    getStyles,
-    getStudio,
+    getStyle,
 };
 
 export default MartialArtsAPI;

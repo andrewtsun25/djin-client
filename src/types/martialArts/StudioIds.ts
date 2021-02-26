@@ -1,12 +1,12 @@
 enum StudioIds {
-    UCSD_TKD = 'ucsd_tkd',
-    YONSEI_TKD = 'yonsei_tkd',
-    UCLA_TKD = 'ucla_tkd',
-    TAERYONG_TKD = 'taeryong_tkd',
-    USC_TKD = 'usc_tkd',
-    MTM_TKD = 'mtm_tkd',
-    TALIUM_TKD = 'talium_tkd',
-    MIGHTYFIST_TKD = 'mightyfist_tkd',
+    UCSD_TKD = 'ucsdTkd',
+    YONSEI_TKD = 'yonseiTkd',
+    UCLA_TKD = 'uclaTkd',
+    TAERYONG_TKD = 'taeryongTkd',
+    USC_TKD = 'uscTkd',
+    MTM_TKD = 'mtmTkd',
+    TALIUM_TKD = 'taliumTkd',
+    MIGHTYFIST_TKD = 'mightyfistTkd',
 }
 
 export default StudioIds;

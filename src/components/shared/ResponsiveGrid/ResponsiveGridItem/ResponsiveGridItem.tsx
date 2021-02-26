@@ -4,14 +4,15 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
 import React from 'react';
+import { Nilable } from 'types/alias';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';
 
 const ITEM_MARGIN = 5;
 
 interface ResponsiveGridItemProps {
-    downloadUrl: string;
-    mediaUrl: string;
+    downloadUrl: Nilable<string>;
+    mediaUrl: Nilable<string>;
     title: string;
     subtitle?: string;
     icon: JSX.Element;
@@ -38,7 +39,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     const width = `calc((100% - 2 * ${ITEM_MARGIN}px * ${cols})/${cols})`;
     return (
         <GridListTile cols={1} rows={1} style={{ width: width, margin: ITEM_MARGIN }}>
-            {!loading && !error && (
+            {!loading && !error && mediaUrl && (
                 <div
                     className={classes.media}
                     style={{ backgroundImage: `url(${mediaUrl})`, backgroundSize: mediaSizingStrategy || 'cover' }}
@@ -49,7 +50,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                     <CircularProgress size={100} className={classes.absoluteCenter} />
                 </div>
             )}
-            {error && (
+            {(error || (!loading && !mediaUrl)) && (
                 <div className={classes.errorContainer}>
                     <Error
                         color="error"
@@ -62,15 +63,19 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                 title={title}
                 subtitle={subtitle}
                 actionIcon={
-                    <IconButton
-                        aria-label={`Download ${title}`}
-                        className={classes.icon}
-                        href={downloadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {icon}
-                    </IconButton>
+                    downloadUrl ? (
+                        <IconButton
+                            aria-label={`Download ${title}`}
+                            className={classes.icon}
+                            href={downloadUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {icon}
+                        </IconButton>
+                    ) : (
+                        icon
+                    )
                 }
             />
         </GridListTile>
