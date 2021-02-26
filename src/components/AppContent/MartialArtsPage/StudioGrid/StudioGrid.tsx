@@ -41,11 +41,11 @@ const StudioGrid: React.FC<StudioGridProps> = ({ studios }: StudioGridProps) => 
                                 />
                                 <GridListTileBar
                                     title={martialArtsStudio?.name}
-                                    subtitle={martialArtsStudio?.location}
+                                    subtitle={martialArtsStudio?.city}
                                     actionIcon={
                                         <IconButton
                                             className={classes.icon}
-                                            href={martialArtsStudio?.href || 'https://example.com'}
+                                            href={martialArtsStudio?.studioUrl || 'https://example.com'}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
