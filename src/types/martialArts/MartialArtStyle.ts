@@ -13,5 +13,5 @@ export interface MartialArtStyle {
     biography: string[];
     mediaUrl: string;
     mediaCaption: string;
-    studios: DocumentReference[] | DocumentReference;
+    studios: DocumentReference[];
 }

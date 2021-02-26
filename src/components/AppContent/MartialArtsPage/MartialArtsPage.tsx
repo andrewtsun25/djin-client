@@ -84,10 +84,7 @@ const MartialArtsPage: React.FC<MartialArtsPageProps> = ({ martialArtsStyle }: M
                             <Typography variant="h2" align="center" className={classes.studioGridTitle}>
                                 Studios
                             </Typography>
-                            <ResponsiveGrid
-                                items={isArray(martialArt.studios) ? martialArt.studios : [martialArt.studios]}
-                                renderGridTile={renderGridTile}
-                            />
+                            <ResponsiveGrid items={martialArt.studios} renderGridTile={renderGridTile} />
                         </div>
                     </Container>
                 </Fade>
