@@ -1,3 +1,3 @@
-import useMartialArtsStyles from './useMartialArtsStyles';
+import useMartialArtsStyle from './useMartialArtsStyle';
 
-export { useMartialArtsStyles };
+export { useMartialArtsStyle };
