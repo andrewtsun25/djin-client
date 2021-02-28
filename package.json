@@ -1,6 +1,6 @@
 {
   "name": "djin",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.2.1",
@@ -32,10 +32,10 @@
     "depcheck": "yarn-check",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:dev": "react-scripts test",
+    "test": "react-scripts test",
     "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint:dev": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "lint:ci": "eslint '*/**/*.{js,ts,tsx}'",
     "deploy:ci": "yarn install && run-s lint:ci test:ci build"
   },

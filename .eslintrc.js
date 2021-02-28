@@ -41,6 +41,7 @@ module.exports = {
         'import/newline-after-import': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         'no-console': 'error',
+        '@typescript-eslint/no-unused-vars': 'warn',
 
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
