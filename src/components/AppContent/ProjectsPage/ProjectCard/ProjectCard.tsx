@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
 import LinkIcon from '@material-ui/icons/Link';
-import { TimeIntervalCardHeader } from 'components/shared/card';
+import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Project } from 'types/project';
@@ -50,13 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                                 ))}
                             </ul>
                         )}
-                        {skills.length > 0 && (
-                            <div className={classes.skillChipContainer}>
-                                {skills.map((skill) => (
-                                    <Chip label={skill} size="small" className={classes.skillChip} key={skill} />
-                                ))}
-                            </div>
-                        )}
+                        <SkillChips skills={skills} />
                     </CardContent>
                 </Card>
             </Grow>

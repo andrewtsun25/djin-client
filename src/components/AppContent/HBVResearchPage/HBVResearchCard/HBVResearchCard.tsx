@@ -1,6 +1,6 @@
 import { Card, CardContent, Chip, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
-import { TimeIntervalCardHeader } from 'components/shared/card';
+import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Research } from 'types/research';
@@ -42,13 +42,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                             ))}
                         </ul>
                     )}
-                    {skills.length > 0 && (
-                        <div className={classes.skillChipContainer}>
-                            {skills.map((skill) => (
-                                <Chip label={skill} size="small" className={classes.skillChip} key={skill} />
-                            ))}
-                        </div>
-                    )}
+                    <SkillChips skills={skills} />
                 </CardContent>
             </Card>
         </Slide>

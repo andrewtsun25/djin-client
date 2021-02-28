@@ -1,3 +1,4 @@
+import SkillChips from './SkillChips';
 import TimeIntervalCardHeader from './TimeIntervalCardHeader';
 
-export { TimeIntervalCardHeader };
+export { SkillChips, TimeIntervalCardHeader };

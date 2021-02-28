@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
-import { TimeIntervalCardHeader } from 'components/shared/card';
+import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import React from 'react';
 import { Employment } from 'types/employment';
 
@@ -48,13 +48,7 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
                                 ))}
                             </ul>
                         )}
-                        {skills.length > 0 && (
-                            <div className={classes.skillChipContainer}>
-                                {skills.map((skill) => (
-                                    <Chip label={skill} size="small" className={classes.skillChip} key={skill} />
-                                ))}
-                            </div>
-                        )}
+                        <SkillChips skills={skills} />
                     </CardContent>
                 </Card>
             </Grow>
