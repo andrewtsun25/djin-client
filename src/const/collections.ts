@@ -1,4 +1,4 @@
-const Collections = {
+const Collections: { [k: string]: Record<string, string> } = {
     HolisticOffice: {
         Modules: 'holisticOfficeModules',
         Links: 'holisticOfficeLinks',
@@ -10,6 +10,12 @@ const Collections = {
     MartialArts: {
         Styles: 'martialArtsStyles',
         Studios: 'martialArtsStudios',
+    },
+    HbvResearch: {
+        Papers: 'hbvResearchPapers',
+    },
+    Shared: {
+        Organizations: 'organizations',
     },
 };
 

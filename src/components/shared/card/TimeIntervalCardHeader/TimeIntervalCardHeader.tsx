@@ -9,7 +9,7 @@ interface TimeIntervalCardHeaderProps {
     subtitle: string;
     startDate: DateTime;
     endDate?: DateTime;
-    logoUrl: string;
+    logoUrl?: string;
 }
 
 const TimeIntervalCardHeader: React.FC<TimeIntervalCardHeaderProps> = ({
