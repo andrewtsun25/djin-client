@@ -17,7 +17,7 @@ interface ResponsiveGridItemProps {
     subtitle?: string;
     icon: JSX.Element;
     loading?: boolean;
-    error?: Error;
+    error?: Error | boolean;
     mediaSizingStrategy?: string;
 }
 
@@ -45,7 +45,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                     style={{ backgroundImage: `url(${mediaUrl})`, backgroundSize: mediaSizingStrategy || 'cover' }}
                 />
             )}
-            {loading && (
+            {loading && !error && (
                 <div className={classes.loadingContainer}>
                     <CircularProgress size={100} className={classes.absoluteCenter} />
                 </div>

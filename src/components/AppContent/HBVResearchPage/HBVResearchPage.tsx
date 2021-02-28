@@ -1,20 +1,18 @@
 import { Container, Fade, Link, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import Background from 'components/shared/Background';
-import useResearches from 'hooks/useResearches';
+import { Urls } from 'const/urls';
 import React from 'react';
-import { Research } from 'types/research';
 
-import HBVResearchCard from './HBVResearchCard';
+import HBVResearchCardList from './HBVResearchCardList';
 import hbvResearchPageStyles from './HBVResearchPage.styles';
 
 const HEP_B_LINK = 'http://med.stanford.edu/liver/education/whatishepb.html';
 const HEP_B_JADE = '#308575';
-const teamHbvBg = 'https://storage.googleapis.com/storage.djin.dev/hbvResearch/bg/team_hbv_bg.png';
+const teamHbvBg = `${Urls.AssetRoot}/hbvResearch/bg/team_hbv_bg.png`;
 
 const HBVResearchPage: React.FC = () => {
     const classes = hbvResearchPageStyles();
-    const researches: Research[] = useResearches();
     return (
         <Background imageUrl={teamHbvBg} color={HEP_B_JADE} tint>
             <Fade in>
@@ -64,9 +62,7 @@ const HBVResearchPage: React.FC = () => {
                         San Diego. Working alongside the Asian Pacific Health Foundation provided me with unique
                         opportunities to perform undergraduate research with them.
                     </Typography>
-                    {researches.map((research, index) => (
-                        <HBVResearchCard research={research} key={index} />
-                    ))}
+                    <HBVResearchCardList />
                 </Container>
             </Fade>
         </Background>

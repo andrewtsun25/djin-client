@@ -374,9 +374,18 @@ const DjinDev: Project = {
         'right under their noses while they are looking for it. I am also not fond of owing Squarespace money for my personal website.',
     responsibilities: [
         `Designed a front-end for my application in React and TypeScript, styled with Material UI`,
-        'Coming Soon: DB in Firestore, Node backend w/ GraphQL communication, assets stored in separate bucket',
+        'Created an assets bucket to host all site images as well as downloadable files',
+        'Currently migrating data hard-coded into the codebase into Firestore.',
     ],
-    skills: ['React', 'TypeScript', 'JSS', 'Material UI', 'GCP Cloud Storage', 'GCP Cloud Build'],
+    skills: [
+        'React',
+        'TypeScript',
+        'JSS',
+        'Material UI',
+        'Firebase Cloud Storage',
+        'Firebase Hosting',
+        'Firestore (NoSQL)',
+    ],
     projectLink: 'https://github.com/andrewtsun25/djin',
 };
 

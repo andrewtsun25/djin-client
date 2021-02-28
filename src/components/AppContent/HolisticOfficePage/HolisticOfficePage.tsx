@@ -1,23 +1,19 @@
-import { Container, Fade, Grid, Grow, Link, Typography, useMediaQuery } from '@material-ui/core';
+import { Container, Fade, Grow, Link, Typography, useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
-import HolisticOfficeAPI from 'api/HolisticOfficeAPI';
 import Background from 'components/shared/Background';
-import ErrorView from 'components/shared/ErrorView';
-import LoadingView from 'components/shared/LoadingView';
+import { Urls } from 'const/urls';
 import React from 'react';
-import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
-import { HolisticOfficeLinkType, HolisticOfficeModule } from 'types/holisticOffice';
+import { HolisticOfficeLinkType } from 'types/holisticOffice';
 
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
-import ModuleInfo from './ModuleInfo';
+import ModulesGrid from './ModulesGrid';
 
-const logo = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/logo/holistic_office_logo.png';
-const websiteImg = 'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_website.png';
-const architectureImg =
-    'https://storage.googleapis.com/storage.djin.dev/holisticOffice/img/holistic_office_architecture.png';
+const logo = `${Urls.AssetRoot}/holisticOffice/logo/holistic_office_logo.png`;
+const websiteImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_website.png`;
+const architectureImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_architecture.png`;
 
 const HOLISTIC_OFFICE_LINK = 'https://www.holisticoffice.biz/';
 const HOLISTIC_OFFICE_GREEN = '#e2f1e9';
@@ -26,7 +22,6 @@ const HolisticOfficePage: React.FC = () => {
     const classes = holisticOfficePageStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const [modules, loading, error] = useCollectionDataOnce<HolisticOfficeModule>(HolisticOfficeAPI.getModules());
     return (
         <Background tint={false} color={HOLISTIC_OFFICE_GREEN}>
             <Fade in>
@@ -75,19 +70,7 @@ const HolisticOfficePage: React.FC = () => {
                             className={classes.holisticOfficeImg}
                         />
                     </Grow>
-                    {error && (
-                        <ErrorView error={error} message="An error occurred when loading architectural modules." />
-                    )}
-                    {loading && <LoadingView message="Loading architectural modules..." />}
-                    {modules && (
-                        <Grid container spacing={3}>
-                            {modules.map((module) => (
-                                <Grid item xs={12} sm={6} md={4} key={module.name}>
-                                    <ModuleInfo category={module} />
-                                </Grid>
-                            ))}
-                        </Grid>
-                    )}
+                    <ModulesGrid />
                     <LinkSection
                         title="Documentation"
                         description="The provided documentation cover various aspects of the project besides raw code."

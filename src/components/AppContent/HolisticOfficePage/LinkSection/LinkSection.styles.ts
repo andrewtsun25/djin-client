@@ -5,12 +5,6 @@ const linkSectionStyles = makeStyles(() =>
         title: {
             margin: '30px auto',
         },
-        linkList: {
-            listStyleType: 'none',
-        },
-        link: {
-            color: '#308575',
-        },
         linkSection: {
             width: '100%',
         },

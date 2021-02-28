@@ -1,5 +1,9 @@
+import 'firebase/firestore';
+
 import { MuiThemeProvider } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { FuegoProvider } from '@nandorojo/swr-firestore';
+import { fuego } from 'api/fuego';
 import React, { useState } from 'react';
 
 import useAppRootStyles from './App.styles';
@@ -15,12 +19,14 @@ const App: React.FC = () => {
     const closeAppDrawer: () => void = () => setAppDrawerOpen(false);
     return (
         <MuiThemeProvider theme={djinTheme}>
-            <div className={classes.root}>
-                <CssBaseline />
-                <AppToolbar isAppDrawerOpen={isAppDrawerOpen} openAppDrawer={openAppDrawer} />
-                <AppDrawer isAppDrawerOpen={isAppDrawerOpen} closeAppDrawer={closeAppDrawer} />
-                <AppContent isAppDrawerOpen={isAppDrawerOpen} />
-            </div>
+            <FuegoProvider fuego={fuego}>
+                <div className={classes.root}>
+                    <CssBaseline />
+                    <AppToolbar isAppDrawerOpen={isAppDrawerOpen} openAppDrawer={openAppDrawer} />
+                    <AppDrawer isAppDrawerOpen={isAppDrawerOpen} closeAppDrawer={closeAppDrawer} />
+                    <AppContent isAppDrawerOpen={isAppDrawerOpen} />
+                </div>
+            </FuegoProvider>
         </MuiThemeProvider>
     );
 };

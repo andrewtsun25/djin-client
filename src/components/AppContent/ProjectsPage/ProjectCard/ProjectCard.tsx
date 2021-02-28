@@ -1,5 +1,7 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Grid, Grow, Typography } from '@material-ui/core';
 import LinkIcon from '@material-ui/icons/Link';
+import BulletPoints from 'components/shared/BulletPoints';
+import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Project } from 'types/project';
@@ -13,8 +15,8 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
     project: {
         name,
+        startDate,
         endDate,
-        startDate: { monthShort: startDateMonth, year: startDateYear },
         organization,
         logoUrl,
         mediaUrl,
@@ -25,38 +27,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     },
 }: ProjectCardProps) => {
     const classes = projectCardStyles();
-    const subheader = endDate
-        ? `${organization}, ${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}`
-        : `${organization}, ${startDateMonth} ${startDateYear} - Present`;
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Grow in>
                 <Card variant="outlined" className={classes.root}>
-                    <CardHeader
+                    <TimeIntervalCardHeader
                         title={name}
-                        subheader={subheader}
-                        avatar={<Avatar alt={`${organization}_avatar`} src={logoUrl} />}
+                        subtitle={organization}
+                        startDate={startDate}
+                        endDate={endDate}
+                        logoUrl={logoUrl}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
                     <CardContent>
                         {projectLink && <IconLink href={projectLink} text="Project Link" icon={<LinkIcon />} />}
                         <Typography paragraph>{description}</Typography>
-                        {responsibilities.length > 0 && (
-                            <ul>
-                                {responsibilities.map((responsibility, index) => (
-                                    <li key={index}>
-                                        <Typography>{responsibility}</Typography>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        {skills.length > 0 && (
-                            <div className={classes.skillChipContainer}>
-                                {skills.map((skill) => (
-                                    <Chip label={skill} size="small" className={classes.skillChip} key={skill} />
-                                ))}
-                            </div>
-                        )}
+                        <BulletPoints points={responsibilities} />
+                        <SkillChips skills={skills} />
                     </CardContent>
                 </Card>
             </Grow>

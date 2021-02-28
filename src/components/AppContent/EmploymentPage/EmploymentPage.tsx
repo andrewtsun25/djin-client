@@ -1,6 +1,7 @@
 import { Grid, Link, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import useEmployments from 'hooks/useEmployments';
 import React from 'react';
 import { Employment } from 'types/employment';
@@ -8,7 +9,7 @@ import { Employment } from 'types/employment';
 import EmploymentCard from './EmploymentCard';
 import employmentPageStyles from './EmploymentPage.styles';
 
-const employmentsBg = 'https://storage.googleapis.com/storage.djin.dev/employment/bg/anduril_22m_bg.jpeg';
+const employmentsBg = `${Urls.AssetRoot}/employment/bg/anduril_22m_bg.jpeg`;
 const RESUME_URL = 'https://docs.google.com/document/d/1fIQ8ceaV1BW7FmWvPe8aGGlLVFtXxLcHDIOf7swxXzw/edit?usp=sharing';
 
 const EmploymentPage: React.FC = () => {

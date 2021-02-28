@@ -1,6 +1,6 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const projectCardStyles = makeStyles((theme: Theme) =>
+const projectCardStyles = makeStyles(() =>
     createStyles({
         root: {
             margin: 10,
@@ -8,17 +8,6 @@ const projectCardStyles = makeStyles((theme: Theme) =>
         media: {
             height: 0,
             paddingTop: '56.25%', // 16:9
-        },
-        skillChipContainer: {
-            display: 'flex',
-            justifyContent: 'left',
-            flexWrap: 'wrap',
-            '& > *': {
-                margin: theme.spacing(0.5),
-            },
-        },
-        skillChip: {
-            margin: '10 auto',
         },
         projectLink: {
             display: 'flex',

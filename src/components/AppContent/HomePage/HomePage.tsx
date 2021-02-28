@@ -2,18 +2,19 @@ import { Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import React from 'react';
 
-import aboutPageStyles from './HomePage.styles';
+import homePageStyles from './HomePage.styles';
 
-const aboutBg = 'https://storage.googleapis.com/storage.djin.dev/home/bg/huntington_beach_bg.jpg';
+const homeBg = `${Urls.AssetRoot}/home/bg/huntington_beach_bg.jpg`;
 
 const HomePage: React.FC = () => {
-    const classes = aboutPageStyles();
+    const classes = homePageStyles();
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('lg'));
     return (
-        <Background imageUrl={aboutBg} className={classes.center}>
+        <Background imageUrl={homeBg} className={classes.center}>
             <Grow in>
                 <div className={classes.pageContent}>
                     <Typography variant={isSmall ? 'h3' : 'h1'} align="center" aria-label="Home Page Title">

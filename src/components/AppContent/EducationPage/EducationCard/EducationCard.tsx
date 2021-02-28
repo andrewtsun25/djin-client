@@ -1,5 +1,6 @@
-import { Avatar, Card, CardContent, CardHeader, Slide, Typography } from '@material-ui/core';
+import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
+import { TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
 import { Education } from 'types/education';
@@ -12,8 +13,8 @@ interface EducationCardProps {
 
 const EducationCard: React.FC<EducationCardProps> = ({
     education: {
-        endDate: { monthShort: endDateMonth, year: endDateYear },
-        startDate: { monthShort: startDateMonth, year: startDateYear },
+        endDate,
+        startDate,
         major,
         name,
         logoUrl,
@@ -26,11 +27,16 @@ const EducationCard: React.FC<EducationCardProps> = ({
     },
 }: EducationCardProps) => {
     const classes = educationCardStyles();
-    const subheader = `${startDateMonth} ${startDateYear} - ${endDateMonth} ${endDateYear}, ${major}`;
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>
-                <CardHeader title={name} subheader={subheader} avatar={<Avatar alt={name} src={logoUrl} />} />
+                <TimeIntervalCardHeader
+                    title={name}
+                    subtitle={major}
+                    startDate={startDate}
+                    endDate={endDate}
+                    logoUrl={logoUrl}
+                />
                 <CardContent>
                     <IconLink icon={<SchoolIcon />} href={syllabusUrl} text="Degree Requirements" />
                     {residentialCollegeSyllabusLink && (
