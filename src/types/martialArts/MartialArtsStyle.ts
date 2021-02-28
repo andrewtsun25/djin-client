@@ -4,7 +4,7 @@ import MartialArtsStyleType from './MartialArtsStyleType';
 
 type DocumentReference = firebase.firestore.DocumentReference;
 
-export interface MartialArtStyle {
+export interface MartialArtsStyle {
     type: MartialArtsStyleType;
     name: string;
     logoUrl: string;

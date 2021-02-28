@@ -6,7 +6,6 @@ import { ResponsiveGrid, ResponsiveGridItem } from 'components/shared/Responsive
 import { isNil, map } from 'lodash';
 import React, { useMemo } from 'react';
 import { InstrumentType, MusicScore } from 'types/music';
-import { isNotNil } from 'utils/general';
 
 import sectionGridStyles from './SectionGrid.styles';
 
@@ -29,18 +28,21 @@ const SectionGrid: React.FC<MusicScoresGridProps> = ({
     const sectionInfos: SectionInfo[] = useMemo(
         () =>
             map(sections, (href, instrumentType) => {
-                // Default state is loading state
-                let name = 'Loading Instrument Name...';
+                // Default state is that instrument is unknown.
+                let name = 'Unknown Instrument';
                 let mediaUrl;
-                // Success state of instruments
+                // If instrument data for all instruments is available, attempt to query it.
                 if (instruments) {
                     const instrument = instruments.get(instrumentType as InstrumentType);
+                    // Use instrument data if it can be found.
                     if (instrument) {
                         name = instrument.name;
                         mediaUrl = instrument.mediaUrl;
                     }
-                } else if (isNotNil(error)) {
-                    name = 'Unknown Instrument';
+                }
+                // Error has not been triggered, we're actually loading. Else, display error.
+                else {
+                    name = isNil(error) ? 'Loading...' : 'Instrument unavailable';
                 }
                 return {
                     name,

@@ -1,6 +1,6 @@
 import type { MartialArtsStudio } from './MartialArtsStudio';
+import type { MartialArtsStyle } from './MartialArtsStyle';
 import MartialArtsStyleType from './MartialArtsStyleType';
-import type { MartialArtStyle } from './MartialArtStyle';
 
 export { MartialArtsStyleType };
-export type { MartialArtsStudio, MartialArtStyle };
+export type { MartialArtsStudio, MartialArtsStyle };

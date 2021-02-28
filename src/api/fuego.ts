@@ -1,11 +1,11 @@
 import 'firebase/firestore';
 
-import { Fuego } from '@nandorojo/swr-firestore';
 import firebase from 'firebase/app';
+import { Fuego } from 'types/util/Fuego';
 
 type Config = Parameters<typeof firebase.initializeApp>[0];
 
-const config: Config = {
+const config = {
     apiKey: 'AIzaSyCE57QjDywg1ZJSwJDSBW4Pbwpjqz_U4fA',
     authDomain: 'djin-dev.firebaseapp.com',
     projectId: 'djin-dev',

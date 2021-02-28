@@ -7,6 +7,10 @@ const Collections = {
         Instruments: 'musicInstruments',
         Scores: 'musicScores',
     },
+    MartialArts: {
+        Styles: 'martialArtsStyles',
+        Studios: 'martialArtsStudios',
+    },
 };
 
 export default Collections;

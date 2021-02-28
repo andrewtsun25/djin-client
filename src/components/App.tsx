@@ -1,3 +1,5 @@
+import 'firebase/firestore';
+
 import { MuiThemeProvider } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { FuegoProvider } from '@nandorojo/swr-firestore';

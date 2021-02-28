@@ -3,7 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useState } from 'react';
 import { Nilable } from 'types/alias';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';
@@ -17,7 +17,7 @@ interface ResponsiveGridItemProps {
     subtitle?: string;
     icon: JSX.Element;
     loading?: boolean;
-    error?: Error;
+    error?: Error | boolean;
     mediaSizingStrategy?: string;
 }
 
@@ -45,7 +45,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                     style={{ backgroundImage: `url(${mediaUrl})`, backgroundSize: mediaSizingStrategy || 'cover' }}
                 />
             )}
-            {loading && (
+            {loading && !error && (
                 <div className={classes.loadingContainer}>
                     <CircularProgress size={100} className={classes.absoluteCenter} />
                 </div>
