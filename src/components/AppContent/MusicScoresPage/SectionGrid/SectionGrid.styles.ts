@@ -1,7 +1,7 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 
-const musicScoresGridStyles = makeStyles((theme: Theme) =>
+const sectionGridStyles = makeStyles((theme: Theme) =>
     createStyles({
         grid: {
             backgroundColor: fade(theme.palette.background.paper, 0.75),
@@ -12,4 +12,4 @@ const musicScoresGridStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export default musicScoresGridStyles;
+export default sectionGridStyles;

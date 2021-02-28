@@ -1,8 +1,11 @@
 import 'firebase/firestore';
 
+import { Fuego } from '@nandorojo/swr-firestore';
 import firebase from 'firebase/app';
 
-const config = {
+type Config = Parameters<typeof firebase.initializeApp>[0];
+
+const config: Config = {
     apiKey: 'AIzaSyCE57QjDywg1ZJSwJDSBW4Pbwpjqz_U4fA',
     authDomain: 'djin-dev.firebaseapp.com',
     projectId: 'djin-dev',
@@ -12,7 +15,6 @@ const config = {
     measurementId: 'G-3KT3E4JR9B',
 };
 
-firebase.initializeApp(config);
-const db = firebase.firestore();
+const fuego = new Fuego(config);
 
-export { db };
+export { fuego };

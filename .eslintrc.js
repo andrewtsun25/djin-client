@@ -16,6 +16,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
+        'plugin:react-hooks/recommended', // Uses the recommended rules for react hooks
         'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
         'plugin:import/errors', // Import recommended errors
         'plugin:import/warnings', // Import recommended warnings

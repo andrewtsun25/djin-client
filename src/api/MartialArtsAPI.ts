@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import { MartialArtsStyleType } from 'types/martialArts';
 
-import { db } from './database';
+import { db } from './fuego';
 
 type Query = firebase.firestore.Query;
 

@@ -1,7 +1,8 @@
 import firebase from 'firebase';
 
-import { HolisticOfficeLinkType } from '../types/holisticOffice';
-import { db } from './database';
+import { HolisticOfficeLink, HolisticOfficeLinkType } from '../types/holisticOffice';
+import HolisticOfficeLinkConverter from '../types/holisticOffice/HollisticOfficeLink.converter';
+import { db } from './fuego';
 
 type Query = firebase.firestore.Query;
 
@@ -15,8 +16,16 @@ const HolisticOfficeCollections: Record<string, string> = {
  * @param type - The type of link too retrieve
  * @return - A Query of the collection of links that can be further processed.
  */
-function getLinks(type: HolisticOfficeLinkType): Query {
-    return db.collection(HolisticOfficeCollections.Links).where('type', '==', type);
+function getLinks(type: HolisticOfficeLinkType): Promise<HolisticOfficeLink[]> {
+    return db
+        .collection(HolisticOfficeCollections.Links)
+        .where('type', '==', type)
+        .get()
+        .then((querySnapshot) =>
+            querySnapshot.docs
+                .filter((doc) => doc.exists)
+                .map((doc) => HolisticOfficeLinkConverter.fromFirestore(doc, {})),
+        );
 }
 
 /**

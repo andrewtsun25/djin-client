@@ -1,15 +1,14 @@
 import { Zoom } from '@material-ui/core';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import MusicAPI from 'api/MusicAPI';
+import useInstruments from 'api/music/useInstruments';
 import ErrorView from 'components/shared/ErrorView';
 import { ResponsiveGrid, ResponsiveGridItem } from 'components/shared/ResponsiveGrid';
-import { map } from 'lodash';
+import { isNil, map } from 'lodash';
 import React, { useMemo } from 'react';
-import { useCollectionDataOnce } from 'react-firebase-hooks/firestore';
-import { MusicScore } from 'types/music';
-import { Instrument } from 'types/music/Instrument';
+import { InstrumentType, MusicScore } from 'types/music';
+import { isNotNil } from 'utils/general';
 
-import musicScoresGridStyles from './MusicScoresGrid.styles';
+import sectionGridStyles from './SectionGrid.styles';
 
 interface MusicScoresGridProps {
     musicScore: MusicScore;
@@ -17,30 +16,31 @@ interface MusicScoresGridProps {
 
 type SectionInfo = {
     name: string;
-    mediaUrl: string;
+    mediaUrl?: string;
     scoreUrl: string;
     type: string;
 };
 
-const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
+const SectionGrid: React.FC<MusicScoresGridProps> = ({
     musicScore: { name: scoreName, sections, trackUrl },
 }: MusicScoresGridProps) => {
-    const classes = musicScoresGridStyles();
-    const [instruments, loading, error] = useCollectionDataOnce<Instrument>(MusicAPI.getInstruments());
+    const classes = sectionGridStyles();
+    const { instruments, error } = useInstruments();
     const sectionInfos: SectionInfo[] = useMemo(
         () =>
             map(sections, (href, instrumentType) => {
-                let name = 'Unknown Instrument';
-                let mediaUrl = 'Image not available';
+                // Default state is loading state
+                let name = 'Loading Instrument Name...';
+                let mediaUrl;
+                // Success state of instruments
                 if (instruments) {
-                    const instrument = instruments.find((instrument) => instrument.type === instrumentType);
+                    const instrument = instruments.get(instrumentType as InstrumentType);
                     if (instrument) {
                         name = instrument.name;
                         mediaUrl = instrument.mediaUrl;
                     }
-                } else if (loading) {
-                    name = 'Loading Instrument Name...';
-                    mediaUrl = 'Getting Image URL...';
+                } else if (isNotNil(error)) {
+                    name = 'Unknown Instrument';
                 }
                 return {
                     name,
@@ -49,7 +49,7 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
                     type: instrumentType,
                 };
             }),
-        [instruments, sections, loading],
+        [instruments, sections, error],
     );
     const renderGridTile = ({ name: instrumentName, mediaUrl, scoreUrl, type }: SectionInfo): JSX.Element => (
         <ResponsiveGridItem
@@ -57,7 +57,7 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
             title={instrumentName}
             icon={<CloudDownloadIcon />}
             mediaUrl={mediaUrl}
-            loading={loading}
+            loading={isNil(instruments)}
             error={error}
             mediaSizingStrategy="cover"
             key={`${scoreName}.${type}`}
@@ -80,4 +80,4 @@ const MusicScoresGrid: React.FC<MusicScoresGridProps> = ({
     );
 };
 
-export default MusicScoresGrid;
+export default SectionGrid;
