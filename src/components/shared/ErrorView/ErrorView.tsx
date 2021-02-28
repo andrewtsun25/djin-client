@@ -16,15 +16,17 @@ const ErrorView: React.FC<ErrorViewProps> = ({ error, message, className }: Erro
     return (
         <div className={classes.root}>
             <Paper className={clsx(classes.content, className)}>
-                <Error color="error" fontSize="large" />
-                <Typography paragraph variant="h5">
-                    {message}
-                </Typography>
-                {process.env.NODE_ENV === 'development' && (
-                    <Typography paragraph className={classes.stackTrace}>
-                        {error.stack}
+                <div className={classes.colorApplication}>
+                    <Error color="error" fontSize="large" />
+                    <Typography paragraph variant="h5">
+                        {message}
                     </Typography>
-                )}
+                    {process.env.NODE_ENV === 'development' && (
+                        <Typography paragraph className={classes.stackTrace}>
+                            {error.stack}
+                        </Typography>
+                    )}
+                </div>
             </Paper>
         </div>
     );

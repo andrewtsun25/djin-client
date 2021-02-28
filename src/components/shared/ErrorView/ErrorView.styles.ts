@@ -8,15 +8,18 @@ const errorViewStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            backgroundColor: theme.palette.background.paper,
         },
         content: {
-            backgroundColor: fade(theme.palette.error.light, 0.4),
+            margin: 20,
+        },
+        colorApplication: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            margin: 20,
-            padding: 20,
             width: 'max-content',
+            backgroundColor: fade(theme.palette.error.light, 0.4),
+            padding: 20,
         },
         stackTrace: {
             whiteSpace: 'pre',
