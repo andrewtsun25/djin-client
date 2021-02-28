@@ -1,5 +1,6 @@
-import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Grid, Grow, Typography } from '@material-ui/core';
 import LinkIcon from '@material-ui/icons/Link';
+import BulletPoints from 'components/shared/BulletPoints';
 import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
@@ -41,15 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <CardContent>
                         {projectLink && <IconLink href={projectLink} text="Project Link" icon={<LinkIcon />} />}
                         <Typography paragraph>{description}</Typography>
-                        {responsibilities.length > 0 && (
-                            <ul>
-                                {responsibilities.map((responsibility, index) => (
-                                    <li key={index}>
-                                        <Typography>{responsibility}</Typography>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                        <BulletPoints points={responsibilities} />
                         <SkillChips skills={skills} />
                     </CardContent>
                 </Card>

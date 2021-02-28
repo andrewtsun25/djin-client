@@ -1,5 +1,6 @@
-import { Card, CardContent, Chip, Slide, Typography } from '@material-ui/core';
+import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
+import BulletPoints from 'components/shared/BulletPoints';
 import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import React from 'react';
@@ -33,15 +34,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                         className={classes.link}
                     />
                     <Typography paragraph>{description}</Typography>
-                    {responsibilities.length > 0 && (
-                        <ul>
-                            {responsibilities.map((responsibility, index) => (
-                                <li key={index}>
-                                    <Typography>{responsibility}</Typography>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                    <BulletPoints points={responsibilities} />
                     <SkillChips skills={skills} />
                 </CardContent>
             </Card>
