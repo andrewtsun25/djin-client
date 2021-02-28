@@ -1,4 +1,4 @@
-import useMusicScores from 'api/music/useMusicScores';
+import { useMusicScores } from 'api/music';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
 import { isNil } from 'lodash';

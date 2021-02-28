@@ -11,6 +11,7 @@ type useHbvResearchPapersResponse = {
 export default function useHbvResearchPapers(): useHbvResearchPapersResponse {
     const { data: hbvResearchPapers, error } = useCollection<HBVResearchPaper>(Collections.HbvResearch.Papers, {
         parseDates: ['startDate', 'endDate'],
+        orderBy: ['startDate', 'asc'],
     });
     return { hbvResearchPapers, error: error as Error };
 }

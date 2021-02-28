@@ -1,7 +1,7 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import useMartialArtsStyles from 'api/martialArts/useMartialArtsStyles';
+import { useMartialArtsStyles } from 'api/martialArts';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
 import { ResponsiveGrid } from 'components/shared/ResponsiveGrid';
