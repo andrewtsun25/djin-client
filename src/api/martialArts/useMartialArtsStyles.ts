@@ -11,6 +11,8 @@ type useMartialArtsStylesResponse = {
 export default function useMartialArtsStyles(styleType: MartialArtsStyleType): useMartialArtsStylesResponse {
     const { data: martialArts, error } = useCollection<MartialArtsStyle>(Collections.MartialArts.Styles, {
         where: ['type', '==', styleType],
+        parseDates: ['joinDate'],
+        orderBy: ['joinDate', 'asc'],
     });
     return { martialArts, error: error as Error };
 }
