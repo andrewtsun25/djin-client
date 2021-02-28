@@ -3,7 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React from 'react';
 import { Nilable } from 'types/alias';
 
 import responsiveGridItemStyles from './ResponsiveGridItem.styles';

@@ -1,6 +1,6 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const employmentCardStyles = makeStyles((theme: Theme) =>
+const employmentCardStyles = makeStyles(() =>
     createStyles({
         root: {
             margin: 10,

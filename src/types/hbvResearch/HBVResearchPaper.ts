@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { DateTime } from 'luxon';
 import DocumentReference = firebase.firestore.DocumentReference;
 
 export interface HBVResearchPaper {

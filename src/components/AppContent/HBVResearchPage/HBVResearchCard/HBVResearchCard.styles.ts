@@ -1,6 +1,6 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const hbvResearchCardStyles = makeStyles((theme: Theme) =>
+const hbvResearchCardStyles = makeStyles(() =>
     createStyles({
         root: {
             margin: '10px auto',

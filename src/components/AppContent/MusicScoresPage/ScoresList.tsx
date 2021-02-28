@@ -1,7 +1,7 @@
 import useMusicScores from 'api/music/useMusicScores';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
-import { isNil, orderBy } from 'lodash';
+import { isNil } from 'lodash';
 import React from 'react';
 import { isNotNil } from 'utils/general';
 

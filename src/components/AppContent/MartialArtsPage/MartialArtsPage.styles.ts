@@ -1,6 +1,6 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const martialArtsPageStyles = makeStyles((theme: Theme) =>
+const martialArtsPageStyles = makeStyles(() =>
     createStyles({
         bg: {
             padding: 0,
