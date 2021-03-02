@@ -1,6 +1,7 @@
 import { Avatar, CardHeader } from '@material-ui/core';
 import { DateTime } from 'luxon';
 import React from 'react';
+import { isNotNil } from 'utils/general';
 
 import StyledBadge from './StyledBadge';
 
@@ -8,7 +9,7 @@ interface TimeIntervalCardHeaderProps {
     title: string;
     subtitle: string;
     startDate: DateTime;
-    endDate?: DateTime;
+    endDate?: DateTime | null;
     logoUrl?: string;
 }
 
@@ -19,7 +20,7 @@ const TimeIntervalCardHeader: React.FC<TimeIntervalCardHeaderProps> = ({
     endDate,
     logoUrl,
 }: TimeIntervalCardHeaderProps) => {
-    const subheader = endDate
+    const subheader = isNotNil(endDate)
         ? `${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}, ${subtitle}`
         : `${startDateMonth} ${startDateYear} - Present, ${subtitle}`;
     const baseAvatar: React.ReactNode = <Avatar alt={title} src={logoUrl} />;

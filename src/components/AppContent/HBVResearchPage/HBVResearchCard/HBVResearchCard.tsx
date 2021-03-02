@@ -11,6 +11,7 @@ import { HBVResearchPaper } from 'types/hbvResearch';
 import { Organization } from 'types/shared';
 import { isNotNil } from 'utils/general';
 
+import { useOrganization } from '../../../../api/shared';
 import hbvResearchCardStyles from './HBVResearchCard.styles';
 
 interface HBVResearchCardProps {
@@ -30,16 +31,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
     },
 }: HBVResearchCardProps) => {
     const classes = hbvResearchCardStyles();
-    const { data: organization, error } = useDocument<Organization>(organizationRef.path);
-
-    const organizationName: string = isNotNil(error)
-        ? 'Organization unavailable'
-        : isNil(organization)
-        ? 'Loading organization...'
-        : organization.exists
-        ? organization.name
-        : 'Unknown Organization';
-    const organizationLogoUrl = organization?.exists ? organization.logoUrl : undefined;
+    const { name: organizationName, logoUrl } = useOrganization(organizationRef);
 
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
@@ -49,7 +41,7 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
                     subtitle={organizationName}
                     startDate={DateTime.fromJSDate(startDate)}
                     endDate={DateTime.fromJSDate(endDate)}
-                    logoUrl={organizationLogoUrl}
+                    logoUrl={logoUrl}
                 />
                 <CardContent>
                     <IconLink

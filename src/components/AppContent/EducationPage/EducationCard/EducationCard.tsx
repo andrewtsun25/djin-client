@@ -2,9 +2,12 @@ import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import { TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
+import { map } from 'lodash';
+import { DateTime } from 'luxon';
 import React from 'react';
 import { Education } from 'types/education';
 
+import { useOrganization } from '../../../../api/shared';
 import educationCardStyles from './EducationCard.styles';
 
 interface EducationCardProps {
@@ -16,10 +19,8 @@ const EducationCard: React.FC<EducationCardProps> = ({
         endDate,
         startDate,
         major,
-        name,
-        logoUrl,
-        syllabusUrl,
-        residentialCollegeSyllabusLink,
+        organization: organizationRef,
+        syllabusUrls,
         department,
         residentialCollege,
         gpa,
@@ -27,25 +28,21 @@ const EducationCard: React.FC<EducationCardProps> = ({
     },
 }: EducationCardProps) => {
     const classes = educationCardStyles();
+    const { name, logoUrl } = useOrganization(organizationRef);
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>
                 <TimeIntervalCardHeader
                     title={name}
                     subtitle={major}
-                    startDate={startDate}
-                    endDate={endDate}
+                    startDate={DateTime.fromJSDate(startDate)}
+                    endDate={endDate ? DateTime.fromJSDate(endDate) : null}
                     logoUrl={logoUrl}
                 />
                 <CardContent>
-                    <IconLink icon={<SchoolIcon />} href={syllabusUrl} text="Degree Requirements" />
-                    {residentialCollegeSyllabusLink && (
-                        <IconLink
-                            icon={<SchoolIcon />}
-                            href={residentialCollegeSyllabusLink}
-                            text="Residential College GE Requirements"
-                        />
-                    )}
+                    {map(syllabusUrls, (syllabusUrl, urlName) => (
+                        <IconLink key={urlName} icon={<SchoolIcon />} href={syllabusUrl} text={urlName} />
+                    ))}
                     {department && (
                         <Typography paragraph>
                             <b>Department:</b> {department}

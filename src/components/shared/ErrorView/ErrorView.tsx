@@ -2,6 +2,7 @@ import { Paper, Typography } from '@material-ui/core';
 import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
 import React from 'react';
+import Linkify from 'react-linkify';
 
 import errorViewStyles from './ErrorView.styles';
 
@@ -23,7 +24,7 @@ const ErrorView: React.FC<ErrorViewProps> = ({ error, message, className }: Erro
                     </Typography>
                     {process.env.NODE_ENV === 'development' && (
                         <Typography paragraph className={classes.stackTrace}>
-                            {error.stack}
+                            <Linkify>{error.stack}</Linkify>
                         </Typography>
                     )}
                 </div>

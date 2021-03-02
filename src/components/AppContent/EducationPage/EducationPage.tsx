@@ -1,12 +1,11 @@
 import { Container, Typography } from '@material-ui/core';
 import Background from 'components/shared/Background';
-import useEducationBackgroundImage from 'hooks/useEducationBackgroundImage';
-import useEducations from 'hooks/useEducations';
-import React from 'react';
-import { Education, EduType } from 'types/education';
+import EduTypeInfos from 'const/eduTypeInfos';
+import React, { useMemo } from 'react';
+import { EduType, EduTypeInfo } from 'types/education';
 
-import EducationCard from './EducationCard';
 import educationPageStyles from './EducationPage.styles';
+import EducationPageContent from './EducationPageContent';
 
 interface EducationPageProps {
     eduType: EduType;
@@ -14,17 +13,14 @@ interface EducationPageProps {
 
 const EducationPage: React.FC<EducationPageProps> = ({ eduType }: EducationPageProps) => {
     const classes = educationPageStyles();
-    const educationBg: string = useEducationBackgroundImage(eduType);
-    const educations: Education[] = useEducations(eduType);
+    const eduTypeInfo: EduTypeInfo | undefined = useMemo(() => EduTypeInfos.get(eduType), [eduType]);
     return (
-        <Background imageUrl={educationBg} tint>
+        <Background imageUrl={eduTypeInfo?.backgroundUrl} tint>
             <Container maxWidth="lg">
                 <Typography variant="h2" align="center" className={classes.pageTitle}>
-                    {eduType} Education
+                    {eduTypeInfo?.name} Education
                 </Typography>
-                {educations.map((education, index) => (
-                    <EducationCard education={education} key={index} />
-                ))}
+                <EducationPageContent eduType={eduType} />
             </Container>
         </Background>
     );
