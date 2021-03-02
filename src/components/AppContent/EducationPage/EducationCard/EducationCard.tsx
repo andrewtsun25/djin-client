@@ -9,7 +9,6 @@ import { DateTime } from 'luxon';
 import React from 'react';
 import { Education } from 'types/education';
 
-import { useStudentOrganizations } from '../../../../api/education';
 import educationCardStyles from './EducationCard.styles';
 import StudentOrganizationBullets from './StudentOrganizationBullets';
 

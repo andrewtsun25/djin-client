@@ -30,7 +30,7 @@ module.exports = {
         'import/order': 'off',
         'import/first': 'error',
         'import/exports-last': 'error',
-        'import/no-unused-modules': 'warn',
+        'import/no-unused-modules': process.env.NODE_ENV === 'development' ? 'warn' : 'error',
         'import/named': 'error',
         'import/no-cycle': 'error',
         'import/no-webpack-loader-syntax': 'error',
@@ -40,7 +40,7 @@ module.exports = {
         'import/no-duplicates': 'error',
         'import/newline-after-import': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
-        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+        'no-console': process.env.NODE_ENV === 'development' ? 'warn' : 'error',
         '@typescript-eslint/no-unused-vars': 'warn',
 
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
