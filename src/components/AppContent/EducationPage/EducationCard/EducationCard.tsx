@@ -58,7 +58,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
                         </Typography>
                     )}
                     <Typography paragraph>
-                        <b>GPA:</b> {gpa.toFixed(3)}
+                        <b>GPA:</b> {gpa.toFixed(3)} <i>(Transcript is available upon request.)</i>
                     </Typography>
                     <Typography paragraph>{description}</Typography>
                     <StudentOrganizationBullets educationId={id} educationName={name} />
