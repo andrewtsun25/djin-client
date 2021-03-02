@@ -1,17 +1,13 @@
 import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
-import { useDocument } from '@nandorojo/swr-firestore';
+import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
 import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
-import { isNil } from 'lodash';
 import { DateTime } from 'luxon';
 import React from 'react';
 import { HBVResearchPaper } from 'types/hbvResearch';
-import { Organization } from 'types/shared';
-import { isNotNil } from 'utils/general';
 
-import { useOrganization } from '../../../../api/shared';
 import hbvResearchCardStyles from './HBVResearchCard.styles';
 
 interface HBVResearchCardProps {

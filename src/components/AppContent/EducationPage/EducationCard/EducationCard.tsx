@@ -1,5 +1,7 @@
 import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
+import { Document } from '@nandorojo/swr-firestore';
+import { useOrganization } from 'api/shared';
 import { TimeIntervalCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
@@ -7,15 +9,15 @@ import { DateTime } from 'luxon';
 import React from 'react';
 import { Education } from 'types/education';
 
-import { useOrganization } from '../../../../api/shared';
 import educationCardStyles from './EducationCard.styles';
 
 interface EducationCardProps {
-    education: Education;
+    education: Document<Education>;
 }
 
 const EducationCard: React.FC<EducationCardProps> = ({
     education: {
+        id,
         endDate,
         startDate,
         major,
@@ -29,6 +31,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
 }: EducationCardProps) => {
     const classes = educationCardStyles();
     const { name, logoUrl } = useOrganization(organizationRef);
+    console.log('ID: ', id);
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>

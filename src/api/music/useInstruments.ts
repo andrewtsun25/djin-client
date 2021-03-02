@@ -16,7 +16,9 @@ export default function useInstruments(): useInstrumentsResponse {
     const instruments: Nilable<Map<InstrumentType, Instrument>> = useMemo(
         () =>
             isNotNil(data)
-                ? new Map<InstrumentType, Instrument>(data.map((instrument) => [instrument.type, instrument]))
+                ? new Map<InstrumentType, Instrument>(
+                      data.filter((instrument) => instrument.exists).map((instrument) => [instrument.type, instrument]),
+                  )
                 : data,
         [data],
     );

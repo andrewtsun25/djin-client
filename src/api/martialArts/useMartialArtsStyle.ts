@@ -14,6 +14,9 @@ export default function useMartialArtsStyle(styleType: MartialArtsStyleType): us
     const { data: martialArts, error } = useCollection<MartialArtsStyle>(Collections.MartialArts.Styles, {
         where: ['type', '==', styleType],
     });
-    const martialArt = useMemo(() => head(martialArts), [martialArts]);
+    const martialArt = useMemo(() => {
+        const martialArtDoc = head(martialArts);
+        return martialArtDoc?.exists ? martialArtDoc : null;
+    }, [martialArts]);
     return { martialArt, error: error as Error };
 }

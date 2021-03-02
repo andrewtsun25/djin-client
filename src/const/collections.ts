@@ -1,6 +1,7 @@
 const Collections: { [k: string]: Record<string, string> } = {
     Education: {
         Colleges: 'educations',
+        StudentOrganizations: 'studentOrganizations',
     },
     HolisticOffice: {
         Modules: 'holisticOfficeModules',
