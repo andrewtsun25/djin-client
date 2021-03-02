@@ -9,7 +9,9 @@ import { DateTime } from 'luxon';
 import React from 'react';
 import { Education } from 'types/education';
 
+import { useStudentOrganizations } from '../../../../api/education';
 import educationCardStyles from './EducationCard.styles';
+import StudentOrganizationBullets from './StudentOrganizationBullets';
 
 interface EducationCardProps {
     education: Document<Education>;
@@ -31,7 +33,6 @@ const EducationCard: React.FC<EducationCardProps> = ({
 }: EducationCardProps) => {
     const classes = educationCardStyles();
     const { name, logoUrl } = useOrganization(organizationRef);
-    console.log('ID: ', id);
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>
@@ -60,6 +61,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
                         <b>GPA:</b> {gpa.toFixed(3)}
                     </Typography>
                     <Typography paragraph>{description}</Typography>
+                    <StudentOrganizationBullets educationId={id} educationName={name} />
                 </CardContent>
             </Card>
         </Slide>
