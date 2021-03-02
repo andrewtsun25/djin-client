@@ -1,4 +1,4 @@
-import useHbvResearchPapers from 'api/hbvResearch/useHbvResearchPapers';
+import { useHbvResearchPapers } from 'api/hbvResearch';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
 import { isNil } from 'lodash';

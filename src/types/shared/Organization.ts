@@ -1,4 +1,4 @@
 export interface Organization {
     name: string;
-    logoUrl: string;
+    logoUrl: string | undefined;
 }

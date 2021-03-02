@@ -1,22 +1,21 @@
-import { DateTime } from 'luxon';
+import firebase from 'firebase';
 
-import { Course } from './Course';
 import EduType from './EduType';
 import { StudentOrganization } from './StudentOrganization';
 
+type DocumentReference = firebase.firestore.DocumentReference;
+
 export interface Education {
+    organization: DocumentReference;
     type: EduType;
-    name: string;
-    startDate: DateTime;
-    endDate: DateTime;
+    startDate: Date;
+    endDate?: Date;
     major: string;
+    minors?: string[];
     department?: string;
     residentialCollege?: string;
     gpa: number;
     description: string;
-    syllabusUrl?: string;
-    residentialCollegeSyllabusLink?: string;
-    logoUrl: string;
+    syllabusUrls?: Record<string, string>;
     studentOrganizations?: StudentOrganization[];
-    courses: Course[];
 }

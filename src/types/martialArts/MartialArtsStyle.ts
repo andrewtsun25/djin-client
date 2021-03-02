@@ -14,4 +14,5 @@ export interface MartialArtsStyle {
     mediaUrl: string;
     mediaCaption: string;
     studios: DocumentReference[];
+    joinDate: Date;
 }

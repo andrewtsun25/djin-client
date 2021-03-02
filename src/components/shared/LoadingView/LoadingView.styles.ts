@@ -10,11 +10,13 @@ const loadingViewStyles = makeStyles((theme: Theme) =>
             alignItems: 'center',
         },
         content: {
-            backgroundColor: fade(theme.palette.warning.light, 0.4),
+            margin: 20,
+        },
+        colorApplication: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            margin: 20,
+            backgroundColor: fade(theme.palette.warning.light, 0.4),
             padding: 20,
             width: 'max-content',
         },

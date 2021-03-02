@@ -1,4 +1,4 @@
-import useHolisticOfficeLinks from 'api/holisticOffice/useHolisticOfficeLinks';
+import { useHolisticOfficeLinks } from 'api/holisticOffice';
 import ErrorView from 'components/shared/ErrorView';
 import IconLink from 'components/shared/IconLink';
 import LoadingView from 'components/shared/LoadingView';

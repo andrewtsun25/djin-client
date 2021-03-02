@@ -1,14 +1,14 @@
 import { Container, Fade, Grid, Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import useMartialArtsStyles from 'api/martialArts/useMartialArtsStyles';
+import { useMartialArtsStyle } from 'api/martialArts';
 import ErrorView from 'components/shared/ErrorView';
 import LoadingView from 'components/shared/LoadingView';
 import { ResponsiveGrid } from 'components/shared/ResponsiveGrid';
 import firebase from 'firebase';
-import { first, isNil } from 'lodash';
-import React, { useMemo } from 'react';
-import { MartialArtsStyle, MartialArtsStyleType } from 'types/martialArts';
+import { isNil } from 'lodash';
+import React from 'react';
+import { MartialArtsStyleType } from 'types/martialArts';
 import { isNotNil } from 'utils/general';
 
 import martialArtsPageContentStyles from './MartialArtsPageContent.styles';
@@ -24,8 +24,7 @@ const MartialArtsPageContent: React.FC<MartialArtsPageContentProps> = ({
     martialArtsStyle,
 }: MartialArtsPageContentProps) => {
     const classes = martialArtsPageContentStyles();
-    const { martialArts, error } = useMartialArtsStyles(martialArtsStyle);
-    const martialArt: MartialArtsStyle | undefined = useMemo(() => first(martialArts), [martialArts]);
+    const { martialArt, error } = useMartialArtsStyle(martialArtsStyle);
     const theme = useTheme();
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
 

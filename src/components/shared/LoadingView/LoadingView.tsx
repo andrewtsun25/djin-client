@@ -14,8 +14,10 @@ const LoadingView: React.FC<LoadingViewProps> = ({ message, className }: Loading
     return (
         <div className={clsx(classes.root, className)}>
             <Paper className={classes.content}>
-                <CircularProgress color="secondary" />
-                <Typography variant="h6">{message}</Typography>
+                <div className={classes.colorApplication}>
+                    <CircularProgress color="secondary" />
+                    <Typography variant="h6">{message}</Typography>
+                </div>
             </Paper>
         </div>
     );
