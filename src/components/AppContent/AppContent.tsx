@@ -5,6 +5,7 @@ import { EduType } from 'types/education';
 import { MartialArtsStyleType } from 'types/martialArts';
 
 import appContentStyles from './AppContent.styles';
+import EDMPage from './EDMPage';
 import EducationPage from './EducationPage';
 import EmploymentPage from './EmploymentPage';
 import ErrorPage from './ErrorPage';
@@ -49,6 +50,9 @@ const AppContent: React.FC<AppContentProps> = ({ isAppDrawerOpen }: AppContentPr
                 </Route>
                 <Route path="/music/scores">
                     <MusicScoresPage />
+                </Route>
+                <Route path="/music/edm">
+                    <EDMPage />
                 </Route>
                 <Route path="/martialArts/itfTaekwondo">
                     <MartialArtsPage martialArtsStyle={MartialArtsStyleType.ITF_TKD} />
