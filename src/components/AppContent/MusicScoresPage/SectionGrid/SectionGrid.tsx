@@ -74,8 +74,8 @@ const SectionGrid: React.FC<MusicScoresGridProps> = ({
                     items={sectionInfos}
                     renderGridTile={renderGridTile}
                     title={scoreName}
-                    titleHref={trackUrl}
                     className={classes.grid}
+                    embedUrl={trackUrl}
                 />
             </Zoom>
         </>

@@ -1,8 +1,9 @@
-import { GridList, GridListTile, Link, Typography } from '@material-ui/core';
+import { GridList, GridListTile, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import clsx from 'clsx';
 import React, { ReactElement } from 'react';
+import Embed from 'react-embed';
 
 import responsiveGridStyles from './ResponsiveGrid.styles';
 
@@ -10,18 +11,18 @@ const COL_HEIGHT = 333;
 
 interface ResponsiveGridProps<T> {
     title?: string;
-    titleHref?: string;
     items: T[];
     className?: string;
     renderGridTile(item: T, index?: number): JSX.Element;
+    embedUrl?: string;
 }
 
 function ResponsiveGrid<T>({
     title,
-    titleHref,
     items,
     renderGridTile,
     className,
+    embedUrl,
 }: ResponsiveGridProps<T>): ReactElement<ResponsiveGridProps<T>> {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
@@ -34,11 +35,14 @@ function ResponsiveGrid<T>({
             <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
                     <GridListTile cols={cols} style={{ height: 'auto' }}>
-                        <Link href={titleHref} target="_blank" rel="noopener noreferrer">
-                            <Typography paragraph variant={titleVariant} align="center" className={classes.gridHeader}>
-                                {title}
-                            </Typography>
-                        </Link>
+                        <Typography paragraph variant={titleVariant} align="center" className={classes.gridHeader}>
+                            {title}
+                        </Typography>
+                    </GridListTile>
+                )}
+                {embedUrl && (
+                    <GridListTile cols={cols} style={{ height: 'auto' }}>
+                        <Embed url={embedUrl} />
                     </GridListTile>
                 )}
                 {items.map((item: T, index: number) => renderGridTile(item, index))}
