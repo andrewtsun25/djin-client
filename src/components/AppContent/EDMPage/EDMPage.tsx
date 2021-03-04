@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core';
 import Background from 'components/shared/Background';
+import { Urls } from 'const/urls';
 import React from 'react';
 import Embed from 'react-embed';
 
-import { Urls } from '../../../const/urls';
 import edmPageStyles from './EDMPage.styles';
 
 const edcBg = `${Urls.AssetRoot}/music/bg/edc_bg.jpg`;
@@ -16,7 +16,7 @@ const EDMPage: React.FC = () => {
                 EDM Tracks
             </Typography>
             <article className={classes.content}>
-                <Embed url="https://soundcloud.com/djtaeyong/sets/edm" />
+                <Embed url={`${Urls.SoundCloudRoot}/sets/edm`} />
             </article>
         </Background>
     );
