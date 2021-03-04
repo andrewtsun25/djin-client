@@ -5,11 +5,12 @@ const backgroundStyles = makeStyles(() =>
         bg: {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
-            width: `100%`,
+            width: '100%',
+            height: '100%',
         },
         colorBg: {
-            minHeight: '100vh',
             padding: 10,
+            height: '100%',
         },
     }),
 );

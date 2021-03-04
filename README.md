@@ -3,6 +3,28 @@
 `djin` is the personal website of its creator, d.jin. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 As of version 1.1.0, this website is front-end only. The production deployment of this website is available at https://djin.dev.
 
+## Architecture
+
+`djin` is a website coded in TypeScript using the React library, and styled with JSS (CSS in JavaScript). The entire 
+application is hosted on Firebase as such: 
+- The client application (this repo) is hosted on Firebase Web Hosting.
+- Assets for the client application (images, documents, etc.) are stored via Firebase Cloud Storage.
+- Data that this application requires is stored directly into Firestore, a No-SQL Document/Collection database.
+
+### CI/CD
+
+Upon creating a pull request, a preview build is automatically created such that the application 
+can be previewed before its final deployment. Upon merging, the client is automatically built and 
+served on Firebase Web Hosting. Within the deployment build process,
+1. Dependencies are `install`ed
+2. The code is `lint`ed
+3. Unit `test`s are run
+4. The code is `built`. 
+
+Failure at any point will result in failure of the entire build, preventing faulty code from being deployed.
+
+`husky` is also installed to allow for pre-commit checks to be made.
+
 ## Commands
 
 Here are some scripts you can run:
@@ -15,7 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test:dev`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -25,9 +47,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Runs tests in a non-interactive mode. Used for building in CI/CD environments.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn lint:dev`
+### `yarn lint`
 
-Runs `eslint` on all source files to correct formatting mistakes. Will fix errors/warnings if possible<br />
+Runs `eslint` on all source files to correct formatting mistakes. Will automatically fix errors/warnings if possible<br />
 
 ### `yarn lint:ci`
 
@@ -45,7 +67,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `yarn deploy:ci`
 Runs all the necessary steps to create a production build in a deployment environment sequentially. First, 
-dependencies are `install`ed, then the code is `lint`ed, `test`s are run, and the code is `built`.
+dependencies are `install`ed, then the code is `lint`ed, `test`s are run, and the code is `built`. Failure at 
+any point will result in failure of the entire build, preventing faulty code from being deployed.
 
 ### `yarn eject`
 

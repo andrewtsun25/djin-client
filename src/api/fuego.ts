@@ -1,7 +1,7 @@
 import 'firebase/firestore';
 
 import firebase from 'firebase/app';
-import { Fuego } from 'types/util';
+import { Fuego } from 'types/api';
 
 type Config = Parameters<typeof firebase.initializeApp>[0];
 

@@ -2,8 +2,7 @@ import { Document, useCollection } from '@nandorojo/swr-firestore';
 import Collections from 'const/collections';
 import { Nilable } from 'types/alias';
 import { Education, EduType } from 'types/education';
-
-import { isNotNil } from '../../utils/general';
+import { isNotNil } from 'utils/general';
 
 type useEducationsResponse = {
     educations: Nilable<Document<Education>[]>;

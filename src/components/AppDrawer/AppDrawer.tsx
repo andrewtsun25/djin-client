@@ -3,6 +3,7 @@ import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import { useTheme } from '@material-ui/core/styles';
+import AlbumIcon from '@material-ui/icons/Album';
 import AppsIcon from '@material-ui/icons/Apps';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -86,13 +87,14 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                 </NestedList>
                 <NestedList icon={<MusicNoteIcon />} text="Music">
                     <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/music/education" nested />
+                    <ListItemInternalLink icon={<AlbumIcon />} text="EDM" to="/music/edm" nested />
+                    <ListItemInternalLink icon={<DescriptionIcon />} text="Classical Music" to="/music/scores" nested />
                     <ListItemExternalLink
                         icon={<HeadsetIcon />}
                         text="SoundCloud"
                         href="https://soundcloud.com/djtaeyong"
                         nested
                     />
-                    <ListItemInternalLink icon={<DescriptionIcon />} text="Download Scores" to="/music/scores" nested />
                 </NestedList>
                 <NestedList icon={<SportsMmaIcon />} text="Martial Arts">
                     <ListItemInternalLink

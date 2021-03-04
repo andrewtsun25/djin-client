@@ -10,6 +10,13 @@ const appContentStyles = makeStyles((theme: Theme) =>
                 duration: theme.transitions.duration.leavingScreen,
             }),
             marginLeft: -DRAWER_WIDTH,
+            minHeight: 'calc(100vh - 56px)',
+            [`@media (min-width: ${theme.breakpoints.values.xs}) and (orientation: landscape)`]: {
+                minHeight: 'calc(100vh - 46px)',
+            },
+            [`@media (min-width: ${theme.breakpoints.values.sm})`]: {
+                minHeight: 'calc(100vh - 64px)',
+            },
         },
         shift: {
             transition: theme.transitions.create('margin', {
