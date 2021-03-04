@@ -1,16 +1,19 @@
-import { DateTime } from 'luxon';
+import firebase from 'firebase';
 
 import JobType from './JobType';
 
+type DocumentReference = firebase.firestore.DocumentReference;
+
 export interface Employment {
-    company: string;
-    logoUrl: string;
+    organization: DocumentReference;
     mediaUrl: string;
     role: string;
-    startDate: DateTime;
-    endDate?: DateTime;
+    startDate: Date;
+    endDate?: Date;
     description: string;
     responsibilities: string[];
     skills: string[];
+    skillTypes: string[];
+    domains: string[];
     jobType: JobType;
 }

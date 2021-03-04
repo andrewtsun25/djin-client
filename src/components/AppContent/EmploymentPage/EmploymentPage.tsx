@@ -1,12 +1,10 @@
-import { Grid, Link, Typography } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import Background from 'components/shared/Background';
 import { Urls } from 'const/urls';
-import useEmployments from 'hooks/useEmployments';
 import React from 'react';
-import { Employment } from 'types/employment';
 
-import EmploymentCard from './EmploymentCard';
+import EmploymentCardGrid from './EmploymentCardGrid';
 import employmentPageStyles from './EmploymentPage.styles';
 
 const employmentsBg = `${Urls.AssetRoot}/employment/bg/anduril_22m_bg.jpeg`;
@@ -14,7 +12,6 @@ const RESUME_URL = 'https://docs.google.com/document/d/1fIQ8ceaV1BW7FmWvPe8aGGlL
 
 const EmploymentPage: React.FC = () => {
     const classes = employmentPageStyles();
-    const experiences: Employment[] = useEmployments();
     return (
         <Background imageUrl={employmentsBg} tint>
             <Typography variant="h2" align="center" className={clsx(classes.pageTitle, classes.contrastText)}>
@@ -32,11 +29,7 @@ const EmploymentPage: React.FC = () => {
                 </Link>
                 .
             </Typography>
-            <Grid container direction="row">
-                {experiences.map((experience, index) => (
-                    <EmploymentCard experience={experience} key={index} />
-                ))}
-            </Grid>
+            <EmploymentCardGrid />
         </Background>
     );
 };

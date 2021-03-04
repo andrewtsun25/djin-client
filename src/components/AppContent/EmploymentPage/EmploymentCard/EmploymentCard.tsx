@@ -1,22 +1,23 @@
 import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
+import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
 import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
+import { DateTime } from 'luxon';
 import React from 'react';
 import { Employment } from 'types/employment';
 
 import employmentCardStyles from './EmploymentCard.styles';
 
 interface EmploymentCardProps {
-    experience: Employment;
+    employment: Employment;
 }
 
 const EmploymentCard: React.FC<EmploymentCardProps> = ({
-    experience: {
+    employment: {
         endDate,
         startDate,
         role,
-        company,
-        logoUrl,
+        organization: organizationRef,
         mediaUrl,
         description,
         responsibilities,
@@ -25,16 +26,17 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
     },
 }: EmploymentCardProps) => {
     const classes = employmentCardStyles();
+    const organization = useOrganization(organizationRef);
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Grow in>
                 <Card variant="outlined" className={classes.root}>
                     <TimeIntervalCardHeader
-                        title={company}
+                        title={organization.name}
                         subtitle={role}
-                        startDate={startDate}
-                        endDate={endDate}
-                        logoUrl={logoUrl}
+                        startDate={DateTime.fromJSDate(startDate)}
+                        endDate={endDate ? DateTime.fromJSDate(endDate) : null}
+                        logoUrl={organization.logoUrl}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
                     <CardContent>

@@ -1,15 +1,13 @@
+import { USC } from 'const/semester';
 import { DateTime } from 'luxon';
 import { Project } from 'types/project/Project';
 
-import { USC } from '../const/semester';
-import { Amazon, Anduril, CouponsCom, Google, HLI, Yahoo1, Yahoo2 } from './employment';
-
 const BrandCaster: Project = {
     name: 'BrandCaster',
-    organization: CouponsCom.company,
-    logoUrl: CouponsCom.logoUrl,
+    organization: 'Quotient Technologies',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/qt_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/qt_brandcaster.jpg',
-    startDate: CouponsCom.startDate,
+    startDate: DateTime.fromISO('2013-06-17T09:00:00-08:00'),
     endDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
     description:
         'Brandcaster is a Facebook application that allows retailers to easily provide online coupons to customers through their Facebook pages.',
@@ -23,11 +21,11 @@ const BrandCaster: Project = {
 
 const CLOE: Project = {
     name: 'BrandCaster',
-    organization: CouponsCom.company,
-    logoUrl: CouponsCom.logoUrl,
+    organization: 'Quotient Technologies',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/qt_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/qt_cloe.png',
     startDate: DateTime.fromISO('2013-08-02T17:00:00-08:00'),
-    endDate: CouponsCom.endDate,
+    endDate: DateTime.fromISO('2013-09-20T17:00:00-08:00'),
     description:
         'Card-linked offers allow Coupons.com coupons to be linked to credit cards such that upon credit card payment, the relevant coupons can automatically be applied. ',
     responsibilities: [
@@ -40,10 +38,10 @@ const CLOE: Project = {
 
 const QueryCategorizationModuleImplementation: Project = {
     name: 'Query Categorization Module: Implementation',
-    organization: Yahoo1.company,
-    logoUrl: Yahoo1.logoUrl,
+    organization: 'Yahoo!',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_gemini.png',
-    startDate: Yahoo1.startDate,
+    startDate: DateTime.fromISO('2014-06-13T09:00:00-08:00'),
     endDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
     description:
         'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. I also realized how much Yahoo! is used to search up pornography.',
@@ -56,11 +54,11 @@ const QueryCategorizationModuleImplementation: Project = {
 
 const QueryCategorizationModuleAnalysis: Project = {
     name: 'Query Categorization Module: Analysis',
-    organization: Yahoo1.company,
-    logoUrl: Yahoo1.logoUrl,
+    organization: 'Yahoo!',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_gemini.png',
     startDate: DateTime.fromISO('2014-08-19T17:00:00-08:00'),
-    endDate: Yahoo1.endDate,
+    endDate: DateTime.fromISO('2014-09-19T17:00:00-08:00'),
     description:
         'Advertisers pay Yahoo! more money to have their ads displayed when a more relevant keyword is searched. Instead, advertisers bought rights to a larger quantity of frequently searched, irrelevant keywords, increasing the frequency of their ads triggering. To combat this abuse of the system, I wrote an ad-serving filter that prevents the abuse of misused bidded words from advertisers through the categorization of queries. After developing the module, I performed continual monitoring and statistical analysis to determine the success of this module.',
     responsibilities: [
@@ -72,10 +70,10 @@ const QueryCategorizationModuleAnalysis: Project = {
 
 const PipelineDetailsDashboard: Project = {
     name: 'Data Pipeline Dashboard Improvements',
-    organization: Yahoo2.company,
-    logoUrl: Yahoo2.logoUrl,
+    organization: 'Yahoo!',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_pipeline-dashboard.png',
-    startDate: Yahoo2.startDate,
+    startDate: DateTime.fromISO('2015-06-15T09:00:00-08:00'),
     endDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
     description:
         "Previously, the data pipeline reporting UI for Yahoo's advertising platform could only visualize the current state or history of a single data pipeline. The reporting team would have to manually sift through multiple pipelines every day. Created a high-level visualization of all pipelines to reduce reporting chores",
@@ -87,8 +85,8 @@ const PipelineDetailsDashboard: Project = {
 
 const PipelineSummaryDashboard: Project = {
     name: 'Data Pipeline Summary Dashboard',
-    organization: Yahoo2.company,
-    logoUrl: Yahoo2.logoUrl,
+    organization: 'Yahoo!',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_summary-dashboard.png',
     startDate: DateTime.fromISO('2015-07-15T09:00:00-08:00'),
     endDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
@@ -100,11 +98,11 @@ const PipelineSummaryDashboard: Project = {
 
 const CloseOfBooksDashboard: Project = {
     name: 'Close-Of-Books Dashboard',
-    organization: Yahoo2.company,
-    logoUrl: Yahoo2.logoUrl,
+    organization: 'Yahoo!',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/yahoo_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/yahoo_cob-dashboard.png',
     startDate: DateTime.fromISO('2015-08-15T09:00:00-08:00'),
-    endDate: Yahoo2.endDate,
+    endDate: DateTime.fromISO('2015-09-18T17:00:00-08:00'),
     description:
         "Created an extension to the monitoring UI for Yahoo's advertising platform: a dashboard to monitor the progress of data-aggregation jobs of advertisement revenue across all known time zones. Yahoo needs to know how much to charge its international clients. Once all jobs across all time zones are completed, a job responsible for close-of-books report can then be generated for internal monitoring purposes. ",
     responsibilities: [
@@ -120,8 +118,8 @@ const Defiance: Project = {
     organization: 'UCSD Intervarsity',
     logoUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/logo/intervarsity_ucsd_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/urbana_2015.jpg',
-    startDate: Yahoo2.startDate,
-    endDate: Yahoo2.endDate,
+    startDate: DateTime.fromISO('2015-12-27T17:00:00-08:00'),
+    endDate: DateTime.fromISO('2016-01-01T17:00:00-08:00'),
     description:
         'Developed a video game during #Hack4Missions, a Christian hackathon, that brings awareness to the despair refugees around the world face in their respective crises. Players assume the role of a refugee discriminated against for eye color, and uses stealth/social interactions to find the abducted members of their family, like Silent Hill. Impressed the Greater Europe Mission (GEM) refugee aid organization with our hackathon demonstration, and the game was briefly in development for GEM.',
     responsibilities: [
@@ -134,10 +132,10 @@ const Defiance: Project = {
 
 const TestHarness: Project = {
     name: 'Mantis: QA Test Harness',
-    organization: HLI.company,
-    logoUrl: HLI.logoUrl,
+    organization: 'Human Longevity, Inc.',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/hli_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/hli_mantis.png',
-    startDate: HLI.startDate,
+    startDate: DateTime.fromISO('2016-01-26T09:00:00-08:00'),
     endDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
     description:
         'Prior to Human Longevity’s eventual integration of Cypher Genomics assets, Cypher Genomics had the Mantis Genome Interpretation Engine. Mantis is currently used in other parts of Human Longevity infrastructure.',
@@ -149,11 +147,11 @@ const TestHarness: Project = {
 
 const DataCurationParsers: Project = {
     name: 'Mantis: Data Curation Parsers for Cancer Exome Report Generation',
-    organization: HLI.company,
-    logoUrl: HLI.logoUrl,
+    organization: 'Human Longevity, Inc.',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/hli_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/hli_mantis.png',
     startDate: DateTime.fromISO('2016-03-26T09:00:00-08:00'),
-    endDate: HLI.endDate,
+    endDate: DateTime.fromISO('2016-06-26T17:00:00-08:00'),
     description:
         'Prior to Human Longevity’s eventual integration of Cypher Genomics assets, Cypher Genomics had the Mantis Genome Interpretation Engine. Mantis is currently used in other parts of Human Longevity infrastructure.',
     responsibilities: [
@@ -165,11 +163,11 @@ const DataCurationParsers: Project = {
 
 const Withoutabox: Project = {
     name: 'Withoutabox',
-    organization: Amazon.company,
-    logoUrl: Amazon.logoUrl,
+    organization: 'Amazon',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/amazon_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/amazon_withoutabox.png',
-    startDate: Amazon.startDate,
-    endDate: Amazon.endDate,
+    startDate: DateTime.fromISO('2016-09-26T09:00:00-08:00'),
+    endDate: DateTime.fromISO('2018-04-13T17:00:00-08:00'),
     description:
         "Worked on developing various features on Withoutabox, a website that allows independent filmmakers to connect with film festivals. Also enabled these film festivals to crush their filmmaker's dreams.",
     responsibilities: [
@@ -252,9 +250,9 @@ const FearlessLAMobile: Project = {
 const SamsungTVs: Project = {
     name: 'Enable Hardware Keyboard Support on Samsung TVs for YouTube',
     organization: 'Google',
-    logoUrl: Google.logoUrl,
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_samsung-tv.jpg',
-    startDate: Google.startDate,
+    startDate: DateTime.fromISO('2019-05-10T09:00:00-08:00'),
     endDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
     description:
         'In the past, Samsung devices were known to have compatibility issues with YouTube on smart TVs, noticeably with unresponsive or wrong input. Even though these were fixed 3 years ago, support was still not allowed for Samsung devices. YouTube would not like to be known for its 3-year SLAs.',
@@ -268,7 +266,7 @@ const SamsungTVs: Project = {
 const ViTelex: Project = {
     name: 'Vietnamese Telex IME for YouTube on Virtual Keyboard',
     organization: 'Google',
-    logoUrl: Google.logoUrl,
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_vi-telex.jpg',
     startDate: DateTime.fromISO('2019-06-10T09:00:00-08:00'),
     endDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
@@ -287,10 +285,10 @@ const ViTelex: Project = {
 const LetterSuggestions: Project = {
     name: 'Letter Suggestions',
     organization: 'Google',
-    logoUrl: Google.logoUrl,
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/google_logo.png',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/google_letter-suggestions.png',
     startDate: DateTime.fromISO('2019-07-10T09:00:00-08:00'),
-    endDate: Google.endDate,
+    endDate: DateTime.fromISO('2019-08-09T19:00:00-08:00'),
     description:
         'Languages other than English often have special characters which are important for spelling. For example, French people searching for videos on "same" items (même) would probably not be searching for memes. YouTube on TV\'s new virtual keyboard cannot type special characters. Interfacing with the GBoard framework for virtual keyboards, I helped design the virtual keyboard\'s ability to type special characters.',
     responsibilities: [
@@ -323,10 +321,10 @@ const UscTaekwondoWebsite: Project = {
 
 const Metrix: Project = {
     name: 'Metrix',
-    organization: Anduril.company,
-    logoUrl: Anduril.logoUrl,
+    organization: 'Anduril Industries',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/classified.jpg',
-    startDate: Anduril.startDate,
+    startDate: DateTime.fromISO('2020-08-10T09:00:00-08:00'),
     description:
         'Designing and developing Metrix, a UI that visualizes object classification and tracking data from networks of Anduril assets (towers and drones). The Perception team, mission operations team, and business operations team use my app to analyze training model performance and improve existing training models for object classification. The app is primarily written in React and TypeScript, visualizing data via Blueprint.js. ',
     responsibilities: [],
@@ -335,8 +333,8 @@ const Metrix: Project = {
 
 const LattticeControlApp: Project = {
     name: 'Lattice UI',
-    organization: Anduril.company,
-    logoUrl: Anduril.logoUrl,
+    organization: 'Anduril Industries',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/anduril_lattice.jpg',
     startDate: DateTime.fromISO('2020-10-10T09:00:00-08:00'),
     description:
@@ -351,8 +349,8 @@ const LattticeControlApp: Project = {
 
 const Capacitor: Project = {
     name: 'Capacitor',
-    organization: Anduril.company,
-    logoUrl: Anduril.logoUrl,
+    organization: 'Anduril Industries',
+    logoUrl: 'https://storage.googleapis.com/storage.djin.dev/employment/logo/anduril_logo.jpeg',
     mediaUrl: 'https://storage.googleapis.com/storage.djin.dev/projects/media/classified.jpg',
     startDate: DateTime.fromISO('2021-01-04T09:00:00-08:00'),
     description:
