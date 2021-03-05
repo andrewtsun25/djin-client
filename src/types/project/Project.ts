@@ -1,15 +1,18 @@
-import { DateTime } from 'luxon';
+import firebase from 'firebase';
+
+type DocumentReference = firebase.firestore.DocumentReference;
 
 export interface Project {
     name: string;
-    startDate: DateTime;
-    endDate?: DateTime;
+    startDate: Date;
+    endDate?: Date;
     mediaUrl: string;
     description: string;
     responsibilities: string[];
-    organization: string;
-    logoUrl: string;
+    organization: DocumentReference;
     skills: string[];
     disclaimer?: string;
-    projectLink?: string;
+    domains: string[];
+    skillTypes: string[];
+    projectUrls?: Record<string, string>;
 }
