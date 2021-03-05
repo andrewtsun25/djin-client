@@ -16,6 +16,9 @@ const projectCardStyles = makeStyles(() =>
         projectLinkIcon: {
             marginRight: 10,
         },
+        disclaimer: {
+            fontWeight: 'bold',
+        },
     }),
 );
 

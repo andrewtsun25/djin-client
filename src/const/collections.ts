@@ -2,6 +2,9 @@ const Collections: { [k: string]: Record<string, string> } = {
     Employment: {
         Companies: 'employments',
     },
+    Project: {
+        Projects: 'projects',
+    },
     Education: {
         Colleges: 'educations',
         StudentOrganizations: 'studentOrganizations',

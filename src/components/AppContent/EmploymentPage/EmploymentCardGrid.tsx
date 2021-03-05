@@ -18,7 +18,7 @@ const EmploymentCardGrid: React.FC = () => {
 
     // Loading state
     if (isNil(employments)) {
-        return <LoadingView message="Loading employment information" />;
+        return <LoadingView message="Loading employment information..." />;
     }
 
     // Success state
