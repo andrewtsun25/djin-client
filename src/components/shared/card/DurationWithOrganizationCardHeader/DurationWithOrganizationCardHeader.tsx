@@ -1,27 +1,31 @@
 import { Avatar, CardHeader } from '@material-ui/core';
 import { DateTime } from 'luxon';
 import React from 'react';
+import { Nilable } from 'types/alias';
 import { isNotNil } from 'utils/general';
 
 import StyledBadge from './StyledBadge';
 
-interface TimeIntervalCardHeaderProps {
+interface DurationWithOrganizationCardHeaderProps {
     title: string;
     subtitle: string;
-    startDate: DateTime;
-    endDate?: DateTime | null;
+    startDate: Date;
+    endDate?: Date | null;
     logoUrl?: string;
 }
 
-const TimeIntervalCardHeader: React.FC<TimeIntervalCardHeaderProps> = ({
+const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardHeaderProps> = ({
     title,
     subtitle,
-    startDate: { monthShort: startDateMonth, year: startDateYear },
+    startDate,
     endDate,
     logoUrl,
-}: TimeIntervalCardHeaderProps) => {
-    const subheader = isNotNil(endDate)
-        ? `${startDateMonth} ${startDateYear} - ${endDate.monthShort} ${endDate.year}, ${subtitle}`
+}: DurationWithOrganizationCardHeaderProps) => {
+    const startDateTime: DateTime = DateTime.fromJSDate(startDate);
+    const { monthShort: startDateMonth, year: startDateYear } = startDateTime;
+    const endDateTime: Nilable<DateTime> = isNotNil(endDate) ? DateTime.fromJSDate(endDate) : endDate;
+    const subheader = isNotNil(endDateTime)
+        ? `${startDateMonth} ${startDateYear} - ${endDateTime.monthShort} ${endDateTime.year}, ${subtitle}`
         : `${startDateMonth} ${startDateYear} - Present, ${subtitle}`;
     const baseAvatar: React.ReactNode = <Avatar alt={title} src={logoUrl} />;
     const avatar: React.ReactNode = endDate ? (
@@ -41,4 +45,4 @@ const TimeIntervalCardHeader: React.FC<TimeIntervalCardHeaderProps> = ({
     return <CardHeader title={title} subheader={subheader} avatar={avatar} />;
 };
 
-export default TimeIntervalCardHeader;
+export default DurationWithOrganizationCardHeader;

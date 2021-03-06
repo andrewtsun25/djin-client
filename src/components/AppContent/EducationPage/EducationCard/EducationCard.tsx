@@ -2,7 +2,7 @@ import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import { Document } from '@nandorojo/swr-firestore';
 import { useOrganization } from 'api/shared';
-import { TimeIntervalCardHeader } from 'components/shared/card';
+import { DurationWithOrganizationCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
 import { DateTime } from 'luxon';
@@ -35,11 +35,11 @@ const EducationCard: React.FC<EducationCardProps> = ({
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card variant="outlined" className={classes.root}>
-                <TimeIntervalCardHeader
+                <DurationWithOrganizationCardHeader
                     title={name}
                     subtitle={major}
-                    startDate={DateTime.fromJSDate(startDate)}
-                    endDate={endDate ? DateTime.fromJSDate(endDate) : null}
+                    startDate={startDate}
+                    endDate={endDate}
                     logoUrl={logoUrl}
                 />
                 <CardContent>

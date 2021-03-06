@@ -2,7 +2,7 @@ import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
-import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
+import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { DateTime } from 'luxon';
 import React from 'react';
@@ -32,11 +32,11 @@ const HBVResearchCard: React.FC<HBVResearchCardProps> = ({
     return (
         <Slide direction="up" in mountOnEnter unmountOnExit>
             <Card className={classes.root}>
-                <TimeIntervalCardHeader
+                <DurationWithOrganizationCardHeader
                     title={name}
                     subtitle={organizationName}
-                    startDate={DateTime.fromJSDate(startDate)}
-                    endDate={DateTime.fromJSDate(endDate)}
+                    startDate={startDate}
+                    endDate={endDate}
                     logoUrl={logoUrl}
                 />
                 <CardContent>

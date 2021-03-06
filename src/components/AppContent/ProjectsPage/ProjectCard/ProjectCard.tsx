@@ -3,7 +3,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
 import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
-import { SkillChips, TimeIntervalCardHeader } from 'components/shared/card';
+import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
 import { DateTime } from 'luxon';
@@ -36,11 +36,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Grow in>
                 <Card variant="outlined" className={classes.root}>
-                    <TimeIntervalCardHeader
+                    <DurationWithOrganizationCardHeader
                         title={name}
                         subtitle={organization.name}
-                        startDate={DateTime.fromJSDate(startDate)}
-                        endDate={endDate ? DateTime.fromJSDate(endDate) : null}
+                        startDate={startDate}
+                        endDate={endDate}
                         logoUrl={organization.logoUrl}
                     />
                     <CardMedia image={mediaUrl} className={classes.media} />
