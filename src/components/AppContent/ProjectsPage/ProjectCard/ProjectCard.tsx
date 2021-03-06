@@ -6,7 +6,6 @@ import BulletPoints from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
-import { DateTime } from 'luxon';
 import React from 'react';
 import { Project } from 'types/project';
 

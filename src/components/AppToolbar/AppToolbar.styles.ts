@@ -1,5 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { DRAWER_WIDTH } from 'const/styling';
+import GlobalStyles from 'const/styling';
 
 const appToolbarStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -13,8 +13,8 @@ const appToolbarStyles = makeStyles((theme: Theme) =>
             marginRight: theme.spacing(2),
         },
         shift: {
-            width: `calc(100% - ${DRAWER_WIDTH}px)`,
-            marginLeft: DRAWER_WIDTH,
+            width: `calc(100% - ${GlobalStyles.DrawerWidth}px)`,
+            marginLeft: GlobalStyles.DrawerWidth,
             transition: theme.transitions.create(['margin', 'width'], {
                 easing: theme.transitions.easing.easeOut,
                 duration: theme.transitions.duration.enteringScreen,

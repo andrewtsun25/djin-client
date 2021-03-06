@@ -4,7 +4,6 @@ import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
-import { DateTime } from 'luxon';
 import React from 'react';
 import { HBVResearchPaper } from 'types/hbvResearch';
 

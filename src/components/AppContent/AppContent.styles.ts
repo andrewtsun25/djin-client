@@ -1,5 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { DRAWER_WIDTH } from 'const/styling';
+import GlobalStyles from 'const/styling';
 
 const appContentStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -9,7 +9,7 @@ const appContentStyles = makeStyles((theme: Theme) =>
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.leavingScreen,
             }),
-            marginLeft: -DRAWER_WIDTH,
+            marginLeft: -GlobalStyles.DrawerWidth,
             minHeight: 'calc(100vh - 56px)',
             [`@media (min-width: ${theme.breakpoints.values.xs}) and (orientation: landscape)`]: {
                 minHeight: 'calc(100vh - 46px)',

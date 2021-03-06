@@ -2,7 +2,6 @@ import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@mat
 import { useOrganization } from 'api/shared';
 import BulletPoints from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
-import { DateTime } from 'luxon';
 import React from 'react';
 import { Employment } from 'types/employment';
 

@@ -5,7 +5,6 @@ import { useOrganization } from 'api/shared';
 import { DurationWithOrganizationCardHeader } from 'components/shared/card';
 import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
-import { DateTime } from 'luxon';
 import React from 'react';
 import { Education } from 'types/education';
 

@@ -1,14 +1,14 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { DRAWER_WIDTH } from 'const/styling';
+import GlobalStyles from 'const/styling';
 
 const appDrawerStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            width: DRAWER_WIDTH,
+            width: GlobalStyles.DrawerWidth,
             flexShrink: 0,
         },
         paper: {
-            width: DRAWER_WIDTH,
+            width: GlobalStyles.DrawerWidth,
         },
         header: {
             display: 'flex',

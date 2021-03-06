@@ -1,3 +1,5 @@
-const DRAWER_WIDTH = 240;
+const GlobalStyles: Record<string, string | number> = {
+    DrawerWidth: 240,
+};
 
-export { DRAWER_WIDTH };
+export default GlobalStyles;
