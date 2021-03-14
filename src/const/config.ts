@@ -1,4 +1,6 @@
-const storageBucket = 'djin-dev.appspot.com';
-const soundCloudUserName = 'djtaeyong';
+const Config: Record<string, string> = {
+    SoundCloudUserName: 'djtaeyong',
+    StorageBucket: 'djin-dev.appspot.com',
+};
 
-export { soundCloudUserName, storageBucket };
+export default Config;

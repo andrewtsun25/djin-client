@@ -1,8 +1,8 @@
-import { soundCloudUserName, storageBucket } from './config';
+import Config from './config';
 
 const Urls: Record<string, string> = {
-    AssetRoot: `https://storage.googleapis.com/${storageBucket}`,
-    SoundCloudRoot: `https://soundcloud.com/${soundCloudUserName}`,
+    AssetRoot: `https://storage.googleapis.com/${Config.StorageBucket}`,
+    SoundCloudRoot: `https://soundcloud.com/${Config.SoundCloudUserName}`,
 };
 
 export { Urls };
