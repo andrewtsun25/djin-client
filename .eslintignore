@@ -1,0 +1,5 @@
+# Build directory
+build/**/*
+
+# Storybook
+src/stories/**/*
