@@ -1,7 +1,7 @@
 import { useHolisticOfficeLinks } from 'api/holisticOffice';
+import { LoadingView } from 'components/shared';
 import ErrorView from 'components/shared/ErrorView';
 import IconLink from 'components/shared/IconLink';
-import LoadingView from 'components/shared/LoadingView';
 import { isNil } from 'lodash';
 import React from 'react';
 import { HolisticOfficeLink, HolisticOfficeLinkType } from 'types/holisticOffice';

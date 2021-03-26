@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core';
 import { useProjects } from 'api/projects';
+import { LoadingView } from 'components/shared';
 import ErrorView from 'components/shared/ErrorView';
-import LoadingView from 'components/shared/LoadingView';
 import { isNil } from 'lodash';
 import React from 'react';
 import { isNotNil } from 'utils/general';

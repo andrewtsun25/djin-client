@@ -1,15 +1,17 @@
 import { Typography } from '@material-ui/core';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Nilable } from 'types/alias';
 import { isNotNil } from 'utils/general';
 
-interface CardInfoProps {
+interface BulletPointsProps {
     points: Nilable<string[]>;
+    className?: string;
+    style?: CSSProperties;
 }
 
-const BulletPoints: React.FC<CardInfoProps> = ({ points }: CardInfoProps) => {
+const BulletPoints: React.FC<BulletPointsProps> = ({ points, className, style }: BulletPointsProps) => {
     return isNotNil(points) && points.length > 0 ? (
-        <ul>
+        <ul className={className} style={style}>
             {points.map((point, index) => (
                 <li key={index}>
                     <Typography>{point}</Typography>
@@ -19,4 +21,5 @@ const BulletPoints: React.FC<CardInfoProps> = ({ points }: CardInfoProps) => {
     ) : null;
 };
 
-export default BulletPoints;
+export { BulletPoints };
+export type { BulletPointsProps };

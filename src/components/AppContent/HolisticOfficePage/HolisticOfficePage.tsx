@@ -9,7 +9,7 @@ import { HolisticOfficeLinkType } from 'types/holisticOffice';
 
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
-import ModulesGrid from './ModulesGrid';
+import { ModulesGrid } from './ModulesGrid';
 
 const logo = `${Urls.AssetRoot}/holisticOffice/logo/holistic_office_logo.png`;
 const websiteImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_website.png`;
