@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import { LoadingView, LoadingViewProps } from './LoadingView';
+import type { LoadingViewProps } from './LoadingView';
+import { LoadingView } from './LoadingView';
 
 const Template: Story<LoadingViewProps> = (args: LoadingViewProps) => <LoadingView {...args} />;
 

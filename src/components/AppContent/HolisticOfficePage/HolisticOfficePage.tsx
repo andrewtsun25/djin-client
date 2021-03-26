@@ -2,7 +2,7 @@ import { Container, Fade, Grow, Link, Typography, useMediaQuery } from '@materia
 import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import { Urls } from 'const/urls';
 import React from 'react';
 import { HolisticOfficeLinkType } from 'types/holisticOffice';

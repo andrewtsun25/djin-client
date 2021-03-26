@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import { BulletPoints, BulletPointsProps } from './BulletPoints';
+import type { BulletPointsProps } from './BulletPoints';
+import { BulletPoints } from './BulletPoints';
 
 const Template: Story<BulletPointsProps> = (args: BulletPointsProps) => <BulletPoints {...args} />;
 

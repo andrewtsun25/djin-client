@@ -1,15 +1,16 @@
 import { useTheme } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { CSSProperties, PropsWithChildren } from 'react';
 
 import backgroundStyles from './Background.styles';
 
 interface BackgroundProps {
-    className?: string;
     imageUrl?: string;
     color?: string;
     tint?: boolean;
+    className?: string;
+    style?: CSSProperties;
 }
 
 const Background: React.FC<BackgroundProps> = ({
@@ -18,6 +19,7 @@ const Background: React.FC<BackgroundProps> = ({
     color,
     children,
     className,
+    style,
 }: PropsWithChildren<BackgroundProps>) => {
     const classes = backgroundStyles();
     const theme = useTheme();
@@ -26,7 +28,7 @@ const Background: React.FC<BackgroundProps> = ({
         <div className={classes.bg} style={{ backgroundImage: `url(${imageUrl})`, backgroundColor: color }}>
             <div
                 className={clsx(classes.colorBg, className)}
-                style={{ backgroundColor: fade(theme.palette.common.black, tintOpacity) }}
+                style={{ backgroundColor: fade(theme.palette.common.black, tintOpacity), ...style }}
             >
                 {children}
             </div>
@@ -34,4 +36,5 @@ const Background: React.FC<BackgroundProps> = ({
     );
 };
 
-export default Background;
+export { Background };
+export type { BackgroundProps };

@@ -7,7 +7,7 @@ import ShopIcon from '@material-ui/icons/Shop';
 import WebIcon from '@material-ui/icons/Web';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import clsx from 'clsx';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import IconLink from 'components/shared/IconLink';
 import { Urls } from 'const/urls';
 import React from 'react';

@@ -1,4 +1,4 @@
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import { Urls } from 'const/urls';
 import React from 'react';
 import { MartialArtsStyleType } from 'types/martialArts';

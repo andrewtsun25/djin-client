@@ -1,7 +1,7 @@
 import { Grow, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import { Urls } from 'const/urls';
 import React from 'react';
 
