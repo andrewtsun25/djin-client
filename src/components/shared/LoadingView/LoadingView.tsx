@@ -24,3 +24,4 @@ const LoadingView: React.FC<LoadingViewProps> = ({ message, className }: Loading
 };
 
 export default LoadingView;
+export type { LoadingViewProps };
