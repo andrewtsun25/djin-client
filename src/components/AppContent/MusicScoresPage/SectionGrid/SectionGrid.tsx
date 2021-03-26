@@ -1,7 +1,7 @@
 import { Zoom } from '@material-ui/core';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import { useInstruments } from 'api/music';
-import ErrorView from 'components/shared/ErrorView';
+import { ErrorView } from 'components/shared';
 import { ResponsiveGrid, ResponsiveGridItem } from 'components/shared/ResponsiveGrid';
 import { isNil, map } from 'lodash';
 import React, { useMemo } from 'react';

@@ -12,7 +12,7 @@ export default {
     argTypes: {
         message: { control: 'text' },
     },
-} as Meta;
+} as Meta<LoadingViewProps>;
 
 export const DefaultView = Template.bind({});
 DefaultView.args = {

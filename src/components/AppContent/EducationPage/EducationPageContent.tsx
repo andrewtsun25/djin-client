@@ -1,6 +1,5 @@
 import { useEducations } from 'api/education';
-import { LoadingView } from 'components/shared';
-import ErrorView from 'components/shared/ErrorView';
+import { ErrorView, LoadingView } from 'components/shared';
 import EduTypeInfos from 'const/eduTypeInfos';
 import { isNil } from 'lodash';
 import React, { useMemo } from 'react';

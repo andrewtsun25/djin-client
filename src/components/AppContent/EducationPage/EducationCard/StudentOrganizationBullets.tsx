@@ -1,7 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { useStudentOrganizations } from 'api/education';
-import { LoadingView } from 'components/shared';
-import ErrorView from 'components/shared/ErrorView';
+import { ErrorView, LoadingView } from 'components/shared';
 import { isNil } from 'lodash';
 import React from 'react';
 import { StudentOrganization } from 'types/education';

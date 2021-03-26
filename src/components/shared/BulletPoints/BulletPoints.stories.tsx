@@ -12,7 +12,7 @@ export default {
     argTypes: {
         points: { control: 'array' },
     },
-} as Meta;
+} as Meta<BulletPointsProps>;
 
 export const DefaultView = Template.bind({});
 DefaultView.args = {

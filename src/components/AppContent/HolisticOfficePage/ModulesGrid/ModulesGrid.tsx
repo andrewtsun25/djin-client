@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core';
 import { useHolisticOfficeModules } from 'api/holisticOffice';
-import ErrorView from 'components/shared/ErrorView';
+import { ErrorView } from 'components/shared';
 import { LoadingView } from 'components/shared/LoadingView';
 import { isNil } from 'lodash';
 import React from 'react';

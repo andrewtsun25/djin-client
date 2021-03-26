@@ -67,7 +67,7 @@ export default {
         color: { control: 'color' },
         tint: { control: 'boolean' },
     },
-} as Meta;
+} as Meta<BackgroundProps>;
 
 export const WithImage = Template.bind({});
 WithImage.args = {

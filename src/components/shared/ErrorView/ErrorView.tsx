@@ -33,4 +33,5 @@ const ErrorView: React.FC<ErrorViewProps> = ({ error, message, className }: Erro
     );
 };
 
-export default ErrorView;
+export { ErrorView };
+export type { ErrorViewProps };
