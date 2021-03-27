@@ -20,4 +20,5 @@ const SkillChips: React.FC<SkillChipsProps> = ({ skills }: SkillChipsProps) => {
     ) : null;
 };
 
-export default SkillChips;
+export { SkillChips };
+export type { SkillChipsProps };

@@ -10,7 +10,7 @@ export default {
     title: 'Shared/Error View',
     component: ErrorView,
     argTypes: {
-        error: { control: Object },
+        error: { control: 'object' },
         message: { control: 'text' },
     },
 } as Meta<ErrorViewProps>;
