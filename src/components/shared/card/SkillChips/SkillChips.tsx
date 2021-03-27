@@ -14,7 +14,7 @@ const SkillChips: React.FC<SkillChipsProps> = ({ skills }: SkillChipsProps) => {
     return isNotNil(skills) && skills.length > 0 ? (
         <div className={classes.skillChipContainer}>
             {skills.map((skill) => (
-                <Chip label={skill} size="small" className={classes.skillChip} key={skill} />
+                <Chip label={skill} size="small" className={classes.skillChip} key={skill} role="skill" />
             ))}
         </div>
     ) : null;
