@@ -9,16 +9,18 @@ interface SkillChipsProps {
     skills: Nilable<string[]>;
 }
 
+const SKILL_CHIP_ROLE = 'skill';
+
 const SkillChips: React.FC<SkillChipsProps> = ({ skills }: SkillChipsProps) => {
     const classes = skillChipsStyles();
     return isNotNil(skills) && skills.length > 0 ? (
         <div className={classes.skillChipContainer}>
             {skills.map((skill) => (
-                <Chip label={skill} size="small" className={classes.skillChip} key={skill} role="skill" />
+                <Chip label={skill} size="small" className={classes.skillChip} key={skill} role={SKILL_CHIP_ROLE} />
             ))}
         </div>
     ) : null;
 };
 
-export { SkillChips };
+export { SKILL_CHIP_ROLE, SkillChips };
 export type { SkillChipsProps };
