@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
@@ -12,9 +13,22 @@ export default {
     argTypes: {
         points: { control: 'array' },
     },
+    decorators: [
+        (StoryComponent): JSX.Element => (
+            <div>
+                <Typography paragraph>If there exists at least one bullet point, it will be shown below: </Typography>
+                <StoryComponent />
+            </div>
+        ),
+    ],
 } as Meta<BulletPointsProps>;
 
-export const DefaultView = Template.bind({});
-DefaultView.args = {
+export const WithBulletPoints = Template.bind({});
+WithBulletPoints.args = {
     points: ['Point 1', 'Point 2', 'Point 3'],
+};
+
+export const WithoutBulletPoints = Template.bind({});
+WithoutBulletPoints.args = {
+    points: [],
 };

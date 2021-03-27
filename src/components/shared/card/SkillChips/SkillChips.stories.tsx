@@ -33,12 +33,7 @@ WithSkills.args = {
     skills: ['Skill 1', 'Skill 2', 'Skill 3'],
 };
 
-export const WithEmptySkills = Template.bind({});
-WithEmptySkills.args = {
+export const WithoutSkills = Template.bind({});
+WithoutSkills.args = {
     skills: [],
-};
-
-export const WithNullSkills = Template.bind({});
-WithNullSkills.args = {
-    skills: null,
 };
