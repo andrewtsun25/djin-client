@@ -8,7 +8,7 @@ import { SkillChips } from './SkillChips';
 const Template: Story<SkillChipsProps> = (args: SkillChipsProps) => <SkillChips {...args} />;
 
 export default {
-    title: 'Shared/Skill Chips',
+    title: 'Shared/Card/Skill Chips',
     component: SkillChips,
     argTypes: {
         skills: { control: 'array' },

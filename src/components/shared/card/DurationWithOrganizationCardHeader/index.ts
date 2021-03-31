@@ -1,3 +1,3 @@
-import DurationWithOrganizationCardHeader from './DurationWithOrganizationCardHeader';
+import { DurationWithOrganizationCardHeader } from './DurationWithOrganizationCardHeader';
 
-export default DurationWithOrganizationCardHeader;
+export { DurationWithOrganizationCardHeader };

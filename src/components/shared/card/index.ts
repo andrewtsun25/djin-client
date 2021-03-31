@@ -1,4 +1,4 @@
-import DurationWithOrganizationCardHeader from './DurationWithOrganizationCardHeader';
+import { DurationWithOrganizationCardHeader } from './DurationWithOrganizationCardHeader';
 import { SkillChips } from './SkillChips';
 
 export { DurationWithOrganizationCardHeader, SkillChips };
