@@ -66,6 +66,8 @@ export default {
         imageUrl: { control: 'text' },
         color: { control: 'color' },
         tint: { control: 'boolean' },
+        className: { table: { disable: true } },
+        style: { table: { disable: true } },
     },
 } as Meta<BackgroundProps>;
 

@@ -1,3 +1,3 @@
-import IconLink from './IconLink';
+import { IconLink } from './IconLink';
 
-export default IconLink;
+export { IconLink };

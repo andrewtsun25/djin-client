@@ -12,6 +12,8 @@ export default {
     component: BulletPoints,
     argTypes: {
         points: { control: 'array' },
+        className: { table: { disable: true } },
+        style: { table: { disable: true } },
     },
     decorators: [
         (StoryComponent): JSX.Element => (

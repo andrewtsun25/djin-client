@@ -11,6 +11,8 @@ export default {
     component: LoadingView,
     argTypes: {
         message: { control: 'text' },
+        className: { table: { disable: true } },
+        style: { table: { disable: true } },
     },
 } as Meta<LoadingViewProps>;
 

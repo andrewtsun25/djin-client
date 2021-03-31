@@ -12,6 +12,8 @@ export default {
     argTypes: {
         error: { control: 'object' },
         message: { control: 'text' },
+        className: { table: { disable: true } },
+        style: { table: { disable: true } },
     },
 } as Meta<ErrorViewProps>;
 
