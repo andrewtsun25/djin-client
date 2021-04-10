@@ -1,3 +1,3 @@
-import ModulesGrid from './ModulesGrid';
+import { ModulesGrid } from './ModulesGrid';
 
 export { ModulesGrid };
