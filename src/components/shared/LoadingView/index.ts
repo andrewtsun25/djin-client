@@ -1,3 +1,3 @@
-import LoadingView from './LoadingView';
+import { LoadingView } from './LoadingView';
 
-export default LoadingView;
+export { LoadingView };

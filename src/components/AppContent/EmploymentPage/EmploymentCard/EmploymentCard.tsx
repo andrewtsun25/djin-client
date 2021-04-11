@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Chip, Grid, Grow, Typography } from '@material-ui/core';
 import { useOrganization } from 'api/shared';
-import BulletPoints from 'components/shared/BulletPoints';
+import { BulletPoints } from 'components/shared';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import React from 'react';
 import { Employment } from 'types/employment';

@@ -1,0 +1,6 @@
+# Build directory
+build/**/*
+
+# Storybook
+src/stories/**/*
+storybook-static/**/*

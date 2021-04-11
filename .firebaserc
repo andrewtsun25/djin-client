@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "djin-dev"
+  },
+  "targets": {
+    "djin-dev": {
+      "hosting": {
+        "app": [
+          "djin-dev"
+        ],
+        "storybook": [
+          "storybook-djin-dev"
+        ]
+      }
+    }
   }
 }

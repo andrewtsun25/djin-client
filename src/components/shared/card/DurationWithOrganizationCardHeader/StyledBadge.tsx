@@ -1,12 +1,13 @@
 import { Badge, createStyles, withStyles } from '@material-ui/core';
 import { Theme } from '@material-ui/core/styles';
 
+const activeColor = '#44b700';
 // Borrowed from: https://material-ui.com/components/avatars/#with-badge
 const StyledBadge = withStyles((theme: Theme) =>
     createStyles({
         badge: {
-            backgroundColor: '#44b700',
-            color: '#44b700',
+            backgroundColor: activeColor,
+            color: activeColor,
             boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
             '&::after': {
                 position: 'absolute',

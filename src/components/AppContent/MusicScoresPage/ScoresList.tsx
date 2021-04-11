@@ -1,6 +1,5 @@
 import { useMusicScores } from 'api/music';
-import ErrorView from 'components/shared/ErrorView';
-import LoadingView from 'components/shared/LoadingView';
+import { ErrorView, LoadingView } from 'components/shared';
 import { isNil } from 'lodash';
 import React from 'react';
 import { isNotNil } from 'utils/general';

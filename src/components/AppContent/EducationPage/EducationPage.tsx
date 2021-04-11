@@ -1,5 +1,5 @@
 import { Container, Typography } from '@material-ui/core';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import EduTypeInfos from 'const/eduTypeInfos';
 import React, { useMemo } from 'react';
 import { EduType, EduTypeInfo } from 'types/education';

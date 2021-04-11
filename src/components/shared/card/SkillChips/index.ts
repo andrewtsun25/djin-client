@@ -1,3 +1,3 @@
-import SkillChips from './SkillChips';
+import { SkillChips } from './SkillChips';
 
-export default SkillChips;
+export { SkillChips };

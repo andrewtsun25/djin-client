@@ -1,6 +1,6 @@
 import { Link, Typography } from '@material-ui/core';
 import clsx from 'clsx';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import { Urls } from 'const/urls';
 import React from 'react';
 

@@ -2,9 +2,9 @@ import { Card, CardContent, CardMedia, Grid, Grow, Typography } from '@material-
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
 import { useOrganization } from 'api/shared';
-import BulletPoints from 'components/shared/BulletPoints';
+import { IconLink } from 'components/shared';
+import { BulletPoints } from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
-import IconLink from 'components/shared/IconLink';
 import { map } from 'lodash';
 import React from 'react';
 import { Project } from 'types/project';

@@ -2,14 +2,14 @@ import { Container, Fade, Grow, Link, Typography, useMediaQuery } from '@materia
 import { useTheme } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
 import FolderSpecialIcon from '@material-ui/icons/FolderSpecial';
-import Background from 'components/shared/Background';
+import { Background } from 'components/shared';
 import { Urls } from 'const/urls';
 import React from 'react';
 import { HolisticOfficeLinkType } from 'types/holisticOffice';
 
 import holisticOfficePageStyles from './HolisticOfficePage.styles';
 import LinkSection from './LinkSection';
-import ModulesGrid from './ModulesGrid';
+import { ModulesGrid } from './ModulesGrid';
 
 const logo = `${Urls.AssetRoot}/holisticOffice/logo/holistic_office_logo.png`;
 const websiteImg = `${Urls.AssetRoot}/holisticOffice/img/holistic_office_website.png`;

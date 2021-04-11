@@ -11,6 +11,11 @@ application is hosted on Firebase as such:
 - Assets for the client application (images, documents, etc.) are stored via Firebase Cloud Storage.
 - Data that this application requires is stored directly into Firestore, a No-SQL Document/Collection database.
 
+### Preview Components
+
+Components used to create this website can be previewable via [https://storybook.djin.dev](https://storybook.djin.dev) (not linked yet). You can run a local 
+build to preview `djin`'s components on your computer via `yarn storybook`. 
+
 ### CI/CD
 
 Upon creating a pull request, a preview build is automatically created such that the application 
@@ -61,7 +66,7 @@ Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`djin` is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
@@ -69,6 +74,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 Runs all the necessary steps to create a production build in a deployment environment sequentially. First, 
 dependencies are `install`ed, then the code is `lint`ed, `test`s are run, and the code is `built`. Failure at 
 any point will result in failure of the entire build, preventing faulty code from being deployed.
+
+### `yarn storybook`
+Creates a local Storybook build that can be used to view and examine individual components.
+
+### `yarn build-storybook`
+Creates a production-ready Storybook build that can be hosted on a server.
 
 ### `yarn eject`
 
@@ -80,8 +91,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Additional Resources
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Language: [TypeScript](https://www.typescriptlang.org/)
+- Framework: [React](https://reactjs.org/)
+- Bootstrapping: [Create React App](https://facebook.github.io/create-react-app/docs/getting-started)
+- Cloud Infrastructure: [Firebase](https://firebase.google.com/)
+- UI Components: [Material-UI](https://material-ui.com/) 
+- Preview Components: [Storybook](https://https://storybook.js.org/)

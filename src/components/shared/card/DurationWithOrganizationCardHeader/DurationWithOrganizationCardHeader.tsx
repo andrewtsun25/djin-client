@@ -14,6 +14,8 @@ interface DurationWithOrganizationCardHeaderProps {
     logoUrl?: string;
 }
 
+const CURRENT_BADGE_TEST_ID = 'Current Badge';
+
 const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardHeaderProps> = ({
     title,
     subtitle,
@@ -38,6 +40,7 @@ const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardH
                 horizontal: 'right',
             }}
             variant="dot"
+            data-testid={CURRENT_BADGE_TEST_ID}
         >
             {baseAvatar}
         </StyledBadge>
@@ -45,4 +48,5 @@ const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardH
     return <CardHeader title={title} subheader={subheader} avatar={avatar} />;
 };
 
-export default DurationWithOrganizationCardHeader;
+export { CURRENT_BADGE_TEST_ID, DurationWithOrganizationCardHeader };
+export type { DurationWithOrganizationCardHeaderProps };
