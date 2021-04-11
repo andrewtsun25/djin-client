@@ -8,10 +8,10 @@ name: Deploy to Firebase Hosting on merge
       - master
 jobs:
   deploy_app:
-    name: Build and deploy app
+    name: Deploy app
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code from master branch
+      - name: Check out latest code from master branch
         uses: actions/checkout@v2
 
       - name: Install dependencies
@@ -37,9 +37,10 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
   deploy_storybook:
+    name: Deploy Storybook static site
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code from master branch
+      - name: Check out latest code from master branch
         uses: actions/checkout@v2
 
       - name: Install dependencies
