@@ -32,3 +32,6 @@ yarn-error.log*
 # Firebase
 .firebase/**/*
 firebase-debug.log*
+
+# Storybook
+storybook-static/
