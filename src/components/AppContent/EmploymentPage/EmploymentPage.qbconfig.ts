@@ -1,4 +1,5 @@
-import { BasicConfig, Config, Fields } from 'react-awesome-query-builder';
+import { Config, Fields } from 'react-awesome-query-builder';
+import MaterialConfig from 'react-awesome-query-builder/lib/config/material';
 import JobType from 'types/employment/JobType';
 
 const fields: Fields = {
@@ -12,7 +13,7 @@ const fields: Fields = {
     },
     endDate: {
         type: 'date',
-        label: 'Job Responsibilities',
+        label: 'End Date',
     },
     description: {
         type: 'text',
@@ -31,7 +32,7 @@ const fields: Fields = {
         label: 'Domains (e.g. Defense, Entertainment, etc.)',
     },
     jobType: {
-        type: 'multiselect',
+        type: 'select',
         label: 'Job Type',
         listValues: [
             { value: JobType.FullTime, title: 'Full-Time' },
@@ -41,7 +42,7 @@ const fields: Fields = {
 };
 
 const config: Config = {
-    ...BasicConfig,
+    ...(MaterialConfig as Config),
     fields,
 };
 

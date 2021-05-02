@@ -1,4 +1,6 @@
-import { Config, ImmutableTree, JsonTree, Utils as QbUtils } from 'react-awesome-query-builder';
+import { RulesLogic } from 'json-logic-js';
+import { isNil } from 'lodash';
+import { Config, ImmutableTree, JsonLogicTree, JsonTree, Utils as QbUtils } from 'react-awesome-query-builder';
 
 const defaultQueryValue: JsonTree = { id: QbUtils.uuid(), type: 'group' };
 
@@ -8,4 +10,19 @@ const defaultQueryValue: JsonTree = { id: QbUtils.uuid(), type: 'group' };
  */
 export function createDefaultTreeForConfig(config: Config): ImmutableTree {
     return QbUtils.checkTree(QbUtils.loadTree(defaultQueryValue), config);
+}
+
+export function exportTree(qbTree: ImmutableTree, config: Config): RulesLogic {
+    const { logic, errors } = QbUtils.jsonLogicFormat(qbTree, config);
+    if (!isNil(errors) && errors.length > 0) {
+        throw new Error(errors.join(', '));
+    }
+    if (isNil(logic)) {
+        throw new Error('JsonLogic rules for the supplied query builder tree does not exist.');
+    }
+    return logic as RulesLogic;
+}
+
+export function importTree(logicTree: JsonLogicTree, config: Config): ImmutableTree {
+    return QbUtils.loadFromJsonLogic(logicTree, config);
 }
