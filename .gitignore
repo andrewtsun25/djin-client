@@ -27,11 +27,11 @@ yarn-error.log*
 
 # IntelliJ Idea
 *.idea
-.idea/*
+.idea/
 
 # Firebase
-.firebase/**/*
+/.firebase
 firebase-debug.log*
 
 # Storybook
-storybook-static/
+/storybook-static
