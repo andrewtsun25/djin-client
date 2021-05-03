@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const employmentCardGridStyles = makeStyles(() =>
+const queryFilterStyles = makeStyles(() =>
     createStyles({
         filterButtonsRow: {
             display: 'flex',
@@ -12,4 +12,5 @@ const employmentCardGridStyles = makeStyles(() =>
         },
     }),
 );
-export default employmentCardGridStyles;
+
+export default queryFilterStyles;
