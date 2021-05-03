@@ -5,7 +5,8 @@ import { MuiThemeProvider } from '@material-ui/core';
 import { FuegoProvider } from '@nandorojo/swr-firestore';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { QueryParamProvider } from 'use-query-params';
 
 import { fuego } from './api/fuego';
 import App from './components';
@@ -17,7 +18,9 @@ ReactDOM.render(
         <Router>
             <MuiThemeProvider theme={djinTheme}>
                 <FuegoProvider fuego={fuego}>
-                    <App />
+                    <QueryParamProvider ReactRouterRoute={Route}>
+                        <App />
+                    </QueryParamProvider>
                 </FuegoProvider>
             </MuiThemeProvider>
         </Router>

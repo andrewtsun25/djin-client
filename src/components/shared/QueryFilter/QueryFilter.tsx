@@ -2,8 +2,11 @@ import { Button } from '@material-ui/core';
 import { Clear, Input } from '@material-ui/icons';
 import React, { useState } from 'react';
 import { Builder, BuilderProps, Config, Query } from 'react-awesome-query-builder';
+import { JsonLogicTreeParam } from 'types/queryParams';
+import { useQueryParam } from 'use-query-params';
+import { isNotNil } from 'utils/general';
 import jsonLogic from 'utils/jsonLogic';
-import { createDefaultTreeForConfig, exportTree } from 'utils/qb';
+import { createDefaultTreeForConfig, exportTree, importTree } from 'utils/qb';
 
 import queryFilterStyles from './QueryFilter.styles';
 
@@ -24,19 +27,22 @@ const renderBuilder = (props: BuilderProps): JSX.Element => (
 
 function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: QueryFilterProps<T>): JSX.Element {
     const classes = queryFilterStyles();
+    const [filter, setFilter] = useQueryParam('filter', JsonLogicTreeParam);
     const defaultTree = createDefaultTreeForConfig(config);
-    const [tree, setTree] = useState(defaultTree);
+    const [tree, setTree] = useState(isNotNil(filter) ? importTree(filter, config) : defaultTree);
     const applyFilter = (): void => {
         if (tree === defaultTree) {
             return;
         }
         const logicTree = exportTree(tree, config);
+        setFilter(logicTree);
         const filteredCollection = collection.filter((item) => jsonLogic.apply(logicTree, item));
         onApplyFilter(filteredCollection);
     };
 
     const clearFilter = (): void => {
         setTree(defaultTree);
+        setFilter(undefined);
         onClearFilter();
     };
     return (

@@ -1,7 +1,6 @@
 import * as jsLogic from 'json-logic-js';
 import { isNil } from 'lodash';
-
-import { Nilable } from '../types/alias';
+import { Nilable } from 'types/alias';
 
 function inIgnoresCase(subStr: Nilable<string>, searchStr: Nilable<string>): boolean {
     if (isNil(subStr) || isNil(searchStr)) {
