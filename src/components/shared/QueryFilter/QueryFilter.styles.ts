@@ -10,6 +10,18 @@ const queryFilterStyles = makeStyles(() =>
         filterButton: {
             margin: '0 5px',
         },
+        applyFilterButton: {
+            backgroundColor: '#3DCC91',
+            '&:hover': {
+                backgroundColor: '#0F9960',
+            },
+        },
+        clearFilterButton: {
+            backgroundColor: '#FF7373',
+            '&:hover': {
+                backgroundColor: '#DB3737',
+            },
+        },
     }),
 );
 

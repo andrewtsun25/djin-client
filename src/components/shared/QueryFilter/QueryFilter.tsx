@@ -1,5 +1,7 @@
 import { Button } from '@material-ui/core';
 import { Clear, Input } from '@material-ui/icons';
+import clsx from 'clsx';
+import { isNil } from 'lodash';
 import React, { useState } from 'react';
 import { Builder, BuilderProps, Config, Query } from 'react-awesome-query-builder';
 import { JsonLogicTreeParam } from 'types/queryParams';
@@ -35,6 +37,9 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
             return;
         }
         const logicTree = exportTree(tree, config);
+        if (isNil(logicTree)) {
+            return;
+        }
         setFilter(logicTree);
         const filteredCollection = collection.filter((item) => jsonLogic.apply(logicTree, item));
         onApplyFilter(filteredCollection);
@@ -49,10 +54,20 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
         <>
             <Query {...config} value={tree} onChange={setTree} renderBuilder={renderBuilder} />
             <div className={classes.filterButtonsRow}>
-                <Button variant="contained" className={classes.filterButton} onClick={applyFilter} endIcon={<Input />}>
+                <Button
+                    variant="contained"
+                    className={clsx(classes.filterButton, classes.applyFilterButton)}
+                    onClick={applyFilter}
+                    endIcon={<Input />}
+                >
                     Apply Filter
                 </Button>
-                <Button variant="contained" className={classes.filterButton} onClick={clearFilter} endIcon={<Clear />}>
+                <Button
+                    variant="contained"
+                    className={clsx(classes.filterButton, classes.clearFilterButton)}
+                    onClick={clearFilter}
+                    endIcon={<Clear />}
+                >
                     Clear
                 </Button>
             </div>
@@ -61,3 +76,4 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
 }
 
 export { QueryFilter };
+export type { QueryFilterProps };

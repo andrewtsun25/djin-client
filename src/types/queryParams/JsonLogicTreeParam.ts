@@ -2,7 +2,7 @@ import { JsonLogicTree } from 'react-awesome-query-builder';
 import { decodeJson, encodeJson, QueryParamConfig } from 'serialize-query-params';
 import { Nilable } from 'types/alias';
 
-/** Uses a comma to delimit entries. e.g. ['a', 'b'] => qp?=a,b */
+/* Deserializes/Serializes into a tree parsable by JsonLogic */
 const JsonLogicTreeParam: QueryParamConfig<Nilable<JsonLogicTree>> = {
     encode: (jsonLogicTree: Nilable<JsonLogicTree>): Nilable<string> => encodeJson(jsonLogicTree),
     decode: (jsonLogicTreeStr: (string | null)[] | Nilable<string>): Nilable<JsonLogicTree> =>

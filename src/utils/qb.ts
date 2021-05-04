@@ -12,17 +12,21 @@ export function createDefaultTreeForConfig(config: Config): ImmutableTree {
     return QbUtils.checkTree(QbUtils.loadTree(defaultQueryValue), config);
 }
 
-export function exportTree(qbTree: ImmutableTree, config: Config): RulesLogic {
+export function exportTree(qbTree: ImmutableTree, config: Config): RulesLogic | undefined {
     const { logic, errors } = QbUtils.jsonLogicFormat(qbTree, config);
     if (!isNil(errors) && errors.length > 0) {
         throw new Error(errors.join(', '));
     }
     if (isNil(logic)) {
-        throw new Error('JsonLogic rules for the supplied query builder tree does not exist.');
+        return logic;
     }
     return logic as RulesLogic;
 }
 
 export function importTree(logicTree: JsonLogicTree, config: Config): ImmutableTree {
     return QbUtils.loadFromJsonLogic(logicTree, config);
+}
+
+export function isValidTree(qbTree: ImmutableTree): boolean {
+    return QbUtils.isValidTree(qbTree);
 }
