@@ -9,7 +9,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import CodeIcon from '@material-ui/icons/Code';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import DescriptionIcon from '@material-ui/icons/Description';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -20,6 +19,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import SportsMmaIcon from '@material-ui/icons/SportsMma';
 import WorkIcon from '@material-ui/icons/Work';
+import { FistIcon, KatanaIcon, MusicScoreIcon, StorybookIcon, TaekwondoIcon } from 'components/icons';
 import React from 'react';
 
 import appDrawerStyles from './AppDrawer.styles';
@@ -88,7 +88,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                 <NestedList icon={<MusicNoteIcon />} text="Music">
                     <ListItemInternalLink icon={<SchoolIcon />} text="Education" to="/music/education" nested />
                     <ListItemInternalLink icon={<AlbumIcon />} text="EDM" to="/music/edm" nested />
-                    <ListItemInternalLink icon={<DescriptionIcon />} text="Classical Music" to="/music/scores" nested />
+                    <ListItemInternalLink icon={<MusicScoreIcon />} text="Classical Music" to="/music/scores" nested />
                     <ListItemExternalLink
                         icon={<HeadsetIcon />}
                         text="SoundCloud"
@@ -98,19 +98,19 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                 </NestedList>
                 <NestedList icon={<SportsMmaIcon />} text="Martial Arts">
                     <ListItemInternalLink
-                        icon={<SportsMmaIcon />}
+                        icon={<FistIcon />}
                         text="ITF Taekwondo"
                         to="/martialArts/itfTaekwondo"
                         nested
                     />
                     <ListItemInternalLink
-                        icon={<SportsMmaIcon />}
+                        icon={<TaekwondoIcon />}
                         text="WT Taekwondo"
                         to="/martialArts/wtTaekwondo"
                         nested
                     />
                     <ListItemInternalLink
-                        icon={<SportsMmaIcon />}
+                        icon={<KatanaIcon />}
                         text="Haidong Gumdo"
                         to="/martialArts/haidongGumdo"
                         nested
@@ -122,6 +122,12 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ closeAppDrawer, isAppDrawerOpen }
                         icon={<ContactMailIcon />}
                         text="Contact"
                         href="mailto:djtaeyong@gmail.com"
+                        nested
+                    />
+                    <ListItemExternalLink
+                        icon={<StorybookIcon />}
+                        text="Site Storybook"
+                        href="https://storybook.djin.dev"
                         nested
                     />
                 </List>

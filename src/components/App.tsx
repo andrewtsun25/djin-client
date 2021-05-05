@@ -1,3 +1,5 @@
+import 'react-awesome-query-builder/lib/css/styles.css';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import React, { useState } from 'react';
 
