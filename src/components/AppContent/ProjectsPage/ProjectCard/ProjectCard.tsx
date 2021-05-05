@@ -2,6 +2,7 @@ import { Card, CardContent, CardMedia, Grid, Grow, Typography } from '@material-
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
 import { useOrganization } from 'api/shared';
+import { StorybookIcon } from 'components/icons';
 import { IconLink } from 'components/shared';
 import { BulletPoints } from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
@@ -46,7 +47,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <CardContent>
                         {projectUrls &&
                             map(projectUrls, (url: string, urlName: string) => {
-                                const icon = urlName === 'Source Code' ? <GitHubIcon /> : <LinkIcon />;
+                                let icon: JSX.Element;
+                                switch (urlName) {
+                                    case 'Source Code':
+                                        icon = <GitHubIcon />;
+                                        break;
+                                    case 'Storybook':
+                                        icon = <StorybookIcon />;
+                                        break;
+                                    default:
+                                        icon = <LinkIcon />;
+                                }
                                 return <IconLink key={urlName} href={url} text={urlName} icon={icon} />;
                             })}
                         {disclaimer && (

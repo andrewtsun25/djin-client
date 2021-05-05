@@ -7,7 +7,7 @@ import React from 'react';
 
 import homePageStyles from './HomePage.styles';
 
-const homeBg = `${Urls.AssetRoot}/home/bg/huntington_beach_bg.jpg`;
+const homeBg = `${Urls.AssetRoot}/home/bg/starry_night_bg.jpg`;
 
 const HomePage: React.FC = () => {
     const classes = homePageStyles();
