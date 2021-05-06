@@ -7,7 +7,7 @@ import { Builder, BuilderProps, Config, Query } from 'react-awesome-query-builde
 import { JsonLogicTreeParam } from 'types/queryParams';
 import { useQueryParam } from 'use-query-params';
 import { isNotNil } from 'utils/general';
-import jsonLogic from 'utils/jsonLogic';
+import { filterCollectionWithLogicTree } from 'utils/jsonLogicUtils';
 import { createDefaultTreeForConfig, exportTree, importTree } from 'utils/qb';
 
 import queryFilterStyles from './QueryFilter.styles';
@@ -41,7 +41,7 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
             return;
         }
         setFilter(logicTree);
-        const filteredCollection = collection.filter((item) => jsonLogic.apply(logicTree, item));
+        const filteredCollection = filterCollectionWithLogicTree(collection, logicTree);
         onApplyFilter(filteredCollection);
     };
 
