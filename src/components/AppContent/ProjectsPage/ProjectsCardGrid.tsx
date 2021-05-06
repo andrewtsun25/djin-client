@@ -1,5 +1,4 @@
 import { Grid } from '@material-ui/core';
-import { Document } from '@nandorojo/swr-firestore';
 import { useProjects } from 'api/projects';
 import { ErrorView, LoadingView } from 'components/shared';
 import { QueryFilter } from 'components/shared/QueryFilter';
@@ -14,7 +13,7 @@ import config from './ProjectsPage.qbconfig';
 const ProjectsCardGrid: React.FC = () => {
     const { projects, error } = useProjects();
 
-    const [filteredProjects, setFilteredProjects] = useState<Document<Project>[]>([]);
+    const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
     const [initialized, setInitialized] = useState(false);
 
     // Initialize filtered employments to true once loaded
@@ -36,7 +35,7 @@ const ProjectsCardGrid: React.FC = () => {
     }
 
     // Success state
-    const handleApplyFilter = (newFilteredProjects: Document<Project>[]): void => {
+    const handleApplyFilter = (newFilteredProjects: Project[]): void => {
         setFilteredProjects(newFilteredProjects);
     };
 
