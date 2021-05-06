@@ -1,28 +1,34 @@
 import { Grid } from '@material-ui/core';
-import { Document } from '@nandorojo/swr-firestore';
 import { useEmployments } from 'api/employment';
 import { ErrorView, LoadingView } from 'components/shared';
 import { QueryFilter } from 'components/shared/QueryFilter';
+import { RulesLogic } from 'json-logic-js';
 import { isNil } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { Employment } from 'types/employment';
+import { JsonLogicTreeParam } from 'types/queryParams';
+import { useQueryParam } from 'use-query-params';
 import { isNotNil } from 'utils/general';
+import { filterCollectionWithLogicTree } from 'utils/jsonLogicUtils';
 
 import EmploymentCard from './EmploymentCard';
 import config from './EmploymentPage.qbconfig';
 
 const EmploymentCardGrid: React.FC = () => {
+    const [filter] = useQueryParam('filter', JsonLogicTreeParam);
     const { employments, error } = useEmployments();
-    const [filteredEmployments, setFilteredEmployments] = useState<Document<Employment>[]>([]);
+    const [filteredEmployments, setFilteredEmployments] = useState<Employment[]>([]);
     const [initialized, setInitialized] = useState(false);
 
     // Initialize filtered employments to true once loaded
     useEffect(() => {
         if (isNotNil(employments) && !initialized) {
-            setFilteredEmployments(employments);
+            setFilteredEmployments(
+                isNotNil(filter) ? filterCollectionWithLogicTree(employments, filter as RulesLogic) : employments,
+            );
             setInitialized(true);
         }
-    }, [initialized, employments]);
+    }, [initialized, employments, filter]);
 
     // Error state
     if (isNotNil(error)) {
@@ -34,7 +40,7 @@ const EmploymentCardGrid: React.FC = () => {
         return <LoadingView message="Loading employment information..." />;
     }
 
-    const handleApplyFilter = (newFilteredEmployments: Document<Employment>[]): void => {
+    const handleApplyFilter = (newFilteredEmployments: Employment[]): void => {
         setFilteredEmployments(newFilteredEmployments);
     };
 

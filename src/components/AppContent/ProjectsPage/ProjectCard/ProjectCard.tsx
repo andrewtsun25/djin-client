@@ -8,12 +8,12 @@ import { BulletPoints } from 'components/shared/BulletPoints';
 import { DurationWithOrganizationCardHeader, SkillChips } from 'components/shared/card';
 import { map } from 'lodash';
 import React from 'react';
-import { ProjectResponse } from 'types/project';
+import { Project } from 'types/project';
 
 import projectCardStyles from './ProjectCard.styles';
 
 interface ProjectCardProps {
-    project: ProjectResponse;
+    project: Project;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({

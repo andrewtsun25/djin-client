@@ -32,6 +32,7 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
     const [filter, setFilter] = useQueryParam('filter', JsonLogicTreeParam);
     const defaultTree = createDefaultTreeForConfig(config);
     const [tree, setTree] = useState(isNotNil(filter) ? importTree(filter, config) : defaultTree);
+
     const applyFilter = (): void => {
         if (tree === defaultTree) {
             return;

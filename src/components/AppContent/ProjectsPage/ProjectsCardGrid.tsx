@@ -9,8 +9,8 @@ import { Project } from 'types/project';
 import { JsonLogicTreeParam } from 'types/queryParams';
 import { useQueryParam } from 'use-query-params';
 import { isNotNil } from 'utils/general';
+import { filterCollectionWithLogicTree } from 'utils/jsonLogicUtils';
 
-import { filterCollectionWithLogicTree } from '../../../utils/jsonLogicUtils';
 import ProjectCard from './ProjectCard';
 import config from './ProjectsPage.qbconfig';
 

@@ -1,10 +1,9 @@
 import { useCollection } from '@nandorojo/swr-firestore';
+import useOrganizationNameMapping from 'api/shared/useOrganizationNameMapping';
 import Collections from 'const/collections';
 import { Nilable } from 'types/alias';
 import { Project, ProjectResponse } from 'types/project';
 import { isNotNil } from 'utils/general';
-
-import useOrganizationNameMapping from '../shared/useOrganizationNameMapping';
 
 type useProjectsResponse = { projects: Nilable<Project[]>; error: Error };
 
@@ -14,13 +13,14 @@ export default function useProjects(): useProjectsResponse {
         orderBy: ['startDate', 'desc'],
     });
     const { organizationNameMapping, error: orgNameMappingError } = useOrganizationNameMapping();
-    const projectsResponses = isNotNil(data) ? data.filter((project) => project.exists) : data;
     const projects: Nilable<Project[]> =
-        isNotNil(projectsResponses) && isNotNil(organizationNameMapping)
-            ? projectsResponses.map((projectResponse) => ({
-                  ...projectResponse,
-                  organizationName: organizationNameMapping.get(projectResponse.organization.id),
-              }))
+        isNotNil(data) && isNotNil(organizationNameMapping)
+            ? data
+                  .filter((project) => project.exists)
+                  .map((project) => ({
+                      ...project,
+                      organizationName: organizationNameMapping.get(project.organization.id),
+                  }))
             : undefined;
-    return { projects, error: (projectsError as Error) || (orgNameMappingError as Error) };
+    return { projects, error: (projectsError as Error) || (orgNameMappingError as Error) || undefined };
 }

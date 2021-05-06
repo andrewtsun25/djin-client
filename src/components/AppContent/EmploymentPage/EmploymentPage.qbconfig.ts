@@ -3,6 +3,10 @@ import MaterialConfig from 'react-awesome-query-builder/lib/config/material';
 import JobType from 'types/employment/JobType';
 
 const fields: Fields = {
+    organizationName: {
+        type: 'text',
+        label: 'Company',
+    },
     role: {
         type: 'text',
         label: 'Role',
