@@ -24,13 +24,15 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
         responsibilities,
         skills,
         jobType,
+        organizationName,
     },
 }: EmploymentCardProps) => {
     const classes = employmentCardStyles();
     const organization = useOrganization(organizationRef);
     const projectQueryJsonLogic: RulesLogic = {
-        and: [{ '==': [{ var: 'organizationName' }, organization.isPresent ? organization.name : ''] }],
+        and: [{ '==': [{ var: 'organizationName' }, organizationName] }],
     };
+    const projectQueryJsonLogicString = encodeURIComponent(JSON.stringify(projectQueryJsonLogic));
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
             <Grow in>
@@ -48,7 +50,7 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
                         <IconLink
                             icon={<AppsIcon />}
                             text="Projects"
-                            href={`/coding/projects?filter=${JSON.stringify(projectQueryJsonLogic)}`}
+                            href={`/coding/projects?filter=${projectQueryJsonLogicString}`}
                             target="_self"
                             internal
                         />

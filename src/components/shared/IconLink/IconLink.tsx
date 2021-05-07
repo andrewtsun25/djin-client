@@ -30,7 +30,7 @@ const IconLink: React.FC<IconLinkProps> = ({
     return internal ? (
         <InternalLink
             to={href || 'about:blank'}
-            className={clsx(classes.link, className)}
+            className={clsx(classes.internalLink, className)}
             style={style}
             target={target}
             rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const IconLink: React.FC<IconLinkProps> = ({
     ) : (
         <ExternalLink
             href={href}
-            className={clsx(classes.link, className)}
+            className={clsx(classes.externalLink, className)}
             style={style}
             target="_blank"
             rel="noopener noreferrer"
