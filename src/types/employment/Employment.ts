@@ -1,19 +1,5 @@
-import firebase from 'firebase';
+import { EmploymentResponse } from './EmploymentResponse';
 
-import JobType from './JobType';
-
-type DocumentReference = firebase.firestore.DocumentReference;
-
-export interface Employment {
-    organization: DocumentReference;
-    mediaUrl: string;
-    role: string;
-    startDate: Date;
-    endDate?: Date;
-    description: string;
-    responsibilities: string[];
-    skills: string[];
-    skillTypes: string[];
-    domains: string[];
-    jobType: JobType;
+export interface Employment extends EmploymentResponse {
+    organizationName?: string;
 }

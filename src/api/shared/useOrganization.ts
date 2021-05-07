@@ -6,16 +6,22 @@ import { isNotNil } from 'utils/general';
 
 type DocumentReference = firebase.firestore.DocumentReference;
 
+const OrganizationLoadingState = {
+    UNAVAILABLE: 'Organization unavailable',
+    LOADING: 'Loading organization...',
+    UNKNOWN: 'Unknown Organization',
+};
+
 export default function useOrganization(organizationRef: DocumentReference): Organization {
     const { data, error } = useDocument<Organization>(organizationRef.path);
 
     const name: string = isNotNil(error)
-        ? 'Organization unavailable'
+        ? OrganizationLoadingState.UNAVAILABLE
         : isNil(data)
-        ? 'Loading organization...'
+        ? OrganizationLoadingState.LOADING
         : data.exists
         ? data.name
-        : 'Unknown Organization';
+        : OrganizationLoadingState.UNKNOWN;
     const logoUrl = data?.exists ? data.logoUrl : undefined;
 
     return {

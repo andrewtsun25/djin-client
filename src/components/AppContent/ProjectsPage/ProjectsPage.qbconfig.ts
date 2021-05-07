@@ -34,6 +34,10 @@ const fields: Fields = {
         type: 'text',
         label: 'Skill Types',
     },
+    organizationName: {
+        type: 'text',
+        label: 'Organization',
+    },
 };
 
 const config: Config = {
