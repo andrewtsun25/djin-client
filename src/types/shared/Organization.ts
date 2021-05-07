@@ -1,5 +1,4 @@
-import { OrganizationResponse } from './OrganizationResponse';
-
-export interface Organization extends OrganizationResponse {
-    isPresent: boolean;
+export interface Organization {
+    name: string;
+    logoUrl: string | undefined;
 }

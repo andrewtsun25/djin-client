@@ -1,7 +1,7 @@
 import { useDocument } from '@nandorojo/swr-firestore';
 import firebase from 'firebase';
 import { isNil } from 'lodash';
-import { Organization, OrganizationResponse } from 'types/shared';
+import { Organization } from 'types/shared';
 import { isNotNil } from 'utils/general';
 
 type DocumentReference = firebase.firestore.DocumentReference;
@@ -13,7 +13,7 @@ const OrganizationLoadingState = {
 };
 
 export default function useOrganization(organizationRef: DocumentReference): Organization {
-    const { data, error } = useDocument<OrganizationResponse>(organizationRef.path);
+    const { data, error } = useDocument<Organization>(organizationRef.path);
 
     const name: string = isNotNil(error)
         ? OrganizationLoadingState.UNAVAILABLE
@@ -27,6 +27,5 @@ export default function useOrganization(organizationRef: DocumentReference): Org
     return {
         name,
         logoUrl,
-        isPresent: data?.exists ? !Object.values(OrganizationLoadingState).includes(name) : false,
     };
 }

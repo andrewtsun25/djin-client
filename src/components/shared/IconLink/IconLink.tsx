@@ -44,7 +44,7 @@ const IconLink: React.FC<IconLinkProps> = ({
             href={href}
             className={clsx(classes.externalLink, className)}
             style={style}
-            target="_blank"
+            target={target}
             rel="noopener noreferrer"
             aria-label={ICON_LINK_ARIA_LABEL}
         >
