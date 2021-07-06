@@ -10,12 +10,14 @@ import { QueryParamProvider } from 'use-query-params';
 
 import { fuego } from './api/fuego';
 import App from './components';
+import ScrollToTop from './components/ScrollToTop';
 import djinTheme from './components/theme';
 import { unregister } from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
+            <ScrollToTop />
             <MuiThemeProvider theme={djinTheme}>
                 <FuegoProvider fuego={fuego}>
                     <QueryParamProvider ReactRouterRoute={Route}>
