@@ -1,17 +1,35 @@
-import firebase from 'firebase/app';
+import { FirebaseOptions, getApp, initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getFunctions } from 'firebase/functions';
+import { getStorage } from 'firebase/storage';
 
-type Config = Parameters<typeof firebase.initializeApp>[0];
+const firebaseConfig: FirebaseOptions = {
+    apiKey: 'AIzaSyCE57QjDywg1ZJSwJDSBW4Pbwpjqz_U4fA',
+    authDomain: 'djin-dev.firebaseapp.com',
+    projectId: 'djin-dev',
+    storageBucket: 'djin-dev.appspot.com',
+    messagingSenderId: '491248123522',
+    appId: '1:491248123522:web:f49fcc67aaa94d70787e9b',
+    measurementId: 'G-3KT3E4JR9B',
+};
 
-// Hacked version of the Fuego class (https://github.com/nandorojo/swr-firestore/blob/master/src/classes/Fuego.ts) because of differences between Firebase v7/v8 https://github.com/nandorojo/swr-firestore/issues/59
+const fbConfig = initializeApp(firebaseConfig);
+const auth = getAuth(getApp());
+const db = getFirestore(getApp());
+const functions = getFunctions(getApp());
+const storage = getStorage(getApp());
+
 export class Fuego {
-    public db: ReturnType<firebase.app.App['firestore']>;
-    public auth: typeof firebase.auth;
-    public functions: typeof firebase.functions;
-    public storage: typeof firebase.storage;
-    constructor(config: Config) {
-        this.db = !firebase.apps.length ? firebase.initializeApp(config).firestore() : firebase.app().firestore();
-        this.auth = firebase.auth;
-        this.functions = firebase.functions;
-        this.storage = firebase.storage;
+    public db: typeof db;
+    public auth: typeof auth;
+    public functions: typeof functions;
+    public storage: typeof storage;
+
+    constructor() {
+        this.db = !fbConfig ? db : db; // this is probably pointless
+        this.auth = auth;
+        this.functions = functions;
+        this.storage = storage;
     }
 }

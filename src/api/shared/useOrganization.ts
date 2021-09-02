@@ -1,10 +1,8 @@
 import { useDocument } from '@nandorojo/swr-firestore';
-import firebase from 'firebase';
 import { isNil } from 'lodash';
+import { DocumentReference } from 'types/firebase/firestore';
 import { Organization } from 'types/shared';
 import { isNotNil } from 'utils/general';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 const OrganizationLoadingState = {
     UNAVAILABLE: 'Organization unavailable',

@@ -1,5 +1,5 @@
 import { useTheme } from '@material-ui/core/styles';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import { alpha } from '@material-ui/core/styles/colorManipulator';
 import clsx from 'clsx';
 import React, { CSSProperties, PropsWithChildren } from 'react';
 
@@ -35,7 +35,7 @@ const Background: React.FC<BackgroundProps> = ({
         >
             <div
                 className={clsx(classes.colorBg, className)}
-                style={{ backgroundColor: fade(theme.palette.common.black, tintOpacity), ...style }}
+                style={{ backgroundColor: alpha(theme.palette.common.black, tintOpacity), ...style }}
                 data-testid={BACKGROUND_TINT_TEST_ID}
             >
                 {children}

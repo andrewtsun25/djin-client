@@ -1,12 +1,7 @@
-import firebase from 'firebase';
+import { DocumentData, FirestoreDataConverter, QueryDocumentSnapshot, SnapshotOptions } from 'types/firebase/firestore';
 
 import { HolisticOfficeLink } from './HolisticOfficeLink';
 import { HolisticOfficeLinkType } from './HolisticOfficeLinkType';
-
-type FirestoreDataConverter<T> = firebase.firestore.FirestoreDataConverter<T>;
-type QueryDocumentSnapshot = firebase.firestore.QueryDocumentSnapshot;
-type SnapshotOptions = firebase.firestore.SnapshotOptions;
-type DocumentData = firebase.firestore.DocumentData;
 
 function toFirestore({ name, type, url }: HolisticOfficeLink): DocumentData {
     return {

@@ -1,8 +1,6 @@
-import firebase from 'firebase';
+import { DocumentReference } from 'types/firebase/firestore';
 
 import JobType from './JobType';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 export interface EmploymentResponse {
     organization: DocumentReference;

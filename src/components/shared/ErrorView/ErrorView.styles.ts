@@ -1,5 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import { alpha } from '@material-ui/core/styles/colorManipulator';
 
 const errorViewStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -18,7 +18,7 @@ const errorViewStyles = makeStyles((theme: Theme) =>
             flexDirection: 'column',
             alignItems: 'center',
             width: 'max-content',
-            backgroundColor: fade(theme.palette.error.light, 0.4),
+            backgroundColor: alpha(theme.palette.error.light, 0.4),
             padding: 20,
         },
         stackTrace: {

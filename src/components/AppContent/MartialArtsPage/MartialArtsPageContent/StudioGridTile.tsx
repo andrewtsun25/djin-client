@@ -1,13 +1,11 @@
 import LaunchIcon from '@material-ui/icons/Launch';
 import { useDocument } from '@nandorojo/swr-firestore';
 import { ResponsiveGridItem } from 'components/shared/ResponsiveGrid';
-import firebase from 'firebase';
 import { isNil } from 'lodash';
 import React from 'react';
+import { DocumentReference } from 'types/firebase/firestore';
 import { MartialArtsStudio } from 'types/martialArts';
 import { isNotNil } from 'utils/general';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 interface StudioGridTileProps {
     studioRef: DocumentReference;

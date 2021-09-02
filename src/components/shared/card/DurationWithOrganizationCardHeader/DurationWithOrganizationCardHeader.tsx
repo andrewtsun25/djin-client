@@ -34,7 +34,7 @@ const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardH
         baseAvatar
     ) : (
         <StyledBadge
-            overlap="circle"
+            overlap="circular"
             anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'right',

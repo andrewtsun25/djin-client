@@ -1,5 +1,4 @@
-import firebase from 'firebase';
-import DocumentReference = firebase.firestore.DocumentReference;
+import { DocumentReference } from '../firebase/firestore';
 
 export interface HBVResearchPaper {
     name: string;
