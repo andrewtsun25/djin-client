@@ -3,6 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
 import clsx from 'clsx';
+import { isNil } from 'lodash';
 import React from 'react';
 import { Nilable } from 'types/alias';
 
@@ -17,7 +18,7 @@ interface ResponsiveGridItemProps {
     subtitle?: string;
     icon: JSX.Element;
     loading?: boolean;
-    error?: Error | boolean;
+    error: Nilable<Error>;
     mediaSizingStrategy?: string;
 }
 
@@ -39,13 +40,13 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     const width = `calc((100% - 2 * ${ITEM_MARGIN}px * ${cols})/${cols})`;
     return (
         <GridListTile cols={1} rows={1} style={{ width: width, margin: ITEM_MARGIN }}>
-            {!loading && !error && mediaUrl && (
+            {!loading && isNil(error) && mediaUrl && (
                 <div
                     className={classes.media}
                     style={{ backgroundImage: `url(${mediaUrl})`, backgroundSize: mediaSizingStrategy || 'cover' }}
                 />
             )}
-            {loading && !error && (
+            {loading && isNil(error) && (
                 <div className={classes.loadingContainer}>
                     <CircularProgress size={100} className={classes.absoluteCenter} />
                 </div>

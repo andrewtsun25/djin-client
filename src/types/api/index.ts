@@ -1,3 +1,4 @@
-import { Fuego } from './Fuego';
+import type { FirebaseServices } from './FirebaseServices';
+import type { FirestoreDocument } from './FirestoreDocument';
 
-export { Fuego };
+export type { FirebaseServices, FirestoreDocument };

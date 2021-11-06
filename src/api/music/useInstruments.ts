@@ -1,4 +1,4 @@
-import { useCollection } from '@nandorojo/swr-firestore';
+import { useCollection } from 'api/firestore';
 import Collections from 'const/collections';
 import { useMemo } from 'react';
 import { Nilable } from 'types/alias';
@@ -8,7 +8,7 @@ import { isNotNil } from 'utils/general';
 
 type useInstrumentsResponse = {
     instruments: Nilable<Map<InstrumentType, Instrument>>;
-    error: Error;
+    error: Nilable<Error>;
 };
 
 export default function useInstruments(): useInstrumentsResponse {
@@ -17,7 +17,7 @@ export default function useInstruments(): useInstrumentsResponse {
         () =>
             isNotNil(data)
                 ? new Map<InstrumentType, Instrument>(
-                      data.filter((instrument) => instrument.exists).map((instrument) => [instrument.type, instrument]),
+                      data.filter(isNotNil).map((instrument) => [instrument.type, instrument]),
                   )
                 : data,
         [data],

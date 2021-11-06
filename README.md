@@ -9,7 +9,7 @@ As of version 1.1.0, this website is front-end only. The production deployment o
 application is hosted on Firebase as such: 
 - The client application (this repo) is hosted on Firebase Web Hosting.
 - Assets for the client application (images, documents, etc.) are stored via Firebase Cloud Storage.
-- Data that this application requires is stored directly into Firestore, a No-SQL Document/Collection database.
+- Data that this application requires is stored directly into Firestore, a No-SQL FirestoreDocument/Collection database.
 
 ### Preview Components
 

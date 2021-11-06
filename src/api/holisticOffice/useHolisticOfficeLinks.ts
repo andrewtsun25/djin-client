@@ -1,18 +1,17 @@
-import { useCollection } from '@nandorojo/swr-firestore';
+import { useCollection } from 'api/firestore';
 import Collections from 'const/collections';
+import { where } from 'firebase/firestore';
 import { Nilable } from 'types/alias';
 import { HolisticOfficeLink, HolisticOfficeLinkType } from 'types/holisticOffice';
-import { isNotNil } from 'utils/general';
 
 type useHolisticOfficeLinksResponse = {
     links: Nilable<HolisticOfficeLink[]>;
-    error: Error;
+    error: Nilable<Error>;
 };
 
 export default function useHolisticOfficeLinks(linkType: HolisticOfficeLinkType): useHolisticOfficeLinksResponse {
-    const { data, error } = useCollection<HolisticOfficeLink>(Collections.HolisticOffice.Links, {
-        where: ['type', '==', linkType],
+    const { data: links, error } = useCollection<HolisticOfficeLink>(Collections.HolisticOffice.Links, {
+        query: [where('type', '==', linkType)],
     });
-    const links = isNotNil(data) ? data.filter((link) => link.exists) : data;
-    return { links, error: error as Error };
+    return { links, error };
 }

@@ -1,8 +1,8 @@
-import { createMuiTheme } from '@material-ui/core';
+import { createTheme } from '@material-ui/core';
 import { orange, red } from '@material-ui/core/colors';
 import { Theme } from '@material-ui/core/styles';
 
-const djinTheme: Theme = createMuiTheme({
+const djinTheme: Theme = createTheme({
     palette: {
         primary: {
             light: red[300],
