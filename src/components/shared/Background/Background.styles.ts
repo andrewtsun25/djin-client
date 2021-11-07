@@ -1,25 +1,16 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const backgroundStyles = makeStyles((theme: Theme) => {
-    const bgHeight = {
-        height: 'calc(100% - 55px)',
-        [`@media (min-width: ${theme.breakpoints.values.xs}) and (orientation: landscape)`]: {
-            minHeight: 'calc(100% - 46px)',
-        },
-        [`@media (min-width: ${theme.breakpoints.values.sm})`]: {
-            minHeight: 'calc(100% - 64px)',
-        },
-    };
+const backgroundStyles = makeStyles(() => {
     return createStyles({
         bg: {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
             width: '100%',
-            ...bgHeight,
+            height: '100%',
         },
         colorBg: {
             padding: 10,
-            ...bgHeight,
+            height: '100%',
         },
     });
 });

@@ -1,5 +1,4 @@
 import { useDocument } from 'api/firestore';
-import Collections from 'const/collections';
 import { isNil } from 'lodash';
 import { DocumentReference } from 'types/firebase/firestore';
 import { Organization } from 'types/shared';
@@ -12,7 +11,7 @@ const OrganizationLoadingState = {
 };
 
 export default function useOrganization(organizationRef: DocumentReference): Organization {
-    const { data, error } = useDocument<Organization>(Collections.Shared.Organizations, organizationRef.path);
+    const { data, error } = useDocument<Organization>(organizationRef.path);
 
     const name: string = isNotNil(error)
         ? OrganizationLoadingState.UNAVAILABLE

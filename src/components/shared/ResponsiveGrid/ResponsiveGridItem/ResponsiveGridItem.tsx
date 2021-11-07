@@ -1,4 +1,4 @@
-import { CircularProgress, GridListTile, GridListTileBar, IconButton } from '@material-ui/core';
+import { CircularProgress, IconButton, ImageListItem, ImageListItemBar } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Error from '@material-ui/icons/Error';
@@ -39,7 +39,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
     const cols = isMedium ? 4 : isSmall ? 2 : 1;
     const width = `calc((100% - 2 * ${ITEM_MARGIN}px * ${cols})/${cols})`;
     return (
-        <GridListTile cols={1} rows={1} style={{ width: width, margin: ITEM_MARGIN }}>
+        <ImageListItem cols={1} rows={1} style={{ width: width, margin: ITEM_MARGIN }}>
             {!loading && isNil(error) && mediaUrl && (
                 <div
                     className={classes.media}
@@ -60,7 +60,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                     />
                 </div>
             )}
-            <GridListTileBar
+            <ImageListItemBar
                 title={title}
                 subtitle={subtitle}
                 actionIcon={
@@ -79,7 +79,7 @@ const ResponsiveGridItem: React.FC<ResponsiveGridItemProps> = ({
                     )
                 }
             />
-        </GridListTile>
+        </ImageListItem>
     );
 };
 

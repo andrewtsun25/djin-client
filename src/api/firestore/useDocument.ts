@@ -11,17 +11,17 @@ type UseDocumentOptions<T extends DocumentData> = {
 };
 
 export default function useDocument<T extends DocumentData>(
-    collectionId: string,
-    path: string,
+    docPath: string,
     options?: UseDocumentOptions<T>,
 ): SWRResponse<FirestoreDocument<T> | null, Error> {
     const { parseDates = [] } = options || {};
     const { db } = useContext(FirebaseContext);
-    return useSWR(path, async (docRef): Promise<FirestoreDocument<T> | null> => {
+    return useSWR(db ? docPath : null, async (dp: string): Promise<FirestoreDocument<T> | null> => {
+        // This code path should never be reached, as useSWR does not trigger a request if the database is not present.
         if (!db) {
             return null;
         }
-        const d = await getDoc(doc(db, collectionId, docRef));
+        const d = await getDoc(doc(db, dp));
         return d.exists()
             ? parseDocumentDates(toFirestoneDocument(d as unknown as DocumentSnapshot<T>), parseDates)
             : null;

@@ -11,6 +11,12 @@ const appContentStyles = makeStyles((theme: Theme) =>
             }),
             marginLeft: -GlobalStyles.DrawerWidth,
             minHeight: '100vh',
+            [`@media (min-width: ${theme.breakpoints.values.xs}) and (orientation: landscape)`]: {
+                minHeight: 'calc(100vh - 46px)',
+            },
+            [`@media (min-width: ${theme.breakpoints.values.sm})`]: {
+                minHeight: 'calc(100vh - 64px)',
+            },
         },
         shift: {
             transition: theme.transitions.create('margin', {

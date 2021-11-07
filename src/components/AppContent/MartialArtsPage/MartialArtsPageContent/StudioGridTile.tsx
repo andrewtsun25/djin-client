@@ -1,7 +1,6 @@
 import LaunchIcon from '@material-ui/icons/Launch';
 import { useDocument } from 'api/firestore';
 import { ResponsiveGridItem } from 'components/shared/ResponsiveGrid';
-import Collections from 'const/collections';
 import { isNil } from 'lodash';
 import React from 'react';
 import { DocumentReference } from 'types/firebase/firestore';
@@ -12,7 +11,7 @@ interface StudioGridTileProps {
 }
 
 const StudioGridTile: React.FC<StudioGridTileProps> = ({ studioRef }: StudioGridTileProps) => {
-    const { data: studio, error } = useDocument<MartialArtsStudio>(Collections.MartialArts.Studios, studioRef.path);
+    const { data: studio, error } = useDocument<MartialArtsStudio>(studioRef.path);
     const loading = isNil(studio);
     const title = error ? 'Studio Unavailable' : loading ? 'Loading Studio...' : studio?.name || 'Unnamed Studio';
     const subtitle = error ? 'City Unavailable' : loading ? 'Loading State...' : studio?.city || 'Unnamed City';

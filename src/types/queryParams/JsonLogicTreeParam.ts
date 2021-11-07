@@ -10,6 +10,7 @@ const JsonLogicTreeParam: QueryParamConfig<Nilable<JsonLogicTree>> = {
     decode: (jsonLogicTreeStr: (string | null)[] | Nilable<string>): Nilable<JsonLogicTree> => {
         const decodedJson = decodeJson(jsonLogicTreeStr);
         if (isNotNil(decodedJson)) {
+            /* eslint-disable @typescript-eslint/no-explicit-any */
             traverse(decodedJson, {
                 processValue: (
                     key: string,

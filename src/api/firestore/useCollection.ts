@@ -10,8 +10,9 @@ import {
 } from 'firebase/firestore';
 import { useContext } from 'react';
 import useSWR, { SWRResponse } from 'swr';
+import { FirestoreDocument, toFirestoneDocument } from 'types/api';
+import { isNotNil } from 'utils/general';
 
-import { FirestoreDocument, toFirestoneDocument } from '../../types/api/FirestoreDocument';
 import { parseDocumentDates } from './parseDocumentDates';
 
 type UseCollectionOptions<T extends DocumentData> = {
@@ -25,7 +26,8 @@ export default function useCollection<T extends DocumentData>(
 ): SWRResponse<FirestoreDocument<T>[], Error> {
     const { query: queryConstraints = [], parseDates = [] } = options || {};
     const { db } = useContext(FirebaseContext);
-    return useSWR(collectionId, async (cName): Promise<FirestoreDocument<T>[]> => {
+    return useSWR(isNotNil(db) ? `${collectionId}` : null, async (cName): Promise<FirestoreDocument<T>[]> => {
+        // This condition should never be triggered since useSWR doesn't start the request until the DB is initialized
         if (!db) {
             return [];
         }
