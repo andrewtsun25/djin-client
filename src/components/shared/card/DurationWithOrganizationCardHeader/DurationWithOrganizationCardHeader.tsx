@@ -24,11 +24,11 @@ const DurationWithOrganizationCardHeader: React.FC<DurationWithOrganizationCardH
     logoUrl,
 }: DurationWithOrganizationCardHeaderProps) => {
     const startDateTime: DateTime = DateTime.fromJSDate(startDate);
-    const { monthShort: startDateMonth, year: startDateYear } = startDateTime;
+    const { monthShort: startDateMonth, year: startDateYear, day: startDateDay } = startDateTime;
     const endDateTime: Nilable<DateTime> = isNotNil(endDate) ? DateTime.fromJSDate(endDate) : endDate;
     const subheader = isNotNil(endDateTime)
-        ? `${startDateMonth} ${startDateYear} - ${endDateTime.monthShort} ${endDateTime.year}, ${subtitle}`
-        : `${startDateMonth} ${startDateYear} - Present, ${subtitle}`;
+        ? `${startDateMonth} ${startDateDay}, ${startDateYear} - ${endDateTime.monthShort} ${endDateTime.day}, ${endDateTime.year}: ${subtitle}`
+        : `${startDateMonth} ${startDateDay}, ${startDateYear} - Present: ${subtitle}`;
     const baseAvatar: React.ReactNode = <Avatar alt={title} src={logoUrl} />;
     const avatar: React.ReactNode = endDate ? (
         baseAvatar

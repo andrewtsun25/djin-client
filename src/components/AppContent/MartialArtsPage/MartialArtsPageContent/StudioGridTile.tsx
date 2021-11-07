@@ -13,8 +13,8 @@ interface StudioGridTileProps {
 const StudioGridTile: React.FC<StudioGridTileProps> = ({ studioRef }: StudioGridTileProps) => {
     const { data: studio, error } = useDocument<MartialArtsStudio>(studioRef.path);
     const loading = isNil(studio);
-    const title = error ? 'Studio Unavailable' : loading ? 'Loading Studio...' : studio?.name || 'Unnamed Studio';
-    const subtitle = error ? 'City Unavailable' : loading ? 'Loading State...' : studio?.city || 'Unnamed City';
+    const title = error ? 'Studio Unavailable' : loading ? 'Loading Studio...' : studio?.name ?? 'Unnamed Studio';
+    const subtitle = error ? 'City Unavailable' : loading ? 'Loading State...' : studio?.city ?? 'Unnamed City';
 
     return (
         <ResponsiveGridItem

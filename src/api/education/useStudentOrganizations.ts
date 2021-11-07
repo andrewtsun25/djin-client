@@ -5,7 +5,7 @@ import { StudentOrganization } from 'types/education';
 
 type useStudentOrganizationsResponse = {
     studentOrganizations: Nilable<StudentOrganization[]>;
-    error: Error | undefined;
+    error: Nilable<Error>;
 };
 
 export default function useStudentOrganizations(educationId: string): useStudentOrganizationsResponse {

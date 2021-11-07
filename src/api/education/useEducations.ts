@@ -7,7 +7,7 @@ import { Education, EduType } from 'types/education';
 
 type useEducationsResponse = {
     educations: Nilable<FirestoreDocument<Education>[]>;
-    error: Error | undefined;
+    error: Nilable<Error>;
 };
 
 export default function useEducations(eduType: EduType): useEducationsResponse {

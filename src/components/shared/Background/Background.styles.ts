@@ -1,7 +1,7 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-const backgroundStyles = makeStyles(() => {
-    return createStyles({
+const backgroundStyles = makeStyles(() =>
+    createStyles({
         bg: {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
@@ -12,7 +12,7 @@ const backgroundStyles = makeStyles(() => {
             padding: 10,
             height: '100%',
         },
-    });
-});
+    }),
+);
 
 export default backgroundStyles;
