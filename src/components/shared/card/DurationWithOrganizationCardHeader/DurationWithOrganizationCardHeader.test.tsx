@@ -18,7 +18,7 @@ describe('DurationWithOrganizationCardHeader', () => {
                 endDate={endDate}
             />,
         );
-        const dateSubtitle = getByText('Jan 2021 - Feb 2021, subtitle');
+        const dateSubtitle = getByText('Jan 1, 2021 - Feb 1, 2021: subtitle');
         expect(dateSubtitle).toBeInTheDocument();
         const currentBadge = queryByTestId(CURRENT_BADGE_TEST_ID);
         expect(currentBadge).toBeNull();
@@ -28,7 +28,7 @@ describe('DurationWithOrganizationCardHeader', () => {
         const { getByText, getByTestId } = render(
             <DurationWithOrganizationCardHeader subtitle={subTitle} title={title} startDate={startDate} />,
         );
-        const dateSubtitle = getByText('Jan 2021 - Present, subtitle');
+        const dateSubtitle = getByText('Jan 1, 2021 - Present: subtitle');
         expect(dateSubtitle).toBeInTheDocument();
         const currentBadge = getByTestId(CURRENT_BADGE_TEST_ID);
         expect(currentBadge).toBeInTheDocument();
