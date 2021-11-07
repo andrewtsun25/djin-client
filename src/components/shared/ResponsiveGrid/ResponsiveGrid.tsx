@@ -1,4 +1,4 @@
-import { GridList, GridListTile, Typography } from '@material-ui/core';
+import { ImageList, ImageListItem, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import clsx from 'clsx';
@@ -32,21 +32,21 @@ function ResponsiveGrid<T>({
     const titleVariant = isMedium ? 'h4' : isSmall ? 'h5' : 'h6';
     return (
         <div className={clsx(classes.root, className)}>
-            <GridList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
+            <ImageList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
                 {title && (
-                    <GridListTile cols={cols} style={{ height: 'auto' }}>
+                    <ImageListItem cols={cols} style={{ height: 'auto' }}>
                         <Typography paragraph variant={titleVariant} align="center" className={classes.gridHeader}>
                             {title}
                         </Typography>
-                    </GridListTile>
+                    </ImageListItem>
                 )}
                 {embedUrl && (
-                    <GridListTile cols={cols} style={{ height: 'auto' }}>
+                    <ImageListItem cols={cols} style={{ height: 'auto' }}>
                         <Embed url={embedUrl} />
-                    </GridListTile>
+                    </ImageListItem>
                 )}
                 {items.map((item: T, index: number) => renderGridTile(item, index))}
-            </GridList>
+            </ImageList>
         </div>
     );
 }

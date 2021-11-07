@@ -33,12 +33,20 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
     const defaultTree = createDefaultTreeForConfig(config);
     const [tree, setTree] = useState(isNotNil(filter) ? importTree(filter, config) : defaultTree);
 
+    const clearFilter = (): void => {
+        setTree(defaultTree);
+        setFilter(undefined);
+        onClearFilter();
+    };
+
     const applyFilter = (): void => {
         if (tree === defaultTree) {
+            clearFilter();
             return;
         }
         const logicTree = exportTree(tree, config);
         if (isNil(logicTree)) {
+            clearFilter();
             return;
         }
         setFilter(logicTree);
@@ -46,11 +54,6 @@ function QueryFilter<T>({ config, collection, onApplyFilter, onClearFilter }: Qu
         onApplyFilter(filteredCollection);
     };
 
-    const clearFilter = (): void => {
-        setTree(defaultTree);
-        setFilter(undefined);
-        onClearFilter();
-    };
     return (
         <>
             <Query {...config} value={tree} onChange={setTree} renderBuilder={renderBuilder} />

@@ -1,13 +1,10 @@
 import LaunchIcon from '@material-ui/icons/Launch';
-import { useDocument } from '@nandorojo/swr-firestore';
+import { useDocument } from 'api/firestore';
 import { ResponsiveGridItem } from 'components/shared/ResponsiveGrid';
-import firebase from 'firebase';
 import { isNil } from 'lodash';
 import React from 'react';
+import { DocumentReference } from 'types/firebase/firestore';
 import { MartialArtsStudio } from 'types/martialArts';
-import { isNotNil } from 'utils/general';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 interface StudioGridTileProps {
     studioRef: DocumentReference;
@@ -16,9 +13,8 @@ interface StudioGridTileProps {
 const StudioGridTile: React.FC<StudioGridTileProps> = ({ studioRef }: StudioGridTileProps) => {
     const { data: studio, error } = useDocument<MartialArtsStudio>(studioRef.path);
     const loading = isNil(studio);
-    const isError: boolean = isNotNil(error) || !studio?.exists;
-    const title = isError ? 'Studio Unavailable' : loading ? 'Loading Studio...' : studio?.name || 'Unnamed Studio';
-    const subtitle = isError ? 'City Unavailable' : loading ? 'Loading State...' : studio?.city || 'Unnamed City';
+    const title = error ? 'Studio Unavailable' : loading ? 'Loading Studio...' : studio?.name ?? 'Unnamed Studio';
+    const subtitle = error ? 'City Unavailable' : loading ? 'Loading State...' : studio?.city ?? 'Unnamed City';
 
     return (
         <ResponsiveGridItem
@@ -28,7 +24,7 @@ const StudioGridTile: React.FC<StudioGridTileProps> = ({ studioRef }: StudioGrid
             subtitle={subtitle}
             icon={<LaunchIcon />}
             loading={loading}
-            error={isError}
+            error={error}
             mediaSizingStrategy="contain"
         />
     );

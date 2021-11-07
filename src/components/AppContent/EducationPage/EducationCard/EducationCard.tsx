@@ -1,18 +1,18 @@
 import { Card, CardContent, Slide, Typography } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
-import { Document } from '@nandorojo/swr-firestore';
 import { useOrganization } from 'api/shared';
 import { IconLink } from 'components/shared';
 import { DurationWithOrganizationCardHeader } from 'components/shared/card';
 import { map } from 'lodash';
 import React from 'react';
+import { FirestoreDocument } from 'types/api';
 import { Education } from 'types/education';
 
 import educationCardStyles from './EducationCard.styles';
 import StudentOrganizationBullets from './StudentOrganizationBullets';
 
 interface EducationCardProps {
-    education: Document<Education>;
+    education: FirestoreDocument<Education>;
 }
 
 const EducationCard: React.FC<EducationCardProps> = ({

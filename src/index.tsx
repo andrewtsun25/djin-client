@@ -2,13 +2,12 @@ import './index.css';
 import 'firebase/firestore';
 
 import { MuiThemeProvider } from '@material-ui/core';
-import { FuegoProvider } from '@nandorojo/swr-firestore';
+import { FirebaseProvider } from 'api/provider';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { QueryParamProvider } from 'use-query-params';
 
-import { fuego } from './api/fuego';
 import App from './components';
 import ScrollToTop from './components/ScrollToTop';
 import djinTheme from './components/theme';
@@ -19,11 +18,11 @@ ReactDOM.render(
         <Router>
             <ScrollToTop />
             <MuiThemeProvider theme={djinTheme}>
-                <FuegoProvider fuego={fuego}>
+                <FirebaseProvider>
                     <QueryParamProvider ReactRouterRoute={Route}>
                         <App />
                     </QueryParamProvider>
-                </FuegoProvider>
+                </FirebaseProvider>
             </MuiThemeProvider>
         </Router>
     </React.StrictMode>,

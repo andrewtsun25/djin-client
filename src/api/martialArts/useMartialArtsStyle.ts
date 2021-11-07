@@ -1,5 +1,6 @@
-import { useCollection } from '@nandorojo/swr-firestore';
+import { useCollection } from 'api/firestore';
 import Collections from 'const/collections';
+import { where } from 'firebase/firestore';
 import { head } from 'lodash';
 import { useMemo } from 'react';
 import { Nilable } from 'types/alias';
@@ -12,11 +13,11 @@ type useMartialArtsStylesResponse = {
 
 export default function useMartialArtsStyle(styleType: MartialArtsStyleType): useMartialArtsStylesResponse {
     const { data: martialArts, error } = useCollection<MartialArtsStyle>(Collections.MartialArts.Styles, {
-        where: ['type', '==', styleType],
+        query: [where('type', '==', styleType)],
     });
     const martialArt = useMemo(() => {
         const martialArtDoc = head(martialArts);
-        return martialArtDoc?.exists ? martialArtDoc : null;
+        return martialArtDoc ?? null;
     }, [martialArts]);
     return { martialArt, error: error as Error };
 }

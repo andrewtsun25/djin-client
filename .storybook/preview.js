@@ -1,12 +1,11 @@
 import djinTheme from '../src/components/theme';
-import { FuegoProvider } from '@nandorojo/swr-firestore';
-import { fuego } from '../src/api/fuego';
 import { MuiThemeProvider } from '@material-ui/core';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router';
 import { QueryParamProvider } from 'use-query-params';
 
 import 'react-awesome-query-builder/lib/css/styles.css';
+import { FirebaseProvider } from '../src/api/provider';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -17,11 +16,11 @@ export const decorators = [
     (StoryComponent) => (
         <Router>
             <MuiThemeProvider theme={djinTheme}>
-                <FuegoProvider fuego={fuego}>
+                <FirebaseProvider>
                     <QueryParamProvider ReactRouterRoute={Route}>
                         <StoryComponent />
                     </QueryParamProvider>
-                </FuegoProvider>
+                </FirebaseProvider>
             </MuiThemeProvider>
         </Router>
     ),

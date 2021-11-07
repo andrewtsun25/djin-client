@@ -1,6 +1,4 @@
-import firebase from 'firebase';
-
-type DocumentReference = firebase.firestore.DocumentReference;
+import { DocumentReference } from 'types/firebase/firestore';
 
 export interface ProjectResponse {
     name: string;

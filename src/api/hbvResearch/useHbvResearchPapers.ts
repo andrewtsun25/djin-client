@@ -1,19 +1,18 @@
-import { useCollection } from '@nandorojo/swr-firestore';
+import { useCollection } from 'api/firestore';
 import Collections from 'const/collections';
+import { orderBy } from 'firebase/firestore';
 import { Nilable } from 'types/alias';
 import { HBVResearchPaper } from 'types/hbvResearch';
-import { isNotNil } from 'utils/general';
 
 type useHbvResearchPapersResponse = {
     hbvResearchPapers: Nilable<HBVResearchPaper[]>;
-    error: Error;
+    error: Nilable<Error>;
 };
 
 export default function useHbvResearchPapers(): useHbvResearchPapersResponse {
-    const { data, error } = useCollection<HBVResearchPaper>(Collections.HbvResearch.Papers, {
+    const { data: hbvResearchPapers, error } = useCollection<HBVResearchPaper>(Collections.HbvResearch.Papers, {
+        query: [orderBy('startDate', 'asc')],
         parseDates: ['startDate', 'endDate'],
-        orderBy: ['startDate', 'asc'],
     });
-    const hbvResearchPapers = isNotNil(data) ? data.filter((hbvResearchPaper) => hbvResearchPaper.exists) : data;
-    return { hbvResearchPapers, error: error as Error };
+    return { hbvResearchPapers, error };
 }

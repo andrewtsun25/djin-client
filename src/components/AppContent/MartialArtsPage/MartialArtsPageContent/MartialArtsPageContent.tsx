@@ -4,16 +4,14 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useMartialArtsStyle } from 'api/martialArts';
 import { ErrorView, LoadingView } from 'components/shared';
 import { ResponsiveGrid } from 'components/shared/ResponsiveGrid';
-import firebase from 'firebase';
 import { isNil } from 'lodash';
 import React from 'react';
+import { DocumentReference } from 'types/firebase/firestore';
 import { MartialArtsStyleType } from 'types/martialArts';
 import { isNotNil } from 'utils/general';
 
 import martialArtsPageContentStyles from './MartialArtsPageContent.styles';
 import StudioGridTile from './StudioGridTile';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 interface MartialArtsPageContentProps {
     martialArtsStyle: MartialArtsStyleType;

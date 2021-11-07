@@ -10,7 +10,7 @@ const appContentStyles = makeStyles((theme: Theme) =>
                 duration: theme.transitions.duration.leavingScreen,
             }),
             marginLeft: -GlobalStyles.DrawerWidth,
-            minHeight: 'calc(100vh - 56px)',
+            minHeight: '100vh',
             [`@media (min-width: ${theme.breakpoints.values.xs}) and (orientation: landscape)`]: {
                 minHeight: 'calc(100vh - 46px)',
             },

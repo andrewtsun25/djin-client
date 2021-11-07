@@ -1,9 +1,7 @@
-import firebase from 'firebase';
+import { DocumentReference } from 'types/firebase/firestore';
 
 import EduType from './EduType';
 import { StudentOrganization } from './StudentOrganization';
-
-type DocumentReference = firebase.firestore.DocumentReference;
 
 export interface Education {
     organization: DocumentReference;
