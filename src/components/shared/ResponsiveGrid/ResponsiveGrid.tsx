@@ -7,7 +7,7 @@ import Embed from 'react-embed';
 
 import responsiveGridStyles from './ResponsiveGrid.styles';
 
-const COL_HEIGHT = 333;
+const ROW_HEIGHT = 333;
 
 interface ResponsiveGridProps<T> {
     title?: string;
@@ -32,7 +32,7 @@ function ResponsiveGrid<T>({
     const titleVariant = isMedium ? 'h4' : isSmall ? 'h5' : 'h6';
     return (
         <div className={clsx(classes.root, className)}>
-            <ImageList cellHeight={COL_HEIGHT} cols={cols} spacing={10}>
+            <ImageList rowHeight={ROW_HEIGHT} cols={cols} gap={10}>
                 {title && (
                     <ImageListItem cols={cols} style={{ height: 'auto' }}>
                         <Typography paragraph variant={titleVariant} align="center" className={classes.gridHeader}>
