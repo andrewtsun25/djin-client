@@ -13,17 +13,19 @@ type UseDocumentOptions<T extends DocumentData> = {
 export default function useDocument<T extends DocumentData>(
     docPath: string,
     options?: UseDocumentOptions<T>,
-): SWRResponse<FirestoreDocument<T> | null, Error> {
+): SWRResponse<FirestoreDocument<T>, Error> {
     const { parseDates = [] } = options || {};
     const { db } = useContext(FirebaseContext);
-    return useSWR(db ? docPath : null, async (dp: string): Promise<FirestoreDocument<T> | null> => {
+    return useSWR(db ? `${docPath}_${parseDates}` : null, async (key: string): Promise<FirestoreDocument<T>> => {
         // This code path should never be reached, as useSWR does not trigger a request if the database is not present.
         if (!db) {
-            return null;
+            throw new Error('Firestore DB has not been initialized yet.');
         }
+        const dp = key.split('_')[0];
         const d = await getDoc(doc(db, dp));
-        return d.exists()
-            ? parseDocumentDates(toFirestoneDocument(d as unknown as DocumentSnapshot<T>), parseDates)
-            : null;
+        if (!d.exists()) {
+            throw new Error('Document does not exist.');
+        }
+        return parseDocumentDates(toFirestoneDocument(d as unknown as DocumentSnapshot<T>), parseDates);
     });
 }
